@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
   --paper: #eee2e7;
   --ink: #372c39;
   --muted: #665b69;
@@ -34,26 +34,24 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 nav { font-size: .94rem; }
 nav a { text-decoration: none; }
 
-.hero { padding: clamp(58px, 9vw, 105px) 0 clamp(72px, 11vw, 128px); }
-.hero-note { margin: 0 0 10px; color: var(--terracotta); font: 600 clamp(1.55rem, 3.3vw, 2rem)/1 Caveat, cursive; }
-h1, h2 { font-family: Newsreader, Georgia, serif; font-weight: 500; letter-spacing: -0.035em; }
-h1 { max-width: 11ch; margin: 0 0 23px; font-size: clamp(3.15rem, 7vw, 6.5rem); line-height: .93; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 245px); gap: clamp(28px, 7vw, 100px); align-items: end; padding: clamp(58px, 9vw, 105px) 0 clamp(72px, 11vw, 128px); }
+h1, h2, .tool-copy h3 { font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-weight: 600; letter-spacing: -0.035em; }
+h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); line-height: .94; }
 .hero-intro { max-width: 47ch; margin-bottom: 26px; color: var(--muted); font-size: clamp(1.03rem, 1.6vw, 1.17rem); }
 .text-link { color: var(--terracotta-dark); font-weight: 700; }
+.hero-mark { width: min(100%, 245px); height: auto; margin-bottom: 7px; opacity: .94; }
 
 .tools-section { padding-bottom: 105px; }
 .section-heading { margin-bottom: 32px; }
-.section-label { margin: 0 0 5px; color: var(--terracotta); font: 600 1.35rem/1 Caveat, cursive; }
-.section-heading h2, .support-section h2 { max-width: 11ch; margin: 0; font-size: clamp(2.65rem, 5vw, 4.5rem); line-height: .96; }
+.section-heading h2, .support-section h2 { max-width: 13ch; margin: 0; font-size: clamp(2.45rem, 4.8vw, 4.25rem); line-height: .98; }
 .tool-list { display: grid; gap: 12px; }
 .tool-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 25px 0 27px; border-top: 1px solid var(--line); }
 .tool-item:last-child { border-bottom: 1px solid var(--line); }
-.tool-copy h3 { margin: 0 0 6px; font: 500 clamp(1.45rem, 2.5vw, 1.85rem)/1.1 Newsreader, Georgia, serif; letter-spacing: -0.02em; }
+.tool-copy h3 { margin: 0 0 6px; font-size: clamp(1.3rem, 2.2vw, 1.65rem); line-height: 1.15; letter-spacing: -0.025em; }
 .tool-copy p { max-width: 47ch; margin: 0; color: var(--muted); }
 .tool-link { color: var(--terracotta-dark); font-weight: 700; white-space: nowrap; }
 
 .support-section { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(35px, 7vw, 88px); margin-bottom: 58px; padding: clamp(38px, 7vw, 78px); border-radius: 28px 28px 28px 7px; background: var(--plum); color: var(--cloud); }
-.support-section .section-label { color: #efb995; }
 .support-section h2 { max-width: 9ch; }
 .support-copy { align-self: end; max-width: 38ch; }
 .support-copy p { margin: 0 0 17px; }
@@ -63,12 +61,30 @@ h1 { max-width: 11ch; margin: 0 0 23px; font-size: clamp(3.15rem, 7vw, 6.5rem); 
 
 footer { display: flex; justify-content: space-between; gap: 18px; padding: 0 0 32px; color: var(--muted); font-size: .9rem; }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #160f18;
+    --ink: #f7edf2;
+    --muted: #d4c1cb;
+    --line: #765c71;
+    --terracotta: #ff9a75;
+    --terracotta-dark: #ffc0a8;
+    --plum: #321d32;
+    --cloud: #fff7fb;
+    --focus: #82d6ff;
+  }
+  ::selection { background: #7c423a; color: #fff7fb; }
+  .brand-lockup { filter: brightness(0) invert(1); }
+  .hero-mark { filter: brightness(0) invert(1); opacity: .78; }
+}
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media (max-width: 650px) {
   .site-header, main, footer { width: min(100% - 34px, 1010px); }
   .site-header { padding: 22px 0; }
-  .hero { padding: 58px 0 82px; }
-  h1 { max-width: 10ch; font-size: clamp(3rem, 14vw, 4.7rem); }
+  .hero { display: block; padding: 58px 0 82px; }
+  h1 { max-width: 11ch; font-size: clamp(2.85rem, 13.5vw, 4.5rem); }
+  .hero-mark { display: none; }
   .tool-item { grid-template-columns: 1fr; gap: 14px; padding: 23px 0 25px; }
   .support-section { grid-template-columns: 1fr; gap: 32px; margin-bottom: 38px; padding: 38px 28px; border-radius: 24px 24px 24px 6px; }
   footer { flex-direction: column; gap: 7px; }

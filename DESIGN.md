@@ -2,20 +2,26 @@
 
 ## Visual world
 
-Friendly personal note: a warm lilac paper-like field, handwritten greetings,
-and a deep-plum tip-jar panel. The page should feel like Cody introducing a
-few things he made, never a studio portfolio, SaaS dashboard, or donation
-funnel.
+Clean maker-tech with a personal edge: a warm, minimal light surface paired
+with a true dark theme, the plum-and-orange Dracars mark, and strong geometric
+type. The page should feel like a practical personal workshop for software,
+open projects, and hardware work—not a studio portfolio, SaaS dashboard, or
+donation funnel.
 
 ## Type and hierarchy
 
-- Newsreader carries the soft editorial headings.
-- Atkinson Hyperlegible keeps descriptions easy to read.
-- Caveat is reserved for the personal greeting, wordmark, and friendly notes.
+- Space Grotesk carries headings and project names with clear, slightly curvy
+  technical character.
+- Atkinson Hyperlegible keeps descriptions and controls easy to read.
+- The supplied Dracars wordmark is the sole expressive lettering; no
+  handwritten accent font competes with it.
 
 ## Layout and interaction
 
-- Generous vertical whitespace makes this feel like a hello rather than a pitch.
+- Generous vertical whitespace gives the system room without turning it into a
+  lifestyle landing page.
+- The Dracars icon appears once in the hero on wider screens and stays small,
+  practical, and legible.
 - Tools form a simple list without catalogue numbering or business labels.
 - The support note is conversational and clearly optional.
 - On mobile, the list keeps one action per tool and an easy reading order.
@@ -26,6 +32,9 @@ funnel.
 - Ink: `#372c39`
 - Terracotta accent: `#a9503b`
 - Plum: `#4d364c`
+
+In dark mode, deep aubergine replaces paper, pale ink preserves readability,
+and the provided dark wordmark/mark are rendered light for contrast.
 
 Ko-fi remains in a soft plum panel after the tool list, framed as an optional
 tip jar.
