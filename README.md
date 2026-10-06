@@ -39,7 +39,7 @@ Cloudflare will issue HTTPS certificates after the custom domains are attached.
 
 ## Included links
 
-- [Task Prioritizer](https://task-prioritizer-one.vercel.app)
-- [Stitch Shaper source](https://github.com/cdracars/stich-shaper)
-- [Local Screen Recorder](https://cdracars.github.io/local-screen-recorder/)
+- [Task Prioritizer](https://task-prioritizer.dracars.com/)
+- [Stitch Shaper](https://stitch-shaper.dracars.com/)
+- [Local Screen Recorder](https://screen-recorder.dracars.com/)
 - [Ko-fi support](https://ko-fi.com/cdracars66494)

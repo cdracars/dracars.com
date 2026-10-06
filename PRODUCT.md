@@ -39,7 +39,7 @@ or desktop browser.
 - Featured links currently include Task Prioritizer, Stitch Shaper source, and Local Screen Recorder.
 - Ko-fi support destination: `https://ko-fi.com/cdracars66494`.
 - No invented testimonials, usage counts, commercial claims, analytics claims, or paid features.
-- Stitch Shaper has no confirmed public deployment URL, so it links to source rather than implying a live app.
+- Featured tools use descriptive `dracars.com` subdomains once their Cloudflare Pages DNS records are active.
 
 ## Brand Commitments
 
@@ -49,11 +49,11 @@ an optional invitation to support upkeep, never a prerequisite.
 ## Evidence on Hand
 
 - Task Prioritizer: comparison-based task ordering, live at
-  `https://task-prioritizer-one.vercel.app`.
-- Stitch Shaper: open-source stitch-shaping tool at
-  `https://github.com/cdracars/stich-shaper`.
-- Local Screen Recorder: private, browser-only recording tool at
-  `https://cdracars.github.io/local-screen-recorder/`.
+  `https://task-prioritizer.dracars.com/`.
+- Stitch Shaper: stitch-shaping tool, live at
+  `https://stitch-shaper.dracars.com/`.
+- Local Screen Recorder: private, browser-only recording tool, live at
+  `https://screen-recorder.dracars.com/`.
 - GitHub profile: `https://github.com/cdracars`.
 
 ## Product Principles
