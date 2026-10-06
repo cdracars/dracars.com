@@ -18,7 +18,6 @@ html { scroll-behavior: smooth; }
 body { min-width: 320px; margin: 0; background: var(--paper); color: var(--ink); line-height: 1.55; }
 ::selection { background: #e2ae8d; color: #2d202c; }
 a { color: inherit; text-underline-offset: 0.25em; text-decoration-thickness: 1px; }
-.site-header a:hover,
 .text-link:hover,
 footer a:hover { color: var(--terracotta-dark); }
 a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
@@ -27,11 +26,12 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 .skip-link:focus { transform: translateY(0); }
 
 .site-header, main, footer { width: min(1010px, calc(100% - 44px)); margin-inline: auto; }
-.site-header { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 26px 0; }
+.site-header { padding: 26px 0; }
 .wordmark { display: inline-flex; align-items: center; text-decoration: none; }
 .brand-lockup { width: auto; height: 32px; }
-nav { font-size: .94rem; }
-nav a { text-decoration: none; }
+.github-corner { position: absolute; z-index: 3; top: 0; right: 0; width: 58px; height: 58px; clip-path: polygon(0 0, 100% 0, 100% 100%); background: var(--terracotta); color: var(--cloud); transition: background-color 160ms ease-out, width 160ms ease-out, height 160ms ease-out; }
+.github-corner svg { position: absolute; top: 11px; right: 11px; width: 20px; height: 20px; }
+.github-corner:hover { width: 64px; height: 64px; background: var(--plum); color: var(--cloud); }
 
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 245px); gap: clamp(28px, 7vw, 100px); align-items: end; padding: clamp(58px, 9vw, 105px) 0 clamp(72px, 11vw, 128px); }
 h1, h2, .tool-copy h3 { font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-weight: 600; letter-spacing: -0.035em; }
@@ -84,6 +84,8 @@ footer { display: flex; justify-content: space-between; gap: 18px; padding: 0 0 
 @media (max-width: 650px) {
   .site-header, main, footer { width: min(100% - 34px, 1010px); }
   .site-header { padding: 22px 0; }
+  .github-corner { width: 50px; height: 50px; }
+  .github-corner svg { top: 8px; right: 8px; width: 18px; height: 18px; }
   .hero { display: block; padding: 58px 0 82px; }
   h1 { max-width: 11ch; font-size: clamp(2.85rem, 13.5vw, 4.5rem); }
   .hero-mark { display: none; }
