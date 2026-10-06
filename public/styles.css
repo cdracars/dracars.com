@@ -56,7 +56,8 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .support-section h2 { max-width: 9ch; }
 .support-copy { align-self: end; max-width: 38ch; }
 .support-copy p { margin: 0 0 17px; }
-.support-link { color: var(--cloud); font-weight: 700; }
+.support-link { display: inline-flex; align-items: center; gap: .5rem; color: var(--cloud); font-weight: 700; }
+.kofi-mark { width: 1.25rem; height: 1.25rem; object-fit: contain; }
 .support-section a:hover { color: #ffe5d1; }
 .support-link:hover { color: #ffe5d1; }
 
