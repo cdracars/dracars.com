@@ -7,7 +7,8 @@ open-source projects, and optional support links.
 
 - Introduce Cody and link to `cdracars` on GitHub.
 - Feature the Task Prioritizer and Stitch Counter.
-- Provide a voluntary Ko-fi support link once the destination URL is confirmed.
+- Provide a voluntary Ko-fi support link for anyone who wants to help maintain
+  the work.
 - Deploy as a static site using Cloudflare Workers Static Assets.
 
 The site intentionally has no accounts, tracking-heavy features, paywalls, or
@@ -43,3 +44,8 @@ Cloudflare will issue HTTPS certificates after the custom domains are attached.
 - [Stitch Shaper](https://stitch-shaper.dracars.com/)
 - [Local Screen Recorder](https://screen-recorder.dracars.com/)
 - [Ko-fi support](https://ko-fi.com/cdracars66494)
+
+## Support
+
+If the site or one of its projects is useful to you, you can support its
+continued upkeep on [Ko-fi](https://ko-fi.com/cdracars66494).
