@@ -14,11 +14,13 @@ The site intentionally has no accounts, tracking-heavy features, paywalls, or
 gated downloads. Its purpose is to help people find useful free tools and
 support their upkeep if they choose.
 
-## Planned structure
+## Project structure
 
 ```text
 index.html          The public landing page
-assets/             Local, production-ready images and styles when needed
+styles.css          Responsive visual system and interaction styles
+PRODUCT.md          Durable site purpose and constraints
+DESIGN.md           Approved visual direction
 ```
 
 ## Cloudflare Pages deployment
@@ -33,8 +35,9 @@ assets/             Local, production-ready images and styles when needed
 
 Cloudflare will issue HTTPS certificates after DNS activation.
 
-## Before the first public deploy
+## Included links
 
-- Confirm the exact Ko-fi profile URL.
-- Confirm the public URLs for Task Prioritizer and Stitch Counter.
-- Add the landing-page source and test it locally at desktop and mobile widths.
+- [Task Prioritizer](https://task-prioritizer-one.vercel.app)
+- [Stitch Shaper source](https://github.com/cdracars/stich-shaper)
+- [Local Screen Recorder](https://cdracars.github.io/local-screen-recorder/)
+- [Ko-fi support](https://ko-fi.com/cdracars66494)
