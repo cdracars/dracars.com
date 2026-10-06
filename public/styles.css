@@ -26,7 +26,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 .skip-link:focus { transform: translateY(0); }
 
 .site-header, main, footer { width: min(1010px, calc(100% - 44px)); margin-inline: auto; }
-.site-header { padding: 26px 0; }
+.site-header { padding: 26px 0 26px 12px; }
 .wordmark { display: inline-flex; align-items: center; text-decoration: none; }
 .brand-lockup { width: auto; height: 32px; }
 .github-corner { position: absolute; z-index: 3; top: 0; right: 0; width: 58px; height: 58px; clip-path: polygon(0 0, 100% 0, 100% 100%); background: var(--terracotta); color: var(--cloud); transition: background-color 160ms ease-out, width 160ms ease-out, height 160ms ease-out; }
@@ -82,7 +82,7 @@ footer { display: flex; justify-content: space-between; gap: 18px; padding: 0 0 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media (max-width: 650px) {
   .site-header, main, footer { width: min(100% - 34px, 1010px); }
-  .site-header { padding: 22px 0; }
+  .site-header { padding: 22px 0 22px 10px; }
   .github-corner { width: 50px; height: 50px; }
   .github-corner svg { top: 8px; right: 8px; width: 18px; height: 18px; }
   .hero { display: block; padding: 58px 0 82px; }
