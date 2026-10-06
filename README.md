@@ -1,15 +1,14 @@
 # dracars.com
 
-The personal home of Cody Dracars: a small, durable directory for free tools,
-open-source projects, and optional support links.
+The personal home of Cody Dracars: software, hardware, and open projects made
+to be useful.
 
-## Initial scope
+## What it is
 
-- Introduce Cody and link to `cdracars` on GitHub.
-- Feature the Task Prioritizer and Stitch Counter.
-- Provide a voluntary Ko-fi support link for anyone who wants to help maintain
-  the work.
-- Deploy as a static site using Cloudflare Workers Static Assets.
+This is the directory for Cody's browser tools, open-source projects, and
+practical work around 3D printers and the systems that make them better. The
+site is deliberately small: no accounts, tracking-heavy features, paywalls, or
+gated downloads.
 
 The site intentionally has no accounts, tracking-heavy features, paywalls, or
 gated downloads. Its purpose is to help people find useful free tools and
@@ -38,14 +37,22 @@ for a new static site. There is no Worker script or server-side code.
 
 Cloudflare will issue HTTPS certificates after the custom domains are attached.
 
-## Included links
+## Projects
 
 - [Task Prioritizer](https://task-prioritizer.dracars.com/)
 - [Stitch Shaper](https://stitch-shaper.dracars.com/)
 - [Local Screen Recorder](https://screen-recorder.dracars.com/)
-- [Ko-fi support](https://ko-fi.com/cdracars66494)
+- [TunePrint](https://tuneprint.dracars.com/)
+- [Voron Mod Hub](https://cdracars.github.io/voron-mod-hub/)
+- [STL to STEP for FreeCAD](https://github.com/cdracars/stl2step-freecad/releases)
+- [STL to STEP for Fusion 360](https://github.com/cdracars/stl2step-fusion/releases)
+- [SafeSync](https://github.com/cdracars/SafeSync)
 
 ## Support
 
 If the site or one of its projects is useful to you, you can support its
 continued upkeep on [Ko-fi](https://ko-fi.com/cdracars66494).
+
+## License
+
+[MIT](LICENSE)
