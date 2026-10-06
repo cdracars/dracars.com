@@ -26,8 +26,8 @@ DESIGN.md           Approved visual direction
 ## Cloudflare Pages deployment
 
 1. Create a Cloudflare Pages project and connect this GitHub repository.
-2. Select **no framework** and leave the build command empty.
-3. Set the output directory to `/`.
+2. Select **no framework** and set the build command to `exit 0`.
+3. Set the build output directory to `.` (the repository root).
 4. In the Pages project, add `dracars.com` and `www.dracars.com` under
    **Custom domains**.
 5. In IONOS, replace the retired Linode nameservers with the two nameservers
