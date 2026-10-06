@@ -1,0 +1,9 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Local editor and deployment state
+.idea/
+.vscode/
+.wrangler/
+node_modules/
