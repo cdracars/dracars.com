@@ -2,30 +2,30 @@
 
 ## Visual world
 
-Warm workshop directory: a calm paper-like field, deep green ink, fine rules,
-and a clay support panel. The page should feel like a carefully kept index of
-useful things, not a SaaS dashboard or a donation funnel.
+Friendly personal note: a warm lilac paper-like field, handwritten greetings,
+and a deep-plum tip-jar panel. The page should feel like Cody introducing a
+few things he made, never a studio portfolio, SaaS dashboard, or donation
+funnel.
 
 ## Type and hierarchy
 
-- Fraunces carries the personal, editorial headings and wordmark.
-- Inter keeps tool descriptions practical and easy to scan.
-- DM Mono labels small catalogue details only.
+- Newsreader carries the soft editorial headings.
+- Atkinson Hyperlegible keeps descriptions easy to read.
+- Caveat is reserved for the personal greeting, wordmark, and friendly notes.
 
 ## Layout and interaction
 
-- Generous vertical whitespace gives the introduction room to breathe.
-- Tools form a ruled directory; each row has a number, plain description, and
-  direct destination.
-- Hovering a row produces a small, purposeful lateral shift.
-- On mobile, the directory preserves its reading order and one action per row.
+- Generous vertical whitespace makes this feel like a hello rather than a pitch.
+- Tools form a simple list without catalogue numbering or business labels.
+- The support note is conversational and clearly optional.
+- On mobile, the list keeps one action per tool and an easy reading order.
 
 ## Color
 
-- Paper: `#f2eadb`
-- Ink: `#26322b`
-- Clay accent: `#964d37`
-- Cream: `#fffbf3`
+- Paper: `#eee2e7`
+- Ink: `#372c39`
+- Terracotta accent: `#a9503b`
+- Plum: `#4d364c`
 
-Ko-fi remains in a separate clay panel after the tool list, so support is
-clearly optional.
+Ko-fi remains in a soft plum panel after the tool list, framed as an optional
+tip jar.

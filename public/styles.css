@@ -1,0 +1,74 @@
+:root {
+  color-scheme: light;
+  --paper: #eee2e7;
+  --ink: #372c39;
+  --muted: #665b69;
+  --line: #b99fa9;
+  --terracotta: #913d2d;
+  --terracotta-dark: #753224;
+  --plum: #4d364c;
+  --cloud: #fff9fb;
+  --focus: #176a91;
+  font-family: "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { min-width: 320px; margin: 0; background: var(--paper); color: var(--ink); line-height: 1.55; }
+::selection { background: #e2ae8d; color: #2d202c; }
+a { color: inherit; text-underline-offset: 0.25em; text-decoration-thickness: 1px; }
+.site-header a:hover,
+.text-link:hover,
+.tool-link:hover,
+footer a:hover { color: var(--terracotta-dark); }
+a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+
+.skip-link { position: fixed; z-index: 2; top: 12px; left: 12px; transform: translateY(-180%); padding: 9px 12px; border-radius: 8px; background: var(--ink); color: var(--cloud); font-weight: 700; }
+.skip-link:focus { transform: translateY(0); }
+
+.site-header, main, footer { width: min(1010px, calc(100% - 44px)); margin-inline: auto; }
+.site-header { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 26px 0; }
+.wordmark { font: 600 clamp(1.55rem, 3vw, 2rem)/1 Caveat, cursive; letter-spacing: -0.035em; text-decoration: none; }
+nav { font-size: .94rem; }
+nav a { text-decoration: none; }
+
+.hero { padding: clamp(58px, 9vw, 105px) 0 clamp(72px, 11vw, 128px); }
+.hero-note { margin: 0 0 10px; color: var(--terracotta); font: 600 clamp(1.55rem, 3.3vw, 2rem)/1 Caveat, cursive; }
+h1, h2 { font-family: Newsreader, Georgia, serif; font-weight: 500; letter-spacing: -0.035em; }
+h1 { max-width: 11ch; margin: 0 0 23px; font-size: clamp(3.15rem, 7vw, 6.5rem); line-height: .93; }
+.hero-intro { max-width: 47ch; margin-bottom: 26px; color: var(--muted); font-size: clamp(1.03rem, 1.6vw, 1.17rem); }
+.text-link { color: var(--terracotta-dark); font-weight: 700; }
+
+.tools-section { padding-bottom: 105px; }
+.section-heading { margin-bottom: 32px; }
+.section-label { margin: 0 0 5px; color: var(--terracotta); font: 600 1.35rem/1 Caveat, cursive; }
+.section-heading h2, .support-section h2 { max-width: 11ch; margin: 0; font-size: clamp(2.65rem, 5vw, 4.5rem); line-height: .96; }
+.tool-list { display: grid; gap: 12px; }
+.tool-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 25px 0 27px; border-top: 1px solid var(--line); }
+.tool-item:last-child { border-bottom: 1px solid var(--line); }
+.tool-copy h3 { margin: 0 0 6px; font: 500 clamp(1.45rem, 2.5vw, 1.85rem)/1.1 Newsreader, Georgia, serif; letter-spacing: -0.02em; }
+.tool-copy p { max-width: 47ch; margin: 0; color: var(--muted); }
+.tool-link { color: var(--terracotta-dark); font-weight: 700; white-space: nowrap; }
+
+.support-section { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(35px, 7vw, 88px); margin-bottom: 58px; padding: clamp(38px, 7vw, 78px); border-radius: 28px 28px 28px 7px; background: var(--plum); color: var(--cloud); }
+.support-section .section-label { color: #efb995; }
+.support-section h2 { max-width: 9ch; }
+.support-copy { align-self: end; max-width: 38ch; }
+.support-copy p { margin: 0 0 17px; }
+.support-link { color: var(--cloud); font-weight: 700; }
+.support-section a:hover { color: #ffe5d1; }
+.support-link:hover { color: #ffe5d1; }
+
+footer { display: flex; justify-content: space-between; gap: 18px; padding: 0 0 32px; color: var(--muted); font-size: .9rem; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 650px) {
+  .site-header, main, footer { width: min(100% - 34px, 1010px); }
+  .site-header { padding: 22px 0; }
+  .hero { padding: 58px 0 82px; }
+  h1 { max-width: 10ch; font-size: clamp(3rem, 14vw, 4.7rem); }
+  .tool-item { grid-template-columns: 1fr; gap: 14px; padding: 23px 0 25px; }
+  .support-section { grid-template-columns: 1fr; gap: 32px; margin-bottom: 38px; padding: 38px 28px; border-radius: 24px 24px 24px 6px; }
+  footer { flex-direction: column; gap: 7px; }
+}
