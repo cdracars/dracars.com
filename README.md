@@ -44,6 +44,7 @@ Cloudflare will issue HTTPS certificates after the custom domains are attached.
 - [Local Screen Recorder](https://screen-recorder.dracars.com/)
 - [TunePrint](https://tuneprint.dracars.com/)
 - [Voron Mod Hub](https://cdracars.github.io/voron-mod-hub/)
+- [Book Scanner Copy Stand](https://github.com/cdracars/book-scanner-copy-stand) — maintained build; [original design by caj](https://www.thingiverse.com/thing:2466704)
 - [STL to STEP for FreeCAD](https://github.com/cdracars/stl2step-freecad/releases)
 - [STL to STEP for Fusion 360](https://github.com/cdracars/stl2step-fusion/releases)
 - [SafeSync](https://github.com/cdracars/SafeSync)
