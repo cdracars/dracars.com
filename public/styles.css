@@ -44,12 +44,11 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .section-heading { margin-bottom: 32px; }
 .section-heading h2, .support-section h2 { max-width: 13ch; margin: 0; font-size: clamp(2.45rem, 4.8vw, 4.25rem); line-height: .98; }
 .tool-list { display: grid; gap: 12px; }
-.tool-item { display: block; margin-inline: -18px; padding: 25px 18px 27px; border-top: 1px solid var(--line); color: inherit; text-decoration: none; transition: background-color 160ms ease, color 160ms ease; }
+.tool-item { display: block; margin-inline: -18px; padding: 25px 18px 27px; border-top: 1px solid var(--line); color: inherit; text-decoration: none; }
 .tool-item:last-child { border-bottom: 1px solid var(--line); }
-.tool-item:hover { background: color-mix(in srgb, var(--terracotta) 9%, transparent); }
-.tool-item:hover .tool-copy h3 { color: var(--terracotta-dark); }
-.tool-item:focus-visible { outline-offset: 2px; background: color-mix(in srgb, var(--terracotta) 12%, transparent); }
-.tool-copy h3 { margin: 0 0 6px; font-size: clamp(1.3rem, 2.2vw, 1.65rem); line-height: 1.15; letter-spacing: -0.025em; }
+.tool-item:hover .tool-copy h3 { color: var(--terracotta-dark); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .17em; }
+.tool-item:focus-visible { outline-offset: 2px; }
+.tool-copy h3 { margin: 0 0 6px; font-size: clamp(1.3rem, 2.2vw, 1.65rem); line-height: 1.15; letter-spacing: -0.025em; transition: color 160ms ease, text-decoration-color 160ms ease; }
 .tool-copy p { max-width: 47ch; margin: 0; color: var(--muted); }
 
 .support-section { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(35px, 7vw, 88px); margin-bottom: 58px; padding: clamp(38px, 7vw, 78px); border-radius: 28px 28px 28px 7px; background: var(--plum); color: var(--cloud); }
