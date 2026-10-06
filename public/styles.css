@@ -30,7 +30,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 .site-header, main, footer { width: min(1010px, calc(100% - 44px)); margin-inline: auto; }
 .site-header { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 26px 0; }
 .wordmark { display: inline-flex; align-items: center; gap: 9px; font: 600 clamp(1.55rem, 3vw, 2rem)/1 Caveat, cursive; letter-spacing: -0.035em; text-decoration: none; }
-.brand-mark { width: 28px; height: 28px; flex: 0 0 auto; }
+.brand-mark { width: 30px; height: 30px; flex: 0 0 auto; }
 nav { font-size: .94rem; }
 nav a { text-decoration: none; }
 
