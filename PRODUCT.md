@@ -13,14 +13,14 @@ chosen for a simple, dependency-free Cloudflare Pages deployment.
 
 ## Users
 
-People looking for Cody Dracars's free tools, open-source projects, and a
-straightforward way to support their continued upkeep.
+People looking for Cody Dracars's software, open-source projects, and practical
+maker work, with a straightforward way to support its continued upkeep.
 
 ## Product Purpose
 
 `dracars.com` is Cody's durable personal home on the web. It helps visitors
-find useful tools and projects without putting them behind accounts, paywalls,
-or lead-capture flows.
+find useful tools and projects without accounts, tracking-heavy features, or
+lead-capture flows.
 
 ## Positioning
 
@@ -38,13 +38,17 @@ or desktop browser.
 - Static Cloudflare Pages site, source hosted in the public `cdracars/dracars.com` repository.
 - Featured links currently include Task Prioritizer, Stitch Shaper source, and Local Screen Recorder.
 - Ko-fi support destination: `https://ko-fi.com/cdracars66494`.
-- No invented testimonials, usage counts, commercial claims, analytics claims, or paid features.
+- No invented testimonials, usage counts, commercial claims, analytics claims, or paid offerings.
+- Keep current tools and projects free to use. Add a distinct Shop section only
+  when there is a real paid product to present.
 - Featured tools use descriptive `dracars.com` subdomains once their Cloudflare Pages DNS records are active.
 
 ## Brand Commitments
 
-The voice is direct, calm, and appreciative. Tools stay free to use; Ko-fi is
-an optional invitation to support upkeep, never a prerequisite.
+The voice is direct, calm, and appreciative. Current tools and projects are
+free to use; Ko-fi is an optional invitation to support upkeep, never a
+prerequisite. Future paid products belong in a distinct Shop section rather
+than changing the terms of existing tools.
 
 ## Evidence on Hand
 

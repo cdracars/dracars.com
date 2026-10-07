@@ -22,7 +22,9 @@ donation funnel.
   lifestyle landing page.
 - The Dracars icon appears once in the hero on wider screens and stays small,
   practical, and legible.
-- Tools form a simple list without catalogue numbering or business labels.
+- The current tools form a simple list without catalogue numbering or business
+  labels. Add clear top-level sections only when distinct offering types (such
+  as a real shop) would otherwise be conflated.
 - The support note is conversational and clearly optional.
 - On mobile, the list keeps one action per tool and an easy reading order.
 

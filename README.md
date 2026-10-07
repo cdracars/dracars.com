@@ -1,18 +1,15 @@
 # dracars.com
 
-The personal home of Cody Dracars: software, hardware, and open projects made
-to be useful.
+The personal home of Cody Dracars: software, maker tools, and open projects
+made to be useful.
 
 ## What it is
 
 This is the directory for Cody's browser tools, open-source projects, and
 practical work around 3D printers and the systems that make them better. The
-site is deliberately small: no accounts, tracking-heavy features, paywalls, or
-gated downloads.
-
-The site intentionally has no accounts, tracking-heavy features, paywalls, or
-gated downloads. Its purpose is to help people find useful free tools and
-support their upkeep if they choose.
+site is deliberately small: no accounts, tracking-heavy features, or gated
+downloads. Its current tools and projects are free to use, with optional
+support through Ko-fi.
 
 ## Project structure
 
