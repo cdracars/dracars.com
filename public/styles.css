@@ -43,6 +43,8 @@ h1, h2, .tool-copy h3 { font-family: "Space Grotesk", ui-sans-serif, system-ui, 
 h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); line-height: .94; }
 .hero-intro { max-width: 47ch; margin-bottom: 26px; color: var(--muted); font-size: clamp(1.03rem, 1.6vw, 1.17rem); }
 .text-link { color: var(--terracotta-dark); font-weight: 700; }
+.text-link, .support-link, footer a { min-height: 28px; }
+.text-link, footer a { display: inline-flex; align-items: center; }
 .hero-mark { width: min(100%, 245px); height: auto; margin-bottom: 7px; opacity: .94; }
 
 .tools-section { padding-bottom: 105px; }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dracars.com/sitemap.xml
