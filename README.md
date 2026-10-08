@@ -19,6 +19,7 @@ public/styles.css   Responsive visual system and interaction styles
 scripts/site-chrome.mjs Shared header, GitHub corner, and footer markup
 PRODUCT.md          Durable site purpose and constraints
 DESIGN.md           Approved visual direction
+BUILD-LOGS.md       Evidence, voice, image, and update guidance for project journals
 wrangler.jsonc      Cloudflare Workers Static Assets configuration
 ```
 

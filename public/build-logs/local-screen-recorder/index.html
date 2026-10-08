@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Screen Recorder: keeping the recording on your device — Dracars Build Logs</title>
+    <meta name="description" content="A short build log for a tiny browser screen recorder: local capture, a small compatibility layer, and no upload path." />
+    <link rel="canonical" href="https://dracars.com/build-logs/local-screen-recorder/" />
+    <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Dracars" />
+    <meta property="og:url" content="https://dracars.com/build-logs/local-screen-recorder/" />
+    <meta property="og:title" content="Local Screen Recorder: keeping the recording on your device — Dracars Build Logs" />
+    <meta property="og:description" content="A short build log for a tiny browser screen recorder: local capture, a small compatibility layer, and no upload path." />
+    <meta property="og:image" content="https://dracars.com/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Local Screen Recorder: keeping the recording on your device — Dracars Build Logs" />
+    <meta name="twitter:description" content="A short build log for a tiny browser screen recorder: local capture, a small compatibility layer, and no upload path." />
+    <meta name="twitter:image" content="https://dracars.com/social-preview.png" />
+    <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Local Screen Recorder: keeping the recording on your device","description":"A short build log for a tiny browser screen recorder: local capture, a small compatibility layer, and no upload path.","datePublished":"2026-09-28","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/local-screen-recorder/","keywords":"screen-recording, browser, privacy, javascript, web-api"}</script>
+  </head>
+  <body class="guides">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
+      <svg viewBox="0 0 250 250" aria-hidden="true" focusable="false">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
+        <path class="octo-arm" d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" />
+        <path class="octo-body" d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.6 C171.4,40.6 176.1,42.5 178.8,56.2 C183.8,58.6 187.2,61.8 189.8,65.4 C203.1,64.1 206.7,69.9 206.7,69.9 C203.7,78.2 197.8,81.0 196.1,81.4 C196.4,87.8 194.4,93.4 189.8,98.1 C173.7,114.2 159.5,107.5 149.9,99.4 C150.1,101.8 149.3,104.9 146.9,108.1 L133.0,121.9 C131.9,123.0 133.3,126.8 133.4,126.8 Z" />
+      </svg>
+    </a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="dracars home">
+        <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
+      </a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="/">Tools</a>
+        <a href="/build-logs/" aria-current="page">Build Logs</a>
+        <a href="/guides/">Guides</a>
+      </nav>
+    </header>
+    <main id="content">
+      <article class="build-log">
+        <p class="article-type">Project journal</p>
+
+        <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> Tools &amp; Software</p>
+        <h1>Local Screen Recorder: keeping the recording on your device</h1>
+        <p class="guide-deck">A short build log for a tiny browser screen recorder: local capture, a small compatibility layer, and no upload path.</p>
+        <div class="build-log-meta">
+          <span>Started <time datetime="2026-09-28">September 28, 2026</time></span>
+          <span>Updated <time datetime="2026-10-08">October 8, 2026</time></span>
+          <span><span class="status project-state project-state-in-use" title="Usable and mostly settled for now; it may be revisited later.">In use</span> <span class="status status-current" title="Recently reviewed and believed to still be accurate.">Reviewed</span> <span class="status-note">Live browser tool — reviewed after its October polish pass</span></span>
+        </div>
+        <div class="build-log-details">
+          <details class="guide-contents"><summary>In this log</summary><nav aria-label="In this log"><ul><li><a href="#tldr">At a glance</a></li><li><a href="#it-started-as-a-quick-favor">It started as a quick favor</a></li><li><a href="#the-job-was-small-on-purpose">The job was small on purpose</a></li><li><a href="#designing-around-what-the-browser-actually-offers">Designing around what the browser actually offers</a></li><li><a href="#a-recorder-has-more-than-one-stop-button">A recorder has more than one stop button</a></li><li><a href="#the-compatibility-edge-is-part-of-the-product">The compatibility edge is part of the product</a></li><li><a href="#what-changed-after-the-initial-build">What changed after the initial build</a></li><li><a href="#try-it">Try it</a></li></ul></nav></details>
+          <details class="guide-equipment"><summary>Build details</summary><p>Started <time datetime="2026-09-28">September 28, 2026</time></p><p>Built and documented with:</p><ul><li>The browser Screen Capture API via getDisplayMedia</li><li>The browser MediaRecorder API</li><li>Current Firefox, Chrome, Edge, and Safari releases where those APIs are available</li></ul></details>
+        </div>
+        <div class="build-log-body">
+<aside class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">The build in brief</p><ul><li>Local Screen Recorder is deliberately a small, browser-only recorder: choose a screen or window, record it, then save the result locally.</li><li>The important constraint was privacy. There is no server-side code, analytics, or upload feature in the project.</li><li>Browser support is checked before recording begins, and the recorder chooses a supported WebM or MP4 MIME type when it can.</li><li>Audio remains optional because system-audio capture depends on the browser and operating system.</li></ul></aside>
+<figure class="photo"><img src="/images/build-logs/local-screen-recorder/02-app-interface.png" alt="Local Screen Recorder's interface: choose whether to include available system audio, then start or stop a local recording." loading="lazy" /><figcaption>Local Screen Recorder's interface: choose whether to include available system audio, then start or stop a local recording.</figcaption></figure>
+<h2 id="it-started-as-a-quick-favor">It started as a quick favor</h2>
+<p>I work in a full Linux VM and needed to grab a quick screen recording for a coworker. There is probably a best-in-class app for that job, but researching it would have taken longer than the recording. I asked Codex whether it could make one instead.</p>
+<p>Rather than just solving the one request, it produced a tiny browser app. It was reusable, so I saved it. That is the whole origin story: a small convenience that was useful enough not to throw away.</p>
+<h2 id="the-job-was-small-on-purpose">The job was small on purpose</h2>
+<p>Sometimes the useful version of a tool is the one that refuses to become a service. Local Screen Recorder starts with a simple path: open the page, choose a screen or window in the browser's sharing dialog, record, and save the finished file to Downloads.</p>
+<p>That means the recording and file creation happen in the browser on the person's device. The project has no backend, no account flow, no analytics, and no upload step to explain away later. The initial version was committed on September 28, 2026 as a single-page recorder; the code was then separated from the page presentation so the recording behavior could stand on its own.</p>
+<figure class="photo"><img src="/images/build-logs/local-screen-recorder/01-local-recorder-workbench.png" alt="A workbench interpretation of the recorder's constraint: capture stays on the device, with no upload path in the middle." loading="lazy" /><figcaption>A workbench interpretation of the recorder's constraint: capture stays on the device, with no upload path in the middle.</figcaption></figure>
+<h2 id="designing-around-what-the-browser-actually-offers">Designing around what the browser actually offers</h2>
+<p>The recorder depends on two browser capabilities: <code>getDisplayMedia</code> to ask for a display or window, and <code>MediaRecorder</code> to collect the capture. Before it starts, it checks that both exist and gives a useful message when they do not.</p>
+<p>The more fiddly piece is file format. Browsers do not all accept the same recording MIME type, so the app tries a short list in order: VP9 WebM, VP8 WebM, plain WebM, then MP4. It uses the first format the current browser says it supports; if none is advertised, it still lets the browser choose its default.</p>
+<p>The saved filename follows the recorder's actual MIME type: an MP4 recording gets an <code>.mp4</code> extension and the other path saves as <code>.webm</code>. That is a small detail, but it keeps the download honest about what was made.</p>
+<h2 id="a-recorder-has-more-than-one-stop-button">A recorder has more than one stop button</h2>
+<p>The visible <strong>Stop and save</strong> control is only one way a recording can end. The browser's own sharing controls can end the selected video track first. The recorder listens for that event too, so closing the picker from outside the page still finishes the recording flow.</p>
+<p>When capture stops, the app gathers only non-empty chunks, builds a browser <code>Blob</code>, clicks a temporary download link, and releases the temporary URL after a minute. It also stops the media tracks, so the page returns to a ready state instead of leaving capture alive.</p>
+<h2 id="the-compatibility-edge-is-part-of-the-product">The compatibility edge is part of the product</h2>
+<p>The tool can ask for system audio, but it cannot promise it. That checkbox is optional because the availability of system-audio capture varies by browser and operating system. Likewise, the project describes support as current Firefox, Chrome, Edge, and Safari releases <em>where their Screen Capture and MediaRecorder implementations allow it</em>, rather than claiming a universal recording experience.</p>
+<p>The app needs a secure context for screen capture, so local development is served from <code>localhost</code> instead of opening the HTML file directly. That constraint is documented beside the project rather than hidden behind a build step.</p>
+<h2 id="what-changed-after-the-initial-build">What changed after the initial build</h2>
+<p>The first follow-up separated recorder behavior from presentation. The next small improvements were not new product features: a Ko-fi link and a favicon made the hosted project feel more complete without changing the local-only promise.</p>
+<p>The result is intentionally not a video platform. It is a small piece of browser functionality, made available without sending someone else's recording through a server first.</p>
+<h2 id="try-it">Try it</h2>
+<p><a href="https://screen-recorder.dracars.com/" rel="noopener" target="_blank">Open Local Screen Recorder</a> or review the <a href="https://github.com/cdracars/local-screen-recorder" rel="noopener" target="_blank">source on GitHub</a>.</p>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <span>Built by Cody Dracars.</span>
+        <a href="https://github.com/cdracars" target="_blank" rel="noreferrer">There’s more over on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="footer-disclosure">Guides may include affiliate links, disclosed on the page. Recommendations come first; links are added only where they fit.</p>
+    </footer>
+  </body>
+</html>

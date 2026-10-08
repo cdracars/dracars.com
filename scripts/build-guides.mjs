@@ -175,6 +175,11 @@ function renderBlocks(lines, ctx) {
 
 const REQUIRED = ["title", "slug", "description", "publishedAt", "updatedAt", "author", "category"];
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
+const PROJECT_STATES = {
+  "in-use": { label: "In use", hint: "Usable and mostly settled for now; it may be revisited later." },
+  testing: { label: "Testing", hint: "Built and being checked before settling into regular use." },
+  building: { label: "Building", hint: "Active work is still underway." },
+};
 
 function loadEntries(contentDir, label) {
   const guides = [];
@@ -186,6 +191,7 @@ function loadEntries(contentDir, label) {
     if (!/^[a-z0-9-]+$/.test(data.slug)) fail(`${file}: slug must be lowercase letters, numbers, hyphens`);
     if (!CATEGORIES.some((c) => c.slug === data.category)) fail(`${file}: unknown category "${data.category}"`);
     if (data.status && !["current", "aging", "legacy", "coming-soon"].includes(data.status)) fail(`${file}: status must be current|aging|legacy|coming-soon`);
+    if (label === "build logs" && !PROJECT_STATES[data.projectState]) fail(`${file}: projectState must be in-use|testing|building`);
     if (!data.testedWith?.length) fail(`${file}: testedWith is required (say what you actually used)`);
     if (data.draft) continue;
     if (/TODO|\(Cody:|\(add link/i.test(body)) fail(`${file}: contains an unfinished placeholder; finish it or set draft: true`);
@@ -274,8 +280,13 @@ ${siteFooter()}
 `;
 }
 
-function statusBadge(f) {
-  return `<span class="status status-${f.key}" title="${escAttr(f.hint)}">${esc(f.label)}</span>`;
+function statusBadge(f, label = f.label) {
+  return `<span class="status status-${f.key}" title="${escAttr(f.hint)}">${esc(label)}</span>`;
+}
+
+function projectStateBadge(g) {
+  const state = PROJECT_STATES[g.projectState];
+  return `<span class="status project-state project-state-${g.projectState}" title="${escAttr(state.hint)}">${esc(state.label)}</span>`;
 }
 
 function guideCard(g) {
@@ -311,7 +322,7 @@ ${isBuildLog ? '        <p class="article-type">Project journal</p>\n' : ""}
         <div class="${isBuildLog ? "build-log-meta" : "guide-meta"}">
           ${isBuildLog ? `<span>Started <time datetime="${g.publishedAt}">${fmtDate(g.publishedAt)}</time></span>` : `<span>By ${esc(g.author)}</span>`}
           <span>Updated <time datetime="${g.updatedAt}">${fmtDate(g.updatedAt)}</time></span>
-          <span>${statusBadge(f)}${g.statusNote ? ` <span class="status-note">${esc(g.statusNote)}</span>` : ""}</span>
+          <span>${isBuildLog ? `${projectStateBadge(g)} ${statusBadge(f, f.key === "current" ? "Reviewed" : f.label)}` : statusBadge(f)}${g.statusNote ? ` <span class="status-note">${esc(g.statusNote)}</span>` : ""}</span>
         </div>
         <div class="${isBuildLog ? "build-log-details" : "guide-details"}">
 ${contents ? `          <details class="guide-contents"><summary>${isBuildLog ? "In this log" : "On this page"}</summary><nav aria-label="${isBuildLog ? "In this log" : "On this page"}"><ul><li><a href="#tldr">At a glance</a></li>${contents}</ul></nav></details>` : ""}
@@ -396,12 +407,14 @@ ${groups}
 function buildLogIndexPage(logs) {
   const byUpdated = [...logs].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const cards = byUpdated.map((g) => {
-    const f = freshness(g);
-    return `<a class="guide-card" href="/build-logs/${g.slug}/">
-  <p class="guide-card-meta"><span>${esc(catName(g.category))}</span> ${statusBadge(f)}</p>
+    return `<a class="guide-card${g.indexImage ? " guide-card-with-image" : ""}" href="/build-logs/${g.slug}/">${g.indexImage ? `
+  <img class="guide-card-image" src="${escAttr(g.indexImage)}" alt="" loading="lazy" />` : ""}
+  <div class="guide-card-content">
+  <p class="guide-card-meta"><span>${esc(catName(g.category))}</span> ${projectStateBadge(g)}</p>
   <h3>${esc(g.title)}</h3>
   <p class="guide-card-desc">${esc(g.description)}</p>
   <p class="guide-card-updated">Updated <time datetime="${g.updatedAt}">${fmtDate(g.updatedAt)}</time></p>
+  </div>
 </a>`;
   }).join("\n");
   const body = `      <section class="guides-hero" aria-labelledby="page-title">
@@ -410,7 +423,7 @@ function buildLogIndexPage(logs) {
       </section>
 
       <section aria-labelledby="logs-h" class="all-guides">
-        <h2 id="logs-h" class="section-label">Current projects</h2>
+        <h2 id="logs-h" class="section-label">Project status</h2>
         <div class="guide-grid">${cards}</div>
       </section>`;
   return page({

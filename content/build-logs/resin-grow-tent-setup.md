@@ -3,10 +3,12 @@ title: Building a garage grow-tent workspace for resin printing
 slug: resin-grow-tent-setup
 description: A running record of building a shared garage resin-printing workspace, from floor protection to washing and exhaust.
 publishedAt: 2026-10-07
-updatedAt: 2026-10-07
+updatedAt: 2026-10-08
+indexImage: /images/build-logs/resin-grow-tent-setup/08-tent-in-place.webp
 author: Dracars
 category: projects-builds
 status: current
+projectState: building
 statusNote: Tent assembled — workspace still being built
 featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
@@ -39,7 +41,37 @@ I do plenty of FDM printing, but resin is a different problem. The printer isn't
 
 A resin setup needs somewhere for resin → printing → dripping → washing → drying → curing → cleanup → waste, without uncured resin spreading across every tool and surface in the shop. I'm planning the workspace around that whole process.
 
-## My workspace
+## From pickup to getting the tent in place
+
+### The equipment at pickup
+
+These photos are from the place I got the printers and cleaning station from, before bringing them home.
+
+!photo 01-equipment-at-pickup.webp | The printers and cleaning equipment at the pickup location.
+
+!photo 02-cleaning-station-at-pickup.webp | A closer look at the cleaning station before the move.
+
+!photo 03-photon-p1-at-pickup.webp | The Anycubic Photon P1 at the pickup location.
+
+### Airing out the tent at home
+
+Back at my house, I fully unzipped and opened up the AC Infinity tent to air it out and work on curing small resin spills on its floor and elsewhere on the tent. I forgot to photograph it fully opened, so the photo below only catches part of that process. This was part of getting the equipment ready for the new workspace.
+
+!photo 05-tent-airing-out.webp | The AC Infinity tent on the grass at home. I fully unzipped and opened it for curing and airing out, but forgot to photograph that step.
+
+### Wrestling it into place
+
+Then came the less graceful part: wrestling the tent into place in the garage. These are the frame, the fabric partway into position, and the tent finally standing where I want it. It's still empty and waiting for the work surface and the rest of the setup.
+
+!photo 04-tent-frame.webp | The bare tent frame in its garage spot.
+
+!photo 06-tent-fabric.webp | Getting the reflective tent fabric into position around the frame.
+
+!photo 07-tent-going-in.webp | Partway through wrestling the tent into place.
+
+!photo 08-tent-in-place.webp | The tent standing in place, still empty while I plan the interior.
+
+## My workspace plan
 
 The AC Infinity CLOUDLAB 866 (model `AC-CBA866`), a 5 × 5 ft grow tent, is up in my garage. Both printers are planned to go inside, with a roughly 58-inch standing desk as the main work surface. The plan is to keep printing, washing, curing, and contaminated tools together. During the dry fit, I still need to check room for opening the printers, lifting build plates, and moving dripping parts to the wash area.
 

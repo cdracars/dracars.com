@@ -97,6 +97,9 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .guide-card-updated { margin: 0; font-size: .9rem; opacity: .85; }
 .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 16px; }
 .guide-card { padding: 22px; border: 1px solid var(--line); border-radius: 16px; }
+.guide-card-with-image { overflow: hidden; padding: 0; }
+.guide-card-image { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: var(--paper); }
+.guide-card-content { padding: 20px 22px 22px; }
 .guide-card h3 { margin: 6px 0 8px; font-size: 1.3rem; line-height: 1.15; }
 .guide-card-desc { margin: 0 0 12px; color: var(--muted); }
 .featured-card .guide-card-desc { color: inherit; opacity: .92; }
@@ -113,6 +116,9 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .status-aging { color: #8a5a00; }
 .status-legacy { color: var(--muted); }
 .status-coming-soon { color: #8a5a00; }
+.project-state-in-use { color: #1f6b3a; }
+.project-state-testing { color: #8a5a00; }
+.project-state-building { color: var(--terracotta-dark); }
 .featured-card .status { color: var(--cloud); }
 .status-note { color: var(--muted); font-size: .92rem; }
 
@@ -221,6 +227,8 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
   ::selection { background: #7c423a; color: #fff7fb; }
   .status-current { color: #7fd99c; }
   .status-aging { color: #f2c06b; }
+  .project-state-in-use { color: #7fd99c; }
+  .project-state-testing { color: #f2c06b; }
   .callout, .guide-body code, .guide-body pre { background: #231a25; }
   .guides { --fig-surface: #231a25; --fig-shadow: rgba(0, 0, 0, .4); }
   .flow-clean .flow-card { border-color: #b49ab2; }

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voron Mod Hub: turning a huge table into a browsable catalog — Dracars Build Logs</title>
+    <meta name="description" content="A build log for a static, searchable view of the community-maintained VoronUsers mod catalog." />
+    <link rel="canonical" href="https://dracars.com/build-logs/voron-mod-hub/" />
+    <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Dracars" />
+    <meta property="og:url" content="https://dracars.com/build-logs/voron-mod-hub/" />
+    <meta property="og:title" content="Voron Mod Hub: turning a huge table into a browsable catalog — Dracars Build Logs" />
+    <meta property="og:description" content="A build log for a static, searchable view of the community-maintained VoronUsers mod catalog." />
+    <meta property="og:image" content="https://dracars.com/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Voron Mod Hub: turning a huge table into a browsable catalog — Dracars Build Logs" />
+    <meta name="twitter:description" content="A build log for a static, searchable view of the community-maintained VoronUsers mod catalog." />
+    <meta name="twitter:image" content="https://dracars.com/social-preview.png" />
+    <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Voron Mod Hub: turning a huge table into a browsable catalog","description":"A build log for a static, searchable view of the community-maintained VoronUsers mod catalog.","datePublished":"2025-11-12","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/voron-mod-hub/","keywords":"voron, 3d-printing, catalog, nextjs, github-pages"}</script>
+  </head>
+  <body class="guides">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
+      <svg viewBox="0 0 250 250" aria-hidden="true" focusable="false">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
+        <path class="octo-arm" d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" />
+        <path class="octo-body" d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.6 C171.4,40.6 176.1,42.5 178.8,56.2 C183.8,58.6 187.2,61.8 189.8,65.4 C203.1,64.1 206.7,69.9 206.7,69.9 C203.7,78.2 197.8,81.0 196.1,81.4 C196.4,87.8 194.4,93.4 189.8,98.1 C173.7,114.2 159.5,107.5 149.9,99.4 C150.1,101.8 149.3,104.9 146.9,108.1 L133.0,121.9 C131.9,123.0 133.3,126.8 133.4,126.8 Z" />
+      </svg>
+    </a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="dracars home">
+        <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
+      </a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="/">Tools</a>
+        <a href="/build-logs/" aria-current="page">Build Logs</a>
+        <a href="/guides/">Guides</a>
+      </nav>
+    </header>
+    <main id="content">
+      <article class="build-log">
+        <p class="article-type">Project journal</p>
+
+        <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> Tools &amp; Software</p>
+        <h1>Voron Mod Hub: turning a huge table into a browsable catalog</h1>
+        <p class="guide-deck">A build log for a static, searchable view of the community-maintained VoronUsers mod catalog.</p>
+        <div class="build-log-meta">
+          <span>Started <time datetime="2025-11-12">November 12, 2025</time></span>
+          <span>Updated <time datetime="2026-10-08">October 8, 2026</time></span>
+          <span><span class="status project-state project-state-in-use" title="Usable and mostly settled for now; it may be revisited later.">In use</span> <span class="status status-current" title="Recently reviewed and believed to still be accurate.">Reviewed</span> <span class="status-note">Static catalog with scheduled data refreshes</span></span>
+        </div>
+        <div class="build-log-details">
+          <details class="guide-contents"><summary>In this log</summary><nav aria-label="In this log"><ul><li><a href="#tldr">At a glance</a></li><li><a href="#one-bad-table-and-an-idea">One bad table and an idea</a></li><li><a href="#the-catalog-already-existed-finding-things-was-the-problem">The catalog already existed; finding things was the problem</a></li><li><a href="#parsing-a-human-maintained-table">Parsing a human-maintained table</a></li><li><a href="#keep-the-interaction-in-the-browser">Keep the interaction in the browser</a></li><li><a href="#giving-a-catalog-visual-handles">Giving a catalog visual handles</a></li><li><a href="#static-does-not-have-to-mean-stale">Static does not have to mean stale</a></li><li><a href="#the-small-post-launch-details">The small post-launch details</a></li><li><a href="#browse-the-catalog">Browse the catalog</a></li></ul></nav></details>
+          <details class="guide-equipment"><summary>Build details</summary><p>Started <time datetime="2025-11-12">November 12, 2025</time></p><p>Built and documented with:</p><ul><li>The public VoronUsers printer_mods README table</li><li>A static Next.js export hosted on GitHub Pages</li><li>Client-side search, printer-family filters, and permalinked filter URLs</li></ul></details>
+        </div>
+        <div class="build-log-body">
+<aside class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">The build in brief</p><ul><li>Voron Mod Hub turns the community-maintained VoronUsers mod table into a static catalog that can be searched and filtered in the browser.</li><li>A parser converts the upstream Markdown table into structured JSON, including inferred compatibility for five primary printer families.</li><li>The site deploys as static files to GitHub Pages, with a scheduled workflow that refreshes data and rebuilds the catalog.</li><li>Card previews are cached from mod READMEs so browsing has more visual context without manually curating every entry.</li></ul></aside>
+<h2 id="one-bad-table-and-an-idea">One bad table and an idea</h2>
+<p>A buddy was digging through the VoronUsers table and said, more or less, “this is garbo.” He was right: the catalog was useful, but it was not a pleasant place to browse for a specific mod.</p>
+<p>That complaint sparked the hub. There was also an <a href="https://mods.vorondesign.com/" rel="noopener" target="_blank">official Voron Mods page</a>, though it was not easy to find at the time. This app may not strictly need to exist, but it is an independent, evergreen way to browse the community catalog, so what the hey.</p>
+<figure class="photo"><img src="/images/build-logs/voron-mod-hub/02-app-interface.png" alt="Voron Mod Hub's catalog interface, with search, sorting, printer-family filters, and mod previews in one place." loading="lazy" /><figcaption>Voron Mod Hub's catalog interface, with search, sorting, printer-family filters, and mod previews in one place.</figcaption></figure>
+<h2 id="the-catalog-already-existed-finding-things-was-the-problem">The catalog already existed; finding things was the problem</h2>
+<p>The source of truth is the community-maintained <a href="https://github.com/VoronDesign/VoronUsers" rel="noopener" target="_blank">VoronUsers catalog</a>. It is useful precisely because it is broad, but a large Markdown table is not the friendliest place to browse when you are trying to find a mod for a particular printer.</p>
+<p>Voron Mod Hub does not replace that catalog or invent a separate database. It reads the <code>printer_mods/README.md</code> table, turns it into structured data, and ships a fast client-side view of the result. The idea was to make the existing work easier to explore while keeping deployment simple enough for GitHub Pages.</p>
+<h2 id="parsing-a-human-maintained-table">Parsing a human-maintained table</h2>
+<p>The parser downloads the upstream README and walks its rows into <code>public/mods.json</code>. The table can leave creator cells blank when the creator is the same as the row above, so the parser carries that value forward. It also derives compatibility flags for the five primary printer families from the table's contents.</p>
+<p>That conversion is the real seam in the project: upstream Markdown remains the source, while the browser receives predictable records it can search and filter. If the upstream table layout changes, the parser is the one part that needs to understand the new shape.</p>
+<h2 id="keep-the-interaction-in-the-browser">Keep the interaction in the browser</h2>
+<p>The published site is a static Next.js export. It reads the generated JSON at build time, then performs searching and filtering on the client. Visitors can search by title, creator, or description and narrow the list by printer family without asking a server to interpret the query.</p>
+<p>Filter state is also reflected in the URL. A link such as <code>?q=query&amp;printers=v2_4</code> restores the search and selected printer family for the next visitor, making a useful find shareable rather than trapped in one browser tab.</p>
+<figure class="photo"><img src="/images/build-logs/voron-mod-hub/01-voron-mod-catalog-workbench.png" alt="A workbench interpretation of the hub's job: putting a browsable layer between a large community catalog and a specific printer build." loading="lazy" /><figcaption>A workbench interpretation of the hub's job: putting a browsable layer between a large community catalog and a specific printer build.</figcaption></figure>
+<h2 id="giving-a-catalog-visual-handles">Giving a catalog visual handles</h2>
+<p>Names and short descriptions help, but images make an unfamiliar mod easier to scan. The build tries to capture the first image from each mod's README and caches a JPG preview locally. Cache metadata tracks the source so later runs can reuse images that have not changed.</p>
+<p>That is deliberately automated rather than a manual gallery project: the catalog can grow or change without requiring someone to select and upload every card image by hand.</p>
+<h2 id="static-does-not-have-to-mean-stale">Static does not have to mean stale</h2>
+<p>GitHub Actions runs the refresh on pushes, on a nightly UTC schedule, and manually when needed. The workflow parses the source catalog, commits <code>mods.json</code> when the data changed, runs the lint and static build checks, then deploys the static output to GitHub Pages.</p>
+<p>No secrets are required because the source material is public. The tradeoff is clear too: a changed upstream table can require a parser update. That is a healthier failure mode than quietly serving a private copy of the catalog with no connection to its community-maintained source.</p>
+<h2 id="the-small-post-launch-details">The small post-launch details</h2>
+<p>Later updates concentrated on the unglamorous edges of static hosting: image paths needed to resolve correctly under the GitHub Pages base path, and the site gained a favicon that had to be served from that same path. These are modest changes, but they are part of what makes a static tool feel finished rather than merely exported.</p>
+<h2 id="browse-the-catalog">Browse the catalog</h2>
+<p><a href="https://cdracars.github.io/voron-mod-hub/" rel="noopener" target="_blank">Open Voron Mod Hub</a> or see the <a href="https://github.com/cdracars/voron-mod-hub" rel="noopener" target="_blank">project source</a>.</p>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <span>Built by Cody Dracars.</span>
+        <a href="https://github.com/cdracars" target="_blank" rel="noreferrer">There’s more over on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="footer-disclosure">Guides may include affiliate links, disclosed on the page. Recommendations come first; links are added only where they fit.</p>
+    </footer>
+  </body>
+</html>

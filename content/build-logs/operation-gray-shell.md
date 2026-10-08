@@ -4,9 +4,11 @@ slug: operation-gray-shell
 description: "A running build log for a Box Turtle 1.1 beta with an early Longboi 1.0 prototype, Smol v2 lanes, and a few lessons from reprinting parts."
 publishedAt: 2026-09-20
 updatedAt: 2026-10-08
+indexImage: /images/build-logs/operation-gray-shell/07-finished-box-turtle.jpg
 author: Dracars
 category: projects-builds
 status: current
+projectState: building
 statusNote: Mechanical build assembled — CAN cable, AFC setup, and serial Turtle still pending
 featured: false
 tags: [box-turtle, longboi, afc, smol-v2, multi-material, 3d-printing]
