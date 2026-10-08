@@ -14,14 +14,17 @@ featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
   - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; still empty)
-  - Elegoo Saturn 4 Ultra 12K (planned for this workspace; no prints yet)
+  - Elegoo Saturn 4 Ultra 12K (incomplete setup; not ready to print)
   - Anycubic Photon P1 (planned for this workspace; no prints yet)
+  - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
   - Garage; ~58-inch standing desk planned as the main work surface
 affiliateLinksPresent: false
 ---
 
 :::tldr Where things stand and what I'm planning
-- The 5 × 5 ft grow tent is assembled in the garage and still empty. The shared workspace for the Elegoo Saturn 4 Ultra 12K and Anycubic Photon P1 is still a plan; no prints from either machine yet.
+- The 5 × 5 ft grow tent is assembled in the garage and still empty. Neither printer has been used for prints in this workspace.
+- The Saturn 4 Ultra came with two boxes of parts. I haven't found the vat among the items checked so far; I think it may still be in one of those boxes. The printer is not ready to print.
+- The Wash & Cure 3 Max powers on and its display lights up, but I haven't confirmed that it functions. There is cured resin in its lines, so its repair is still to be diagnosed.
 - Planned floor protection: two layers of ~3.5 mil plastic under the work area, plus a smooth, wipeable, replaceable surface in the wet zone.
 - Keep a deliberate **dirty side**. Workflow: print → drip → **dirty wash → clean wash** → dry completely → cure.
 - Resin-only tools stay in the resin area. Covered containers for dirty IPA and resin waste.
@@ -31,7 +34,9 @@ affiliateLinksPresent: false
 - Build the workspace and workflow first. Printer upgrades can wait until there's a real problem to solve.
 :::
 
-So far, I've assembled the grow tent. It's still empty. The layout, floor protection, washing, curing, and exhaust described below are plans for the workspace, not an installed or tested setup. I haven't printed with either machine yet. I'll update this page as I build out and use the space, find problems, and change things. The "Updated" date at the top records when I last revised the guide.
+So far, I've assembled the grow tent. It's still empty. The layout, floor protection, washing, curing, and exhaust described below are plans for the workspace, not an installed or tested setup. Neither printer has produced a print in this workspace. The Saturn 4 Ultra is not ready to print: it came with two boxes of parts, and I haven't found the vat in the items checked so far. I think it may still be in one of the boxes.
+
+The Anycubic Wash & Cure 3 Max came with the printers. It powers on and the display lights up, but I haven't confirmed its functions; cured resin is in its lines. I'll track its diagnosis and repair separately from the P1 setup, and keep this log focused on the shared workspace. I'll link the printer-specific logs here as they are ready. I'll update this page as I build out and use the space, find problems, and change things. The "Updated" date at the top records when I last revised the guide.
 
 The Saturn and P1 have different features, but they share the same need for somewhere to handle wet prints, wash parts, and keep contaminated tools. That's the focus here. This isn't a comparison or a recommendation based on print results.
 
@@ -52,6 +57,8 @@ These photos are from the place I got the printers and cleaning station from, be
 !photo 02-cleaning-station-at-pickup.webp | A closer look at the cleaning station before the move.
 
 !photo 03-photon-p1-at-pickup.webp | The Anycubic Photon P1 at the pickup location.
+
+The Wash & Cure 3 Max was part of the same pickup. Its display lights when powered on, but I haven't established that the machine functions. Cured resin is in the lines, so it needs inspection before I can count on it for the wash workflow.
 
 ### Airing out the tent at home
 
@@ -170,8 +177,9 @@ I'll label the resin in each vat and keep each machine's parts together. Two pri
 
 This is the equipment around which I'm planning the workspace. It isn't a shopping list or a tested recommendation:
 
-- **Printer:** [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer), at the setup stage
-- **Printer being added:** [Anycubic Photon P1](https://store.anycubic.com/products/photon-p1-resin-3d-printer)
+- **Printer:** [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer), not ready to print while I check the two boxes of parts and find the vat
+- **Printer being added:** [Anycubic Photon P1](https://store.anycubic.com/products/photon-p1-resin-3d-printer), not yet used in the workspace
+- **Wash and cure:** Anycubic Wash & Cure 3 Max, powers on and lights its display; function unconfirmed, with cured resin in the lines
 - **Enclosure:** [AC Infinity CLOUDLAB 866](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) (model `AC-CBA866`), 5 × 5 ft grow tent
 - **Floor protection:** two layers of roughly 3.5 mil plastic
 - **Main work surface:** a standing desk of about 58 inches

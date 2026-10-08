@@ -20,8 +20,16 @@ scripts/site-chrome.mjs Shared header, GitHub corner, and footer markup
 PRODUCT.md          Durable site purpose and constraints
 DESIGN.md           Approved visual direction
 BUILD-LOGS.md       Evidence, voice, image, and update guidance for project journals
+ROADMAP.md           12-month goals, milestones, and current status
+BUILD-LOG-BACKLOG.md Candidate project logs and fact-checking notes
 wrangler.jsonc      Cloudflare Workers Static Assets configuration
 ```
+
+Use [ROADMAP.md](ROADMAP.md) to track business and publishing milestones. It is
+planning documentation; current public offerings and product constraints are
+defined by the site and [PRODUCT.md](PRODUCT.md).
+Use [BUILD-LOG-BACKLOG.md](BUILD-LOG-BACKLOG.md) to track possible project logs
+and the details to confirm before drafting or publishing them.
 
 ## Guides
 
