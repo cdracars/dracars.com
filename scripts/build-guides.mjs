@@ -134,7 +134,8 @@ function renderBlocks(lines, ctx) {
       const [, file, caption = ""] = photo;
       if (!/^[a-z0-9][a-z0-9._-]*$/i.test(file)) fail(`invalid photo filename "${file}"`);
       const alt = caption || "Build log photo";
-      out.push(`<figure class="photo"><img src="/images/build-logs/resin-grow-tent-setup/${escAttr(file)}" alt="${escAttr(alt)}" loading="lazy" />${caption ? `<figcaption>${inline(caption, ctx)}</figcaption>` : ""}</figure>`);
+      const photoDirectory = ctx.photoDirectory ?? "resin-grow-tent-setup";
+      out.push(`<figure class="photo"><img src="/images/build-logs/${escAttr(photoDirectory)}/${escAttr(file)}" alt="${escAttr(alt)}" loading="lazy" />${caption ? `<figcaption>${inline(caption, ctx)}</figcaption>` : ""}</figure>`);
       i++; continue;
     }
 
@@ -189,7 +190,7 @@ function loadEntries(contentDir, label) {
     if (data.draft) continue;
     if (/TODO|\(Cody:|\(add link/i.test(body)) fail(`${file}: contains an unfinished placeholder; finish it or set draft: true`);
 
-    const ctx = { affiliateLinks: 0, hasTldr: false };
+    const ctx = { affiliateLinks: 0, hasTldr: false, photoDirectory: label === "build logs" ? data.slug : null };
     const html = renderBlocks(body.replace(/\r\n/g, "\n").split("\n"), ctx);
     if (!ctx.hasTldr) fail(`${file}: needs a ":::tldr" block at the top`);
     const declared = data.affiliateLinksPresent === true;
