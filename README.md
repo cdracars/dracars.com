@@ -24,6 +24,27 @@ DESIGN.md           Approved visual direction
 wrangler.jsonc      Cloudflare Workers Static Assets configuration
 ```
 
+## Guides
+
+Guides live in `content/guides/<slug>.md` (frontmatter + Markdown) and are built
+to static HTML in `public/guides/` by a dependency-free script:
+
+```sh
+node scripts/build-guides.mjs
+```
+
+Commit the generated `public/guides/` and `public/sitemap.xml` along with the
+source. The build fails if a guide is missing required metadata or a `:::tldr`
+block, contains an unfinished placeholder, or if `affiliateLinksPresent`
+doesn't match the body. Mark an affiliate link with `[text](url "affiliate")`;
+that adds `rel="sponsored"` and turns on the disclosure. Freshness is computed
+from `updatedAt` at build time (Aging after 180 days; `status: legacy` overrides),
+so rebuild when you deploy. Set `draft: true` to keep a guide unpublished.
+
+When adding product links, researching affiliate programs, or replacing links
+after approval, use [AFFILIATE-PROGRAMS.md](AFFILIATE-PROGRAMS.md) for the current
+program status, product inventory, and next steps.
+
 ## Cloudflare Workers deployment
 
 This site uses Cloudflare Workers Static Assets—the current deployment model
