@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, existsSync
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { FIGURES } from "./figures.mjs";
+import { siteHeader, siteFooter } from "./site-chrome.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content", "guides");
@@ -27,8 +28,6 @@ const CATEGORIES = [
 
 const AFFILIATE_DISCLOSURE =
   "Quick heads-up: some links on this page are affiliate links. If you buy something through one of them, I may get a small kickback at no extra cost to you. I appreciate you using them—it helps support Dracars and lets me keep building the tools, guides, and projects here.";
-const FOOTER_DISCLOSURE =
-  "Guides may include affiliate links, disclosed on the page. Recommendations come first; links are added only where they fit.";
 
 // ---------- helpers ----------
 
@@ -248,21 +247,11 @@ function page({ title, description, path, body, jsonld, type = "website" }) {
     <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
   </head>
   <body class="guides">
-    <a class="skip-link" href="#content">Skip to content</a>
-    <header class="site-header">
-      <a class="wordmark" href="/" aria-label="dracars home">
-        <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
-      </a>
-      <nav class="site-nav" aria-label="Site"><a href="/">Tools</a><a href="/guides/"${path === "/guides/" ? ' aria-current="page"' : ""}>Guides</a></nav>
-    </header>
+${siteHeader(path)}
     <main id="content">
 ${body}
     </main>
-    <footer class="guide-footer">
-      <span>Built by Cody Dracars.</span>
-      <span class="footer-disclosure">${esc(FOOTER_DISCLOSURE)}</span>
-      <a href="/">dracars.com</a>
-    </footer>
+${siteFooter()}
   </body>
 </html>
 `;
@@ -381,6 +370,19 @@ ${groups}
 
 const guides = loadGuides();
 if (!guides.length) fail("no published guides found");
+
+// Keep the homepage's managed chrome blocks in sync with guide templates.
+const homePath = join(PUBLIC, "index.html");
+let home = readFileSync(homePath, "utf8");
+for (const [name, markup] of [["header", siteHeader("/")], ["footer", siteFooter()]]) {
+  const start = `    <!-- site-${name}:start -->`;
+  const end = `    <!-- site-${name}:end -->`;
+  const from = home.indexOf(start);
+  const to = home.indexOf(end);
+  if (from < 0 || to < from) fail(`homepage missing managed site-${name} markers`);
+  home = home.slice(0, from) + start + "\n" + markup + "\n" + home.slice(to);
+}
+writeFileSync(homePath, home);
 
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });

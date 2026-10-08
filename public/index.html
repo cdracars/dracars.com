@@ -108,7 +108,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#tools">Skip to tools</a>
+    <!-- site-header:start -->
+    <a class="skip-link" href="#content">Skip to content</a>
     <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
       <svg viewBox="0 0 250 250" aria-hidden="true" focusable="false">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
@@ -120,10 +121,14 @@
       <a class="wordmark" href="/" aria-label="dracars home">
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
-      <nav class="site-nav" aria-label="Site"><a href="/guides/">Guides</a></nav>
+      <nav class="site-nav" aria-label="Site">
+        <a href="/" aria-current="page">Tools</a>
+        <a href="/guides/">Guides</a>
+      </nav>
     </header>
+    <!-- site-header:end -->
 
-    <main>
+    <main id="content">
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-copy">
           <h1 id="page-title">I build useful things in software and hardware.</h1>
@@ -206,9 +211,14 @@
       </section>
     </main>
 
-    <footer>
-      <span>Built by Cody Dracars.</span>
-      <a href="https://github.com/cdracars" target="_blank" rel="noreferrer">There’s more over on GitHub <span aria-hidden="true">↗</span></a>
+    <!-- site-footer:start -->
+    <footer class="site-footer">
+      <div class="footer-main">
+        <span>Built by Cody Dracars.</span>
+        <a href="https://github.com/cdracars" target="_blank" rel="noreferrer">There’s more over on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="footer-disclosure">Guides may include affiliate links, disclosed on the page. Recommendations come first; links are added only where they fit.</p>
     </footer>
+    <!-- site-footer:end -->
   </body>
 </html>

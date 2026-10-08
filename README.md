@@ -19,6 +19,7 @@ support their upkeep if they choose.
 ```text
 public/index.html   The public landing page
 public/styles.css   Responsive visual system and interaction styles
+scripts/site-chrome.mjs Shared header, GitHub corner, and footer markup
 PRODUCT.md          Durable site purpose and constraints
 DESIGN.md           Approved visual direction
 wrangler.jsonc      Cloudflare Workers Static Assets configuration
@@ -34,12 +35,22 @@ node scripts/build-guides.mjs
 ```
 
 Commit the generated `public/guides/` and `public/sitemap.xml` along with the
-source. The build fails if a guide is missing required metadata or a `:::tldr`
+source. The same build refreshes the managed header/footer blocks in
+`public/index.html`; include that file when shared chrome changes. Edit shared
+markup in `scripts/site-chrome.mjs` and styling in `public/styles.css`, rather
+than editing the homepage's `site-header` / `site-footer` comment blocks.
+Homepage content and metadata remain directly editable in `public/index.html`.
+
+The build fails if a guide is missing required metadata or a `:::tldr`
 block, contains an unfinished placeholder, or if `affiliateLinksPresent`
 doesn't match the body. Mark an affiliate link with `[text](url "affiliate")`;
 that adds `rel="sponsored"` and turns on the disclosure. Freshness is computed
 from `updatedAt` at build time (Aging after 180 days; `status: legacy` overrides),
 so rebuild when you deploy. Set `draft: true` to keep a guide unpublished.
+
+The shared resin-workspace guide lives at `/guides/resin-grow-tent-setup/`.
+`public/_redirects` preserves the former `/guides/saturn-4-ultra-setup/` URL
+with a permanent redirect for Workers Static Assets. Keep that file when deploying.
 
 When adding product links, researching affiliate programs, or replacing links
 after approval, use [AFFILIATE-PROGRAMS.md](AFFILIATE-PROGRAMS.md) for the current

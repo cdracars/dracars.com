@@ -26,7 +26,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 .skip-link:focus { transform: translateY(0); }
 
 .site-header, main, footer { width: min(1010px, calc(100% - 44px)); margin-inline: auto; }
-.site-header { padding: 26px 0 26px 12px; }
+.site-header { padding: 26px 0; }
 .wordmark { display: inline-flex; align-items: center; text-decoration: none; }
 .brand-lockup { width: auto; height: 32px; }
 .github-corner { position: fixed; z-index: 5; top: 0; right: 0; width: 82px; height: 82px; color: var(--cloud); }
@@ -67,19 +67,19 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .support-section a:hover { color: #ffe5d1; }
 .support-link:hover { color: #ffe5d1; }
 
-footer { display: flex; justify-content: space-between; gap: 18px; padding: 0 0 32px; color: var(--muted); font-size: .9rem; }
+.site-footer { padding: 22px 0 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+.footer-main { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; }
+.site-footer a { min-height: 44px; }
+.footer-disclosure { max-width: 70ch; margin: 12px 0 0; }
 
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.site-nav { margin-right: clamp(60px, 9vw, 96px); }
-.site-nav a { display: inline-flex; align-items: center; min-height: 28px; font-weight: 700; color: var(--terracotta-dark); }
+.site-nav { display: flex; gap: 24px; margin-right: clamp(60px, 9vw, 96px); }
+.site-nav a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--terracotta-dark); }
 .site-nav a:hover { text-decoration-thickness: 2px; }
+.site-nav a[aria-current] { color: var(--ink); }
 
 /* Guides */
 .guides main { padding-bottom: 56px; }
-.guides .site-header { padding-left: 0; }
-.guides .site-nav { display: flex; gap: 24px; margin-right: 0; }
-.guides .site-nav a { min-height: 44px; }
-.guides .site-nav a[aria-current="page"] { color: var(--ink); }
 .guides h1, .guides h2, .guides h3 { font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-weight: 600; letter-spacing: -0.03em; }
 .guides-hero { padding: clamp(28px, 4vw, 48px) 0 32px; }
 .guides-hero .hero-intro { max-width: 52ch; margin: 0; }
@@ -191,8 +191,6 @@ footer { display: flex; justify-content: space-between; gap: 18px; padding: 0 0 
 @media (max-width: 650px) { .flow-arrow { display: none; } .flow { gap: 10px 8px; } }
 .flow-arrow { width: 22px; height: 22px; flex: none; fill: none; stroke: var(--muted); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-.guide-footer { flex-wrap: wrap; padding-top: 22px; border-top: 1px solid var(--line); }
-.footer-disclosure { flex: 0 1 440px; max-width: 56ch; }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -221,14 +219,14 @@ footer { display: flex; justify-content: space-between; gap: 18px; padding: 0 0 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media (max-width: 650px) {
   .guide-contents ul { columns: 1; }
-  .guide-footer .footer-disclosure { flex-basis: auto; }
   .site-header, main, footer { width: min(100% - 34px, 1010px); }
-  .site-header { padding: 22px 0 22px 10px; }
+  .site-header { padding: 22px 0; gap: 12px; }
+  .site-nav { gap: 16px; margin-right: 48px; }
   .github-corner { width: 62px; height: 62px; }
   .hero { display: block; padding: 58px 0 82px; }
   h1 { max-width: 11ch; font-size: clamp(2.85rem, 13.5vw, 4.5rem); }
   .hero-mark { display: none; }
   .tool-item { margin-inline: -12px; padding: 23px 12px 25px; }
   .support-section { grid-template-columns: 1fr; gap: 32px; margin-bottom: 38px; padding: 38px 28px; border-radius: 24px 24px 24px 6px; }
-  footer { flex-direction: column; gap: 7px; }
+  .footer-main { flex-direction: column; align-items: flex-start; gap: 7px; }
 }
