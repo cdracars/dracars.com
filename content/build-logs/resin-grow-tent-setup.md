@@ -31,6 +31,19 @@ affiliateLinksPresent: false
 
 So far, I've assembled the grow tent. It's still empty. The layout, floor protection, washing, curing, and exhaust described below are plans for the workspace, not an installed or tested setup. I haven't printed with either machine yet. I'll update this page as I build out and use the space, find problems, and change things. The "Updated" date at the top records when I last revised the guide.
 
+## Photos from this stage
+
+These are the actual photos from the setup as it exists right now: the tent before assembly, the assembled frame and reflective liner, the cleaned empty interior, and the printers and wash equipment still staged outside the tent. The mess is part of the build log because the workspace is still being built.
+
+!photo 01-empty-frame.jpeg | The garage space before the tent was assembled.
+!photo 02-tent-laid-out.jpeg | The AC Infinity tent laid out on the grass before assembly.
+!photo 03-tent-being-assembled.jpeg | The tent partway through assembly, with the reflective liner going in.
+!photo 04-tent-assembled.jpeg | The assembled tent in the garage before the final cleanup.
+!photo 05-tent-cleaned.jpeg | The tent opened up after cleanup, still empty and waiting for the work surface.
+!photo 06-equipment-staged.jpeg | The Elegoo Saturn 4 Ultra and Anycubic wash-and-cure equipment staged outside the tent.
+!photo 07-wash-cure-station.jpeg | The Anycubic Wash & Cure 3 Max waiting for its place in the workflow.
+!photo 08-photon-p1.jpeg | The Anycubic Photon P1, also staged before the resin workspace is put into use.
+
 The Saturn and P1 have different features, but they share the same need for somewhere to handle wet prints, wash parts, and keep contaminated tools. That's the focus here. This isn't a comparison or a recommendation based on print results.
 
 ## The goal

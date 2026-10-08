@@ -117,12 +117,18 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .status-note { color: var(--muted); font-size: .92rem; }
 
 .guide { max-width: 720px; margin: 0 auto; padding-top: 20px; }
+.build-log { max-width: 900px; margin: 0 auto; padding-top: 20px; }
+.article-type { margin: 0 0 12px; color: var(--terracotta-dark); font-size: .82rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .crumbs { margin: 0 0 14px; color: var(--muted); font-size: .92rem; }
 .guide h1 { max-width: none; margin: 0 0 22px; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; }
 .guide-deck { margin: 0 0 18px; color: var(--muted); font-size: 1.15rem; line-height: 1.5; }
 .guide-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-bottom: 22px; color: var(--muted); font-size: .9rem; }
 .guide-meta > span:last-child { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.build-log-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-bottom: 24px; padding: 12px 0; border-block: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+.build-log-meta > span:last-child { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .guide-details { margin-bottom: 24px; border-block: 1px solid var(--line); }
+.build-log-details { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .7fr); gap: 24px; margin-bottom: 30px; padding: 16px 0; border-block: 1px solid var(--line); }
+.build-log-details .guide-details { margin-bottom: 0; }
 .guide-details details + details { border-top: 1px solid var(--line); }
 .guide-details summary { padding: 12px 0; cursor: pointer; font-weight: 700; }
 .guide-details summary:hover { color: var(--terracotta-dark); }
@@ -143,6 +149,8 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .callout li + li { margin-top: 6px; }
 
 .guide-body { font-size: 1.06rem; line-height: 1.65; }
+.build-log-body { font-size: 1.06rem; line-height: 1.65; }
+.build-log-body > p:first-child { font-size: 1.12rem; }
 .guide-body h2 { margin: 2.2em 0 .5em; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.15; }
 .guide-body h3 { margin: 1.8em 0 .4em; font-size: 1.2rem; }
 .guide-body p, .guide-body ul, .guide-body ol { margin: 0 0 1.1em; }
@@ -151,6 +159,11 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .guide-body pre { margin: 0 0 1.1em; padding: 14px 16px; overflow-x: auto; border-radius: 12px; background: var(--cloud); font-size: .88rem; line-height: 1.5; }
 .guide-body pre code { padding: 0; background: none; font-size: inherit; }
 .guide-body blockquote { margin: 0 0 1.1em; padding-left: 16px; border-left: 3px solid var(--line); color: var(--muted); }
+.build-log-body h2 { margin-top: 2.8em; padding-top: .7em; border-top: 1px solid var(--line); }
+.build-log-body .photo { max-width: 760px; }
+.photo { margin: 0 0 1.6em; }
+.photo img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); }
+.photo figcaption { margin-top: 8px; color: var(--muted); font-size: .9rem; }
 .guide-related { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); }
 .guide-related h2 { margin: 0 0 10px; font-size: 1.3rem; }
 .guide-related ul { margin: 0; padding-left: 1.2em; }
@@ -220,6 +233,7 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media (max-width: 650px) {
   .guide-contents ul { columns: 1; }
+  .build-log-details { grid-template-columns: 1fr; gap: 0; }
   .site-header, main, footer { width: min(100% - 34px, 1010px); }
   .site-header { padding: 22px 0; gap: 12px; }
   .site-nav { gap: 16px; margin-right: 48px; }

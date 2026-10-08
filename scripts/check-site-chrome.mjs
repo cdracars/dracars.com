@@ -3,7 +3,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { siteHeader, siteFooter } from './site-chrome.mjs';
 
 const root = new URL('../public/', import.meta.url);
-const paths = ['/', '/guides/', ...readdirSync(new URL('guides/', root), { withFileTypes: true }).filter(entry => entry.isDirectory()).map(entry => `/guides/${entry.name}/`)];
+const paths = ['/', '/guides/', '/build-logs/', ...readdirSync(new URL('guides/', root), { withFileTypes: true }).filter(entry => entry.isDirectory()).map(entry => `/guides/${entry.name}/`), ...readdirSync(new URL('build-logs/', root), { withFileTypes: true }).filter(entry => entry.isDirectory()).map(entry => `/build-logs/${entry.name}/`)];
 for (const path of paths) {
   const html = readFileSync(new URL(`${path.slice(1)}index.html`, root), 'utf8').replace(/\r\n/g, '\n');
   assert.ok(html.includes(siteHeader(path)), `${path}: shared header missing or stale`);

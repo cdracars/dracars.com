@@ -69,7 +69,7 @@ function parseFrontmatter(src, file) {
 }
 
 // ---------- markdown (small subset) ----------
-// Blocks: ## / ### headings, paragraphs, - and 1. lists, > quotes, ::: containers (tldr, note).
+// Blocks: ## / ### headings, paragraphs, - and 1. lists, > quotes, ::: containers (tldr, note), and !photo blocks.
 // Inline: `code`, **bold**, *italic*, [text](url) and [text](url "affiliate") for affiliate links.
 
 function inline(text, ctx) {
@@ -127,6 +127,15 @@ function renderBlocks(lines, ctx) {
       i++;
       out.push(`<pre><code>${esc(code.join("\n"))}</code></pre>`);
       continue;
+    }
+
+    const photo = line.match(/^!photo\s+(\S+)(?:\s*\|\s*(.*))?\s*$/);
+    if (photo) {
+      const [, file, caption = ""] = photo;
+      if (!/^[a-z0-9][a-z0-9._-]*$/i.test(file)) fail(`invalid photo filename "${file}"`);
+      const alt = caption || "Build log photo";
+      out.push(`<figure class="photo"><img src="/images/build-logs/resin-grow-tent-setup/${escAttr(file)}" alt="${escAttr(alt)}" loading="lazy" />${caption ? `<figcaption>${inline(caption, ctx)}</figcaption>` : ""}</figure>`);
+      i++; continue;
     }
 
     const h = line.match(/^(#{2,3})\s+(.*)$/);
@@ -291,20 +300,23 @@ function articlePage(g, all, section) {
     const [name, url] = t.split("|").map((x) => x.trim());
     return `<li><a href="${escAttr(url)}" rel="noopener" target="_blank">${esc(name)}</a></li>`;
   });
-  const body = `      <article class="guide">
+  const articleClass = isBuildLog ? "build-log" : "guide";
+  const bodyClass = isBuildLog ? "build-log-body" : "guide-body";
+  const body = `      <article class="${articleClass}">
+${isBuildLog ? '        <p class="article-type">Project journal</p>\n' : ""}
         <p class="crumbs"><a href="${sectionPath}">${sectionLabel}</a> <span aria-hidden="true">/</span> ${esc(catName(g.category))}</p>
         <h1>${esc(g.title)}</h1>
         <p class="guide-deck">${esc(g.description)}</p>
-        <div class="guide-meta">
-          <span>By ${esc(g.author)}</span>
+        <div class="${isBuildLog ? "build-log-meta" : "guide-meta"}">
+          ${isBuildLog ? `<span>Started <time datetime="${g.publishedAt}">${fmtDate(g.publishedAt)}</time></span>` : `<span>By ${esc(g.author)}</span>`}
           <span>Updated <time datetime="${g.updatedAt}">${fmtDate(g.updatedAt)}</time></span>
           <span>${statusBadge(f)}${g.statusNote ? ` <span class="status-note">${esc(g.statusNote)}</span>` : ""}</span>
         </div>
-        <div class="guide-details">
-${contents ? `          <details class="guide-contents"><summary>On this page</summary><nav aria-label="On this page"><ul><li><a href="#tldr">At a glance</a></li>${contents}</ul></nav></details>` : ""}
-          <details class="guide-equipment"><summary>Equipment &amp; ${isBuildLog ? "build" : "guide"} details</summary><p>Published <time datetime="${g.publishedAt}">${fmtDate(g.publishedAt)}</time></p><p>${isBuildLog ? "Built and documented with:" : "Used for this guide:"}</p><ul>${g.testedWith.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></details>
+        <div class="${isBuildLog ? "build-log-details" : "guide-details"}">
+${contents ? `          <details class="guide-contents"><summary>${isBuildLog ? "In this log" : "On this page"}</summary><nav aria-label="${isBuildLog ? "In this log" : "On this page"}"><ul><li><a href="#tldr">At a glance</a></li>${contents}</ul></nav></details>` : ""}
+          <details class="guide-equipment"><summary>${isBuildLog ? "Build details" : "Equipment &amp; guide details"}</summary><p>${isBuildLog ? "Started" : "Published"} <time datetime="${g.publishedAt}">${fmtDate(g.publishedAt)}</time></p><p>${isBuildLog ? "Built and documented with:" : "Used for this guide:"}</p><ul>${g.testedWith.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></details>
         </div>
-${g.affiliateLinksPresent ? `        <p class="disclosure">${esc(AFFILIATE_DISCLOSURE)}</p>\n` : ""}        <div class="guide-body">
+${g.affiliateLinksPresent ? `        <p class="disclosure">${esc(AFFILIATE_DISCLOSURE)}</p>\n` : ""}        <div class="${bodyClass}">
 ${g.html}
         </div>
 ${tools.length ? `        <section class="guide-related"><h2 id="related-tools">Related Dracars tools</h2><ul>${tools.join("")}</ul></section>\n` : ""}${related.length ? `        <section class="guide-related"><h2 id="related-guides">Related Dracars guides</h2><ul>${related.map((r) => `<li><a href="/guides/${r.slug}/">${esc(r.title)}</a></li>`).join("")}</ul></section>\n` : ""}      </article>`;
@@ -317,7 +329,7 @@ ${tools.length ? `        <section class="guide-related"><h2 id="related-tools">
     body,
     jsonld: {
       "@context": "https://schema.org",
-      "@type": "TechArticle",
+      "@type": isBuildLog ? "BlogPosting" : "TechArticle",
       headline: g.title,
       description: g.description,
       datePublished: g.publishedAt,
