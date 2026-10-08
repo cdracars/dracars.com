@@ -231,10 +231,15 @@ function page({ title, description, path, body, jsonld, type = "website" }) {
     <meta property="og:title" content="${escAttr(title)}" />
     <meta property="og:description" content="${escAttr(description)}" />
     <meta property="og:image" content="${SITE}/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escAttr(title)}" />
     <meta name="twitter:description" content="${escAttr(description)}" />
     <meta name="twitter:image" content="${SITE}/social-preview.png" />
+    <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
