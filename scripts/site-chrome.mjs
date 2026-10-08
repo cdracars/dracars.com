@@ -1,6 +1,6 @@
 // Shared static site chrome, rendered at build time (no browser JavaScript required).
 export function siteHeader(path) {
-  const current = path === '/' ? 'tools' : 'guides';
+  const current = path === '/' ? 'tools' : path.startsWith('/build-logs') ? 'build-logs' : 'guides';
   return `    <a class="skip-link" href="#content">Skip to content</a>
     <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
       <svg viewBox="0 0 250 250" aria-hidden="true" focusable="false">
@@ -15,6 +15,7 @@ export function siteHeader(path) {
       </a>
       <nav class="site-nav" aria-label="Site">
         <a href="/"${current === 'tools' ? ' aria-current="page"' : ''}>Tools</a>
+        <a href="/build-logs/"${current === 'build-logs' ? ' aria-current="page"' : ''}>Build Logs</a>
         <a href="/guides/"${current === 'guides' ? (path === '/guides/' ? ' aria-current="page"' : ' aria-current="true"') : ''}>Guides</a>
       </nav>
     </header>`;

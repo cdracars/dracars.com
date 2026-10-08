@@ -11,8 +11,10 @@ import { siteHeader, siteFooter } from "./site-chrome.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content", "guides");
+const BUILD_LOG_CONTENT = join(ROOT, "content", "build-logs");
 const PUBLIC = join(ROOT, "public");
 const OUT = join(PUBLIC, "guides");
+const BUILD_LOG_OUT = join(PUBLIC, "build-logs");
 const SITE = "https://dracars.com";
 
 // A guide that hasn't been updated in this many days is shown as "Aging" (unless marked legacy).
@@ -164,16 +166,16 @@ function renderBlocks(lines, ctx) {
 const REQUIRED = ["title", "slug", "description", "publishedAt", "updatedAt", "author", "category"];
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
 
-function loadGuides() {
+function loadEntries(contentDir, label) {
   const guides = [];
-  for (const file of readdirSync(CONTENT).filter((f) => f.endsWith(".md")).sort()) {
-    const { data, body } = parseFrontmatter(readFileSync(join(CONTENT, file), "utf8"), file);
+  for (const file of readdirSync(contentDir).filter((f) => f.endsWith(".md")).sort()) {
+    const { data, body } = parseFrontmatter(readFileSync(join(contentDir, file), "utf8"), file);
     for (const k of REQUIRED) if (!data[k]) fail(`${file}: missing "${k}"`);
     if (!ISO.test(data.publishedAt) || !ISO.test(data.updatedAt)) fail(`${file}: dates must be YYYY-MM-DD`);
     if (data.updatedAt < data.publishedAt) fail(`${file}: updatedAt is before publishedAt`);
     if (!/^[a-z0-9-]+$/.test(data.slug)) fail(`${file}: slug must be lowercase letters, numbers, hyphens`);
     if (!CATEGORIES.some((c) => c.slug === data.category)) fail(`${file}: unknown category "${data.category}"`);
-    if (data.status && !["current", "aging", "legacy"].includes(data.status)) fail(`${file}: status must be current|aging|legacy`);
+    if (data.status && !["current", "aging", "legacy", "coming-soon"].includes(data.status)) fail(`${file}: status must be current|aging|legacy|coming-soon`);
     if (!data.testedWith?.length) fail(`${file}: testedWith is required (say what you actually used)`);
     if (data.draft) continue;
     if (/TODO|\(Cody:|\(add link/i.test(body)) fail(`${file}: contains an unfinished placeholder; finish it or set draft: true`);
@@ -193,17 +195,22 @@ function loadGuides() {
     slugs.add(g.slug);
   }
   for (const g of guides) for (const r of g.relatedGuides) if (!slugs.has(r)) fail(`${g.file}: relatedGuides references unknown slug "${r}"`);
+  if (!guides.length) fail(`no published ${label} found`);
   return guides;
 }
 
+const loadGuides = () => loadEntries(CONTENT, "guides");
+const loadBuildLogs = () => loadEntries(BUILD_LOG_CONTENT, "build logs");
+
 function freshness(g, today = new Date()) {
   const days = Math.floor((today - new Date(g.updatedAt + "T00:00:00Z")) / 86400000);
-  const key = g.status === "legacy" ? "legacy" : days > AGING_AFTER_DAYS ? "aging" : "current";
-  const label = { current: "Current", aging: "Aging", legacy: "Legacy" }[key];
+  const key = g.status === "coming-soon" ? "coming-soon" : g.status === "legacy" ? "legacy" : days > AGING_AFTER_DAYS ? "aging" : "current";
+  const label = { current: "Current", aging: "Aging", legacy: "Legacy", "coming-soon": "Coming Soon" }[key];
   const hint = {
     current: "Recently reviewed and believed to still be accurate.",
     aging: "Not reviewed recently enough to assume everything is still current.",
     legacy: "Kept on purpose for older hardware, software, or workflows.",
+    "coming-soon": "Being built from the real project before it is presented as a finished guide.",
   }[key];
   return { key, label, hint, text: g.statusNote ? `${label} — ${g.statusNote}` : label };
 }
@@ -271,8 +278,12 @@ function guideCard(g) {
 </a>`;
 }
 
-function guidePage(g, all) {
+function articlePage(g, all, section) {
   const f = freshness(g);
+  const isBuildLog = section === "build-logs";
+  const sectionLabel = isBuildLog ? "Build Logs" : "Guides";
+  const sectionPath = `/${section}/`;
+  const articlePath = `${sectionPath}${g.slug}/`;
   const contents = [...g.html.matchAll(/<h2 id="([^"]+)">(.*?)<\/h2>/g)]
     .map(([, id, label]) => `<li><a href="#${id}">${label}</a></li>`).join("");
   const related = g.relatedGuides.map((s) => all.find((x) => x.slug === s));
@@ -281,7 +292,7 @@ function guidePage(g, all) {
     return `<li><a href="${escAttr(url)}" rel="noopener" target="_blank">${esc(name)}</a></li>`;
   });
   const body = `      <article class="guide">
-        <p class="crumbs"><a href="/guides/">Guides</a> <span aria-hidden="true">/</span> ${esc(catName(g.category))}</p>
+        <p class="crumbs"><a href="${sectionPath}">${sectionLabel}</a> <span aria-hidden="true">/</span> ${esc(catName(g.category))}</p>
         <h1>${esc(g.title)}</h1>
         <p class="guide-deck">${esc(g.description)}</p>
         <div class="guide-meta">
@@ -291,7 +302,7 @@ function guidePage(g, all) {
         </div>
         <div class="guide-details">
 ${contents ? `          <details class="guide-contents"><summary>On this page</summary><nav aria-label="On this page"><ul><li><a href="#tldr">At a glance</a></li>${contents}</ul></nav></details>` : ""}
-          <details class="guide-equipment"><summary>Equipment &amp; guide details</summary><p>Published <time datetime="${g.publishedAt}">${fmtDate(g.publishedAt)}</time></p><p>Used for this guide:</p><ul>${g.testedWith.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></details>
+          <details class="guide-equipment"><summary>Equipment &amp; ${isBuildLog ? "build" : "guide"} details</summary><p>Published <time datetime="${g.publishedAt}">${fmtDate(g.publishedAt)}</time></p><p>${isBuildLog ? "Built and documented with:" : "Used for this guide:"}</p><ul>${g.testedWith.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></details>
         </div>
 ${g.affiliateLinksPresent ? `        <p class="disclosure">${esc(AFFILIATE_DISCLOSURE)}</p>\n` : ""}        <div class="guide-body">
 ${g.html}
@@ -299,9 +310,9 @@ ${g.html}
 ${tools.length ? `        <section class="guide-related"><h2 id="related-tools">Related Dracars tools</h2><ul>${tools.join("")}</ul></section>\n` : ""}${related.length ? `        <section class="guide-related"><h2 id="related-guides">Related Dracars guides</h2><ul>${related.map((r) => `<li><a href="/guides/${r.slug}/">${esc(r.title)}</a></li>`).join("")}</ul></section>\n` : ""}      </article>`;
 
   return page({
-    title: `${g.title} — Dracars Guides`,
+    title: `${g.title} — Dracars ${sectionLabel}`,
     description: g.description,
-    path: `/guides/${g.slug}/`,
+    path: articlePath,
     type: "article",
     body,
     jsonld: {
@@ -312,12 +323,15 @@ ${tools.length ? `        <section class="guide-related"><h2 id="related-tools">
       datePublished: g.publishedAt,
       dateModified: g.updatedAt,
       author: { "@type": "Person", name: g.author, url: SITE + "/" },
-      mainEntityOfPage: `${SITE}/guides/${g.slug}/`,
+      mainEntityOfPage: `${SITE}${articlePath}`,
       keywords: g.tags.join(", "),
       ...(g.heroImage ? { image: SITE + g.heroImage } : {}),
     },
   });
 }
+
+const guidePage = (g, all) => articlePage(g, all, "guides");
+const buildLogPage = (g, all) => articlePage(g, all, "build-logs");
 
 function indexPage(guides) {
   const byUpdated = [...guides].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
@@ -366,10 +380,39 @@ ${groups}
   });
 }
 
+function buildLogIndexPage(logs) {
+  const byUpdated = [...logs].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  const cards = byUpdated.map((g) => {
+    const f = freshness(g);
+    return `<a class="guide-card" href="/build-logs/${g.slug}/">
+  <p class="guide-card-meta"><span>${esc(catName(g.category))}</span> ${statusBadge(f)}</p>
+  <h3>${esc(g.title)}</h3>
+  <p class="guide-card-desc">${esc(g.description)}</p>
+  <p class="guide-card-updated">Updated <time datetime="${g.updatedAt}">${fmtDate(g.updatedAt)}</time></p>
+</a>`;
+  }).join("\n");
+  const body = `      <section class="guides-hero" aria-labelledby="page-title">
+        <h1 id="page-title">Build Logs.</h1>
+        <p class="hero-intro">The real work behind the guides: experiments, unfinished setups, mistakes, fixes, and what changes after the gear gets used.</p>
+      </section>
+
+      <section aria-labelledby="logs-h" class="all-guides">
+        <h2 id="logs-h" class="section-label">Current projects</h2>
+        <div class="guide-grid">${cards}</div>
+      </section>`;
+  return page({
+    title: "Build Logs — Dracars",
+    description: "Real workshop build logs from Cody Dracars, including experiments, mistakes, fixes, and the guides that come out of them.",
+    path: "/build-logs/",
+    body,
+    jsonld: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Dracars Build Logs", url: `${SITE}/build-logs/`, hasPart: logs.map((g) => ({ "@type": "BlogPosting", headline: g.title, url: `${SITE}/build-logs/${g.slug}/`, dateModified: g.updatedAt })) },
+  });
+}
+
 // ---------- build ----------
 
 const guides = loadGuides();
-if (!guides.length) fail("no published guides found");
+const buildLogs = loadBuildLogs();
 
 // Keep the homepage's managed chrome blocks in sync with guide templates.
 const homePath = join(PUBLIC, "index.html");
@@ -391,11 +434,20 @@ for (const g of guides) {
   mkdirSync(join(OUT, g.slug), { recursive: true });
   writeFileSync(join(OUT, g.slug, "index.html"), guidePage(g, guides));
 }
+rmSync(BUILD_LOG_OUT, { recursive: true, force: true });
+mkdirSync(BUILD_LOG_OUT, { recursive: true });
+writeFileSync(join(BUILD_LOG_OUT, "index.html"), buildLogIndexPage(buildLogs));
+for (const g of buildLogs) {
+  mkdirSync(join(BUILD_LOG_OUT, g.slug), { recursive: true });
+  writeFileSync(join(BUILD_LOG_OUT, g.slug, "index.html"), buildLogPage(g, buildLogs));
+}
 
 const urls = [
   { loc: `${SITE}/` },
   { loc: `${SITE}/guides/`, lastmod: guides.map((g) => g.updatedAt).sort().at(-1) },
   ...guides.map((g) => ({ loc: `${SITE}/guides/${g.slug}/`, lastmod: g.updatedAt })),
+  { loc: `${SITE}/build-logs/`, lastmod: buildLogs.map((g) => g.updatedAt).sort().at(-1) },
+  ...buildLogs.map((g) => ({ loc: `${SITE}/build-logs/${g.slug}/`, lastmod: g.updatedAt })),
 ];
 writeFileSync(
   join(PUBLIC, "sitemap.xml"),
@@ -406,3 +458,5 @@ writeFileSync(
 
 console.log(`Built ${guides.length} guide(s):`);
 for (const g of guides) console.log(`  /guides/${g.slug}/  [${freshness(g).label}]${g.affiliateLinksPresent ? " (affiliate)" : ""}`);
+console.log(`Built ${buildLogs.length} build log(s):`);
+for (const g of buildLogs) console.log(`  /build-logs/${g.slug}/  [${freshness(g).label}]`);

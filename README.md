@@ -27,8 +27,9 @@ wrangler.jsonc      Cloudflare Workers Static Assets configuration
 
 ## Guides
 
-Guides live in `content/guides/<slug>.md` (frontmatter + Markdown) and are built
-to static HTML in `public/guides/` by a dependency-free script:
+Guides live in `content/guides/<slug>.md` and build logs live in
+`content/build-logs/<slug>.md` (frontmatter + Markdown). Both are built to
+static HTML under `public/` by a dependency-free script:
 
 ```sh
 node scripts/build-guides.mjs
@@ -48,7 +49,9 @@ that adds `rel="sponsored"` and turns on the disclosure. Freshness is computed
 from `updatedAt` at build time (Aging after 180 days; `status: legacy` overrides),
 so rebuild when you deploy. Set `draft: true` to keep a guide unpublished.
 
-The shared resin-workspace guide lives at `/guides/resin-grow-tent-setup/`.
+The resin-workspace build log lives at `/build-logs/resin-grow-tent-setup/`.
+Its future reference guide lives at `/guides/resin-grow-tent-setup/` and is
+intentionally marked Coming Soon until the workspace has been used and tested.
 `public/_redirects` preserves the former `/guides/saturn-4-ultra-setup/` URL
 with a permanent redirect for Workers Static Assets. Keep that file when deploying.
 

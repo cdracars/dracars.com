@@ -112,6 +112,7 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .status-current { color: #1f6b3a; }
 .status-aging { color: #8a5a00; }
 .status-legacy { color: var(--muted); }
+.status-coming-soon { color: #8a5a00; }
 .featured-card .status { color: var(--cloud); }
 .status-note { color: var(--muted); font-size: .92rem; }
 
