@@ -86,7 +86,7 @@ The tent isn't empty anymore. The light is an old fish tank light, not a UV ligh
 
 !photo 10-tent-interior-table.webp | Inside the tent with the light on: a black folding table, the hanging coiled cords, and the silver cinch-top duct ports on the wall and in the floor corner.
 
-Nothing in these photos has been tested for resin work. There's still no exhaust, no wash station and no printer in here, so the rule below still stands.
+Nothing in these photos has been tested for resin work. There's still no exhaust, no wash station and no printer in here, so the exhaust rule below still stands as the recommendation.
 
 One note on the cords: I coiled and hung them on the wall to keep them off the floor. The orange one is a 25 ft Harbor Freight cord, 16 gauge, and it's the only cord whose gauge I know for sure. The other cord is the one on the light, which gets replaced when the light does. Coiled cords hold heat, so I'll uncoil them before anything that draws real power runs through them.
 
@@ -134,7 +134,7 @@ A grow-tent floor looks like containment, but I don't want resin curing into the
 
 !figure floor-layers
 
-In this planned layout, the tray on top forms the wet zone for the printer, vat, and wash station.
+In this planned layout, the tray on top forms the wet zone for the printers and vats. The Wash & Cure sits on the tent floor instead.
 
 Two 3.5 mil layers aren't equivalent to one perfect 7 mil liner, since seams and punctures still matter. But they give me two disposable layers before a spill reaches the tent. If the top layer gets bad enough, I replace it.
 
@@ -171,6 +171,8 @@ I'm keeping resin off bare skin and replacing contaminated or damaged gloves. I'
 NIOSH's [Safe Desktop Vat Photopolymerization 3-D Printing](https://www.cdc.gov/niosh/media/pdfs/2025/01/Safe-3D-Printing.pdf) calls for gloves that protect against acrylates and IPA, frequent changes, and immediate replacement of PPE contaminated by uncured resin or solvents. So “nitrile” alone isn't a compatibility check for every resin, solvent, or glove thickness.
 
 Use the glove manufacturer's data for the exact glove and chemicals. Ansell's [example permeation chart and its limitations](https://www.ansell.com/-/media/projects/ansell/website/pdf/industrial/ansell-guardian/sample-chemical-report.ashx) explain that laboratory breakthrough times aren't safe wear times and that mixture effects aren't accounted for. This is a reference for interpreting data, not a recommendation for the gloves in that chart or a timed replacement schedule for this setup.
+
+The gloves I bought are Hardy 9 mil black nitrile (see Where the gear came from). I haven't checked them against this resin's acrylates or against IPA yet, so for now I treat them as a barrier I change often, not as proven protection.
 
 I'm not a safety professional, and this is what I'm doing, not a guarantee. Read the safety data sheet for whatever resin and solvent you use.
 
@@ -238,7 +240,7 @@ Everything in the tent will run through the orange 16 gauge cord, so I added up 
 - **Anycubic Photon P1:** 215 W power supply, per [Anycubic's store page](https://store.anycubic.com/products/photon-p1-resin-3d-printer).
 - **Anycubic Wash & Cure 3 Max:** 120 W power supply, per [Anycubic's store page](https://store.anycubic.com/products/wash-cure-3-max). The page doesn't say whether that covers washing, curing or both.
 
-That adds up to about 479 W, roughly 4 amps at 120 V. A 16 gauge cord is commonly rated around 13 amps (about 1,560 W), but the real rating depends on the cord and its length, so I'll check the label on mine.
+That adds up to about 479 W, roughly 4 amps at 120 V. The orange cord's [Harbor Freight listing](https://www.harborfreight.com/25-ft-x-163-gauge-indooroutdoor-extension-cord-orange-62938.html) says 13 amps, 1,625 W and 125 V, so 479 W is well inside it. The listing says its specs are approximate, so I'll still check the label on the cord itself.
 
 That cord feeds a surge protector, which is how I get the extra outlets, so the surge protector's own rating matters too. I'll record its model and rating when I'm at the setup.
 
@@ -307,6 +309,9 @@ This will change as I use the setup. So far the lesson is: **design the resin wo
 - diagnosing the Wash & Cure
 - the standing desk
 - replacing the fish tank light with a plain white LED
+- recording the ratings on the surge protector, the red switch, and the orange cord's label
+- recording the IPA product and concentration, and pulling its SDS
+- checking the nitrile gloves against the resin and IPA
 - a fire extinguisher nearby
 - first-print experience
 - which printer mods are worth it, and which accessories turned out unnecessary
