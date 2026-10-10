@@ -22,7 +22,7 @@ affiliateLinksPresent: false
 ---
 
 :::tldr Where things stand and what I'm planning
-- The 5 × 5 ft grow tent is assembled in the garage. As of 2026-10-10 it has a hanging light fixture, a switched power cord, coiled extension cords and a folding table inside. Neither printer has been used for prints in this workspace.
+- The 5 × 5 ft grow tent is assembled in the garage. As of 2026-10-10 it has a hanging light (an old non-UV fish tank light on an external switch near the door), coiled extension cords and a folding table inside. Neither printer has been used for prints in this workspace.
 - The Saturn 4 Ultra came with two boxes of parts. I haven't found the vat among the items checked so far; I think it may still be in one of those boxes. The printer is not ready to print.
 - The Wash & Cure 3 Max powers on and its display lights up, but I haven't confirmed that it functions. There is cured resin in its lines, so its repair is still to be diagnosed.
 - Planned floor protection: two layers of ~3.5 mil plastic under the work area, plus a smooth, wipeable, replaceable surface in the wet zone.
@@ -80,9 +80,9 @@ Then came the less graceful part: wrestling the tent into place in the garage. T
 
 ### Update, 2026-10-10: the first things inside the tent
 
-The tent isn't empty anymore. A light fixture now hangs from chains inside the roof of the tent. Its black power cord runs down the wall to a switch with a red rocker, zip-tied to the tent's frame. Extension cords are coiled and hung on the wall nearby, and a black folding table is set up inside.
+The tent isn't empty anymore. The light is an old fish tank light, not a UV light. It has no power switch of its own, so I added an external switch with a red rocker on its black cord and zip-tied it to the tent frame near the door. That lets me turn the light on and off from the door without touching the surge protector. Extension cords are coiled and hung on the wall nearby, and a black folding table is set up inside.
 
-!photo 09-tent-light-and-switch.webp | The hanging light fixture, its black cord running along the tent wall to a red rocker switch zip-tied to the frame, and coiled extension cords hung on the wall.
+!photo 09-tent-light-and-switch.webp | The old non-UV fish tank light hanging from chains, its black cord running along the tent wall to the external red rocker switch zip-tied to the frame near the door, and coiled extension cords hung on the wall.
 
 !photo 10-tent-interior-table.webp | Inside the tent with the light on: a black folding table, the hanging coiled cords, and the silver cinch-top duct ports on the wall and in the floor corner.
 
