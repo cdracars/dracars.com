@@ -3,7 +3,7 @@ title: Building a garage grow-tent workspace for resin printing
 slug: resin-grow-tent-setup
 description: A running record of building a shared garage resin-printing workspace, from floor protection to washing and exhaust.
 publishedAt: 2026-10-07
-updatedAt: 2026-10-08
+updatedAt: 2026-10-10
 indexImage: /images/build-logs/resin-grow-tent-setup/08-tent-in-place.webp
 author: Dracars
 category: projects-builds
@@ -13,7 +13,7 @@ statusNote: Tent assembled — workspace still being built
 featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
-  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; still empty)
+  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; a light fixture, cords and a folding table are inside; no printers yet)
   - Elegoo Saturn 4 Ultra 12K (incomplete setup; not ready to print)
   - Anycubic Photon P1 (planned for this workspace; no prints yet)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
@@ -22,7 +22,7 @@ affiliateLinksPresent: false
 ---
 
 :::tldr Where things stand and what I'm planning
-- The 5 × 5 ft grow tent is assembled in the garage and still empty. Neither printer has been used for prints in this workspace.
+- The 5 × 5 ft grow tent is assembled in the garage. As of 2026-10-10 it has a hanging light (an old non-UV fish tank light on an external switch near the door), coiled extension cords and a folding table inside. Neither printer has been used for prints in this workspace.
 - The Saturn 4 Ultra came with two boxes of parts. I haven't found the vat among the items checked so far; I think it may still be in one of those boxes. The printer is not ready to print.
 - The Wash & Cure 3 Max powers on and its display lights up, but I haven't confirmed that it functions. There is cured resin in its lines, so its repair is still to be diagnosed.
 - Planned floor protection: two layers of ~3.5 mil plastic under the work area, plus a smooth, wipeable, replaceable surface in the wet zone.
@@ -34,7 +34,7 @@ affiliateLinksPresent: false
 - Build the workspace and workflow first. Printer upgrades can wait until there's a real problem to solve.
 :::
 
-So far, I've assembled the grow tent. It's still empty. The layout, floor protection, washing, curing, and exhaust described below are plans for the workspace, not an installed or tested setup. Neither printer has produced a print in this workspace. The Saturn 4 Ultra is not ready to print: it came with two boxes of parts, and I haven't found the vat in the items checked so far. I think it may still be in one of the boxes.
+So far, I've assembled the grow tent and started putting a light, cords and a folding table inside. The layout, floor protection, washing, curing, and exhaust described below are plans for the workspace, not an installed or tested setup. Neither printer has produced a print in this workspace. The Saturn 4 Ultra is not ready to print: it came with two boxes of parts, and I haven't found the vat in the items checked so far. I think it may still be in one of the boxes.
 
 The Anycubic Wash & Cure 3 Max came with the printers. It powers on and the display lights up, but I haven't confirmed its functions; cured resin is in its lines. I'll track its diagnosis and repair separately from the P1 setup, and keep this log focused on the shared workspace. I'll link the printer-specific logs here as they are ready. I'll update this page as I build out and use the space, find problems, and change things. The "Updated" date at the top records when I last revised the guide.
 
@@ -77,6 +77,16 @@ Then came the less graceful part: wrestling the tent into place in the garage. T
 !photo 07-tent-going-in.webp | Partway through wrestling the tent into place.
 
 !photo 08-tent-in-place.webp | The tent standing in place, still empty while I plan the interior.
+
+### Update, 2026-10-10: the first things inside the tent
+
+The tent isn't empty anymore. The light is an old fish tank light, not a UV light. It has no power switch of its own, so I added an external switch with a red rocker on its black cord and zip-tied it to the tent frame near the door. That lets me turn the light on and off from the door without touching the surge protector. Extension cords are coiled and hung on the wall nearby, and a black folding table is set up inside. The table is a temporary measure so I can get up and running sooner rather than later; the standing desk is still the plan for the main work surface.
+
+!photo 09-tent-light-and-switch.webp | The old non-UV fish tank light hanging from chains, its black cord running along the tent wall to the external red rocker switch zip-tied to the frame near the door, and coiled extension cords hung on the wall.
+
+!photo 10-tent-interior-table.webp | Inside the tent with the light on: a black folding table, the hanging coiled cords, and the silver cinch-top duct ports on the wall and in the floor corner.
+
+Nothing in these photos has been tested for resin work. There's still no exhaust, no wash station and no printer in here, so the rule below still stands.
 
 ## My workspace plan
 
