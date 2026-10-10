@@ -172,7 +172,9 @@ NIOSH's [Safe Desktop Vat Photopolymerization 3-D Printing](https://www.cdc.gov/
 
 Use the glove manufacturer's data for the exact glove and chemicals. Ansell's [example permeation chart and its limitations](https://www.ansell.com/-/media/projects/ansell/website/pdf/industrial/ansell-guardian/sample-chemical-report.ashx) explain that laboratory breakthrough times aren't safe wear times and that mixture effects aren't accounted for. This is a reference for interpreting data, not a recommendation for the gloves in that chart or a timed replacement schedule for this setup.
 
-The gloves I bought are Hardy 9 mil black nitrile (see Where the gear came from). I haven't checked them against this resin's acrylates or against IPA yet, so for now I treat them as a barrier I change often, not as proven protection.
+**Glove check, October 10, 2026.** The gloves I bought are Hardy 9 mil black nitrile (see Where the gear came from). I looked for evidence that they protect against this resin's acrylates and against IPA, and I couldn't confirm it. NIOSH says to use gloves that protect against acrylates and isopropyl alcohol and to change them frequently, but it doesn't name a material. [Harbor Freight's listing](https://www.harborfreight.com/9-mil-nitrile-powder-free-gloves-medium-50-pack-68510.html) says the gloves resist chemicals better than latex and suit industrial solvents, but it gives no permeation or breakthrough data and lists no ASTM or EN standards. A [dental study of nitrile and latex gloves](https://medicaljournalssweden.se/actaodontologica/article/view/39113) found a mean breakthrough of about 16 minutes against undiluted methacrylate monomers, with wide variation between gloves, and much shorter times when ethanol or acetone was present. Those are different chemicals and different gloves, so it isn't proof either way, but it's a reason to be careful around IPA.
+
+Until I have real data, I treat these gloves as short-contact, splash-level protection: I change them right after any contact with resin, and I don't rinse them in IPA and keep wearing them. To close this out I need permeation data from the manufacturer, or a glove that publishes its own acrylate and IPA data.
 
 I'm not a safety professional, and this is what I'm doing, not a guarantee. Read the safety data sheet for whatever resin and solvent you use.
 
@@ -311,7 +313,7 @@ This will change as I use the setup. So far the lesson is: **design the resin wo
 - replacing the fish tank light with a plain white LED
 - recording the ratings on the surge protector, the red switch, and the orange cord's label
 - recording the IPA product and concentration, and pulling its SDS
-- checking the nitrile gloves against the resin and IPA
+- getting permeation data for the nitrile gloves, or switching to a glove that publishes acrylate and IPA data
 - a fire extinguisher nearby
 - first-print experience
 - which printer mods are worth it, and which accessories turned out unnecessary
@@ -327,3 +329,4 @@ When one of these gets big enough, I'll split it into its own guide and link it 
 - [OSHA: Hazard Communication Standard — Safety Data Sheets](https://www.osha.gov/Publications/OSHA3514.html), for navigating the actual products' SDS documents.
 - [Elegoo: Get Started in Resin Printing](https://us.elegoo.com/blogs/3d-printer-user-guide/getstarted-in-resin-printing), for workspace precautions and wash, dry, and cure guidance. Follow each printer's own manual for setup.
 - [EPA: Household Hazardous Waste](https://www.epa.gov/hw/household-hazardous-waste-hhw), for household waste handling and finding local disposal instructions.
+- [Acta Odontologica: Permeability of protective gloves by HEMA and TEGDMA in the presence of solvents](https://medicaljournalssweden.se/actaodontologica/article/view/39113), for how solvents can shorten nitrile glove breakthrough times. Different monomers and gloves than mine, so context, not proof.
