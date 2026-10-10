@@ -88,6 +88,15 @@ The tent isn't empty anymore. The light is an old fish tank light, not a UV ligh
 
 Nothing in these photos has been tested for resin work. There's still no exhaust, no wash station and no printer in here, so the rule below still stands.
 
+**Supplies that arrived.** I bought four more items for the workspace, and they've been delivered. These are plain links, not affiliate links:
+
+- [Inline extension cord switch](https://www.amazon.com/dp/B0DRTCM4DH)
+- [2-pack of 45 oz pickle jars](https://www.amazon.com/dp/B0DBKF17W3)
+- [36.2" × 24" extra large silicone mat](https://www.amazon.com/dp/B09L7SDWGC)
+- [SUNLU 1000G ABS-Like Resin](https://www.amazon.com/dp/B0BYSKNGX3)
+
+I haven't tested any of them in this workspace yet, so this is a record of what I bought, not a recommendation. The resin is the product I'll need the safety data sheet for before anything gets poured.
+
 **Next step: plastic on the floor and the table.** This is where the two layers of plastic from the floor-protection plan go in, along with a covering for the folding table. To keep the plastic from shifting, I plan to print two clip designs from Printables: the [22mm grow tent clip collection](https://www.printables.com/model/1201054-22mm-grow-tent-clip-collection) and a [tablecloth clip](https://www.printables.com/model/363236-tablecloth-clip). I haven't printed or tested either one yet, so I don't know how well they'll hold.
 
 ## My workspace plan
@@ -149,7 +158,7 @@ For U.S. readers, the EPA page points to local environmental, health, or solid-w
 
 ## Gloves and skin
 
-I'm keeping resin off bare skin and replacing contaminated or damaged gloves. I'll use the resin and solvent safety data sheets to choose suitable gloves and other protection; I haven't recorded the specific resin for this setup yet.
+I'm keeping resin off bare skin and replacing contaminated or damaged gloves. I'll use the resin and solvent safety data sheets to choose suitable gloves and other protection; The resin for this setup is SUNLU 1000G ABS-Like Resin, and I haven't checked its safety data sheet yet.
 
 NIOSH's [Safe Desktop Vat Photopolymerization 3-D Printing](https://www.cdc.gov/niosh/media/pdfs/2025/01/Safe-3D-Printing.pdf) calls for gloves that protect against acrylates and IPA, frequent changes, and immediate replacement of PPE contaminated by uncured resin or solvents. So “nitrile” alone isn't a compatibility check for every resin, solvent, or glove thickness.
 
@@ -166,7 +175,7 @@ Get the current SDS from the supplier for the exact resin formulation and IPA pr
 - **Section 8:** exposure controls and personal protection.
 - **Section 13:** disposal considerations; confirm local acceptance and disposal instructions separately.
 
-I haven't recorded the exact resin and IPA products yet, so product-specific SDS links will come once those are known.
+The resin is SUNLU 1000G ABS-Like Resin. I haven't pulled its safety data sheet yet, and I haven't recorded the exact IPA product, so product-specific SDS links will come once I have them.
 
 ## Setting up each printer
 
@@ -195,13 +204,14 @@ This is the equipment around which I'm planning the workspace. It isn't a shoppi
 - **Enclosure:** [AC Infinity CLOUDLAB 866](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) (model `AC-CBA866`), 5 × 5 ft grow tent
 - **Floor protection:** two layers of roughly 3.5 mil plastic
 - **Main work surface:** a standing desk of about 58 inches
-- **Planned wet zone:** a smooth, wipeable, replaceable surface, such as a silicone mat or rigid tray
+- **Planned wet zone:** a smooth, wipeable, replaceable surface, such as a silicone mat or rigid tray. I've bought a 36.2" × 24" extra large silicone mat; I haven't used it yet
+- **Resin:** SUNLU 1000G ABS-Like Resin, delivered; not yet used
 
 For the wet-zone surface, I'm considering the [Wham Bam Slap Mat](https://www.whambamsystems.com/products/slap-mat) and [Mach5ive Splat Mat](https://mach5ive.com/products/mach5ive-splat-mat-silicon-work-surface-for-resin-3d-printing-crafts-medium-400mm-x-600mm). Both are silicone work mats marketed for resin printing. I haven't picked or tested either yet; these are options I'm considering, not equipment I've used or recommendations.
 
 You don't need a 5 × 5 grow tent to use a resin printer. I'm using one because I have the room and want printing and post-processing contained together. The desk, floor covering, containers, and eventual exhaust are examples of how I'm solving the problem. I'll call out useful recommendations separately once I have experience with them.
 
-I haven't recorded the resin, firmware, or slicer versions for this guide yet. I'll add them when I start printing.
+The resin is SUNLU 1000G ABS-Like Resin. I haven't recorded firmware or slicer versions for this guide yet. I'll add them when I start printing.
 
 ## What I'm not upgrading yet
 
