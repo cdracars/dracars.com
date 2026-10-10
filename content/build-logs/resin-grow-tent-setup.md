@@ -29,7 +29,7 @@ affiliateLinksPresent: false
 - Keep a deliberate **dirty side**. Workflow: print → drip → **dirty wash → clean wash** → dry completely → cure.
 - Resin-only tools stay in the resin area. Covered containers for dirty IPA and resin waste.
 - Nitrile gloves and eye protection within reach, and change gloves often.
-- **The tent is not ventilation, and IPA vapor is flammable.** Exhaust is part of the plan, and I'm not putting resin in either machine until it works.
+- **The tent is not ventilation, and IPA vapor is flammable.** Exhaust is part of the plan, and the rule is no resin in either machine until it works. I may run a few print-only jobs before then anyway; see the note under the exhaust rules.
 - Don't pour resin or resin-contaminated solvent down the drain.
 - Build the workspace and workflow first. Printer upgrades can wait until there's a real problem to solve.
 :::
@@ -95,7 +95,7 @@ Nothing in these photos has been tested for resin work. There's still no exhaust
 - [36.2" × 24" extra large silicone mat](https://www.amazon.com/dp/B09L7SDWGC)
 - [SUNLU 1000G ABS-Like Resin](https://www.amazon.com/dp/B0BYSKNGX3)
 
-I haven't tested any of them in this workspace yet, so this is a record of what I bought, not a recommendation. The resin is the product I'll need the safety data sheet for before anything gets poured.
+I haven't tested any of them in this workspace yet, so this is a record of what I bought, not a recommendation. The resin is the product that needed a safety data sheet before anything gets poured. I've pulled it; see [Gloves and skin](#gloves-and-skin).
 
 **Next step: plastic on the floor and the table.** This is where the two layers of plastic from the floor-protection plan go in, along with a covering for the folding table. To keep the plastic from shifting, I plan to print two clip designs from Printables: the [22mm grow tent clip collection](https://www.printables.com/model/1201054-22mm-grow-tent-clip-collection) and a [tablecloth clip](https://www.printables.com/model/363236-tablecloth-clip). I haven't printed or tested either one yet, so I don't know how well they'll hold.
 
@@ -115,6 +115,8 @@ Two rules until that's done:
 
 1. **No resin in either machine until the exhaust works.** Setup and dry fit only.
 2. **Treat IPA as a fire hazard, not just a fumes problem.** I'll keep containers lidded and away from ignition sources, and check the solvent's safety data sheet before choosing ventilation equipment. I'll document the actual exhaust build when it exists.
+
+**Do as I say, not as I do.** The rule above is the recommendation: no resin until the exhaust works. I'm running a few prints before it's built anyway, print-only: lid on, no open IPA in the garage, garage door cracked, and me out of the space while it prints. That's my risk call, not a safe setup, so don't copy it. I'll update this note when the exhaust is in.
 
 OSHA's [flammable-liquids standard](https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.106) addresses covered containers when not in use and keeping ignition sources out of the path of flammable vapors (1910.106(e)(2)(iv)). Its ignition-source list includes electrical and static sparks. I'm using this as a workplace safety reference, not claiming that this garage setup meets a code or that a household installation has the same requirements.
 
@@ -158,7 +160,7 @@ For U.S. readers, the EPA page points to local environmental, health, or solid-w
 
 ## Gloves and skin
 
-I'm keeping resin off bare skin and replacing contaminated or damaged gloves. I'll use the resin and solvent safety data sheets to choose suitable gloves and other protection; The resin for this setup is SUNLU 1000G ABS-Like Resin, and I haven't checked its safety data sheet yet.
+I'm keeping resin off bare skin and replacing contaminated or damaged gloves. I'll use the resin and solvent safety data sheets to choose suitable gloves and other protection. The resin for this setup is SUNLU 1000G ABS-Like Resin, and I've pulled its safety data sheet (summarized below).
 
 NIOSH's [Safe Desktop Vat Photopolymerization 3-D Printing](https://www.cdc.gov/niosh/media/pdfs/2025/01/Safe-3D-Printing.pdf) calls for gloves that protect against acrylates and IPA, frequent changes, and immediate replacement of PPE contaminated by uncured resin or solvents. So “nitrile” alone isn't a compatibility check for every resin, solvent, or glove thickness.
 
@@ -175,7 +177,16 @@ Get the current SDS from the supplier for the exact resin formulation and IPA pr
 - **Section 8:** exposure controls and personal protection.
 - **Section 13:** disposal considerations; confirm local acceptance and disposal instructions separately.
 
-The resin is SUNLU 1000G ABS-Like Resin. I haven't pulled its safety data sheet yet, and I haven't recorded the exact IPA product, so product-specific SDS links will come once I have them.
+The resin is SUNLU 1000G ABS-Like Resin. On October 10, 2026, I pulled the SDS that SUNLU links from its [ABS-Like Resin product page](https://www.sunlu.com/products/abs-like-resin) ([SDS PDF](https://media.sunlu.com/prod/20260331/796b9835-c2e6-42d6-af1f-f36c17671a03.pdf?filename=SDS), version 1.0, dated February 11, 2025). It's one sheet for the whole ABS-Like line, not specific to my color or bottle size. This is what it says that affects this setup:
+
+- **Hazards (Section 2):** signal word "Danger." Harmful if swallowed, skin irritation, may cause an allergic skin reaction, severe eye damage, respiratory irritation, and possible organ damage from prolonged or repeated exposure. Toxic to aquatic life with long-lasting effects.
+- **Ventilation (Sections 2, 7 and 8):** use outdoors or in a well-ventilated area, and ensure adequate ventilation.
+- **Fire (Section 5):** foam, dry extinguishing agents or water spray, not a water jet. Burning produces carbon monoxide and nitrogen oxides. No flash point is listed.
+- **Storage (Section 7):** original, tightly closed container in a cool, well-ventilated place, out of direct sunlight, away from strong acids and oxidizers, and upright after opening.
+- **Disposal (Section 13):** not down the drain. The sheet classes the resin and its empty packaging as dangerous waste, to be disposed of under local rules.
+- **Gloves and eyes (Section 8):** it only says "suitable" gloves, with no material named. It also says eye protection isn't necessary under normal conditions, which conflicts with the severe eye damage hazard in Section 2, so eye protection stays in my plan regardless.
+
+The sheet has gaps. Sections 9, 10 and 12 are mostly "N/A" or empty, and it lists "H355" for respiratory irritation, which looks like a typo for H335. I haven't recorded the exact IPA product yet, so its SDS link will come once I have it.
 
 ## Setting up each printer
 
