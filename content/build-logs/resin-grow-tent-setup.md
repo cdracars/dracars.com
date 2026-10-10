@@ -88,12 +88,14 @@ The tent isn't empty anymore. The light is an old fish tank light, not a UV ligh
 
 Nothing in these photos has been tested for resin work. There's still no exhaust, no wash station and no printer in here, so the rule below still stands.
 
+One note on the cords: I coiled and hung them on the wall to keep them off the floor. The orange ones are 16 gauge. Coiled cords hold heat, so I'll uncoil them before anything that draws real power runs through them.
+
 **Supplies that arrived.** I bought four more items for the workspace, and they've been delivered. These are plain links, not affiliate links:
 
-- [Inline extension cord switch](https://www.amazon.com/dp/B0DRTCM4DH)
-- [2-pack of 45 oz pickle jars](https://www.amazon.com/dp/B0DBKF17W3)
+- [Inline extension cord switch](https://www.amazon.com/dp/B0DRTCM4DH): the red rocker switch on the light's cord in the photos above.
+- [2-pack of 45 oz pickle jars](https://www.amazon.com/dp/B0DBKF17W3): for dirty wash storage, an idea I picked up from a YouTube video.
 - [36.2" × 24" extra large silicone mat](https://www.amazon.com/dp/B09L7SDWGC)
-- [SUNLU 1000G ABS-Like Resin](https://www.amazon.com/dp/B0BYSKNGX3)
+- [SUNLU 1000G ABS-Like Resin](https://www.amazon.com/dp/B0BYSKNGX3): unopened, in its bottle, stored inside the house for now.
 
 I haven't tested any of them in this workspace yet, so this is a record of what I bought, not a recommendation. The resin is the product that needed a safety data sheet before anything gets poured. I've pulled it; see [Gloves and skin](#gloves-and-skin).
 
@@ -104,6 +106,8 @@ I haven't tested any of them in this workspace yet, so this is a record of what 
 The AC Infinity CLOUDLAB 866 (model `AC-CBA866`), a 5 × 5 ft grow tent, is up in my garage. Both printers are planned to go inside, with a roughly 58-inch standing desk as the main work surface. The plan is to keep printing, washing, curing, and contaminated tools together. During the dry fit, I still need to check room for opening the printers, lifting build plates, and moving dripping parts to the wash area.
 
 Once resin work starts, the tent will also draw a boundary: **if it's inside here, assume it has been near uncured resin.**
+
+**Where the Wash & Cure goes.** I'm planning to put the Anycubic Wash & Cure 3 Max inside the tent, on the floor where it's out of the way. The dirty wash goes in the pickle jars, also in the tent, and the final wash goes in the Wash & Cure. That keeps washing and curing in the same place as the printers. The UV doesn't turn on unless the lid is closed. I haven't confirmed that this machine works yet, so I'll recheck that when I diagnose it. IPA washing in here follows the same rule as everything else: it waits for the exhaust.
 
 ### A tent is not ventilation
 
@@ -119,6 +123,8 @@ Two rules until that's done:
 **Do as I say, not as I do.** The rule above is the recommendation: no resin until the exhaust works. I'm running a few prints before it's built anyway, print-only: lid on, no open IPA in the garage, garage door cracked, and me out of the space while it prints. That's my risk call, not a safe setup, so don't copy it. I'll update this note when the exhaust is in.
 
 OSHA's [flammable-liquids standard](https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.106) addresses covered containers when not in use and keeping ignition sources out of the path of flammable vapors (1910.106(e)(2)(iv)). Its ignition-source list includes electrical and static sparks. I'm using this as a workplace safety reference, not claiming that this garage setup meets a code or that a household installation has the same requirements.
+
+That list matters for my own tent: the light and its red rocker switch are inside it. Before open IPA goes in there, I'll revisit where the electrical pieces sit and document what I change.
 
 **Tent volume and a fan's advertised CFM aren't enough to establish safe exhaust.** OSHA's [ventilation primer](https://www.osha.gov/otm/section-3-health-hazards/chapter-3) distinguishes capturing contaminants at their source from diluting them in room air. System selection depends on emissions, air movement, and the work being done. The unfinished exhaust needs to account for replacement air, duct resistance, outdoor discharge, and equipment suitability for the vapors involved. A grow-tent airflow rule or inward-pulling fabric won't by itself demonstrate exposure control or fire safety.
 
@@ -211,7 +217,7 @@ This is the equipment around which I'm planning the workspace. It isn't a shoppi
 
 - **Printer:** [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer), not ready to print while I check the two boxes of parts and find the vat
 - **Printer being added:** [Anycubic Photon P1](https://store.anycubic.com/products/photon-p1-resin-3d-printer), not yet used in the workspace
-- **Wash and cure:** Anycubic Wash & Cure 3 Max, powers on and lights its display; function unconfirmed, with cured resin in the lines
+- **Wash and cure:** Anycubic Wash & Cure 3 Max, planned for the tent floor; powers on and lights its display; function unconfirmed, with cured resin in the lines
 - **Enclosure:** [AC Infinity CLOUDLAB 866](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) (model `AC-CBA866`), 5 × 5 ft grow tent
 - **Floor protection:** two layers of roughly 3.5 mil plastic
 - **Main work surface:** a standing desk of about 58 inches
@@ -223,6 +229,29 @@ For the wet-zone surface, I'm considering the [Wham Bam Slap Mat](https://www.wh
 You don't need a 5 × 5 grow tent to use a resin printer. I'm using one because I have the room and want printing and post-processing contained together. The desk, floor covering, containers, and eventual exhaust are examples of how I'm solving the problem. I'll call out useful recommendations separately once I have experience with them.
 
 The resin is SUNLU 1000G ABS-Like Resin. I haven't recorded firmware or slicer versions for this guide yet. I'll add them when I start printing.
+
+### Planned power load
+
+Everything in the tent will run through the 16 gauge cord, so I added up the ratings. These are manufacturer power-supply figures, which are maximums, not what each machine actually draws, and I haven't measured anything with a meter yet:
+
+- **Elegoo Saturn 4 Ultra 12K:** 144 W. Elegoo's own product page doesn't list power, so this comes from a [spec listing](https://printer-hub.ru/en/printers/elegoo-saturn-4-ultra), and it matches the 24 V, 6 A adapter rating on a [retailer's page](https://spool3d.ca/elegoo-saturn-4-ultra-12k-resin-3d-printer).
+- **Anycubic Photon P1:** 215 W power supply, per [Anycubic's store page](https://store.anycubic.com/products/photon-p1-resin-3d-printer).
+- **Anycubic Wash & Cure 3 Max:** 120 W power supply, per [Anycubic's store page](https://store.anycubic.com/products/wash-cure-3-max). The page doesn't say whether that covers washing, curing or both.
+
+That adds up to about 479 W, roughly 4 amps at 120 V. A 16 gauge cord is commonly rated around 13 amps (about 1,560 W), but the real rating depends on the cord and its length, so I'll check the label on mine.
+
+The total doesn't include the light or a possible heater. The current light is an old fish tank fixture with physical bulbs that flicker on, and it may be the biggest draw in the tent, so I plan to replace it with a plain white LED that doesn't put out UV rather than work out its load. I haven't picked a replacement. If I add a small chamber heater, I'll add its wattage here. A heater is also an ignition-source question next to IPA vapor, so I'm treating it as a separate decision from the cord load. I'll also check the rating on the red inline switch, since a switch is often rated lower than the cord.
+
+### Where the gear came from
+
+Several of the supplies came from Harbor Freight. These are plain links, not affiliate links, and I haven't tested any of this gear for resin work yet:
+
+- **Extension cord:** [Vanguard 25 ft. x 16/3 gauge indoor/outdoor extension cord, orange](https://www.harborfreight.com/25-ft-x-163-gauge-indooroutdoor-extension-cord-orange-62938.html).
+- **Gloves:** [Hardy 9 mil nitrile powder-free gloves](https://www.harborfreight.com/9-mil-nitrile-powder-free-gloves-large-50-pack-68511.html), the black ones. They're sold in several sizes.
+- **Floor-protection plastic:** [Husky 10 ft. x 25 ft. poly sheeting](https://www.harborfreight.com/10-ft-x-25-ft-poly-sheeting-95144.html), which I've been calling the drop cloth. Harbor Freight's page lists it as 3 mil, and the packaging on mine says 3.5 mil.
+- **Shop towels:** [Toolbox disposable blue shop towels](https://www.harborfreight.com/disposable-blue-shop-towels-64395.html).
+
+The printers and the wash station came from the pickup described above, and the other supplies are linked in the update above.
 
 ## What I'm not upgrading yet
 
@@ -271,7 +300,12 @@ This will change as I use the setup. So far the lesson is: **design the resin wo
 - my actual dirty-wash and clean-wash setup
 - curing workflow
 - plastic on the floor and table, and whether the printed clips hold it
-- the exhaust build
+- the exhaust build, and updating the "Do as I say, not as I do" note once it's in
+- finding the Saturn's vat
+- diagnosing the Wash & Cure
+- the standing desk
+- replacing the fish tank light with a plain white LED
+- a fire extinguisher nearby
 - first-print experience
 - which printer mods are worth it, and which accessories turned out unnecessary
 
