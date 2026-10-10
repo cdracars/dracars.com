@@ -4,7 +4,7 @@ slug: stl-to-step-plugins
 description: "A build log for bringing a newly discussed STL-to-STEP library into FreeCAD and Fusion 360 as plugins."
 publishedAt: 2026-10-08
 updatedAt: 2026-10-08
-indexImage: /images/build-logs/stl-to-step-plugins/02-ai-mesh-flat-cad.png
+indexImage: /images/build-logs/stl-to-step-plugins/02-ai-mesh-flat-cad.webp
 author: Dracars
 category: tools-software
 status: current
@@ -23,7 +23,7 @@ affiliateLinksPresent: false
 - That sounded like a challenge, so the idea became plugins for FreeCAD and Fusion 360.
 :::
 
-!photo 02-ai-mesh-flat-cad.png | AI-generated concept illustration: a green triangulated mesh transitions into a flat-shaded CAD-style solid. Not a plugin screenshot or conversion result.
+!photo 02-ai-mesh-flat-cad.webp | AI-generated concept illustration: a green triangulated mesh transitions into a flat-shaded CAD-style solid. Not a plugin screenshot or conversion result.
 
 ## The question that started it
 

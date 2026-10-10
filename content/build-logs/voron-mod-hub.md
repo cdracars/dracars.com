@@ -52,7 +52,7 @@ The published site is a static Next.js export. It reads the generated JSON at bu
 
 Filter state is also reflected in the URL. A link such as `?q=query&printers=v2_4` restores the search and selected printer family for the next visitor, making a useful find shareable rather than trapped in one browser tab.
 
-!photo 01-voron-mod-catalog-workbench.png | A workbench interpretation of the hub's job: putting a browsable layer between a large community catalog and a specific printer build.
+!photo 01-voron-mod-catalog-workbench.webp | A workbench interpretation of the hub's job: putting a browsable layer between a large community catalog and a specific printer build.
 
 ## Giving a catalog visual handles
 
