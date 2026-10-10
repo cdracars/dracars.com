@@ -80,7 +80,7 @@ Then came the less graceful part: wrestling the tent into place in the garage. T
 
 ### Update, 2026-10-10: the first things inside the tent
 
-The tent isn't empty anymore. The light is an old fish tank light, not a UV light. It has no power switch of its own, so I added an external switch with a red rocker on its black cord and zip-tied it to the tent frame near the door. That lets me turn the light on and off from the door without touching the surge protector. Extension cords are coiled and hung on the wall nearby, and a black folding table is set up inside.
+The tent isn't empty anymore. The light is an old fish tank light, not a UV light. It has no power switch of its own, so I added an external switch with a red rocker on its black cord and zip-tied it to the tent frame near the door. That lets me turn the light on and off from the door without touching the surge protector. Extension cords are coiled and hung on the wall nearby, and a black folding table is set up inside. The table is a temporary measure so I can get up and running sooner rather than later; the standing desk is still the plan for the main work surface.
 
 !photo 09-tent-light-and-switch.webp | The old non-UV fish tank light hanging from chains, its black cord running along the tent wall to the external red rocker switch zip-tied to the frame near the door, and coiled extension cords hung on the wall.
 
