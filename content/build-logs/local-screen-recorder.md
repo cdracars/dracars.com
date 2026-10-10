@@ -40,7 +40,7 @@ Sometimes the useful version of a tool is the one that refuses to become a servi
 
 That means the recording and file creation happen in the browser on the person's device. The project has no backend, no account flow, no analytics, and no upload step to explain away later. The initial version was committed on September 28, 2026 as a single-page recorder; the code was then separated from the page presentation so the recording behavior could stand on its own.
 
-!photo 01-local-recorder-workbench.png | A workbench interpretation of the recorder's constraint: capture stays on the device, with no upload path in the middle.
+!photo 01-local-recorder-workbench.webp | A workbench interpretation of the recorder's constraint: capture stays on the device, with no upload path in the middle.
 
 ## Designing around what the browser actually offers
 

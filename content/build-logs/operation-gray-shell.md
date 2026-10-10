@@ -4,7 +4,7 @@ slug: operation-gray-shell
 description: "A running build log for a Box Turtle 1.1 beta with an early Longboi 1.0 prototype, Smol v2 lanes, and a few lessons from reprinting parts."
 publishedAt: 2026-09-20
 updatedAt: 2026-10-08
-indexImage: /images/build-logs/operation-gray-shell/07-finished-box-turtle.jpg
+indexImage: /images/build-logs/operation-gray-shell/07-finished-box-turtle.webp
 author: Dracars
 category: projects-builds
 status: current
@@ -38,9 +38,9 @@ Robert Klotz, the mind behind the Box Turtle project, got me one of the early Lo
 
 This build uses the **Smol v2** lane design, an alternative to the Apex extruders expected to ship in production kits. The notable benefit of the Longboi arrangement is wiring: every lane uses wires of the same length. That repeatability made routing the wiring cleanly much easier than measuring and managing a different run for each lane.
 
-!photo 01-side-open-assembly.jpg | An early open-frame view shows the lane hardware and wiring before the covers went on.
+!photo 01-side-open-assembly.webp | An early open-frame view shows the lane hardware and wiring before the covers went on.
 
-!photo 02-internal-lanes.jpg | Inside the frame, the lane assemblies and their wiring are visible together.
+!photo 02-internal-lanes.webp | Inside the frame, the lane assemblies and their wiring are visible together.
 
 I’ll add the final lane configuration and any differences I find in day-to-day use once AFC is set up and the system is commissioned.
 
@@ -48,9 +48,9 @@ I’ll add the final lane configuration and any differences I find in day-to-day
 
 The early photos show the Longboi and Box Turtle coming together in stages. The lane carriage was fitted across the top of the frame, then I worked through the front lighting and trim details.
 
-!photo 03-lane-carriage-layout.jpg | The lane carriage and printed parts laid across the Box Turtle frame during assembly.
+!photo 03-lane-carriage-layout.webp | The lane carriage and printed parts laid across the Box Turtle frame during assembly.
 
-!photo 04-led-panel-detail.jpg | A close look at the front panel detail and its LED strip.
+!photo 04-led-panel-detail.webp | A close look at the front panel detail and its LED strip.
 
 ## Why it is called Gray Shell
 
@@ -58,11 +58,11 @@ The gray color started as an accident. I began printing parts with the filament 
 
 It is a good example of a build picking up its own identity while it is still on the bench. The color was never a planned theme; it became one because I kept going with the material I had loaded.
 
-!photo 05-assembled-spool-side.jpg | The assembled unit with the Longboi spools and front panel in place.
+!photo 05-assembled-spool-side.webp | The assembled unit with the Longboi spools and front panel in place.
 
-!photo 06-spool-lanes-top.jpg | Looking down at the spool lanes and printed guides on the assembled frame.
+!photo 06-spool-lanes-top.webp | Looking down at the spool lanes and printed guides on the assembled frame.
 
-!photo 07-finished-box-turtle.jpg | The finished Gray Shell setup with spools loaded and the front lighting on.
+!photo 07-finished-box-turtle.webp | The finished Gray Shell setup with spools loaded and the front lighting on.
 
 ## The thing I would change
 
