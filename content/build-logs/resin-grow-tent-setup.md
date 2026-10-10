@@ -88,7 +88,7 @@ The tent isn't empty anymore. The light is an old fish tank light, not a UV ligh
 
 Nothing in these photos has been tested for resin work. There's still no exhaust, no wash station and no printer in here, so the rule below still stands.
 
-One note on the cords: I coiled and hung them on the wall to keep them off the floor. The orange ones are 16 gauge. Coiled cords hold heat, so I'll uncoil them before anything that draws real power runs through them.
+One note on the cords: I coiled and hung them on the wall to keep them off the floor. The orange one is a 25 ft Harbor Freight cord, 16 gauge, and it's the only cord whose gauge I know for sure. The other cord is the one on the light, which gets replaced when the light does. Coiled cords hold heat, so I'll uncoil them before anything that draws real power runs through them.
 
 **Supplies that arrived.** I bought four more items for the workspace, and they've been delivered. These are plain links, not affiliate links:
 
@@ -232,13 +232,15 @@ The resin is SUNLU 1000G ABS-Like Resin. I haven't recorded firmware or slicer v
 
 ### Planned power load
 
-Everything in the tent will run through the 16 gauge cord, so I added up the ratings. These are manufacturer power-supply figures, which are maximums, not what each machine actually draws, and I haven't measured anything with a meter yet:
+Everything in the tent will run through the orange 16 gauge cord, so I added up the ratings. These are manufacturer power-supply figures, which are maximums, not what each machine actually draws, and I haven't measured anything with a meter yet:
 
 - **Elegoo Saturn 4 Ultra 12K:** 144 W. Elegoo's own product page doesn't list power, so this comes from a [spec listing](https://printer-hub.ru/en/printers/elegoo-saturn-4-ultra), and it matches the 24 V, 6 A adapter rating on a [retailer's page](https://spool3d.ca/elegoo-saturn-4-ultra-12k-resin-3d-printer).
 - **Anycubic Photon P1:** 215 W power supply, per [Anycubic's store page](https://store.anycubic.com/products/photon-p1-resin-3d-printer).
 - **Anycubic Wash & Cure 3 Max:** 120 W power supply, per [Anycubic's store page](https://store.anycubic.com/products/wash-cure-3-max). The page doesn't say whether that covers washing, curing or both.
 
 That adds up to about 479 W, roughly 4 amps at 120 V. A 16 gauge cord is commonly rated around 13 amps (about 1,560 W), but the real rating depends on the cord and its length, so I'll check the label on mine.
+
+That cord feeds a surge protector, which is how I get the extra outlets, so the surge protector's own rating matters too. I'll record its model and rating when I'm at the setup.
 
 The total doesn't include the light or a possible heater. The current light is an old fish tank fixture with physical bulbs that flicker on, and it may be the biggest draw in the tent, so I plan to replace it with a plain white LED that doesn't put out UV rather than work out its load. I haven't picked a replacement. If I add a small chamber heater, I'll add its wattage here. A heater is also an ignition-source question next to IPA vapor, so I'm treating it as a separate decision from the cord load. I'll also check the rating on the red inline switch, since a switch is often rated lower than the cord.
 
@@ -247,9 +249,9 @@ The total doesn't include the light or a possible heater. The current light is a
 Several of the supplies came from Harbor Freight. These are plain links, not affiliate links, and I haven't tested any of this gear for resin work yet:
 
 - **Extension cord:** [Vanguard 25 ft. x 16/3 gauge indoor/outdoor extension cord, orange](https://www.harborfreight.com/25-ft-x-163-gauge-indooroutdoor-extension-cord-orange-62938.html).
-- **Gloves:** [Hardy 9 mil nitrile powder-free gloves](https://www.harborfreight.com/9-mil-nitrile-powder-free-gloves-large-50-pack-68511.html), the black ones. They're sold in several sizes.
+- **Gloves:** [Hardy 9 mil nitrile powder-free gloves, medium](https://www.harborfreight.com/9-mil-nitrile-powder-free-gloves-medium-50-pack-68510.html), the black ones. I wear a medium, and they run a little tight on me, though not too bad.
 - **Floor-protection plastic:** [Husky 10 ft. x 25 ft. poly sheeting](https://www.harborfreight.com/10-ft-x-25-ft-poly-sheeting-95144.html), which I've been calling the drop cloth. Harbor Freight's page lists it as 3 mil, and the packaging on mine says 3.5 mil.
-- **Shop towels:** [Toolbox disposable blue shop towels](https://www.harborfreight.com/disposable-blue-shop-towels-64395.html).
+- **Shop towels:** [Toolbox disposable blue shop towels](https://www.harborfreight.com/disposable-blue-shop-towels-64395.html). Mine came on a roll, not in a box.
 
 The printers and the wash station came from the pickup described above, and the other supplies are linked in the update above.
 
