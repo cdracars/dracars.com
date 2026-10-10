@@ -88,6 +88,8 @@ The tent isn't empty anymore. The light is an old fish tank light, not a UV ligh
 
 Nothing in these photos has been tested for resin work. There's still no exhaust, no wash station and no printer in here, so the rule below still stands.
 
+**Next step: plastic on the floor and the table.** This is where the two layers of plastic from the floor-protection plan go in, along with a covering for the folding table. To keep the plastic from shifting, I plan to print two clip designs from Printables: the [22mm grow tent clip collection](https://www.printables.com/model/1201054-22mm-grow-tent-clip-collection) and a [tablecloth clip](https://www.printables.com/model/363236-tablecloth-clip). I haven't printed or tested either one yet, so I don't know how well they'll hold.
+
 ## My workspace plan
 
 The AC Infinity CLOUDLAB 866 (model `AC-CBA866`), a 5 × 5 ft grow tent, is up in my garage. Both printers are planned to go inside, with a roughly 58-inch standing desk as the main work surface. The plan is to keep printing, washing, curing, and contaminated tools together. During the dry fit, I still need to check room for opening the printers, lifting build plates, and moving dripping parts to the wash area.
@@ -247,6 +249,7 @@ This will change as I use the setup. So far the lesson is: **design the resin wo
 
 - my actual dirty-wash and clean-wash setup
 - curing workflow
+- plastic on the floor and table, and whether the printed clips hold it
 - the exhaust build
 - first-print experience
 - which printer mods are worth it, and which accessories turned out unnecessary
