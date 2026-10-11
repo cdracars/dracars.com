@@ -3,7 +3,7 @@ title: Building a garage grow-tent workspace for resin printing
 slug: resin-grow-tent-setup
 description: A running record of building a shared garage resin-printing workspace, from floor protection to washing and exhaust.
 publishedAt: 2026-10-07
-updatedAt: 2026-10-10
+updatedAt: 2026-10-11
 indexImage: /images/build-logs/resin-grow-tent-setup/08-tent-in-place.webp
 author: Dracars
 category: projects-builds
@@ -100,6 +100,28 @@ One note on the cords: I coiled and hung them on the wall to keep them off the f
 I haven't tested any of them in this workspace yet, so this is a record of what I bought, not a recommendation. The resin is the product that needed a safety data sheet before anything gets poured. I've pulled it; see [Gloves and skin](#gloves-and-skin).
 
 **Next step: plastic on the floor and the table.** This is where the two layers of plastic from the floor-protection plan go in, along with a covering for the folding table. To keep the plastic from shifting, I plan to print two clip designs from Printables: the [22mm grow tent clip collection](https://www.printables.com/model/1201054-22mm-grow-tent-clip-collection) and a [tablecloth clip](https://www.printables.com/model/363236-tablecloth-clip). I haven't printed or tested either one yet, so I don't know how well they'll hold.
+
+### Update, 2026-10-11: plastic down, a tank in the Saturn, and two more boxes
+
+The folding table and the tent floor now have plastic on them, and the Elegoo Saturn is sitting on the plastic-covered table. White clips hold the plastic at the table's edge.
+
+!photo 11-table-and-floor-plastic.webp | The tent with plastic over the folding table and across the floor, and white clips holding the plastic at the table's edge.
+
+A resin tank is installed in the Saturn, and the build plate is raised above it. The tank looks empty in the photo, and the Wi-Fi antenna is attached. No resin is in it, and I haven't recorded any of the setup checks from [Setting up each printer](#setting-up-each-printer) yet, so it's still not ready to print.
+
+!photo 12-saturn-with-tank-installed.webp | The Elegoo Saturn on the plastic-covered table with a tank installed, the build plate raised above it, and the antenna attached.
+
+Two Elegoo boxes are also sitting on the plastic. One is a resin tank (1 piece) and the other is a laser-carved build plate, and both say they're compatible with the Saturn 4 series. In the photos they're still closed.
+
+!photo 13-resin-tank-box.webp | A closed Elegoo "Resin Tank" box, marked 1 piece and compatible with the Saturn 4 series.
+
+!photo 14-build-plate-box.webp | A closed, taped Elegoo "Laser-Carved Build Plate" box, marked compatible with the Saturn 4 series.
+
+The light is on in these two shots, running along the tent's top frame. The surge protector is zip-tied up there, the orange cord is coiled and hung on the wall, and a bead pull chain hangs at the left.
+
+!photo 15-tent-light-on-frame.webp | The light on, running along the tent's top frame, with the surge protector zip-tied nearby, the orange cord coiled on the wall, a white cord looped below, and a bead pull chain hanging at left.
+
+!photo 16-tent-light-end-piece.webp | A closer look at the light's black end piece, with a black cord running across the tent wall and the orange cord coiled behind it.
 
 ## My workspace plan
 
