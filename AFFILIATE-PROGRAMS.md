@@ -98,8 +98,9 @@ mentioned in the Guides handoff are future research candidates, not selected
 affiliate programs.
 
 The build log (`content/build-logs/resin-grow-tent-setup.md`) records Harbor Freight
-sources for the 25 ft 16/3 extension cord, 9 mil nitrile gloves, poly sheeting, and
-disposable shop towels as ordinary, non-affiliate links. They are not linked in the
+sources for the 25 ft 16/3 extension cord, 9 mil nitrile gloves, poly sheeting,
+disposable shop towels, and the Braun 5500 lumen 4 ft LED shop light (item 59506) as
+ordinary, non-affiliate links. They are not linked in the
 guide, and this inventory stays scoped to the guide. The sheeting's listing says 3 mil;
 Cody reports 3.5 mil on the packaging.
 

@@ -117,11 +117,13 @@ Two Elegoo boxes are also sitting on the plastic. One is a resin tank (1 piece) 
 
 !photo 14-build-plate-box.webp | A closed, taped Elegoo "Laser-Carved Build Plate" box, marked compatible with the Saturn 4 series.
 
-The new LED light is on in these two shots, running along the tent's top frame. I haven't recorded its model or wattage yet. The surge protector is zip-tied up there, the orange cord is coiled and hung on the wall, and a bead pull chain hangs at the left.
+The new LED light is on in these two shots, running along the tent's top frame. It's the [Braun 5500 lumen, 4 ft linkable LED hanging shop light](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html), Harbor Freight item 59506. This is a plain link, not an affiliate link. The listing gives 55 W at 120 V, an on/off metal pull chain, and two chains with S-hooks, and the box on the shelf also says 4000K cool white. Those are the manufacturer's numbers, not anything I've measured, and I haven't confirmed it puts out no UV. The surge protector is zip-tied up there, the orange cord is coiled and hung on the wall, and a bead pull chain hangs at the left.
 
 !photo 15-tent-light-on-frame.webp | The new LED light on, running along the tent's top frame, with the surge protector zip-tied nearby, the orange cord coiled on the wall, a white cord looped below, and a bead pull chain hanging at left.
 
 !photo 16-tent-light-end-piece.webp | A closer look at the new LED light's black end piece, with a black cord running across the tent wall and the orange cord coiled behind it.
+
+!photo 17-braun-shop-light-shelf.webp | The Braun lights on the store shelf. The 5500 lumen, 4 ft linkable shop light is the one I picked.
 
 ## My workspace plan
 
@@ -264,11 +266,13 @@ Everything in the tent will run through the orange 16 gauge cord, so I added up 
 - **Anycubic Photon P1:** 215 W power supply, per [Anycubic's store page](https://store.anycubic.com/products/photon-p1-resin-3d-printer).
 - **Anycubic Wash & Cure 3 Max:** 120 W power supply, per [Anycubic's store page](https://store.anycubic.com/products/wash-cure-3-max). The page doesn't say whether that covers washing, curing or both.
 
-That adds up to about 479 W, roughly 4 amps at 120 V. The orange cord's [Harbor Freight listing](https://www.harborfreight.com/25-ft-x-163-gauge-indooroutdoor-extension-cord-orange-62938.html) says 13 amps, 1,625 W and 125 V, so 479 W is well inside it. The listing says its specs are approximate, so I'll still check the label on the cord itself.
+- **Braun 5500 lumen LED light:** 55 W at 120 V, per its [Harbor Freight listing](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html).
+
+That adds up to about 534 W, roughly 4.5 amps at 120 V. The orange cord's [Harbor Freight listing](https://www.harborfreight.com/25-ft-x-163-gauge-indooroutdoor-extension-cord-orange-62938.html) says 13 amps, 1,625 W and 125 V, so 534 W is well inside it. The listing says its specs are approximate, so I'll still check the label on the cord itself.
 
 That cord feeds a surge protector, which is how I get the extra outlets, so the surge protector's own rating matters too. I'll record its model and rating when I'm at the setup.
 
-The total doesn't include the light or a possible heater. The old fish tank fixture has been replaced with a new LED light (see the 2026-10-11 update above). I haven't recorded its model or wattage yet, so its load isn't in the total, and I haven't confirmed it puts out no UV. If I add a small chamber heater, I'll add its wattage here. A heater is also an ignition-source question next to IPA vapor, so I'm treating it as a separate decision from the cord load. I'll also check the rating on the red inline switch, since a switch is often rated lower than the cord.
+The total doesn't include a possible heater. The old fish tank fixture has been replaced with the new LED light (see the 2026-10-11 update above), and its 55 W is in the total. I haven't confirmed it puts out no UV. If I add a small chamber heater, I'll add its wattage here. A heater is also an ignition-source question next to IPA vapor, so I'm treating it as a separate decision from the cord load. I'll also check the rating on the red inline switch, since a switch is often rated lower than the cord.
 
 ### Where the gear came from
 
@@ -278,6 +282,7 @@ Several of the supplies came from Harbor Freight. These are plain links, not aff
 - **Gloves:** [Hardy 9 mil nitrile powder-free gloves, medium](https://www.harborfreight.com/9-mil-nitrile-powder-free-gloves-medium-50-pack-68510.html), the black ones. I wear a medium, and they run a little tight on me, though not too bad.
 - **Floor-protection plastic:** [Husky 10 ft. x 25 ft. poly sheeting](https://www.harborfreight.com/10-ft-x-25-ft-poly-sheeting-95144.html), which I've been calling the drop cloth. Harbor Freight's page lists it as 3 mil, and the packaging on mine says 3.5 mil.
 - **Shop towels:** [Toolbox disposable blue shop towels](https://www.harborfreight.com/disposable-blue-shop-towels-64395.html). Mine came on a roll, not in a box.
+- **LED light:** [Braun 5500 lumen, 4 ft linkable LED hanging shop light](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html).
 
 The printers and the wash station came from the pickup described above, and the other supplies are linked in the update above.
 
@@ -332,7 +337,7 @@ This will change as I use the setup. So far the lesson is: **design the resin wo
 - checking the Saturn's newly found vat and build plate, then running the setup checks
 - diagnosing the Wash & Cure
 - the standing desk
-- recording the new LED light's model and wattage, and confirming it puts out no UV
+- confirming the new LED light puts out no UV
 - recording the ratings on the surge protector, the red switch, and the orange cord's label
 - recording the IPA product and concentration, and pulling its SDS
 - getting permeation data for the nitrile gloves, or switching to a glove that publishes acrylate and IPA data
