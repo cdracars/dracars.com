@@ -103,7 +103,7 @@ I haven't tested any of them in this workspace yet, so this is a record of what 
 
 ### Update, 2026-10-11: plastic down, a tank in the Saturn, and two more boxes
 
-The folding table and the tent floor now have plastic on them, and the Elegoo Saturn is sitting on the plastic-covered table. White clips hold the plastic at the table's edge.
+The folding table and the tent floor now have plastic on them, and the Elegoo Saturn is sitting on the plastic-covered table. White clips hold the plastic at the table's edge. The floor liner is in, but I'm not happy with how it's sitting, so I'm printing more clips to tidy it up. I haven't tested how well any of them hold yet.
 
 !photo 11-table-and-floor-plastic.webp | The tent with plastic over the folding table and across the floor, and white clips holding the plastic at the table's edge.
 
@@ -327,7 +327,7 @@ This will change as I use the setup. So far the lesson is: **design the resin wo
 
 - my actual dirty-wash and clean-wash setup
 - curing workflow
-- plastic on the floor and table, and whether the printed clips hold it
+- tidying the floor liner with more printed clips, and whether the clips hold it
 - the exhaust build, and updating the "Do as I say, not as I do" note once it's in
 - checking the Saturn's newly found vat and build plate, then running the setup checks
 - diagnosing the Wash & Cure
