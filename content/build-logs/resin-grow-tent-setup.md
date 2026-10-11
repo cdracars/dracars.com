@@ -14,7 +14,7 @@ featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
   - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; a light fixture, cords and a folding table are inside; no printers yet)
-  - Elegoo Saturn 4 Ultra 12K (incomplete setup; not ready to print)
+  - Elegoo Saturn 4 Ultra 12K (vat and build plate found; setup checks not done; not ready to print)
   - Anycubic Photon P1 (planned for this workspace; no prints yet)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
   - Garage; ~58-inch standing desk planned as the main work surface
@@ -23,7 +23,7 @@ affiliateLinksPresent: false
 
 :::tldr Where things stand and what I'm planning
 - The 5 × 5 ft grow tent is assembled in the garage. As of 2026-10-10 it has a hanging light (an old non-UV fish tank light on an external switch near the door), coiled extension cords and a folding table inside. Neither printer has been used for prints in this workspace.
-- The Saturn 4 Ultra came with two boxes of parts. I haven't found the vat among the items checked so far; I think it may still be in one of those boxes. The printer is not ready to print.
+- The Saturn 4 Ultra's missing vat and build plate turned up: a boxed Elegoo resin tank and a boxed laser-carved build plate. The printer is still not ready to print, since none of the setup checks are recorded yet.
 - The Wash & Cure 3 Max powers on and its display lights up, but I haven't confirmed that it functions. There is cured resin in its lines, so its repair is still to be diagnosed.
 - Planned floor protection: two layers of ~3.5 mil plastic under the work area, plus a smooth, wipeable, replaceable surface in the wet zone.
 - Keep a deliberate **dirty side**. Workflow: print → drip → **dirty wash → clean wash** → dry completely → cure.
@@ -34,7 +34,7 @@ affiliateLinksPresent: false
 - Build the workspace and workflow first. Printer upgrades can wait until there's a real problem to solve.
 :::
 
-So far, I've assembled the grow tent and started putting a light, cords and a folding table inside. The layout, floor protection, washing, curing, and exhaust described below are plans for the workspace, not an installed or tested setup. Neither printer has produced a print in this workspace. The Saturn 4 Ultra is not ready to print: it came with two boxes of parts, and I haven't found the vat in the items checked so far. I think it may still be in one of the boxes.
+So far, I've assembled the grow tent and started putting a light, cords and a folding table inside. The layout, floor protection, washing, curing, and exhaust described below are plans for the workspace, not an installed or tested setup. Neither printer has produced a print in this workspace. The Saturn 4 Ultra is not ready to print yet. I'd been missing its vat and build plate, and they've since turned up as a boxed Elegoo resin tank and a boxed laser-carved build plate. The setup checks still aren't recorded.
 
 The Anycubic Wash & Cure 3 Max came with the printers. It powers on and the display lights up, but I haven't confirmed its functions; cured resin is in its lines. I'll track its diagnosis and repair separately from the P1 setup, and keep this log focused on the shared workspace. I'll link the printer-specific logs here as they are ready. I'll update this page as I build out and use the space, find problems, and change things. The "Updated" date at the top records when I last revised the guide.
 
@@ -111,17 +111,17 @@ A resin tank is installed in the Saturn, and the build plate is raised above it.
 
 !photo 12-saturn-with-tank-installed.webp | The Elegoo Saturn on the plastic-covered table with a tank installed, the build plate raised above it, and the antenna attached.
 
-Two Elegoo boxes are also sitting on the plastic. One is a resin tank (1 piece) and the other is a laser-carved build plate, and both say they're compatible with the Saturn 4 series. In the photos they're still closed.
+Two Elegoo boxes are also sitting on the plastic. One is a resin tank (1 piece) and the other is a laser-carved build plate, and both say they're compatible with the Saturn 4 series. These are the vat and build plate I'd been missing for the Saturn. In the photos they're still closed.
 
 !photo 13-resin-tank-box.webp | A closed Elegoo "Resin Tank" box, marked 1 piece and compatible with the Saturn 4 series.
 
 !photo 14-build-plate-box.webp | A closed, taped Elegoo "Laser-Carved Build Plate" box, marked compatible with the Saturn 4 series.
 
-The light is on in these two shots, running along the tent's top frame. The surge protector is zip-tied up there, the orange cord is coiled and hung on the wall, and a bead pull chain hangs at the left.
+The new LED light is on in these two shots, running along the tent's top frame. I haven't recorded its model or wattage yet. The surge protector is zip-tied up there, the orange cord is coiled and hung on the wall, and a bead pull chain hangs at the left.
 
-!photo 15-tent-light-on-frame.webp | The light on, running along the tent's top frame, with the surge protector zip-tied nearby, the orange cord coiled on the wall, a white cord looped below, and a bead pull chain hanging at left.
+!photo 15-tent-light-on-frame.webp | The new LED light on, running along the tent's top frame, with the surge protector zip-tied nearby, the orange cord coiled on the wall, a white cord looped below, and a bead pull chain hanging at left.
 
-!photo 16-tent-light-end-piece.webp | A closer look at the light's black end piece, with a black cord running across the tent wall and the orange cord coiled behind it.
+!photo 16-tent-light-end-piece.webp | A closer look at the new LED light's black end piece, with a black cord running across the tent wall and the orange cord coiled behind it.
 
 ## My workspace plan
 
@@ -241,7 +241,7 @@ I'll label the resin in each vat and keep each machine's parts together. Two pri
 
 This is the equipment around which I'm planning the workspace. It isn't a shopping list or a tested recommendation:
 
-- **Printer:** [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer), not ready to print while I check the two boxes of parts and find the vat
+- **Printer:** [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer), not ready to print until the setup checks are done; its vat and build plate have turned up, boxed in the photos
 - **Printer being added:** [Anycubic Photon P1](https://store.anycubic.com/products/photon-p1-resin-3d-printer), not yet used in the workspace
 - **Wash and cure:** Anycubic Wash & Cure 3 Max, planned for the tent floor; powers on and lights its display; function unconfirmed, with cured resin in the lines
 - **Enclosure:** [AC Infinity CLOUDLAB 866](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) (model `AC-CBA866`), 5 × 5 ft grow tent
@@ -268,7 +268,7 @@ That adds up to about 479 W, roughly 4 amps at 120 V. The orange cord's [Harbor 
 
 That cord feeds a surge protector, which is how I get the extra outlets, so the surge protector's own rating matters too. I'll record its model and rating when I'm at the setup.
 
-The total doesn't include the light or a possible heater. The current light is an old fish tank fixture with physical bulbs that flicker on, and it may be the biggest draw in the tent, so I plan to replace it with a plain white LED that doesn't put out UV rather than work out its load. I haven't picked a replacement. If I add a small chamber heater, I'll add its wattage here. A heater is also an ignition-source question next to IPA vapor, so I'm treating it as a separate decision from the cord load. I'll also check the rating on the red inline switch, since a switch is often rated lower than the cord.
+The total doesn't include the light or a possible heater. The old fish tank fixture has been replaced with a new LED light (see the 2026-10-11 update above). I haven't recorded its model or wattage yet, so its load isn't in the total, and I haven't confirmed it puts out no UV. If I add a small chamber heater, I'll add its wattage here. A heater is also an ignition-source question next to IPA vapor, so I'm treating it as a separate decision from the cord load. I'll also check the rating on the red inline switch, since a switch is often rated lower than the cord.
 
 ### Where the gear came from
 
@@ -329,10 +329,10 @@ This will change as I use the setup. So far the lesson is: **design the resin wo
 - curing workflow
 - plastic on the floor and table, and whether the printed clips hold it
 - the exhaust build, and updating the "Do as I say, not as I do" note once it's in
-- finding the Saturn's vat
+- checking the Saturn's newly found vat and build plate, then running the setup checks
 - diagnosing the Wash & Cure
 - the standing desk
-- replacing the fish tank light with a plain white LED
+- recording the new LED light's model and wattage, and confirming it puts out no UV
 - recording the ratings on the surge protector, the red switch, and the orange cord's label
 - recording the IPA product and concentration, and pulling its SDS
 - getting permeation data for the nitrile gloves, or switching to a glove that publishes acrylate and IPA data
