@@ -1,21 +1,33 @@
 # dracars.com
 
-The personal home of Cody Dracars: software, maker tools, and open projects
-made to be useful.
+The personal home of Cody Dracars: current projects, Build Logs, practical
+guides, software, and maker tools made to be useful.
 
 ## What it is
 
-This is the directory for Cody's browser tools, open-source projects, and
-practical work around 3D printers and the systems that make them better. The
-site is deliberately small: no accounts, tracking-heavy features, or gated
-downloads. Its current tools and projects are free to use, with optional
-support through Ko-fi.
+Dracars Workshop is the long-term home for Cody's practical projects. Project
+pages describe the current state; Build Logs keep the dated story. Guides and
+tools make useful results easier to find and use. The site is deliberately
+small: no accounts, tracking-heavy features, or gated downloads. Its current
+tools and projects are free to use, with optional support through Ko-fi.
+
+## Licensing
+
+This repository does not have one blanket license. The root [LICENSE](LICENSE)
+explains the scope: MIT covers only the original code and configuration listed
+in [LICENSE-SCOPE.md](LICENSE-SCOPE.md), under
+[LICENSE-MIT-CODE.md](LICENSE-MIT-CODE.md). Guides, build logs, photos, and
+Dracars brand assets are reserved; see [CONTENT-RIGHTS.md](CONTENT-RIGHTS.md).
+Third-party material remains subject to its owner's terms. Adding a store or
+affiliate links does not change these boundaries.
 
 ## Project structure
 
 ```text
 public/index.html   The public landing page
 public/styles.css   Responsive visual system and interaction styles
+content/projects/  Persistent Workshop project records
+public/workshop/   Generated Workshop index and project pages
 scripts/site-chrome.mjs Shared header, GitHub corner, and footer markup
 PRODUCT.md          Durable site purpose and constraints
 DESIGN.md           Approved visual direction
@@ -33,9 +45,10 @@ and the details to confirm before drafting or publishing them.
 
 ## Guides
 
-Guides live in `content/guides/<slug>.md` and build logs live in
-`content/build-logs/<slug>.md` (frontmatter + Markdown). Both are built to
-static HTML under `public/` by a dependency-free script:
+Guides live in `content/guides/<slug>.md`, Build Logs in
+`content/build-logs/<slug>.md`, and Workshop project records in
+`content/projects/<slug>.md` (frontmatter + Markdown). They build to static
+HTML under `public/` with a dependency-free script:
 
 ```sh
 node scripts/build-guides.mjs
@@ -55,7 +68,8 @@ that adds `rel="sponsored"` and turns on the disclosure. Freshness is computed
 from `updatedAt` at build time (Aging after 180 days; `status: legacy` overrides),
 so rebuild when you deploy. Set `draft: true` to keep a guide unpublished.
 
-The resin-workspace build log lives at `/build-logs/resin-grow-tent-setup/`.
+The resin-workspace project lives at `/workshop/saturn-4-ultra/`; its dated
+Build Log lives at `/build-logs/resin-grow-tent-setup/`.
 Its future reference guide lives at `/guides/resin-grow-tent-setup/` and is
 intentionally marked Coming Soon until the workspace has been used and tested.
 `public/_redirects` preserves the former `/guides/saturn-4-ultra-setup/` URL

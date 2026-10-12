@@ -1,6 +1,6 @@
 // Shared static site chrome, rendered at build time (no browser JavaScript required).
 export function siteHeader(path) {
-  const current = path === '/' ? 'tools' : path.startsWith('/build-logs') ? 'build-logs' : 'guides';
+  const current = path.startsWith('/workshop') ? 'workshop' : path === '/' ? 'tools' : path.startsWith('/build-logs') ? 'build-logs' : path.startsWith('/guides') ? 'guides' : 'tools';
   return `    <a class="skip-link" href="#content">Skip to content</a>
     <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
       <svg viewBox="0 0 250 250" aria-hidden="true" focusable="false">
@@ -14,7 +14,8 @@ export function siteHeader(path) {
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="/"${current === 'tools' ? ' aria-current="page"' : ''}>Tools</a>
+        <a href="/workshop/"${current === 'workshop' ? ' aria-current="page"' : ''}>Workshop</a>
+        <a href="/#tools"${current === 'tools' ? ' aria-current="page"' : ''}>Tools</a>
         <a href="/build-logs/"${current === 'build-logs' ? ' aria-current="page"' : ''}>Build Logs</a>
         <a href="/guides/"${current === 'guides' ? (path === '/guides/' ? ' aria-current="page"' : ' aria-current="true"') : ''}>Guides</a>
       </nav>
@@ -27,6 +28,6 @@ export function siteFooter() {
         <span>Built by Cody Dracars.</span>
         <a href="https://github.com/cdracars" target="_blank" rel="noreferrer">There’s more over on GitHub <span aria-hidden="true">↗</span></a>
       </div>
-      <p class="footer-disclosure">Guides may include affiliate links, disclosed on the page. Recommendations come first; links are added only where they fit.</p>
+      <p class="footer-disclosure">Affiliate links may appear anywhere on this site. I disclose them on the page; recommendations come first, and I use affiliate links only when they fit.</p>
     </footer>`;
 }

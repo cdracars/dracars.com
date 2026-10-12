@@ -7,3 +7,7 @@ Thumbs.db
 .vscode/
 .wrangler/
 node_modules/
+
+# Local review output; keep it out of public repository history.
+.impeccable/
+.readiness-audit/

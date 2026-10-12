@@ -1,5 +1,9 @@
 # Repository guidance
 
+## Sync before editing
+
+- Before editing any repository files, run `git pull --ff-only` to bring the current branch up to date with its upstream. If the pull cannot fast-forward because of local changes, preserve those changes and reconcile them with upstream before editing; never discard them to make the pull succeed.
+
 ## Read for the task
 
 - For site content, features, or positioning, read [PRODUCT.md](PRODUCT.md) for purpose, voice, and product constraints.

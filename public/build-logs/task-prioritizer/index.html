@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="/styles.css" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Task Prioritizer: one decision at a time","description":"A build log for a small tool born from ADHD prioritization overload: compare two tasks and decide what matters more right now.","datePublished":"2026-10-08","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/task-prioritizer/","keywords":"adhd, prioritization, productivity, browser-tool"}</script>
   </head>
-  <body class="guides">
+  <body class="build-logs-site">
     <a class="skip-link" href="#content">Skip to content</a>
     <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
       <svg viewBox="0 0 250 250" aria-hidden="true" focusable="false">
@@ -44,29 +44,38 @@
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="/">Tools</a>
+        <a href="/workshop/">Workshop</a>
+        <a href="/#tools">Tools</a>
         <a href="/build-logs/" aria-current="page">Build Logs</a>
         <a href="/guides/">Guides</a>
       </nav>
     </header>
     <main id="content">
       <article class="build-log">
-        <p class="article-type">Project journal</p>
-
-        <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> Tools &amp; Software</p>
-        <h1>Task Prioritizer: one decision at a time</h1>
+        <header class="build-log-masthead">
+          <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> <a href="/workshop/">Workshop</a></p>
+          <p class="build-log-kicker">Project journal <span aria-hidden="true">·</span> Tools &amp; Software</p>
+          <h1>Task Prioritizer: one decision at a time</h1>
         <p class="guide-deck">A build log for a small tool born from ADHD prioritization overload: compare two tasks and decide what matters more right now.</p>
-        <div class="build-log-meta">
-          <span>Started <time datetime="2026-10-08">October 8, 2026</time></span>
-          <span>Updated <time datetime="2026-10-08">October 8, 2026</time></span>
-          <span><span class="status project-state project-state-in-use" title="Usable and mostly settled for now; it may be revisited later.">In use</span> <span class="status status-current" title="Recently reviewed and believed to still be accurate.">Reviewed</span> <span class="status-note">Live browser tool</span></span>
-        </div>
-        <div class="build-log-details">
-          <details class="guide-contents"><summary>In this log</summary><nav aria-label="In this log"><ul><li><a href="#tldr">At a glance</a></li><li><a href="#the-problem-was-too-many-tasks-at-once">The problem was too many tasks at once</a></li><li><a href="#a-small-tool-for-a-smaller-question">A small tool for a smaller question</a></li><li><a href="#the-organized-list-has-to-keep-moving">The organized list has to keep moving</a></li><li><a href="#what-this-is-for">What this is for</a></li><li><a href="#try-it">Try it</a></li></ul></nav></details>
-          <details class="guide-equipment"><summary>Build details</summary><p>Started <time datetime="2026-10-08">October 8, 2026</time></p><p>Built and documented with:</p><ul><li>Pairwise task comparisons in Task Prioritizer</li><li>Importing and exporting organized task lists</li></ul></details>
-        </div>
-        <div class="build-log-body">
-<aside class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">The build in brief</p><ul><li>Task Prioritizer started with a real prioritization problem at home, not a plan to make another productivity app.</li><li>When there are many tasks, comparing two at a time can be easier than trying to rank everything at once.</li><li>The tool asks which of two tasks matters more, turns those choices into an ordered list, and lets that list move into the LLM-supported workflow used to keep track of it.</li></ul></aside>
+        <p class="build-log-project-link">This is the dated story. <a href="/workshop/">Browse Workshop projects <span aria-hidden="true">↗</span></a></p>
+        </header>
+        <section class="build-log-snapshot" aria-labelledby="checkpoint-title">
+      <div class="build-log-checkpoint">
+        <p class="build-log-side-label" id="checkpoint-title">Current checkpoint</p>
+        <span class="status project-state project-state-in-use" title="Usable and mostly settled for now; it may be revisited later.">In use</span>
+        <p class="build-log-status-note">Live browser tool</p>
+        <dl class="build-log-dates"><div><dt>Started</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div><div><dt>Updated</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div></dl>
+      </div>
+      <div class="build-log-current"><aside class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">The build in brief</p><ul><li>Task Prioritizer started with a real prioritization problem at home, not a plan to make another productivity app.</li><li>When there are many tasks, comparing two at a time can be easier than trying to rank everything at once.</li><li>The tool asks which of two tasks matters more, turns those choices into an ordered list, and lets that list move into the LLM-supported workflow used to keep track of it.</li></ul></aside></div>
+    </section>
+
+        <details class="build-log-index">
+      <summary>Jump to a section</summary>
+      <nav aria-label="In this log"><ul><li><a href="#the-problem-was-too-many-tasks-at-once">The problem was too many tasks at once</a></li><li><a href="#a-small-tool-for-a-smaller-question">A small tool for a smaller question</a></li><li><a href="#the-organized-list-has-to-keep-moving">The organized list has to keep moving</a></li><li><a href="#what-this-is-for">What this is for</a></li><li><a href="#try-it">Try it</a></li></ul></nav>
+    </details>
+        <div class="build-log-layout">
+          <div class="build-log-story">
+            <div class="build-log-body">
 <h2 id="the-problem-was-too-many-tasks-at-once">The problem was too many tasks at once</h2>
 <p>My wife has ADHD and asked for help with prioritization when there are many tasks competing for attention. Looking at a whole list and deciding its complete order was the hard part.</p>
 <p>Comparing two tasks was different. Which one is more important? Which one can she do? That is a smaller, more answerable decision. Task Prioritizer was built around that move rather than another scoring formula.</p>
@@ -80,7 +89,9 @@
 <h2 id="what-this-is-for">What this is for</h2>
 <p>Task Prioritizer is a browser tool for getting unstuck when the list is bigger than the available executive function. It is free to use and deliberately narrow.</p>
 <h2 id="try-it">Try it</h2>
-<p><a href="https://task-prioritizer.dracars.com/" rel="noopener" target="_blank">Open Task Prioritizer</a>.</p>
+<p><a href="https://task-prioritizer.dracars.com/" rel="noopener" target="_blank">Open Task Prioritizer</a>.</p></div>
+
+          </div>
         </div>
       </article>
     </main>
@@ -89,7 +100,7 @@
         <span>Built by Cody Dracars.</span>
         <a href="https://github.com/cdracars" target="_blank" rel="noreferrer">There’s more over on GitHub <span aria-hidden="true">↗</span></a>
       </div>
-      <p class="footer-disclosure">Guides may include affiliate links, disclosed on the page. Recommendations come first; links are added only where they fit.</p>
+      <p class="footer-disclosure">Affiliate links may appear anywhere on this site. I disclose them on the page; recommendations come first, and I use affiliate links only when they fit.</p>
     </footer>
   </body>
 </html>
