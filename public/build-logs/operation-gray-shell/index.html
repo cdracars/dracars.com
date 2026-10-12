@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="/styles.css" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Operation: Gray Shell: a Box Turtle 1.1 beta build","description":"A running build log for a Box Turtle 1.1 beta with an early Longboi 1.0 prototype, Smol v2 lanes, and a few lessons from reprinting parts.","datePublished":"2026-09-20","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/operation-gray-shell/","keywords":"box-turtle, longboi, afc, smol-v2, multi-material, 3d-printing"}</script>
   </head>
-  <body class="guides">
+  <body class="build-logs-site">
     <a class="skip-link" href="#content">Skip to content</a>
     <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
       <svg viewBox="0 0 250 250" aria-hidden="true" focusable="false">
@@ -44,29 +44,38 @@
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="/">Tools</a>
+        <a href="/">Workshop</a>
+        <a href="/#tools">Tools</a>
         <a href="/build-logs/" aria-current="page">Build Logs</a>
         <a href="/guides/">Guides</a>
       </nav>
     </header>
     <main id="content">
       <article class="build-log">
-        <p class="article-type">Project journal</p>
-
-        <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> Projects &amp; Builds</p>
-        <h1>Operation: Gray Shell: a Box Turtle 1.1 beta build</h1>
+        <header class="build-log-masthead">
+          <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> <a href="/workshop/operation-gray-shell/">Project</a></p>
+          <p class="build-log-kicker">Project journal <span aria-hidden="true">·</span> Projects &amp; Builds</p>
+          <h1>Operation: Gray Shell: a Box Turtle 1.1 beta build</h1>
         <p class="guide-deck">A running build log for a Box Turtle 1.1 beta with an early Longboi 1.0 prototype, Smol v2 lanes, and a few lessons from reprinting parts.</p>
-        <div class="build-log-meta">
-          <span>Started <time datetime="2026-09-20">September 20, 2026</time></span>
-          <span>Updated <time datetime="2026-10-08">October 8, 2026</time></span>
-          <span><span class="status project-state project-state-building" title="Active work is still underway.">Building</span> <span class="status status-current" title="Recently reviewed and believed to still be accurate.">Reviewed</span> <span class="status-note">Mechanical build assembled — CAN cable, AFC setup, and serial Turtle still pending</span></span>
-        </div>
-        <div class="build-log-details">
-          <details class="guide-contents"><summary>In this log</summary><nav aria-label="In this log"><ul><li><a href="#tldr">At a glance</a></li><li><a href="#why-i-joined-the-beta">Why I joined the beta</a></li><li><a href="#the-hardware-choices">The hardware choices</a></li><li><a href="#bringing-the-lanes-together">Bringing the lanes together</a></li><li><a href="#why-it-is-called-gray-shell">Why it is called Gray Shell</a></li><li><a href="#the-thing-i-would-change">The thing I would change</a></li><li><a href="#what-is-left">What is left</a></li></ul></nav></details>
-          <details class="guide-equipment"><summary>Build details</summary><p>Started <time datetime="2026-09-20">September 20, 2026</time></p><p>Built and documented with:</p><ul><li>Box Turtle 1.1 beta hardware</li><li>An early Longboi 1.0 prototype supplied by Robert Klotz, the Box Turtle project's creator</li><li>Smol v2 lane design, used here instead of the Apex extruders expected in production kits</li><li>FDM-printed build parts, including reprints after printer tuning</li></ul></details>
-        </div>
-        <div class="build-log-body">
-<aside class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">Current state</p><ul><li>I joined the Box Turtle 1.1 beta because I wanted hands-on experience building a beta release.</li><li>This build pairs the beta hardware with an early Longboi 1.0 prototype and the Smol v2 lane design.</li><li>Longboi gives each lane the same wire length, which made clean wiring much easier.</li><li>A few early printed parts had to be redone after I tuned the printer. Better calibration before the build would have saved time.</li><li>The mechanical build is assembled. I still need to make the CAN cable, configure the lanes in AFC, and print the serial Turtle.</li></ul></aside>
+        <p class="build-log-project-link">This is the dated story. <a href="/workshop/operation-gray-shell/">See the project's current picture <span aria-hidden="true">↗</span></a></p>
+        </header>
+        <section class="build-log-snapshot" aria-labelledby="checkpoint-title">
+      <div class="build-log-checkpoint">
+        <p class="build-log-side-label" id="checkpoint-title">Current checkpoint</p>
+        <span class="status project-state project-state-building" title="Active work is still underway.">Building</span>
+        <p class="build-log-status-note">Mechanical build assembled — CAN cable, AFC setup, and serial Turtle still pending</p>
+        <dl class="build-log-dates"><div><dt>Started</dt><dd><time datetime="2026-09-20">September 20, 2026</time></dd></div><div><dt>Updated</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div></dl>
+      </div>
+      <div class="build-log-current"><aside class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">Current state</p><ul><li>I joined the Box Turtle 1.1 beta because I wanted hands-on experience building a beta release.</li><li>This build pairs the beta hardware with an early Longboi 1.0 prototype and the Smol v2 lane design.</li><li>Longboi gives each lane the same wire length, which made clean wiring much easier.</li><li>A few early printed parts had to be redone after I tuned the printer. Better calibration before the build would have saved time.</li><li>The mechanical build is assembled. I still need to make the CAN cable, configure the lanes in AFC, and print the serial Turtle.</li></ul></aside></div>
+    </section>
+
+        <details class="build-log-index">
+      <summary>Jump to a section</summary>
+      <nav aria-label="In this log"><ul><li><a href="#why-i-joined-the-beta">Why I joined the beta</a></li><li><a href="#the-hardware-choices">The hardware choices</a></li><li><a href="#bringing-the-lanes-together">Bringing the lanes together</a></li><li><a href="#why-it-is-called-gray-shell">Why it is called Gray Shell</a></li><li><a href="#the-thing-i-would-change">The thing I would change</a></li><li><a href="#what-is-left">What is left</a></li></ul></nav>
+    </details>
+        <div class="build-log-layout">
+          <div class="build-log-story">
+            <div class="build-log-body">
 <h2 id="why-i-joined-the-beta">Why I joined the beta</h2>
 <p>Box Turtle 1.1 was released as a patron beta, and I wanted to be part of a beta build rather than wait for a finished kit. That means this is a record of a real in-progress build, including the choices that made it different from a standard kit.</p>
 <p>Robert Klotz, the mind behind the Box Turtle project, got me one of the early Longboi prototypes. The finished system is a Box Turtle 1.1 paired with Longboi 1.0.</p>
@@ -91,7 +100,9 @@
 <h2 id="what-is-left">What is left</h2>
 <p>The build is physically assembled, but it is not finished. The remaining work is:</p>
 <ul><li>build the CAN cable</li><li>configure the lanes in AFC</li><li>print the serial Turtle</li></ul>
-<p>I’ll update this log after those steps are complete, including what commissioning turns up and whether the clean wiring stays as easy to service as it was to assemble.</p>
+<p>I’ll update this log after those steps are complete, including what commissioning turns up and whether the clean wiring stays as easy to service as it was to assemble.</p></div>
+
+          </div>
         </div>
       </article>
     </main>
@@ -100,7 +111,7 @@
         <span>Built by Cody Dracars.</span>
         <a href="https://github.com/cdracars" target="_blank" rel="noreferrer">There’s more over on GitHub <span aria-hidden="true">↗</span></a>
       </div>
-      <p class="footer-disclosure">Guides may include affiliate links, disclosed on the page. Recommendations come first; links are added only where they fit.</p>
+      <p class="footer-disclosure">Affiliate links may appear anywhere on this site. I disclose them on the page; recommendations come first, and I use affiliate links only when they fit.</p>
     </footer>
   </body>
 </html>

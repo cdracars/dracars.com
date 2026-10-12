@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="/styles.css" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"SafeSync: a small backup helper that outgrew its first job","description":"A build log for a small Git-backed helper first made to protect OrcaSlicer profiles.","datePublished":"2026-10-08","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/safesync/","keywords":"backup, git, orcaslicer, configuration"}</script>
   </head>
-  <body class="guides">
+  <body class="build-logs-site">
     <a class="skip-link" href="#content">Skip to content</a>
     <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
       <svg viewBox="0 0 250 250" aria-hidden="true" focusable="false">
@@ -44,29 +44,38 @@
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="/">Tools</a>
+        <a href="/">Workshop</a>
+        <a href="/#tools">Tools</a>
         <a href="/build-logs/" aria-current="page">Build Logs</a>
         <a href="/guides/">Guides</a>
       </nav>
     </header>
     <main id="content">
       <article class="build-log">
-        <p class="article-type">Project journal</p>
-
-        <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> Tools &amp; Software</p>
-        <h1>SafeSync: a small backup helper that outgrew its first job</h1>
+        <header class="build-log-masthead">
+          <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> <a href="/workshop/">Workshop</a></p>
+          <p class="build-log-kicker">Project journal <span aria-hidden="true">·</span> Tools &amp; Software</p>
+          <h1>SafeSync: a small backup helper that outgrew its first job</h1>
         <p class="guide-deck">A build log for a small Git-backed helper first made to protect OrcaSlicer profiles.</p>
-        <div class="build-log-meta">
-          <span>Started <time datetime="2026-10-08">October 8, 2026</time></span>
-          <span>Updated <time datetime="2026-10-08">October 8, 2026</time></span>
-          <span><span class="status project-state project-state-in-use" title="Usable and mostly settled for now; it may be revisited later.">In use</span> <span class="status status-current" title="Recently reviewed and believed to still be accurate.">Reviewed</span> <span class="status-note">Kept as a generic configuration-backup helper</span></span>
-        </div>
-        <div class="build-log-details">
-          <details class="guide-contents"><summary>In this log</summary><nav aria-label="In this log"><ul><li><a href="#tldr">At a glance</a></li><li><a href="#the-first-job-was-protecting-slicer-profiles">The first job was protecting slicer profiles</a></li><li><a href="#keep-the-helper-small">Keep the helper small</a></li><li><a href="#try-it">Try it</a></li></ul></nav></details>
-          <details class="guide-equipment"><summary>Build details</summary><p>Started <time datetime="2026-10-08">October 8, 2026</time></p><p>Built and documented with:</p><ul><li>Important application configuration folders</li><li>Git-backed backups with SafeSync</li></ul></details>
-        </div>
-        <div class="build-log-body">
-<aside class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">The build in brief</p><ul><li>SafeSync started as a way to back up OrcaSlicer profiles.</li><li>That specific need is less urgent now, but the small Git-based helper remains useful for other configuration folders.</li><li>It is deliberately a helper, not a full backup product.</li></ul></aside>
+        <p class="build-log-project-link">This is the dated story. <a href="/workshop/">Browse Workshop projects <span aria-hidden="true">↗</span></a></p>
+        </header>
+        <section class="build-log-snapshot" aria-labelledby="checkpoint-title">
+      <div class="build-log-checkpoint">
+        <p class="build-log-side-label" id="checkpoint-title">Current checkpoint</p>
+        <span class="status project-state project-state-in-use" title="Usable and mostly settled for now; it may be revisited later.">In use</span>
+        <p class="build-log-status-note">Kept as a generic configuration-backup helper</p>
+        <dl class="build-log-dates"><div><dt>Started</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div><div><dt>Updated</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div></dl>
+      </div>
+      <div class="build-log-current"><aside class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">The build in brief</p><ul><li>SafeSync started as a way to back up OrcaSlicer profiles.</li><li>That specific need is less urgent now, but the small Git-based helper remains useful for other configuration folders.</li><li>It is deliberately a helper, not a full backup product.</li></ul></aside></div>
+    </section>
+
+        <details class="build-log-index">
+      <summary>Jump to a section</summary>
+      <nav aria-label="In this log"><ul><li><a href="#the-first-job-was-protecting-slicer-profiles">The first job was protecting slicer profiles</a></li><li><a href="#keep-the-helper-small">Keep the helper small</a></li><li><a href="#try-it">Try it</a></li></ul></nav>
+    </details>
+        <div class="build-log-layout">
+          <div class="build-log-story">
+            <div class="build-log-body">
 <h2 id="the-first-job-was-protecting-slicer-profiles">The first job was protecting slicer profiles</h2>
 <p>SafeSync began as a way to keep OrcaSlicer profiles backed up. Losing configuration that took time to tune is annoying, and a small Git-backed helper was enough for the job.</p>
 <figure class="photo"><img src="/images/build-logs/safesync/01-app-interface.png" alt="SafeSync backup.sh dry run on a disposable example profile folder, showing one detected untracked file and the planned backup. No remote was configured. Captured October 8, 2026." loading="lazy" /><figcaption>SafeSync backup.sh dry run on a disposable example profile folder, showing one detected untracked file and the planned backup. No remote was configured. Captured October 8, 2026.</figcaption></figure>
@@ -74,7 +83,9 @@
 <h2 id="keep-the-helper-small">Keep the helper small</h2>
 <p>SafeSync is a generic Git-based configuration backup helper. It is not meant to compete with a broad backup product. The value is a lightweight way to keep a folder under versioned backup when that is the right level of protection.</p>
 <h2 id="try-it">Try it</h2>
-<p><a href="https://github.com/cdracars/SafeSync" rel="noopener" target="_blank">View SafeSync on GitHub</a>.</p>
+<p><a href="https://github.com/cdracars/SafeSync" rel="noopener" target="_blank">View SafeSync on GitHub</a>.</p></div>
+
+          </div>
         </div>
       </article>
     </main>
@@ -83,7 +94,7 @@
         <span>Built by Cody Dracars.</span>
         <a href="https://github.com/cdracars" target="_blank" rel="noreferrer">There’s more over on GitHub <span aria-hidden="true">↗</span></a>
       </div>
-      <p class="footer-disclosure">Guides may include affiliate links, disclosed on the page. Recommendations come first; links are added only where they fit.</p>
+      <p class="footer-disclosure">Affiliate links may appear anywhere on this site. I disclose them on the page; recommendations come first, and I use affiliate links only when they fit.</p>
     </footer>
   </body>
 </html>

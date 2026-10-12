@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://dracars.com/build-logs/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
     <loc>https://dracars.com/build-logs/local-screen-recorder/</loc>
@@ -25,7 +25,7 @@
   </url>
   <url>
     <loc>https://dracars.com/build-logs/resin-grow-tent-setup/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
     <loc>https://dracars.com/build-logs/safesync/</loc>
@@ -50,5 +50,41 @@
   <url>
     <loc>https://dracars.com/build-logs/voron-mod-hub/</loc>
     <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/operation-gray-shell/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/resin-workshop/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/saturn-4-ultra/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/spawn-trident-300/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/sv06-plus-tpu-3ms/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/sv08-reliability-lab/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/voron-24-350/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/voron-v02-recovery/</loc>
+    <lastmod>2026-10-12</lastmod>
   </url>
 </urlset>

@@ -13,19 +13,21 @@ chosen for a simple, dependency-free Cloudflare Pages deployment.
 
 ## Users
 
-People looking for Cody Dracars's software, open-source projects, and practical
-maker work, with a straightforward way to support its continued upkeep.
+People following Cody Dracars's software and practical maker projects, with a
+clear route from a dated Build Log to the current project, related guides, and
+useful tools.
 
 ## Product Purpose
 
-`dracars.com` is Cody's durable personal home on the web. It helps visitors
-find useful tools and projects without accounts, tracking-heavy features, or
-lead-capture flows.
+`dracars.com` is Cody's durable personal home on the web. Dracars Workshop is
+the long-term home for real projects: project pages keep the current state,
+while Build Logs preserve the dated story of what happened. Guides and useful
+tools grow out of that work and remain easy to find.
 
 ## Positioning
 
-An honest, personal directory of small tools made to be used—not a portfolio
-of abstract claims or a storefront.
+An honest, personal workshop for making, modifying, repairing, and understanding
+useful things—not a portfolio of abstract claims or a storefront.
 
 ## Operating Context
 
@@ -41,6 +43,9 @@ or desktop browser.
 - No invented testimonials, usage counts, commercial claims, analytics claims, or paid offerings.
 - Keep current tools and projects free to use. Add a distinct Shop section only
   when there is a real paid product to present.
+- Workshop project pages are the current hub for each project. Build Logs stay
+  chronological and are linked to the project they document; updating a project
+  page does not rewrite its logs.
 - Featured tools use descriptive `dracars.com` subdomains once their Cloudflare Pages DNS records are active.
 
 ## Brand Commitments
