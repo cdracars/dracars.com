@@ -682,7 +682,7 @@ writeFileSync(homePath, home);
 const featuredProject = projects.find((project) => project.launchGroup === "featured");
 const homeWorkshop = `      <section class="home-workshop" id="workshop-home" aria-labelledby="home-workshop-heading">
         <div class="home-workshop-heading"><p class="home-workshop-label">Workshop preview</p><h2 id="home-workshop-heading">${esc(featuredProject.title)}</h2><p>A quick look at the resin setup. The Workshop holds the full project list and the changing details.</p></div>
-        <div class="home-workshop-meta"><span class="home-project-status">${esc(featuredProject.statusLabel ?? WORKSHOP_STATES[featuredProject.status])}</span><a href="/workshop/${featuredProject.slug}/">View Resin Workshop <span aria-hidden="true">↗</span></a><a href="/workshop/">Browse all project hubs (${projects.length}) <span aria-hidden="true">↗</span></a></div>
+        <div class="home-workshop-meta"><span class="home-project-status">${esc(featuredProject.statusLabel ?? WORKSHOP_STATES[featuredProject.status])}</span><a href="/workshop/${featuredProject.slug}/">View Resin Workshop <span aria-hidden="true">↗</span></a></div>
       </section>`;
 const homeStart = "      <!-- home-workshop:start -->";
 const homeEnd = "      <!-- home-workshop:end -->";
