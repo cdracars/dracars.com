@@ -690,7 +690,7 @@ const homeFrom = home.indexOf(homeStart);
 const homeTo = home.indexOf(homeEnd);
 if (homeFrom < 0 || homeTo < homeFrom) fail("homepage missing managed home-workshop markers");
 home = home.slice(0, homeFrom) + homeStart + "\n" + homeWorkshop + "\n" + homeEnd + home.slice(homeTo + homeEnd.length);
-home = home.replace('<a class="text-link" href="#tools">See the projects <span aria-hidden="true">↓</span></a>', '<a class="text-link" href="#workshop-home">See what is on the bench <span aria-hidden="true">↓</span></a>');
+home = home.replace(/<a class="text-link"[^>]*>[\s\S]*?<\/a>/, '<a class="text-link" href="/workshop/">Explore the Workshop <span aria-hidden="true">↗</span></a>');
 writeFileSync(homePath, home);
 
 rmSync(OUT, { recursive: true, force: true });
