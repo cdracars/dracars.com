@@ -78,32 +78,13 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .site-nav a:hover { text-decoration-thickness: 2px; }
 .site-nav a[aria-current] { color: var(--ink); }
 
-.home-workshop { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(220px, .7fr); gap: 28px 56px; align-items: end; margin: -34px 0 98px; padding: 26px 0 28px; border-block: 1px solid var(--line); }
+.home-workshop { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(220px, .7fr); gap: 24px 48px; align-items: center; margin: -34px 0 70px; padding: 20px 0 22px; border-block: 1px solid var(--line); }
 .home-workshop-label { margin: 0 0 8px; color: var(--terracotta-dark); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .home-workshop h2 { margin: 0 0 8px; font-size: clamp(1.55rem, 3vw, 2.05rem); line-height: 1.1; }
 .home-workshop-heading > p:last-child { max-width: 62ch; margin: 0; color: var(--muted); }
 .home-workshop-meta { display: grid; justify-items: start; gap: 7px; color: var(--muted); font-size: .92rem; }
 .home-project-status { color: var(--terracotta-dark); font-weight: 700; }
 .home-workshop-meta a { color: var(--terracotta-dark); font-weight: 700; }
-.home-workshop-meta .workshop-project-link { width: 100%; padding: 0; border: 0; }
-.home-workshop-meta .workshop-project-link h3 { display: none; }
-.home-workshop-meta .workshop-project-link .guide-card-desc { display: none; }
-.home-workshop > .home-workshop-meta > a:last-child { min-height: 40px; display: inline-flex; align-items: center; }
-.home-project-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 28px; margin: -54px 0 70px; }
-.home-project-groups h2, .home-recent h2, .home-outputs h2 { margin: 0 0 10px; font-size: 1.15rem; }
-.home-project-groups > div { border-top: 1px solid var(--line); padding-top: 12px; }
-.home-project-groups a, .home-recent li, .home-outputs li { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 9px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
-.home-project-groups a span, .home-outputs li span, .home-recent time { color: var(--muted); font-size: .88rem; text-align: right; }
-.home-project-groups a:hover, .home-recent a:hover { color: var(--terracotta-dark); text-decoration: underline; text-underline-offset: .16em; }
-.home-shelf-link { margin: -52px 0 66px; color: var(--muted); font-size: .92rem; }
-.home-shelf-link a { color: var(--terracotta-dark); font-weight: 700; }
-.home-recent, .home-outputs { margin: 0 0 64px; }
-.home-recent > div { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-top: 1px solid var(--line); padding-top: 14px; }
-.home-recent > div a { color: var(--terracotta-dark); font-weight: 700; }
-.home-recent ul, .home-outputs ul { margin: 0; padding: 0; list-style: none; }
-.home-recent li a { font-weight: 700; }
-.home-outputs { padding: 22px 26px; border-radius: 16px; background: color-mix(in srgb, var(--plum) 9%, var(--paper)); }
-.home-outputs li:last-child, .home-recent li:last-child { border-bottom: 0; }
 
 .workshop main { padding-bottom: 70px; }
 .workshop h1, .workshop h2, .workshop h3 { font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-weight: 600; letter-spacing: -.03em; }
@@ -387,11 +368,7 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
   .hero { display: block; padding: 58px 0 82px; }
   h1 { max-width: 11ch; font-size: clamp(2.85rem, 13.5vw, 4.5rem); }
   .hero-mark { display: none; }
-  .home-workshop { grid-template-columns: 1fr; gap: 17px; margin: -38px 0 72px; }
-  .home-project-groups { grid-template-columns: 1fr; gap: 22px; margin: -34px 0 54px; }
-  .home-shelf-link { margin: -34px 0 48px; }
-  .home-recent, .home-outputs { margin-bottom: 48px; }
-  .home-outputs { padding: 20px; }
+  .home-workshop { grid-template-columns: 1fr; gap: 14px; margin: -38px 0 54px; padding-block: 18px; }
   .tool-item { margin-inline: -12px; padding: 23px 12px 25px; }
   .support-section { grid-template-columns: 1fr; gap: 32px; margin-bottom: 38px; padding: 38px 28px; border-radius: 24px 24px 24px 6px; }
   .footer-main { flex-direction: column; align-items: flex-start; gap: 7px; }

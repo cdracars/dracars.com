@@ -680,22 +680,10 @@ for (const [name, markup] of [["header", siteHeader("/")], ["footer", siteFooter
 }
 writeFileSync(homePath, home);
 const featuredProject = projects.find((project) => project.launchGroup === "featured");
-const activeProjects = projects.filter((project) => project.launchGroup === "active");
-const establishedProjects = projects.filter((project) => project.launchGroup === "established");
-const plannedProjects = projects.filter((project) => project.launchGroup === "planned");
-const recentLogs = [...buildLogs].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)).slice(0, 3);
 const homeWorkshop = `      <section class="home-workshop" id="workshop-home" aria-labelledby="home-workshop-heading">
-        <div class="home-workshop-heading"><p class="home-workshop-label">Featured in the workshop</p><h2 id="home-workshop-heading"><a href="/workshop/${featuredProject.slug}/">${esc(featuredProject.title)}</a></h2><p>${esc(featuredProject.description)}</p></div>
-        <div class="home-workshop-meta">${projectCard(featuredProject)}<a href="/workshop/">Explore the Workshop <span aria-hidden="true">↗</span></a></div>
-      </section>
-      <section class="home-project-groups" aria-label="Workshop projects">
-        ${activeProjects.length ? `<div><h2>Active builds</h2>${activeProjects.map((p) => `<a href="/workshop/${p.slug}/">${esc(p.title)} <span>${esc(p.statusLabel ?? WORKSHOP_STATES[p.status])}</span></a>`).join("")}</div>` : ""}
-        ${establishedProjects.length ? `<div><h2>Established</h2>${establishedProjects.map((p) => `<a href="/workshop/${p.slug}/">${esc(p.title)} <span>${esc(p.statusLabel ?? WORKSHOP_STATES[p.status])}</span></a>`).join("")}</div>` : ""}
-        ${plannedProjects.length ? `<div><h2>Planned</h2>${plannedProjects.map((p) => `<a href="/workshop/${p.slug}/">${esc(p.title)} <span>${esc(p.statusLabel ?? WORKSHOP_STATES[p.status])}</span></a>`).join("")}</div>` : ""}
-      </section>
-      <p class="home-shelf-link"><a href="/workshop/#on-the-shelf">See older machines and ideas on the shelf <span aria-hidden="true">↗</span></a></p>
-      <section class="home-recent" aria-labelledby="home-recent-heading"><div><h2 id="home-recent-heading">Recent logs</h2><a href="/build-logs/">All Build Logs <span aria-hidden="true">↗</span></a></div><ul>${recentLogs.map((log) => `<li><a href="/build-logs/${log.slug}/">${esc(log.title)}</a><time datetime="${log.updatedAt}">${fmtDate(log.updatedAt)}</time></li>`).join("")}</ul></section>
-      <section class="home-outputs" aria-labelledby="home-outputs-heading"><h2 id="home-outputs-heading">Emerging outputs</h2><ul><li><a href="/guides/resin-grow-tent-setup/">Resin workspace guide</a> <span>forming</span></li><li><a href="https://tuneprint.dracars.com/" target="_blank" rel="noreferrer">TunePrint</a> <span>live tool</span></li><li>Grow-tent glove-box holder <span>design</span></li><li>Calibration and cleanup guides <span>planned</span></li></ul></section>`;
+        <div class="home-workshop-heading"><p class="home-workshop-label">Workshop preview</p><h2 id="home-workshop-heading">${esc(featuredProject.title)}</h2><p>A quick look at the resin setup. The Workshop holds the full project list and the changing details.</p></div>
+        <div class="home-workshop-meta"><span class="home-project-status">${esc(featuredProject.statusLabel ?? WORKSHOP_STATES[featuredProject.status])}</span><a href="/workshop/${featuredProject.slug}/">View Resin Workshop <span aria-hidden="true">↗</span></a><a href="/workshop/">Browse all project hubs (${projects.length}) <span aria-hidden="true">↗</span></a></div>
+      </section>`;
 const homeStart = "      <!-- home-workshop:start -->";
 const homeEnd = "      <!-- home-workshop:end -->";
 const homeFrom = home.indexOf(homeStart);
