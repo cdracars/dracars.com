@@ -56,10 +56,6 @@
     <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://dracars.com/workshop/operation-gray-shell/</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
-  <url>
     <loc>https://dracars.com/workshop/resin-workshop/</loc>
     <lastmod>2026-10-12</lastmod>
   </url>
@@ -68,11 +64,7 @@
     <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://dracars.com/workshop/spawn-trident-300/</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://dracars.com/workshop/sv06-plus-tpu-3ms/</loc>
+    <loc>https://dracars.com/workshop/operation-gray-shell/</loc>
     <lastmod>2026-10-12</lastmod>
   </url>
   <url>
@@ -80,11 +72,19 @@
     <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://dracars.com/workshop/voron-24-350/</loc>
+    <loc>https://dracars.com/workshop/sv06-plus-tpu-3ms/</loc>
     <lastmod>2026-10-12</lastmod>
   </url>
   <url>
     <loc>https://dracars.com/workshop/voron-v02-recovery/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/voron-24-350/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://dracars.com/workshop/spawn-trident-300/</loc>
     <lastmod>2026-10-12</lastmod>
   </url>
 </urlset>

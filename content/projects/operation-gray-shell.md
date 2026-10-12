@@ -2,6 +2,7 @@
 title: Operation: Gray Shell
 slug: operation-gray-shell
 launchGroup: active
+launchOrder: 30
 description: Box Turtle 1.1 with Longboi 1.0, tracked as a named hardware build with its own chronological log.
 purpose: Document the Box Turtle 1.1 and Longboi 1.0 build as it develops.
 status: building

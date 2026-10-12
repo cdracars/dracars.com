@@ -2,6 +2,7 @@
 title: SV06 Plus: TPU and 3MS
 slug: sv06-plus-tpu-3ms
 launchGroup: active
+launchOrder: 50
 description: An experimental machine role centered on TPU printing and the 3MS material system.
 purpose: Keep the SV06 Plus firmware, TPU workflow, MMU behavior, and toolhead experiments together.
 status: experimental

@@ -229,6 +229,8 @@ function loadProjects() {
     if (!/^[a-z0-9-]+$/.test(data.slug)) fail(`${file}: slug must be lowercase letters, numbers, hyphens`);
     if (!["planning", "building", "testing", "working", "troubleshooting", "experimental", "operational", "paused", "blocked", "abandoned", "complete", "converted"].includes(data.status)) fail(`${file}: invalid project status`);
     if (!data.launchGroup || !["featured", "child", "active", "established", "planned"].includes(data.launchGroup)) fail(`${file}: launchGroup must be featured|child|active|established|planned`);
+    data.launchOrder = Number(data.launchOrder ?? 100);
+    if (!Number.isFinite(data.launchOrder)) fail(`${file}: launchOrder must be a number`);
     if (!data.focus?.length && !data.equipment?.length && !data.workstreams?.length) fail(`${file}: add focus, equipment, or workstreams`);
     data.equipment ??= [];
     data.problems ??= [];
@@ -243,7 +245,9 @@ function loadProjects() {
     if (/TODO|\(Cody:|\(add link/i.test(body)) fail(`${file}: contains an unfinished placeholder`);
     projects.push({ ...data, html, file });
   }
-  return projects;
+  const orderValues = projects.map((project) => project.launchOrder);
+  if (new Set(orderValues).size !== orderValues.length) fail("Workshop projects must have unique launchOrder values");
+  return projects.sort((a, b) => a.launchOrder - b.launchOrder);
 }
 
 function freshness(g, today = new Date()) {

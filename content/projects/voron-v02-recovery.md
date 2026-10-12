@@ -2,6 +2,7 @@
 title: Voron V0.2 Recovery and Conversion
 slug: voron-v02-recovery
 launchGroup: active
+launchOrder: 60
 description: Recovering a used LDO V0.1 and converting it into a V0.2, with the rebuild decisions kept in one place.
 purpose: Document recovery, conversion, and the next configuration decisions for the compact Voron.
 status: building

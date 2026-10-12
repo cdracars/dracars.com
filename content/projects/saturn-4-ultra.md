@@ -2,6 +2,7 @@
 title: Elegoo Saturn 4 Ultra 12K
 slug: saturn-4-ultra
 launchGroup: child
+launchOrder: 20
 parentProject: resin-workshop
 description: The Saturn is in the garage tent with its empty vat and build plate installed. I have not made a print yet; setup checks and a repeatable cleanup workflow are still ahead.
 purpose: Develop a repeatable resin-printing setup around the Saturn 4 Ultra, including the workspace, calibration, washing, curing, and cleanup.

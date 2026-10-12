@@ -2,6 +2,7 @@
 title: SV08 Reliability Lab
 slug: sv08-reliability-lab
 launchGroup: active
+launchOrder: 40
 description: Troubleshooting the SV08 as a changing system, with the hardware, wiring, and fault history kept together.
 purpose: Track reliability work and troubleshooting on the SV08 over time.
 status: troubleshooting

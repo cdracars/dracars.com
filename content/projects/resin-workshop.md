@@ -2,6 +2,7 @@
 title: Resin Workshop
 slug: resin-workshop
 launchGroup: featured
+launchOrder: 10
 description: The resin setup as one connected project: printers, washing and curing, cleanup, waste handling, and the garage workspace.
 purpose: Build a practical resin-printing area and a repeatable workflow across the machines and workspace.
 status: building

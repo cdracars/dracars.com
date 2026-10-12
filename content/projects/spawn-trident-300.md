@@ -2,6 +2,7 @@
 title: Spawn Trident 300
 slug: spawn-trident-300
 launchGroup: planned
+launchOrder: 80
 description: A planned three-Z Trident build with a Spawn-inspired direction; design and sourcing decisions are still ahead.
 purpose: Keep the design constraints, kit comparisons, reuse options, budget, and dependencies together while the build is planned.
 status: planning
