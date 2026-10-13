@@ -15,14 +15,14 @@ tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
   - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; no prints yet)
   - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate found; remaining setup checks not done; not ready to print)
-  - Anycubic Photon P1 (planned for this workspace; no prints yet)
+  - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
   - Garage; ~58-inch standing desk planned as the main work surface
 affiliateLinksPresent: false
 ---
 
 :::tldr Where I'm at
-I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn is sitting there with an empty tank installed. The exhaust will take time and money to do right. I have new machines and want to play with them, so I plan to make a few prints before it's ready. I'll explain how I'm approaching that below.
+I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn, with an empty tank installed, and the Photon P1 are both sitting on that table. The exhaust will take time and money to do right. I have new machines and want to play with them, so I plan to make a few prints before it's ready. I'll explain how I'm approaching that below.
 :::
 
 ## Why I'm setting it up this way
@@ -119,6 +119,20 @@ After I hung the light, I reused the inline rocker switch from the old fish-tank
 ### Update, 2026-10-12: Planning the first print
 
 **Do as I say, not as I do.** I'd tell someone else to wait until the exhaust is ready. Building it properly is going to take time and money, though, and I have new machines and want to play with them, so I'm planning a few prints before it's ready. I'll keep the printer lid on while it prints, crack the garage door, and stay out of the space while it's running. I'll need to open IPA to wash the prints afterward, so this plan still involves IPA in the garage without the finished exhaust. This doesn't give the tent exhaust or prove the setup is safe. It's how I'm choosing to proceed while I work out the proper system, not a safe setup or instructions to copy. I'll update this log with what happens.
+
+Tonight I took photos of where things stand. Both resin machines are in the tent now: the Anycubic Photon P1 (its base is labeled P1 Photon) at left and the Saturn 4 Ultra at right, side by side on the plastic-covered table. The Saturn's hood is open and the empty vat is in place. I haven't printed on either one.
+
+!photo 18-photon-p1-and-saturn-in-tent.webp | Both machines on the plastic-covered table in the tent: the Anycubic Photon P1 at left, and the Saturn 4 Ultra at right with its hood open and the vat installed. The new LED light runs across the top of the frame.
+
+!photo 19-both-machines-on-table.webp | An angled view of the same table. White clips hold the plastic at the table's edge and a leg, a power adapter is zip-tied to the tent wall above the machines, and the Saturn's hood is open.
+
+The floor liner also has yellow clips on it now. They sit along the lower tent frame and hold the plastic up against the wall at the corner. I haven't tested how well they hold.
+
+!photo 20-floor-liner-corner-clips.webp | A corner of the tent floor liner, bunched along the base of the wall, with yellow clips on the lower frame tube.
+
+!photo 21-liner-held-by-clips.webp | Lifting the liner away from the wall to show two yellow clips holding the plastic to the lower frame tube.
+
+!photo 22-liner-clip-detail.webp | A closer look at the liner with a yellow clip near the top and another near the bottom, the plastic hanging in loose folds between them.
 
 ## Drip mods I've already printed
 
