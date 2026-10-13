@@ -38,7 +38,7 @@ focus:
   - The garage workspace and its changing workflow
 ---
 
-This page is the Saturn workstream within [Resin Workshop](/workshop/resin-workshop/). The Saturn and Photon P1 came in a trade for Pam, my Prusa MK4S, on October 9, 2026. The [Build Log](/build-logs/resin-grow-tent-setup/) keeps the dated sequence, including what changed and what I was thinking at the time. The project page will change as the setup does; the log entries remain in their original order.
+This page is the Saturn workstream within [Resin Workshop](/workshop/resin-workshop/). The Saturn and Photon P1 came in a trade for [Pam, my Prusa MK4S upgraded from an MK3S+](/workshop/pam-mk3s-to-mk4s/), on October 9, 2026. The [Build Log](/build-logs/resin-grow-tent-setup/) keeps the dated sequence, including what changed and what I was thinking at the time. The project page will change as the setup does; the log entries remain in their original order.
 
 The printer and wash station came from the same pickup. The wash station powers on, but I have not confirmed that it works. The current focus is getting the printer setup documented and working out how the wash and cleanup steps fit together. I have not established a tested resin workflow yet.
 

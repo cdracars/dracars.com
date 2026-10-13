@@ -281,7 +281,7 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 .workshop-status-building { color: var(--terracotta-dark); }
 .workshop-status-testing { color: #8a5a00; }
 .workshop-status-working { color: #1f6b3a; }
-.workshop-status-planning, .workshop-status-paused, .workshop-status-blocked, .workshop-status-abandoned, .workshop-status-complete, .workshop-status-converted { color: var(--muted); }
+.workshop-status-planning, .workshop-status-paused, .workshop-status-blocked, .workshop-status-abandoned, .workshop-status-complete, .workshop-status-converted, .workshop-status-retired { color: var(--muted); }
 .workshop-status-troubleshooting { color: #a33426; }
 .workshop-status-experimental { color: #6950a1; }
 .workshop-status-operational { color: #1f6b3a; }

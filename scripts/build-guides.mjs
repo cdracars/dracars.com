@@ -229,8 +229,8 @@ function loadProjects() {
     for (const key of ["title", "slug", "description", "purpose", "status", "phase", "updatedAt", "nextAction"]) if (!data[key]) fail(`${file}: missing "${key}"`);
     if (!ISO.test(data.updatedAt)) fail(`${file}: updatedAt must be YYYY-MM-DD`);
     if (!/^[a-z0-9-]+$/.test(data.slug)) fail(`${file}: slug must be lowercase letters, numbers, hyphens`);
-    if (!["planning", "building", "testing", "working", "troubleshooting", "experimental", "operational", "paused", "blocked", "abandoned", "complete", "converted"].includes(data.status)) fail(`${file}: invalid project status`);
-    if (!data.launchGroup || !["featured", "child", "active", "established", "planned"].includes(data.launchGroup)) fail(`${file}: launchGroup must be featured|child|active|established|planned`);
+    if (!["planning", "building", "testing", "working", "troubleshooting", "experimental", "operational", "paused", "blocked", "abandoned", "complete", "converted", "retired"].includes(data.status)) fail(`${file}: invalid project status`);
+    if (!data.launchGroup || !["featured", "child", "active", "established", "planned", "past"].includes(data.launchGroup)) fail(`${file}: launchGroup must be featured|child|active|established|planned|past`);
     data.launchOrder = Number(data.launchOrder ?? 100);
     if (!Number.isFinite(data.launchOrder)) fail(`${file}: launchOrder must be a number`);
     if (!data.focus?.length && !data.equipment?.length && !data.workstreams?.length) fail(`${file}: add focus, equipment, or workstreams`);
@@ -329,7 +329,7 @@ function projectStateBadge(g) {
 const WORKSHOP_STATES = {
   planning: "Planning", building: "Building", testing: "Testing", working: "Working",
   troubleshooting: "Troubleshooting", experimental: "Working / Experimental", operational: "Operational / Evolving",
-  paused: "Paused", blocked: "Blocked", abandoned: "Abandoned", complete: "Complete", converted: "Converted into a guide",
+  paused: "Paused", blocked: "Blocked", abandoned: "Abandoned", complete: "Complete", converted: "Converted into a guide", retired: "Left the shop",
 };
 
 function workshopStatus(status) {
@@ -369,6 +369,7 @@ function workshopPage(projects, logs, guides) {
   const active = projects.filter((project) => project.launchGroup === "active");
   const established = projects.filter((project) => project.launchGroup === "established");
   const planned = projects.filter((project) => project.launchGroup === "planned");
+  const past = projects.filter((project) => project.launchGroup === "past");
   const shelvedItems = [
     "Geeetech A10",
     "Ender 3 v2",
@@ -395,6 +396,7 @@ function workshopPage(projects, logs, guides) {
       ${active.length ? `<section class="workshop-section" aria-labelledby="active-projects-heading"><div class="workshop-section-heading"><h2 id="active-projects-heading">Active builds</h2></div><div class="workshop-project-grid">${active.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
       ${established.length ? `<section class="workshop-section" aria-labelledby="established-projects-heading"><div class="workshop-section-heading"><h2 id="established-projects-heading">Established machines</h2></div><div class="workshop-project-grid">${established.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
       ${planned.length ? `<section class="workshop-section" aria-labelledby="planned-projects-heading"><div class="workshop-section-heading"><h2 id="planned-projects-heading">Planned</h2><p>Visible as a plan, not presented as an active build.</p></div><div class="workshop-project-grid">${planned.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
+      ${past.length ? `<section class="workshop-section" aria-labelledby="past-projects-heading"><div class="workshop-section-heading"><h2 id="past-projects-heading">Past machines</h2><p>Machines that left the shop, kept here for their configuration and history.</p></div><div class="workshop-project-grid">${past.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
       ${knowledgeSteps.length || recentLogs.length ? `<div class="workshop-reference-grid">${knowledgeSteps.length ? `<section class="workshop-section workshop-knowledge" aria-labelledby="knowledge-heading"><div class="workshop-section-heading"><h2 id="knowledge-heading">From build to lasting knowledge</h2><a href="/guides/">All guides <span aria-hidden="true">↗</span></a></div><ol class="workshop-knowledge-list">${knowledgeSteps.map((step) => `<li><h3>${esc(step.heading)}</h3><a href="${escAttr(step.href)}">${esc(step.title)}</a><p>${esc(step.note)}</p></li>`).join("\n")}</ol></section>` : ""}
       ${recentLogs.length ? `<section class="workshop-section" aria-labelledby="recent-logs-heading"><div class="workshop-section-heading"><h2 id="recent-logs-heading">Recent Build Logs</h2><a href="/build-logs/">All Build Logs <span aria-hidden="true">↗</span></a></div><div class="workshop-activity-list">${recentLogs.map((log) => `<a href="/build-logs/${log.slug}/"><time datetime="${log.updatedAt}">${fmtDate(log.updatedAt)}</time><span>${esc(log.title)}</span><span class="activity-arrow" aria-hidden="true">↗</span></a>`).join("\n")}</div></section>` : ""}</div>` : ""}
       <section class="workshop-section workshop-shelf" id="on-the-shelf" aria-labelledby="shelved-projects-heading"><details><summary id="shelved-projects-heading">On the shelf <span>${shelvedItems.length} parked topics</span></summary><p>Older machines and ideas kept for reference. These are not active Workshop projects.</p><ul>${shelvedItems.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></details></section>
