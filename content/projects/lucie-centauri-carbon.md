@@ -5,7 +5,7 @@ launchGroup: established
 launchOrder: 100
 description: Lucie is the shop's Centauri Carbon, confirmed stable and kept here as an established machine.
 featuredImage: /images/lucie-centauri-carbon.jpg
-featuredImageAlt: Workshop shelf with Lucie, the Elegoo Centauri Carbon, on the bottom shelf beneath two other printers.
+featuredImageAlt: Closer view of Lucie, the Elegoo Centauri Carbon, on the bottom shelf, with its front door and control screen visible.
 purpose: Keep Lucie's current state and machine identity easy to find as the workshop changes.
 status: operational
 statusLabel: Stable
