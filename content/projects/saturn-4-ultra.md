@@ -4,7 +4,7 @@ slug: saturn-4-ultra
 launchGroup: child
 launchOrder: 20
 parentProject: resin-workshop
-description: The Saturn is in the garage tent with its empty vat and build plate installed. I have not made a print yet; setup checks and a repeatable cleanup workflow are still ahead.
+description: The Saturn is in the garage tent; it was traded for Pam (Prusa MK4S) with an Anycubic Photon P1 on October 9, 2026. Setup checks and cleanup workflow remain.
 purpose: Develop a repeatable resin-printing setup around the Saturn 4 Ultra, including the workspace, calibration, washing, curing, and cleanup.
 status: building
 statusLabel: Building / Testing
@@ -13,6 +13,7 @@ updatedAt: 2026-10-12
 nextAction: Inspect the vat and build plate, then record the remaining printer setup checks before adding resin.
 equipment:
   - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; setup checks incomplete; no prints yet)
+  - Anycubic Photon P1 (acquired in the same trade; current condition and use not yet recorded)
   - AC Infinity CLOUDLAB 866, 5 × 5 ft grow tent (assembled in the garage; no functioning exhaust installed)
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)
   - SUNLU ABS-Like Dark Grey resin (stored unopened; not yet used)
@@ -37,7 +38,7 @@ focus:
   - The garage workspace and its changing workflow
 ---
 
-This page is the Saturn workstream within [Resin Workshop](/workshop/resin-workshop/). The [Build Log](/build-logs/resin-grow-tent-setup/) keeps the dated sequence, including what changed and what I was thinking at the time. The project page will change as the setup does; the log entries remain in their original order.
+This page is the Saturn workstream within [Resin Workshop](/workshop/resin-workshop/). The Saturn and Photon P1 came in a trade for Pam, my Prusa MK4S, on October 9, 2026. The [Build Log](/build-logs/resin-grow-tent-setup/) keeps the dated sequence, including what changed and what I was thinking at the time. The project page will change as the setup does; the log entries remain in their original order.
 
 The printer and wash station came from the same pickup. The wash station powers on, but I have not confirmed that it works. The current focus is getting the printer setup documented and working out how the wash and cleanup steps fit together. I have not established a tested resin workflow yet.
 
