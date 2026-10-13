@@ -24,8 +24,9 @@ covered code, as stated in `LICENSE-MIT-CODE.md`.
   `PRODUCT.md`, `DESIGN.md`, and `BUILD-LOGS.md` are editorial or explanatory
   material. See [CONTENT-RIGHTS.md](CONTENT-RIGHTS.md).
 - `assets/**`, `public/images/**`, and original brand files such as
-  `public/dracars-mark.webp`, `public/dracars-wordmark.webp`, and
-  `public/social-preview.*` are not licensed for reuse by the MIT license.
+  `public/dracars-eye.svg`, `public/dracars-mark.webp`,
+  `public/dracars-wordmark.webp`, and `public/social-preview.*` are not licensed
+  for reuse by the MIT license.
 - Product names, logos, trademarks, and domain names are not licensed by the
   MIT license.
 - Third-party material remains under the rights and terms of its respective

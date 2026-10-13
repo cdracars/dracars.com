@@ -3,8 +3,9 @@
 ## Visual world
 
 Clean maker-tech with a personal edge: a warm, minimal light surface paired
-with a true dark theme, the plum-and-orange Dracars mark, and strong geometric
-type. The page should feel like a practical personal workshop for software,
+with a true dark theme, the supplied eye mark and wordmark in plum and terracotta,
+and strong geometric type. The page should feel like a practical personal
+workshop for software,
 open projects, and hardware work—not a studio portfolio, SaaS dashboard, or
 donation funnel.
 
@@ -20,8 +21,8 @@ donation funnel.
 
 - Generous vertical whitespace gives the system room without turning it into a
   lifestyle landing page.
-- The Dracars icon appears once in the hero on wider screens and stays small,
-  practical, and legible.
+- The eye mark appears in the shared wordmark lockup and once in the homepage
+  hero on wider screens; both stay small, practical, and legible.
 - The current tools form a simple list without catalogue numbering or business
   labels. Add clear top-level sections only when distinct offering types (such
   as a real shop) would otherwise be conflated.
@@ -36,7 +37,8 @@ donation funnel.
 - Plum: `#4d364c`
 
 In dark mode, deep aubergine replaces paper, pale ink preserves readability,
-and the provided dark wordmark/mark are rendered light for contrast.
+the eye mark switches to a pale ink and terracotta variant, and the wordmark is
+rendered light for contrast.
 
 Ko-fi remains in a soft plum panel after the tool list, framed as an optional
 tip jar.

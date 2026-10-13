@@ -13,8 +13,10 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content", "guides");
 const BUILD_LOG_CONTENT = join(ROOT, "content", "build-logs");
 const PROJECT_CONTENT = join(ROOT, "content", "projects");
+const RESOURCE_CONTENT = join(ROOT, "content", "resources");
 const PUBLIC = join(ROOT, "public");
 const OUT = join(PUBLIC, "guides");
+const RESOURCE_OUT = join(PUBLIC, "resources");
 const BUILD_LOG_OUT = join(PUBLIC, "build-logs");
 const PROJECT_OUT = join(PUBLIC, "workshop");
 const SITE = "https://dracars.com";
@@ -294,6 +296,7 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
     <meta name="twitter:description" content="${escAttr(description)}" />
     <meta name="twitter:image" content="${SITE}/social-preview.png" />
     <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -331,12 +334,32 @@ function workshopStatus(status) {
   return `<span class="status workshop-status workshop-status-${escAttr(status)}">${esc(WORKSHOP_STATES[status])}</span>`;
 }
 
-function projectCard(project) {
+function projectCard(project, logs = []) {
   const badge = project.statusLabel ? `<span class="status workshop-status workshop-status-${escAttr(project.status)}">${esc(project.statusLabel)}</span>` : workshopStatus(project.status);
+  const imageLog = (project.relatedLogs ?? []).map((slug) => logs.find((log) => log.slug === slug)).find((log) => log?.indexImage);
+  const imageSrc = project.featuredImage ?? imageLog?.indexImage;
+  const imageAlt = project.featuredImage ? project.featuredImageAlt : "";
+  const image = imageSrc ? `<img class="workshop-project-image" src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" loading="lazy" decoding="async" />` : "";
   return `<a class="workshop-project-link" href="/workshop/${project.slug}/">
-    <div><p class="guide-card-meta">${badge} <span>${esc(project.phase)}</span></p><h3>${esc(project.title)}</h3><p class="guide-card-desc">${esc(project.description)}</p></div>
-    <span class="workshop-open">Open project <span aria-hidden="true">↗</span></span>
+    ${image}
+    <span class="workshop-project-copy"><span class="guide-card-meta">${badge}<span>${esc(project.phase)}</span></span><span class="workshop-project-title">${esc(project.title)}</span><span class="guide-card-desc">${esc(project.description)}</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
   </a>`;
+}
+
+function featuredProjectPanel(project, logs, guides) {
+  const badge = project.statusLabel ? `<span class="status workshop-status workshop-status-${escAttr(project.status)}">${esc(project.statusLabel)}</span>` : workshopStatus(project.status);
+  const relatedLog = (project.relatedLogs ?? []).map((slug) => logs.find((log) => log.slug === slug)).find(Boolean);
+  const relatedGuide = (project.relatedGuides ?? []).map((slug) => guides.find((guide) => guide.slug === slug)).find(Boolean);
+  const imageSrc = project.featuredImage ?? relatedLog?.indexImage;
+  const imageAlt = project.featuredImage ? project.featuredImageAlt : "";
+  const image = imageSrc ? `<div class="featured-project-image"><img src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" fetchpriority="high" /></div>` : "";
+  const statusNote = project.statusNote ? `<p class="featured-project-note">${esc(project.statusNote)}</p>` : "";
+  return `<section class="featured-project" aria-labelledby="featured-project-title">
+    <div class="featured-project-copy"><div class="featured-project-heading"><h2 id="featured-project-title"><a href="/workshop/${project.slug}/">${esc(project.title)}</a></h2><p>${esc(project.description)}</p></div>
+      <div class="featured-project-details"><div><h3>Current state</h3><p>${badge}</p><p class="featured-project-updated">Recorded ${fmtDate(project.updatedAt)}</p>${statusNote}</div><div><h3>Next action</h3><p>${esc(project.nextAction)}</p></div></div>
+      <a class="featured-project-link" href="/workshop/${project.slug}/">View project <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7" /></svg></a>
+    </div>${image}
+  </section>`;
 }
 
 function workshopPage(projects, logs, guides) {
@@ -356,18 +379,24 @@ function workshopPage(projects, logs, guides) {
     "Other mod ideas",
   ];
   const recentLogs = [...logs].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)).slice(0, 4);
-  const recentGuides = [...guides].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)).slice(0, 3);
+  const featuredLog = featured?.relatedLogs.map((slug) => logs.find((log) => log.slug === slug)).find(Boolean);
+  const featuredGuide = featured?.relatedGuides.map((slug) => guides.find((guide) => guide.slug === slug)).find(Boolean);
+  const knowledgeSteps = featured ? [
+    { heading: "Project page", title: featured.title, href: `/workshop/${featured.slug}/`, note: "The current picture and next action." },
+    featuredLog ? { heading: "Build Log", title: featuredLog.title, href: `/build-logs/${featuredLog.slug}/`, note: `Dated updates · ${fmtDate(featuredLog.updatedAt)}` } : null,
+    featuredGuide ? { heading: "Guide", title: featuredGuide.title, href: `/guides/${featuredGuide.slug}/`, note: featuredGuide.statusNote || freshness(featuredGuide).text } : null,
+  ].filter(Boolean) : [];
   const body = `      <section class="workshop-hero" aria-labelledby="page-title">
-        <div><h1 id="page-title">The workshop.</h1><p class="hero-intro">Projects stay here as they change. Build Logs tell what happened; each project page keeps the current picture.</p></div>
-        <p class="workshop-note">Making, modifying, repairing, and understanding useful things.</p>
+        <div class="workshop-intro"><h1 id="page-title">The workshop.</h1><p class="hero-intro">Projects stay here as they change. Build Logs tell what happened; each project page keeps the current picture.</p><p class="workshop-note">Making, modifying, repairing, and understanding useful things.</p></div>
+        ${featured ? featuredProjectPanel(featured, logs, guides) : ""}
       </section>
-      ${featured ? `<section class="workshop-section" aria-labelledby="featured-project-heading"><div class="workshop-section-heading"><h2 id="featured-project-heading">Featured</h2><p>The newest and most active area of the shop.</p></div><div class="workshop-project-list">${projectCard(featured)}</div></section>` : ""}
-      ${active.length ? `<section class="workshop-section" aria-labelledby="active-projects-heading"><div class="workshop-section-heading"><h2 id="active-projects-heading">Active builds</h2></div><div class="workshop-project-list">${active.map(projectCard).join("\n")}</div></section>` : ""}
-      ${established.length ? `<section class="workshop-section" aria-labelledby="established-projects-heading"><div class="workshop-section-heading"><h2 id="established-projects-heading">Established machines</h2></div><div class="workshop-project-list">${established.map(projectCard).join("\n")}</div></section>` : ""}
-      ${planned.length ? `<section class="workshop-section" aria-labelledby="planned-projects-heading"><div class="workshop-section-heading"><h2 id="planned-projects-heading">Planned</h2><p>Visible as a plan, not presented as an active build.</p></div><div class="workshop-project-list">${planned.map(projectCard).join("\n")}</div></section>` : ""}
+      ${active.length ? `<section class="workshop-section" aria-labelledby="active-projects-heading"><div class="workshop-section-heading"><h2 id="active-projects-heading">Active builds</h2></div><div class="workshop-project-grid">${active.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
+      ${established.length ? `<section class="workshop-section" aria-labelledby="established-projects-heading"><div class="workshop-section-heading"><h2 id="established-projects-heading">Established machines</h2></div><div class="workshop-project-grid">${established.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
+      ${planned.length ? `<section class="workshop-section" aria-labelledby="planned-projects-heading"><div class="workshop-section-heading"><h2 id="planned-projects-heading">Planned</h2><p>Visible as a plan, not presented as an active build.</p></div><div class="workshop-project-grid">${planned.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
+      ${knowledgeSteps.length || recentLogs.length ? `<div class="workshop-reference-grid">${knowledgeSteps.length ? `<section class="workshop-section workshop-knowledge" aria-labelledby="knowledge-heading"><div class="workshop-section-heading"><h2 id="knowledge-heading">From build to lasting knowledge</h2><a href="/guides/">All guides <span aria-hidden="true">↗</span></a></div><ol class="workshop-knowledge-list">${knowledgeSteps.map((step) => `<li><h3>${esc(step.heading)}</h3><a href="${escAttr(step.href)}">${esc(step.title)}</a><p>${esc(step.note)}</p></li>`).join("\n")}</ol></section>` : ""}
+      ${recentLogs.length ? `<section class="workshop-section" aria-labelledby="recent-logs-heading"><div class="workshop-section-heading"><h2 id="recent-logs-heading">Recent Build Logs</h2><a href="/build-logs/">All Build Logs <span aria-hidden="true">↗</span></a></div><div class="workshop-activity-list">${recentLogs.map((log) => `<a href="/build-logs/${log.slug}/"><time datetime="${log.updatedAt}">${fmtDate(log.updatedAt)}</time><span>${esc(log.title)}</span><span class="activity-arrow" aria-hidden="true">↗</span></a>`).join("\n")}</div></section>` : ""}</div>` : ""}
       <section class="workshop-section workshop-shelf" id="on-the-shelf" aria-labelledby="shelved-projects-heading"><details><summary id="shelved-projects-heading">On the shelf <span>${shelvedItems.length} parked topics</span></summary><p>Older machines and ideas kept for reference. These are not active Workshop projects.</p><ul>${shelvedItems.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></details></section>
-      ${recentLogs.length ? `<section class="workshop-section" aria-labelledby="recent-logs-heading"><div class="workshop-section-heading"><h2 id="recent-logs-heading">Recent Build Logs</h2><a href="/build-logs/">All Build Logs <span aria-hidden="true">↗</span></a></div><div class="workshop-activity-list">${recentLogs.map((log) => `<a href="/build-logs/${log.slug}/"><time datetime="${log.updatedAt}">${fmtDate(log.updatedAt)}</time><span>${esc(log.title)}</span><span class="activity-arrow" aria-hidden="true">↗</span></a>`).join("\n")}</div></section>` : ""}
-      ${recentGuides.length ? `<section class="workshop-section" aria-labelledby="guides-heading"><div class="workshop-section-heading"><h2 id="guides-heading">Guides from the work</h2><a href="/guides/">All guides <span aria-hidden="true">↗</span></a></div><div class="workshop-guide-list">${recentGuides.map((guide) => `<a href="/guides/${guide.slug}/"><span>${esc(guide.title)}</span>${statusBadge(freshness(guide))}</a>`).join("\n")}</div></section>` : ""}`;
+      `;
   return page({
     title: "Workshop — Dracars",
     description: "Current projects, workshop notes, and practical work by Cody Dracars.",
@@ -402,6 +431,7 @@ function projectPage(project, allProjects, logs, guides) {
         <p class="crumbs"><a href="/workshop/">Workshop</a> ${parent ? `<span aria-hidden="true">/</span> <a href="/workshop/${parent.slug}/">${esc(parent.title)}</a>` : ""} <span aria-hidden="true">/</span> Project</p>
         <header class="workshop-project-header"><div><h1 id="page-title">${esc(project.title)}</h1><p class="guide-deck">${esc(project.purpose)}</p></div><div class="workshop-project-meta">${stateBadge}<p class="workshop-updated">Status last recorded <time datetime="${project.updatedAt}">${fmtDate(project.updatedAt)}</time></p>${project.statusNote ? `<p class="workshop-updated">${esc(project.statusNote)}</p>` : ""}</div></header>
         <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>${esc(project.description)}</p><p class="project-next"><strong>Next action</strong>${esc(project.nextAction)}</p></div><div class="project-current-phase"><span>Current phase</span><strong>${esc(project.phase)}</strong></div></section>
+        ${project.featuredImage ? `<div class="featured-project-image project-featured-image"><img src="${escAttr(project.featuredImage)}" alt="${escAttr(project.featuredImageAlt ?? "")}" loading="lazy" decoding="async" /></div>` : ""}
         ${detailSections ? `<div class="project-detail-grid">${detailSections}</div>` : ""}
         ${project.html ? `<section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body">${project.html}</div></section>` : ""}
         ${workstreams}
@@ -420,6 +450,79 @@ function guideCard(g) {
   <p class="guide-card-desc">${esc(g.description)}</p>
   <p class="guide-card-updated">Updated <time datetime="${g.updatedAt}">${fmtDate(g.updatedAt)}</time></p>
 </a>`;
+}
+
+const RESOURCE_TOOLS = [
+  { name: "Task Prioritizer", description: "Turn a pile of tasks into an ordered list by choosing between two at a time.", url: "https://task-prioritizer.dracars.com/" },
+  { name: "Stitch Shaper", description: "Calculate crochet increases and decreases to shape a row or round evenly.", url: "https://stitch-shaper.dracars.com/" },
+  { name: "Local Screen Recorder", description: "Record a screen or window in your browser and save the video directly to your device.", url: "https://screen-recorder.dracars.com/" },
+  { name: "TunePrint", description: "A browser-only companion for turning OrcaSlicer calibration results into settings you can save.", url: "https://tuneprint.dracars.com/", pageUrl: "/resources/tuneprint/" },
+  { name: "Voron Mod Hub", description: "Browse and filter the community-maintained VoronUsers catalog to find mods for your printer.", url: "https://cdracars.github.io/voron-mod-hub/" },
+];
+
+const RESOURCE_CODE = [
+  { name: "STL to STEP for FreeCAD", description: "Turn an STL mesh into editable STEP geometry right inside FreeCAD.", url: "https://github.com/cdracars/stl2step-freecad/releases" },
+  { name: "STL to STEP for Fusion 360", description: "Convert an STL mesh to a STEP solid from inside Autodesk Fusion 360.", url: "https://github.com/cdracars/stl2step-fusion/releases" },
+  { name: "SafeSync", description: "Keep important configuration folders backed up with a small, Git-based helper.", url: "https://github.com/cdracars/SafeSync" },
+  { name: "Book Scanner Copy Stand", description: "A maintained build of caj’s 3D-printable book scanner stand. Original design credited on Thingiverse.", url: "https://github.com/cdracars/book-scanner-copy-stand" },
+];
+
+function resourceCards(items) {
+  return items.map((item) => `<a class="resource-card" href="${escAttr(item.pageUrl ?? item.url)}"${item.pageUrl ? "" : ' target="_blank" rel="noreferrer"'}>
+  <span class="resource-card-copy"><span class="resource-card-title">${esc(item.name)}</span><span class="resource-card-description">${esc(item.description)}</span></span>
+  <span class="resource-card-arrow" aria-hidden="true">↗</span>
+</a>`).join("\n");
+}
+
+function resourceIndexPage() {
+  const body = `      <section class="guides-hero resources-hero" aria-labelledby="page-title">
+        <h1 id="page-title">Free resources.</h1>
+        <p class="hero-intro">Tools and code projects made to solve practical problems. The Build Logs and Workshop show the work behind them.</p>
+      </section>
+      <section class="resource-section" aria-labelledby="tools-heading">
+        <div class="resource-section-heading"><h2 id="tools-heading">Tools</h2><p>Free browser tools and useful catalogs.</p></div>
+        <div class="resource-grid">${resourceCards(RESOURCE_TOOLS)}</div>
+      </section>
+      <section class="resource-section" aria-labelledby="code-heading">
+        <div class="resource-section-heading"><h2 id="code-heading">Code</h2><p>Open repositories and releases. Each project page describes its own scope and terms.</p></div>
+        <div class="resource-grid">${resourceCards(RESOURCE_CODE)}</div>
+      </section>`;
+  return page({
+    title: "Free Tools & Code — Dracars Resources",
+    description: "Free tools and code projects from Dracars, with practical guides and project notes from the work behind them.",
+    path: "/resources/",
+    body,
+    bodyClass: "resources",
+    jsonld: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: "Dracars Resources",
+      url: `${SITE}/resources/`,
+      hasPart: [...RESOURCE_TOOLS, ...RESOURCE_CODE].map((item) => ({ "@type": "CreativeWork", name: item.name, url: item.url })),
+    },
+  });
+}
+
+function tuneprintResourcePage() {
+  const body = readFileSync(join(RESOURCE_CONTENT, "tuneprint.html"), "utf8").trim();
+  return page({
+    title: "TunePrint — OrcaSlicer Calibration Companion | Dracars",
+    description: "A browser-based companion for turning OrcaSlicer calibration results into settings to save.",
+    path: "/resources/tuneprint/",
+    body,
+    bodyClass: "resource-detail-page",
+    jsonld: {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "TunePrint",
+      url: "https://tuneprint.dracars.com/",
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "Web browser",
+      isAccessibleForFree: true,
+      description: "A browser-based companion for turning OrcaSlicer calibration results into settings to save.",
+      author: { "@type": "Person", name: "Cody Dracars", url: `${SITE}/` },
+    },
+  });
 }
 
 function articlePage(g, all) {
@@ -683,7 +786,7 @@ writeFileSync(homePath, home);
 const featuredProject = projects.find((project) => project.launchGroup === "featured");
 const homeWorkshop = `      <section class="home-workshop" id="workshop-home" aria-labelledby="home-workshop-heading">
         <div class="home-workshop-heading"><p class="home-workshop-label">Workshop preview</p><h2 id="home-workshop-heading">${esc(featuredProject.title)}</h2><p>A quick look at the resin setup. The Workshop holds the full project list and the changing details.</p></div>
-        <div class="home-workshop-meta"><span class="home-project-status">${esc(featuredProject.statusLabel ?? WORKSHOP_STATES[featuredProject.status])}</span><a href="/workshop/${featuredProject.slug}/">View Resin Workshop <span aria-hidden="true">↗</span></a></div>
+        <div class="home-workshop-meta"><span class="home-project-status">${esc(featuredProject.statusLabel ?? WORKSHOP_STATES[featuredProject.status])}</span><a href="/workshop/${featuredProject.slug}/">View ${esc(featuredProject.title)} <span aria-hidden="true">↗</span></a></div>
       </section>`;
 const homeStart = "      <!-- home-workshop:start -->";
 const homeEnd = "      <!-- home-workshop:end -->";
@@ -691,7 +794,40 @@ const homeFrom = home.indexOf(homeStart);
 const homeTo = home.indexOf(homeEnd);
 if (homeFrom < 0 || homeTo < homeFrom) fail("homepage missing managed home-workshop markers");
 home = home.slice(0, homeFrom) + homeStart + "\n" + homeWorkshop + "\n" + homeEnd + home.slice(homeTo + homeEnd.length);
-home = home.replace(/<a class="text-link"[^>]*>[\s\S]*?<\/a>/, '<a class="text-link" href="/workshop/">Explore the Workshop <span aria-hidden="true">↗</span></a>');
+home = home.replace(/<a class="text-link"[^>]*>[\s\S]*?<\/a>/, '<a class="text-link" href="/resources/">Browse resources <span aria-hidden="true">↗</span></a>');
+writeFileSync(homePath, home);
+
+const resourceStart = "      <!-- home-resources:start -->";
+const resourceEnd = "      <!-- home-resources:end -->";
+const homeResources = `      <section class="tools-section" id="tools" aria-labelledby="tools-heading">
+        <div class="section-heading"><div><h2 id="tools-heading">Useful right now</h2><p>Free tools and code projects from the workbench.</p></div><a class="text-link" href="/resources/">See all resources <span aria-hidden="true">↗</span></a></div>
+        <div class="resource-grid resource-grid-featured">${resourceCards([RESOURCE_TOOLS[3], RESOURCE_CODE[0], RESOURCE_CODE[2], RESOURCE_TOOLS[2]])}</div>
+      </section>`;
+const existingResourceStart = home.indexOf(resourceStart);
+const existingResourceEnd = home.indexOf(resourceEnd);
+if (existingResourceStart < 0 || existingResourceEnd < existingResourceStart) {
+  const oldStart = '      <section class="tools-section" id="tools"';
+  const toolsStart = home.indexOf(oldStart);
+  const toolsEnd = home.indexOf('      </section>', toolsStart);
+  if (toolsStart < 0 || toolsEnd < toolsStart) fail("homepage missing tools section");
+  const end = toolsEnd + '      </section>'.length;
+  home = home.slice(0, toolsStart) + resourceStart + "\n" + homeResources + "\n" + resourceEnd + home.slice(end);
+} else {
+  const end = existingResourceEnd + resourceEnd.length;
+  home = home.slice(0, existingResourceStart) + resourceStart + "\n" + homeResources + "\n" + resourceEnd + home.slice(end);
+}
+const movedResourcesStart = home.indexOf(resourceStart);
+const movedResourcesEnd = home.indexOf(resourceEnd, movedResourcesStart) + resourceEnd.length;
+const movedWorkshopStart = home.indexOf(homeStart);
+const movedWorkshopEnd = home.indexOf(homeEnd, movedWorkshopStart) + homeEnd.length;
+if (movedResourcesStart < 0 || movedWorkshopStart < 0) fail("homepage section markers missing");
+if (movedWorkshopStart < movedResourcesStart) {
+  const resourcesBlock = home.slice(movedResourcesStart, movedResourcesEnd);
+  const withoutResources = home.slice(0, movedResourcesStart) + home.slice(movedResourcesEnd);
+  const workshopStart = withoutResources.indexOf(homeStart);
+  const workshopEnd = withoutResources.indexOf(homeEnd, workshopStart) + homeEnd.length;
+  home = withoutResources.slice(0, workshopStart) + resourcesBlock + "\n\n" + withoutResources.slice(workshopStart, workshopEnd) + withoutResources.slice(workshopEnd);
+}
 writeFileSync(homePath, home);
 
 rmSync(OUT, { recursive: true, force: true });
@@ -701,6 +837,10 @@ for (const g of guides) {
   mkdirSync(join(OUT, g.slug), { recursive: true });
   writeFileSync(join(OUT, g.slug, "index.html"), guidePage(g, guides));
 }
+mkdirSync(RESOURCE_OUT, { recursive: true });
+writeFileSync(join(RESOURCE_OUT, "index.html"), resourceIndexPage());
+mkdirSync(join(RESOURCE_OUT, "tuneprint"), { recursive: true });
+writeFileSync(join(RESOURCE_OUT, "tuneprint", "index.html"), tuneprintResourcePage());
 rmSync(BUILD_LOG_OUT, { recursive: true, force: true });
 mkdirSync(BUILD_LOG_OUT, { recursive: true });
 writeFileSync(join(BUILD_LOG_OUT, "index.html"), buildLogIndexPage(buildLogs));
@@ -718,6 +858,8 @@ for (const project of allProjects) {
 
 const urls = [
   { loc: `${SITE}/` },
+  { loc: `${SITE}/resources/` },
+  { loc: `${SITE}/resources/tuneprint/` },
   { loc: `${SITE}/guides/`, lastmod: guides.map((g) => g.updatedAt).sort().at(-1) },
   ...guides.map((g) => ({ loc: `${SITE}/guides/${g.slug}/`, lastmod: g.updatedAt })),
   { loc: `${SITE}/build-logs/`, lastmod: buildLogs.map((g) => g.updatedAt).sort().at(-1) },

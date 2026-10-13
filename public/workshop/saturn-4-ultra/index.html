@@ -23,6 +23,7 @@
     <meta name="twitter:description" content="The Saturn is in the garage tent; it was traded for Pam (Prusa MK4S) with an Anycubic Photon P1 on October 9, 2026. Setup checks and cleanup workflow remain." />
     <meta name="twitter:image" content="https://dracars.com/social-preview.png" />
     <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,11 +42,15 @@
     </a>
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="dracars home">
+        <picture class="brand-symbol-picture">
+          <source srcset="/dracars-eye-dark.svg" media="(prefers-color-scheme: dark)" />
+          <img class="brand-symbol" src="/dracars-eye.svg" alt="" width="36" height="34" />
+        </picture>
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
+        <a href="/resources/">Resources</a>
         <a href="/workshop/" aria-current="page">Workshop</a>
-        <a href="/#tools">Tools</a>
         <a href="/build-logs/">Build Logs</a>
         <a href="/guides/">Guides</a>
       </nav>
@@ -55,6 +60,7 @@
         <p class="crumbs"><a href="/workshop/">Workshop</a> <span aria-hidden="true">/</span> <a href="/workshop/resin-workshop/">Resin Workshop</a> <span aria-hidden="true">/</span> Project</p>
         <header class="workshop-project-header"><div><h1 id="page-title">Elegoo Saturn 4 Ultra 12K</h1><p class="guide-deck">Develop a repeatable resin-printing setup around the Saturn 4 Ultra, including the workspace, calibration, washing, curing, and cleanup.</p></div><div class="workshop-project-meta"><span class="status workshop-status workshop-status-building">Building / Testing</span><p class="workshop-updated">Status last recorded <time datetime="2026-10-12">October 12, 2026</time></p></div></header>
         <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>The Saturn is in the garage tent; it was traded for Pam (Prusa MK4S) with an Anycubic Photon P1 on October 9, 2026. Setup checks and cleanup workflow remain.</p><p class="project-next"><strong>Next action</strong>Inspect the vat and build plate, then record the remaining printer setup checks before adding resin.</p></div><div class="project-current-phase"><span>Current phase</span><strong>Workspace setup and first calibration</strong></div></section>
+
         <div class="project-detail-grid"><section aria-labelledby="phase-heading"><h2 id="phase-heading">Project phases</h2><ol class="project-phase-list"><li class="project-phase project-phase-done"><span class="phase-marker" aria-hidden="true"></span><span>Acquired</span></li>
 <li class="project-phase project-phase-current" aria-current="step"><span class="phase-marker" aria-hidden="true"></span><span>Workspace setup</span><span class="phase-current">Current</span></li>
 <li class="project-phase project-phase-up-next"><span class="phase-marker" aria-hidden="true"></span><span>Resin selection</span></li>

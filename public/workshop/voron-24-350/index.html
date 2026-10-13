@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Voron 2.4 350 — Dracars Workshop</title>
-    <meta name="description" content="An established machine record for the original Formbot build and its ongoing configuration and reliability changes." />
+    <meta name="description" content="Teresa is a Formbot Voron 2.4 350 with an active Klipper host at the latest check, but print readiness remains unverified after an unresolved Raspberry Pi shutdown." />
     <link rel="canonical" href="https://dracars.com/workshop/voron-24-350/" />
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="Dracars" />
     <meta property="og:url" content="https://dracars.com/workshop/voron-24-350/" />
     <meta property="og:title" content="Voron 2.4 350 — Dracars Workshop" />
-    <meta property="og:description" content="An established machine record for the original Formbot build and its ongoing configuration and reliability changes." />
+    <meta property="og:description" content="Teresa is a Formbot Voron 2.4 350 with an active Klipper host at the latest check, but print readiness remains unverified after an unresolved Raspberry Pi shutdown." />
     <meta property="og:image" content="https://dracars.com/social-preview.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -20,15 +20,16 @@
     <meta property="og:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Voron 2.4 350 — Dracars Workshop" />
-    <meta name="twitter:description" content="An established machine record for the original Formbot build and its ongoing configuration and reliability changes." />
+    <meta name="twitter:description" content="Teresa is a Formbot Voron 2.4 350 with an active Klipper host at the latest check, but print readiness remains unverified after an unresolved Raspberry Pi shutdown." />
     <meta name="twitter:image" content="https://dracars.com/social-preview.png" />
     <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Voron 2.4 350","description":"An established machine record for the original Formbot build and its ongoing configuration and reliability changes.","dateModified":"2026-10-12","url":"https://dracars.com/workshop/voron-24-350/","author":{"@type":"Person","name":"Cody Dracars","url":"https://dracars.com/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Voron 2.4 350","description":"Teresa is a Formbot Voron 2.4 350 with an active Klipper host at the latest check, but print readiness remains unverified after an unresolved Raspberry Pi shutdown.","dateModified":"2026-10-13","url":"https://dracars.com/workshop/voron-24-350/","author":{"@type":"Person","name":"Cody Dracars","url":"https://dracars.com/"}}</script>
   </head>
   <body class="workshop">
     <a class="skip-link" href="#content">Skip to content</a>
@@ -41,11 +42,15 @@
     </a>
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="dracars home">
+        <picture class="brand-symbol-picture">
+          <source srcset="/dracars-eye-dark.svg" media="(prefers-color-scheme: dark)" />
+          <img class="brand-symbol" src="/dracars-eye.svg" alt="" width="36" height="34" />
+        </picture>
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
+        <a href="/resources/">Resources</a>
         <a href="/workshop/" aria-current="page">Workshop</a>
-        <a href="/#tools">Tools</a>
         <a href="/build-logs/">Build Logs</a>
         <a href="/guides/">Guides</a>
       </nav>
@@ -53,10 +58,14 @@
     <main id="content">
       <article class="workshop-project" aria-labelledby="page-title">
         <p class="crumbs"><a href="/workshop/">Workshop</a>  <span aria-hidden="true">/</span> Project</p>
-        <header class="workshop-project-header"><div><h1 id="page-title">Voron 2.4 350</h1><p class="guide-deck">Keep a durable reference for the machine's configuration as it evolves.</p></div><div class="workshop-project-meta"><span class="status workshop-status workshop-status-operational">Operational / Evolving</span><p class="workshop-updated">Status last recorded <time datetime="2026-10-12">October 12, 2026</time></p><p class="workshop-updated">This launch entry is based on supplied history; verify the current configuration before relying on individual details.</p></div></header>
-        <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>An established machine record for the original Formbot build and its ongoing configuration and reliability changes.</p><p class="project-next"><strong>Next action</strong>Review and record the current hotend, extruder, and multi-material setup.</p></div><div class="project-current-phase"><span>Current phase</span><strong>Living machine record</strong></div></section>
-        <div class="project-detail-grid"><section aria-labelledby="focus-heading"><h2 id="focus-heading">What this project tracks</h2><ul class="project-plain-list"><li>Original Formbot build</li><li>Hotend, extruder, Orbiter 2.5, Dragon Ace, and Volcano extender history</li><li>MMU, ERCF, 3MS, and AFC exploration</li><li>Reliability changes and current configuration</li></ul></section></div>
-        <section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body"><p>This is a living machine record rather than a new build announcement. The configuration list should be refreshed when the machine is next worked on so that older experiments are not mistaken for the current setup.</p></div></section>
+        <header class="workshop-project-header"><div><h1 id="page-title">Voron 2.4 350</h1><p class="guide-deck">Keep a durable reference for the machine's configuration as it evolves.</p></div><div class="workshop-project-meta"><span class="status workshop-status workshop-status-troubleshooting">Troubleshooting</span><p class="workshop-updated">Status last recorded <time datetime="2026-10-13">October 13, 2026</time></p><p class="workshop-updated">3DBrain records Klipper and Moonraker active on October 12, 2026; no print-readiness check was performed.</p></div></header>
+        <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>Teresa is a Formbot Voron 2.4 350 with an active Klipper host at the latest check, but print readiness remains unverified after an unresolved Raspberry Pi shutdown.</p><p class="project-next"><strong>Next action</strong>Investigate the unresolved Raspberry Pi hard shutdown and verify print readiness before describing Teresa as operational.</p></div><div class="project-current-phase"><span>Current phase</span><strong>Diagnose host shutdown and verify print readiness</strong></div></section>
+
+        <div class="project-detail-grid"><section aria-labelledby="focus-heading"><h2 id="focus-heading">What this project tracks</h2><ul class="project-plain-list"><li>Original Formbot build</li><li>Hotend, extruder, Orbiter 2.5, Dragon Ace, and Volcano extender history</li><li>MMU, ERCF, 3MS, and AFC exploration</li><li>Reliability changes and current configuration</li></ul></section>
+<section aria-labelledby="equipment-heading"><h2 id="equipment-heading">Equipment and setup</h2><ul class="project-plain-list"><li>Formbot Voron 2.4 350 with Kalico, Raspberry Pi 4, BTT Octopus Pro, Mainsail/Moonraker, and a Cartographer V4 probe over CAN.</li><li>FYSETC H36 Combo V2.0 toolhead with Triangle-Lab Dragon ACE hotend and Clockwork 2 extruder.</li><li>Box Turtle four-lane MMU using AFC; its enclosure is only partly assembled.</li></ul></section>
+<section aria-labelledby="problems-heading"><h2 id="problems-heading">Open problems</h2><ul class="project-plain-list"><li>A Raspberry Pi hard shutdown interrupted a print in April 2026. The cause remains unknown; Klipper and Moonraker were active at the October 12 check, but printing was not tested.</li><li>Under-extrusion is still being investigated; backlash was adjusted and a flow tower was in progress.</li><li>The bed-relay control wiring has an unresolved configuration/physical-wiring discrepancy; trace it before treating the electrical record as settled.</li></ul></section></div>
+        <section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body"><p>Teresa remains a living machine record rather than a new build announcement. 3DBrain's latest machine notes list a Formbot 350 mm frame running Kalico, a CAN-connected H36 toolhead with Dragon ACE and Clockwork 2, and a four-lane Box Turtle MMU using AFC. The Box Turtle enclosure is incomplete, and core calibration work—including input shaping, per-material pressure advance, and extruder calibration—remains open.</p>
+<p>The machine's service state needs careful wording. A Raspberry Pi hard shutdown interrupted a print in April 2026, and the cause remains undiagnosed. Klipper and Moonraker were active in a read-only October 12 check, but the notes explicitly say print readiness was not tested. Under-extrusion work and an unresolved discrepancy between the bed-relay configuration and the apparent physical output wiring are also recorded. The Workshop status reflects that troubleshooting state; older operational claims should not be relied on without a fresh check.</p></div></section>
 
 
 

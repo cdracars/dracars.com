@@ -23,12 +23,13 @@
     <meta name="twitter:description" content="Troubleshooting the SV08 as a changing system, with the hardware, wiring, and fault history kept together." />
     <meta name="twitter:image" content="https://dracars.com/social-preview.png" />
     <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"SV08 Reliability Lab","description":"Troubleshooting the SV08 as a changing system, with the hardware, wiring, and fault history kept together.","dateModified":"2026-10-12","url":"https://dracars.com/workshop/sv08-reliability-lab/","author":{"@type":"Person","name":"Cody Dracars","url":"https://dracars.com/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"SV08 Reliability Lab","description":"Troubleshooting the SV08 as a changing system, with the hardware, wiring, and fault history kept together.","dateModified":"2026-10-13","url":"https://dracars.com/workshop/sv08-reliability-lab/","author":{"@type":"Person","name":"Cody Dracars","url":"https://dracars.com/"}}</script>
   </head>
   <body class="workshop">
     <a class="skip-link" href="#content">Skip to content</a>
@@ -41,11 +42,15 @@
     </a>
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="dracars home">
+        <picture class="brand-symbol-picture">
+          <source srcset="/dracars-eye-dark.svg" media="(prefers-color-scheme: dark)" />
+          <img class="brand-symbol" src="/dracars-eye.svg" alt="" width="36" height="34" />
+        </picture>
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
+        <a href="/resources/">Resources</a>
         <a href="/workshop/" aria-current="page">Workshop</a>
-        <a href="/#tools">Tools</a>
         <a href="/build-logs/">Build Logs</a>
         <a href="/guides/">Guides</a>
       </nav>
@@ -53,10 +58,14 @@
     <main id="content">
       <article class="workshop-project" aria-labelledby="page-title">
         <p class="crumbs"><a href="/workshop/">Workshop</a>  <span aria-hidden="true">/</span> Project</p>
-        <header class="workshop-project-header"><div><h1 id="page-title">SV08 Reliability Lab</h1><p class="guide-deck">Track reliability work and troubleshooting on the SV08 over time.</p></div><div class="workshop-project-meta"><span class="status workshop-status workshop-status-troubleshooting">Troubleshooting</span><p class="workshop-updated">Status last recorded <time datetime="2026-10-12">October 12, 2026</time></p><p class="workshop-updated">Launch scope and status supplied October 12, 2026; exact configuration and active faults need a fresh check.</p></div></header>
-        <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>Troubleshooting the SV08 as a changing system, with the hardware, wiring, and fault history kept together.</p><p class="project-next"><strong>Next action</strong>Confirm the current hardware configuration and record the next reproducible fault or fix.</p></div><div class="project-current-phase"><span>Current phase</span><strong>Fault finding and reliability work</strong></div></section>
-        <div class="project-detail-grid"><section aria-labelledby="focus-heading"><h2 id="focus-heading">What this project tracks</h2><ul class="project-plain-list"><li>Anthead and Orbiter configuration</li><li>EBB36, thermistor, CAN, and H36 issues</li><li>Filament sensor plans</li><li>Camera and wiring concerns</li></ul></section></div>
-        <section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body"><p>The value of this project is the changing system and its troubleshooting history. The topics here are an index of areas to track, not a claim that each issue is still active today.</p></div></section>
+        <header class="workshop-project-header"><div><h1 id="page-title">SV08 Reliability Lab</h1><p class="guide-deck">Track reliability work and troubleshooting on the SV08 over time.</p></div><div class="workshop-project-meta"><span class="status workshop-status workshop-status-troubleshooting">Troubleshooting</span><p class="workshop-updated">Status last recorded <time datetime="2026-10-13">October 13, 2026</time></p><p class="workshop-updated">Launch scope and status supplied October 12, 2026; exact configuration and active faults need a fresh check.</p></div></header>
+        <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>Troubleshooting the SV08 as a changing system, with the hardware, wiring, and fault history kept together.</p><p class="project-next"><strong>Next action</strong>Recheck whether the monitored Z, gantry, and bed-positioning issues persist, then record the next reproducible fault or fix.</p></div><div class="project-current-phase"><span>Current phase</span><strong>Fault finding and reliability work</strong></div></section>
+
+        <div class="project-detail-grid"><section aria-labelledby="focus-heading"><h2 id="focus-heading">What this project tracks</h2><ul class="project-plain-list"><li>Anthead and Orbiter configuration</li><li>EBB36, thermistor, CAN, and H36 issues</li><li>Filament sensor plans</li><li>Camera and wiring concerns</li></ul></section>
+<section aria-labelledby="equipment-heading"><h2 id="equipment-heading">Equipment and setup</h2><ul class="project-plain-list"><li>Sovol SV08 350 mm CoreXY with mainline Klipper, Mainsail, Moonraker, stock SV08 control board, Raspberry Pi, and stock planetary direct-drive extruder.</li><li>Full acrylic enclosure with printed tophat, Klipper Expander, INKBIRD SSR-40 DA bed relay, and Crowsnest camera.</li><li>Stock inductive probe; input shaping and adaptive bed mesh are configured. The Bambu TZ3.0 hotend is documented as an alternate, not the primary installed hotend.</li></ul></section>
+<section aria-labelledby="problems-heading"><h2 id="problems-heading">Open problems</h2><ul class="project-plain-list"><li>Z1 had a TMC reset during QGL; a related Z-offset issue was attributed to possible 24 V rail instability. Monitor and check the connector/harness and rail if it recurs.</li><li>The gantry had overnight sag after loose Z-belt tension; belts were retensioned in April 2026 and the sag was to be monitored.</li><li>The custom PEI bed sheet can shift because it has no positional locator.</li><li>Per-material ABS/ASA pressure advance and batch profiles remain unfinished; a Cartographer probe and bed-tension modification are planned, not installed.</li></ul></section></div>
+        <section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body"><p>Hoss's 3DBrain record, last updated October 12, 2026, describes an SV08 350 running mainline Klipper, with its enclosure, camera, adaptive bed mesh, QGL, and input shaping in place. A read-only check that day found Klipper and Moonraker active and captured the live configuration. That confirms the services were running at the time of the check; it does not establish that every print workflow was tested.</p>
+<p>The records separate resolved setup faults from issues to monitor. Earlier fixes include a bad hotend thermistor setting that caused brittle prints, probe points that could drive the nozzle into the bed, and a startup macro that referenced a chamber sensor not present in the live configuration. Z1 resets, possible 24 V rail instability, overnight gantry sag, and a shifting PEI sheet remain documented monitor items. The notes do not say whether those symptoms have recurred since their last entries, so this page tracks them as checks rather than current failures.</p></div></section>
 
 
 

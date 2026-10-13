@@ -23,6 +23,7 @@
     <meta name="twitter:description" content="A running build log for a Box Turtle 1.1 beta with an early Longboi 1.0 prototype, Smol v2 lanes, and a few lessons from reprinting parts." />
     <meta name="twitter:image" content="https://dracars.com/social-preview.png" />
     <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,11 +42,15 @@
     </a>
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="dracars home">
+        <picture class="brand-symbol-picture">
+          <source srcset="/dracars-eye-dark.svg" media="(prefers-color-scheme: dark)" />
+          <img class="brand-symbol" src="/dracars-eye.svg" alt="" width="36" height="34" />
+        </picture>
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
+        <a href="/resources/">Resources</a>
         <a href="/workshop/">Workshop</a>
-        <a href="/#tools">Tools</a>
         <a href="/build-logs/" aria-current="page">Build Logs</a>
         <a href="/guides/">Guides</a>
       </nav>

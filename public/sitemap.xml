@@ -4,6 +4,12 @@
     <loc>https://dracars.com/</loc>
   </url>
   <url>
+    <loc>https://dracars.com/resources/</loc>
+  </url>
+  <url>
+    <loc>https://dracars.com/resources/tuneprint/</loc>
+  </url>
+  <url>
     <loc>https://dracars.com/guides/</loc>
     <lastmod>2026-10-07</lastmod>
   </url>
@@ -53,7 +59,7 @@
   </url>
   <url>
     <loc>https://dracars.com/workshop/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://dracars.com/workshop/resin-workshop/</loc>
@@ -69,19 +75,19 @@
   </url>
   <url>
     <loc>https://dracars.com/workshop/sv08-reliability-lab/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://dracars.com/workshop/sv06-plus-tpu-3ms/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://dracars.com/workshop/voron-v02-recovery/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://dracars.com/workshop/voron-24-350/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://dracars.com/workshop/spawn-trident-300/</loc>

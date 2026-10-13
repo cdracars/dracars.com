@@ -23,12 +23,13 @@
     <meta name="twitter:description" content="Current projects, workshop notes, and practical work by Cody Dracars." />
     <meta name="twitter:image" content="https://dracars.com/social-preview.png" />
     <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Dracars Workshop","url":"https://dracars.com/workshop/","hasPart":[{"@type":"CreativeWork","name":"Resin Workshop","url":"https://dracars.com/workshop/resin-workshop/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"Elegoo Saturn 4 Ultra 12K","url":"https://dracars.com/workshop/saturn-4-ultra/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"Operation: Gray Shell","url":"https://dracars.com/workshop/operation-gray-shell/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"SV08 Reliability Lab","url":"https://dracars.com/workshop/sv08-reliability-lab/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"SV06 Plus: TPU and 3MS","url":"https://dracars.com/workshop/sv06-plus-tpu-3ms/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"Voron V0.2 Recovery and Conversion","url":"https://dracars.com/workshop/voron-v02-recovery/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"Voron 2.4 350","url":"https://dracars.com/workshop/voron-24-350/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"Spawn Trident 300","url":"https://dracars.com/workshop/spawn-trident-300/","dateModified":"2026-10-12"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Dracars Workshop","url":"https://dracars.com/workshop/","hasPart":[{"@type":"CreativeWork","name":"Resin Workshop","url":"https://dracars.com/workshop/resin-workshop/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"Elegoo Saturn 4 Ultra 12K","url":"https://dracars.com/workshop/saturn-4-ultra/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"Operation: Gray Shell","url":"https://dracars.com/workshop/operation-gray-shell/","dateModified":"2026-10-12"},{"@type":"CreativeWork","name":"SV08 Reliability Lab","url":"https://dracars.com/workshop/sv08-reliability-lab/","dateModified":"2026-10-13"},{"@type":"CreativeWork","name":"SV06 Plus: TPU and 3MS","url":"https://dracars.com/workshop/sv06-plus-tpu-3ms/","dateModified":"2026-10-13"},{"@type":"CreativeWork","name":"Voron V0.2 Recovery and Conversion","url":"https://dracars.com/workshop/voron-v02-recovery/","dateModified":"2026-10-13"},{"@type":"CreativeWork","name":"Voron 2.4 350","url":"https://dracars.com/workshop/voron-24-350/","dateModified":"2026-10-13"},{"@type":"CreativeWork","name":"Spawn Trident 300","url":"https://dracars.com/workshop/spawn-trident-300/","dateModified":"2026-10-12"}]}</script>
   </head>
   <body class="workshop">
     <a class="skip-link" href="#content">Skip to content</a>
@@ -41,54 +42,62 @@
     </a>
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="dracars home">
+        <picture class="brand-symbol-picture">
+          <source srcset="/dracars-eye-dark.svg" media="(prefers-color-scheme: dark)" />
+          <img class="brand-symbol" src="/dracars-eye.svg" alt="" width="36" height="34" />
+        </picture>
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
+        <a href="/resources/">Resources</a>
         <a href="/workshop/" aria-current="page">Workshop</a>
-        <a href="/#tools">Tools</a>
         <a href="/build-logs/">Build Logs</a>
         <a href="/guides/">Guides</a>
       </nav>
     </header>
     <main id="content">
       <section class="workshop-hero" aria-labelledby="page-title">
-        <div><h1 id="page-title">The workshop.</h1><p class="hero-intro">Projects stay here as they change. Build Logs tell what happened; each project page keeps the current picture.</p></div>
-        <p class="workshop-note">Making, modifying, repairing, and understanding useful things.</p>
+        <div class="workshop-intro"><h1 id="page-title">The workshop.</h1><p class="hero-intro">Projects stay here as they change. Build Logs tell what happened; each project page keeps the current picture.</p><p class="workshop-note">Making, modifying, repairing, and understanding useful things.</p></div>
+        <section class="featured-project" aria-labelledby="featured-project-title">
+    <div class="featured-project-copy"><div class="featured-project-heading"><h2 id="featured-project-title"><a href="/workshop/resin-workshop/">Resin Workshop</a></h2><p>The resin setup grew from trading Pam, my Prusa MK4S, for an Elegoo Saturn 4 Ultra and Anycubic Photon P1 on October 9, 2026.</p></div>
+      <div class="featured-project-details"><div><h3>Current state</h3><p><span class="status workshop-status workshop-status-building">Building / Testing</span></p><p class="featured-project-updated">Recorded October 12, 2026</p><p class="featured-project-note">This launch scope and status were supplied on October 12, 2026; individual machine conditions still need fresh checks.</p></div><div><h3>Next action</h3><p>Record the current state of each resin workstream and continue the garage workflow setup.</p></div></div>
+      <a class="featured-project-link" href="/workshop/resin-workshop/">View project <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7" /></svg></a>
+    </div><div class="featured-project-image"><img src="/images/resin-workshop-featured.png" alt="Conceptual resin-printing workshop with printers, grow tent, wash containers, and printed test pieces." fetchpriority="high" /></div>
+  </section>
       </section>
-      <section class="workshop-section" aria-labelledby="featured-project-heading"><div class="workshop-section-heading"><h2 id="featured-project-heading">Featured</h2><p>The newest and most active area of the shop.</p></div><div class="workshop-project-list"><a class="workshop-project-link" href="/workshop/resin-workshop/">
-    <div><p class="guide-card-meta"><span class="status workshop-status workshop-status-building">Building / Testing</span> <span>Workspace and workflow</span></p><h3>Resin Workshop</h3><p class="guide-card-desc">The resin setup grew from trading Pam, my Prusa MK4S, for an Elegoo Saturn 4 Ultra and Anycubic Photon P1 on October 9, 2026.</p></div>
-    <span class="workshop-open">Open project <span aria-hidden="true">↗</span></span>
-  </a></div></section>
-      <section class="workshop-section" aria-labelledby="active-projects-heading"><div class="workshop-section-heading"><h2 id="active-projects-heading">Active builds</h2></div><div class="workshop-project-list"><a class="workshop-project-link" href="/workshop/operation-gray-shell/">
-    <div><p class="guide-card-meta"><span class="status workshop-status workshop-status-building">Building</span> <span>Build in progress</span></p><h3>Operation: Gray Shell</h3><p class="guide-card-desc">Box Turtle 1.1 with Longboi 1.0, tracked as a named hardware build with its own chronological log.</p></div>
-    <span class="workshop-open">Open project <span aria-hidden="true">↗</span></span>
+      <section class="workshop-section" aria-labelledby="active-projects-heading"><div class="workshop-section-heading"><h2 id="active-projects-heading">Active builds</h2></div><div class="workshop-project-grid"><a class="workshop-project-link" href="/workshop/operation-gray-shell/">
+    <img class="workshop-project-image" src="/images/build-logs/operation-gray-shell/07-finished-box-turtle.webp" alt="" loading="lazy" decoding="async" />
+    <span class="workshop-project-copy"><span class="guide-card-meta"><span class="status workshop-status workshop-status-building">Building</span><span>Build in progress</span></span><span class="workshop-project-title">Operation: Gray Shell</span><span class="guide-card-desc">Box Turtle 1.1 with Longboi 1.0, tracked as a named hardware build with its own chronological log.</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
   </a>
 <a class="workshop-project-link" href="/workshop/sv08-reliability-lab/">
-    <div><p class="guide-card-meta"><span class="status workshop-status workshop-status-troubleshooting">Troubleshooting</span> <span>Fault finding and reliability work</span></p><h3>SV08 Reliability Lab</h3><p class="guide-card-desc">Troubleshooting the SV08 as a changing system, with the hardware, wiring, and fault history kept together.</p></div>
-    <span class="workshop-open">Open project <span aria-hidden="true">↗</span></span>
+
+    <span class="workshop-project-copy"><span class="guide-card-meta"><span class="status workshop-status workshop-status-troubleshooting">Troubleshooting</span><span>Fault finding and reliability work</span></span><span class="workshop-project-title">SV08 Reliability Lab</span><span class="guide-card-desc">Troubleshooting the SV08 as a changing system, with the hardware, wiring, and fault history kept together.</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
   </a>
 <a class="workshop-project-link" href="/workshop/sv06-plus-tpu-3ms/">
-    <div><p class="guide-card-meta"><span class="status workshop-status workshop-status-experimental">Working / Experimental</span> <span>Working / experimental</span></p><h3>SV06 Plus: TPU and 3MS</h3><p class="guide-card-desc">An experimental machine role centered on TPU printing and the 3MS material system.</p></div>
-    <span class="workshop-open">Open project <span aria-hidden="true">↗</span></span>
+
+    <span class="workshop-project-copy"><span class="guide-card-meta"><span class="status workshop-status workshop-status-experimental">Working / Experimental</span><span>Working / experimental</span></span><span class="workshop-project-title">SV06 Plus: TPU and 3MS</span><span class="guide-card-desc">Sam is a fully operational SV06 Plus workhorse in the machine record; this Workshop page follows the separate TPU and 3MS experiments, whose current setup still needs a live check.</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
   </a>
 <a class="workshop-project-link" href="/workshop/voron-v02-recovery/">
-    <div><p class="guide-card-meta"><span class="status workshop-status workshop-status-building">Building</span> <span>Recovery and conversion</span></p><h3>Voron V0.2 Recovery and Conversion</h3><p class="guide-card-desc">Recovering a used LDO V0.1 and converting it into a V0.2, with the rebuild decisions kept in one place.</p></div>
-    <span class="workshop-open">Open project <span aria-hidden="true">↗</span></span>
+
+    <span class="workshop-project-copy"><span class="guide-card-meta"><span class="status workshop-status workshop-status-building">Building</span><span>V0.2 conversion and enclosure completion</span></span><span class="workshop-project-title">Voron V0.2 Recovery and Conversion</span><span class="guide-card-desc">Pinkie is an LDO Voron 0.1 being converted to 0.2; the machine record documents its configuration, recovery work, and unfinished enclosure and calibration tasks.</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
   </a></div></section>
-      <section class="workshop-section" aria-labelledby="established-projects-heading"><div class="workshop-section-heading"><h2 id="established-projects-heading">Established machines</h2></div><div class="workshop-project-list"><a class="workshop-project-link" href="/workshop/voron-24-350/">
-    <div><p class="guide-card-meta"><span class="status workshop-status workshop-status-operational">Operational / Evolving</span> <span>Living machine record</span></p><h3>Voron 2.4 350</h3><p class="guide-card-desc">An established machine record for the original Formbot build and its ongoing configuration and reliability changes.</p></div>
-    <span class="workshop-open">Open project <span aria-hidden="true">↗</span></span>
+      <section class="workshop-section" aria-labelledby="established-projects-heading"><div class="workshop-section-heading"><h2 id="established-projects-heading">Established machines</h2></div><div class="workshop-project-grid"><a class="workshop-project-link" href="/workshop/voron-24-350/">
+
+    <span class="workshop-project-copy"><span class="guide-card-meta"><span class="status workshop-status workshop-status-troubleshooting">Troubleshooting</span><span>Diagnose host shutdown and verify print readiness</span></span><span class="workshop-project-title">Voron 2.4 350</span><span class="guide-card-desc">Teresa is a Formbot Voron 2.4 350 with an active Klipper host at the latest check, but print readiness remains unverified after an unresolved Raspberry Pi shutdown.</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
   </a></div></section>
-      <section class="workshop-section" aria-labelledby="planned-projects-heading"><div class="workshop-section-heading"><h2 id="planned-projects-heading">Planned</h2><p>Visible as a plan, not presented as an active build.</p></div><div class="workshop-project-list"><a class="workshop-project-link" href="/workshop/spawn-trident-300/">
-    <div><p class="guide-card-meta"><span class="status workshop-status workshop-status-planning">Planning</span> <span>Design and sourcing</span></p><h3>Spawn Trident 300</h3><p class="guide-card-desc">A planned three-Z Trident build with a Spawn-inspired direction; design and sourcing decisions are still ahead.</p></div>
-    <span class="workshop-open">Open project <span aria-hidden="true">↗</span></span>
+      <section class="workshop-section" aria-labelledby="planned-projects-heading"><div class="workshop-section-heading"><h2 id="planned-projects-heading">Planned</h2><p>Visible as a plan, not presented as an active build.</p></div><div class="workshop-project-grid"><a class="workshop-project-link" href="/workshop/spawn-trident-300/">
+
+    <span class="workshop-project-copy"><span class="guide-card-meta"><span class="status workshop-status workshop-status-planning">Planning</span><span>Design and sourcing</span></span><span class="workshop-project-title">Spawn Trident 300</span><span class="guide-card-desc">A planned three-Z Trident build with a Spawn-inspired direction; design and sourcing decisions are still ahead.</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
   </a></div></section>
-      <section class="workshop-section workshop-shelf" id="on-the-shelf" aria-labelledby="shelved-projects-heading"><details><summary id="shelved-projects-heading">On the shelf <span>9 parked topics</span></summary><p>Older machines and ideas kept for reference. These are not active Workshop projects.</p><ul><li>Geeetech A10</li><li>Ender 3 v2</li><li>Sculpfun S9</li><li>Geeetech M1 (recorded as functional and shelved)</li><li>M3D Pro (legacy / display; recorded as intermittent)</li><li>Future SFS sensor work</li><li>Future cutter work</li><li>Ender 3 parts pool and stalled conversions</li><li>Other mod ideas</li></ul></details></section>
+      <div class="workshop-reference-grid"><section class="workshop-section workshop-knowledge" aria-labelledby="knowledge-heading"><div class="workshop-section-heading"><h2 id="knowledge-heading">From build to lasting knowledge</h2><a href="/guides/">All guides <span aria-hidden="true">↗</span></a></div><ol class="workshop-knowledge-list"><li><h3>Project page</h3><a href="/workshop/resin-workshop/">Resin Workshop</a><p>The current picture and next action.</p></li>
+<li><h3>Build Log</h3><a href="/build-logs/resin-grow-tent-setup/">Setting up my garage grow tent for resin printing</a><p>Dated updates · October 12, 2026</p></li>
+<li><h3>Guide</h3><a href="/guides/resin-grow-tent-setup/">Resin grow-tent setup guide</a><p>Coming soon — being built from the real workspace</p></li></ol></section>
       <section class="workshop-section" aria-labelledby="recent-logs-heading"><div class="workshop-section-heading"><h2 id="recent-logs-heading">Recent Build Logs</h2><a href="/build-logs/">All Build Logs <span aria-hidden="true">↗</span></a></div><div class="workshop-activity-list"><a href="/build-logs/resin-grow-tent-setup/"><time datetime="2026-10-12">October 12, 2026</time><span>Setting up my garage grow tent for resin printing</span><span class="activity-arrow" aria-hidden="true">↗</span></a>
 <a href="/build-logs/local-screen-recorder/"><time datetime="2026-10-08">October 8, 2026</time><span>Local Screen Recorder: keeping the recording on your device</span><span class="activity-arrow" aria-hidden="true">↗</span></a>
 <a href="/build-logs/operation-gray-shell/"><time datetime="2026-10-08">October 8, 2026</time><span>Operation: Gray Shell: a Box Turtle 1.1 beta build</span><span class="activity-arrow" aria-hidden="true">↗</span></a>
-<a href="/build-logs/safesync/"><time datetime="2026-10-08">October 8, 2026</time><span>SafeSync: a small backup helper that outgrew its first job</span><span class="activity-arrow" aria-hidden="true">↗</span></a></div></section>
-      <section class="workshop-section" aria-labelledby="guides-heading"><div class="workshop-section-heading"><h2 id="guides-heading">Guides from the work</h2><a href="/guides/">All guides <span aria-hidden="true">↗</span></a></div><div class="workshop-guide-list"><a href="/guides/resin-grow-tent-setup/"><span>Resin grow-tent setup guide</span><span class="status status-coming-soon" title="Being built from the real project before it is presented as a finished guide.">Coming Soon</span></a></div></section>
+<a href="/build-logs/safesync/"><time datetime="2026-10-08">October 8, 2026</time><span>SafeSync: a small backup helper that outgrew its first job</span><span class="activity-arrow" aria-hidden="true">↗</span></a></div></section></div>
+      <section class="workshop-section workshop-shelf" id="on-the-shelf" aria-labelledby="shelved-projects-heading"><details><summary id="shelved-projects-heading">On the shelf <span>9 parked topics</span></summary><p>Older machines and ideas kept for reference. These are not active Workshop projects.</p><ul><li>Geeetech A10</li><li>Ender 3 v2</li><li>Sculpfun S9</li><li>Geeetech M1 (recorded as functional and shelved)</li><li>M3D Pro (legacy / display; recorded as intermittent)</li><li>Future SFS sensor work</li><li>Future cutter work</li><li>Ender 3 parts pool and stalled conversions</li><li>Other mod ideas</li></ul></details></section>
+
     </main>
     <footer class="site-footer">
       <div class="footer-main">

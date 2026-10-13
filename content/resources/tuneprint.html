@@ -1,0 +1,85 @@
+<article class="resource-detail" aria-labelledby="page-title">
+  <header class="resource-detail-hero">
+    <div class="resource-detail-intro">
+      <p class="resource-breadcrumb"><a href="/resources/">Resources</a> <span aria-hidden="true">/</span> Tool</p>
+      <h1 id="page-title">TunePrint</h1>
+      <p class="resource-detail-deck">OrcaSlicer makes the test. TunePrint turns the result you select into the setting to save—without an install or a maze of tabs.</p>
+      <div class="resource-detail-actions">
+        <a class="resource-action-primary" href="https://tuneprint.dracars.com/" target="_blank" rel="noopener">Open TunePrint <span aria-hidden="true">↗</span></a>
+        <a class="resource-action-link" href="https://github.com/cdracars/tuneprint" target="_blank" rel="noopener">Source on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <figure class="resource-detail-screenshot">
+      <img src="/images/build-logs/tuneprint/01-app-interface.png" alt="TunePrint open to its Flow ratio calculator, with the calibration workspace visible." width="1280" height="846" fetchpriority="high" />
+      <figcaption>TunePrint’s calibration workspace with Flow ratio selected. Captured October 8, 2026.</figcaption>
+    </figure>
+  </header>
+
+  <section class="resource-detail-section" aria-labelledby="tuneprint-does">
+    <h2 id="tuneprint-does">What TunePrint does</h2>
+    <div class="resource-detail-copy">
+      <p>It handles follow-up calculations for six OrcaSlicer filament-calibration tests:</p>
+      <ul class="resource-detail-list">
+        <li>Flow ratio, for the Pass 1 / Pass 2 tests</li>
+        <li>Pressure advance, using the tower method</li>
+        <li>Maximum volumetric speed, from the flow tower</li>
+        <li>Temperature, by comparing the clean band</li>
+        <li>Retraction, from the tower result</li>
+        <li>VFA avoidance, for speed ranges</li>
+      </ul>
+      <p>You still inspect the print and choose the result. TunePrint helps turn that choice into a profile value or range; it does not decide which test result is best.</p>
+    </div>
+  </section>
+
+  <section class="resource-detail-section" aria-labelledby="tuneprint-who">
+    <h2 id="tuneprint-who">Who it helps</h2>
+    <div class="resource-detail-copy">
+      <p>It is for people using OrcaSlicer who already run filament-calibration tests and want less repeated arithmetic between the printed result and the profile setting. If you need help choosing, running, or validating a test, start with OrcaSlicer’s calibration guide.</p>
+    </div>
+  </section>
+
+  <section class="resource-detail-section" aria-labelledby="tuneprint-how">
+    <h2 id="tuneprint-how">How it works</h2>
+    <div class="resource-detail-copy">
+      <ol class="resource-detail-steps">
+        <li><strong>Run and read the test.</strong> Follow the calibration instructions and judge the print yourself.</li>
+        <li><strong>Choose the matching calculator.</strong> TunePrint has a separate calculator for each supported test.</li>
+        <li><strong>Enter the relevant value and selected result.</strong> For example, the Flow ratio calculator asks for the current flow ratio and the chosen block’s modifier.</li>
+        <li><strong>Use the result in your profile.</strong> TunePrint gives you the follow-up setting to save; you remain responsible for checking the result in your own workflow.</li>
+      </ol>
+      <p class="resource-detail-note">TunePrint is an unofficial calculation companion. OrcaSlicer’s guide remains the reference for how to run, read, and validate calibration tests.</p>
+    </div>
+  </section>
+
+  <section class="resource-detail-section" aria-labelledby="tuneprint-why">
+    <h2 id="tuneprint-why">Why I built it</h2>
+    <div class="resource-detail-copy">
+      <p>I use OrcaSlicer. After enough calibration work, I got tired of rereading guides and manually doing the math from the results. TunePrint is my small bridge from a result I have selected to a setting worth saving. Calibration still depends on understanding and inspecting the printer’s tests.</p>
+    </div>
+  </section>
+
+  <section class="resource-detail-section" aria-labelledby="tuneprint-used">
+    <h2 id="tuneprint-used">What I used</h2>
+    <div class="resource-detail-copy">
+      <p>OrcaSlicer calibration results are the workflow TunePrint was built around. I’ll add specific printer and profile details here when I have them recorded alongside the tests.</p>
+    </div>
+  </section>
+
+  <section class="resource-detail-section" aria-labelledby="tuneprint-related">
+    <h2 id="tuneprint-related">Related calibration resources</h2>
+    <div class="resource-detail-copy">
+      <ul class="resource-detail-links">
+        <li><a href="https://github.com/OrcaSlicer/OrcaSlicer/wiki/Calibration" target="_blank" rel="noopener">OrcaSlicer’s calibration guide <span aria-hidden="true">↗</span></a><span>How to run, read, and validate each test.</span></li>
+        <li><a href="https://layercalc.com/e-steps-calculator/" target="_blank" rel="noopener">LayerCalc E-steps calculator <span aria-hidden="true">↗</span></a><span>Set the extruder baseline before calibrating filament behavior.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="resource-detail-log" aria-labelledby="tuneprint-log">
+    <div>
+      <h2 id="tuneprint-log">From the workbench</h2>
+      <p>The Build Log covers why I made TunePrint and how it fits into the calibration workflow.</p>
+    </div>
+    <a href="/build-logs/tuneprint/">Read “TunePrint: stop rereading the guide and doing the math” <span aria-hidden="true">↗</span></a>
+  </section>
+</article>
