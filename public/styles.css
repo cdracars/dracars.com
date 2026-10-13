@@ -346,7 +346,7 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
   .flow-clean .flow-card { border-color: #b49ab2; }
   .flow-clean .flow-num, .flow-clean .flow-tag { background: #b49ab2; color: #160f18; }
   .flow-end .flow-card { border-color: #765c71; }
-  .brand-lockup { filter: brightness(0) invert(1); }
+  .wordmark img { filter: brightness(0) invert(1); }
   .hero-mark { filter: brightness(0) invert(1); opacity: .78; }
 }
 
