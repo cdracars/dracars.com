@@ -126,7 +126,7 @@ Tonight I took photos of where things stand. Both resin machines are in the tent
 
 !photo 19-both-machines-on-table.webp | An angled view of the same table. White clips hold the plastic at the table's edge and a leg, a power adapter is zip-tied to the tent wall above the machines, and the Saturn's hood is open.
 
-The floor liner also has yellow clips on it now. They sit along the lower tent frame and hold the plastic up against the wall at the corner. I haven't tested how well they hold.
+The floor liner is done for now. The yellow clips are the 22mm grow tent clips I printed from the Printables collection. They sit along the lower tent frame and hold the plastic up against the wall at the corner. I haven't tested how well they hold.
 
 !photo 20-floor-liner-corner-clips.webp | A corner of the tent floor liner, bunched along the base of the wall, with yellow clips on the lower frame tube.
 
@@ -153,7 +153,7 @@ I haven't used this setup yet, so I can't call this a finished lesson. I did sta
 
 ## What I'm working on next
 
-- tidy the floor liner with more printed clips and see how well they hold
+- see how the printed clips on the floor liner hold up once I'm working in the tent
 - record how the first prints and IPA cleanup go
 - inspect the Saturn's vat and build plate, then work through its setup checks
 - diagnose the Wash & Cure and set up the dirty and clean washes
