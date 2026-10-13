@@ -584,6 +584,12 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 :root[data-theme="dark"] .home-workshop-points li > span { background: #513548; color: #ffd0bd; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 850px) {
+  .site-header { display: grid; grid-template-columns: 1fr auto; }
+  .site-header > .wordmark { grid-column: 1; grid-row: 1; }
+  .site-nav { grid-column: 1 / -1; grid-row: 2; flex-wrap: wrap; margin-right: 58px; }
+  .theme-toggle { grid-column: 2; grid-row: 1; justify-self: end; }
+}
 @media (max-width: 650px) {
   .guide-contents ul { columns: 1; }
   .build-log-snapshot { grid-template-columns: 1fr; gap: 16px; }
@@ -595,6 +601,7 @@ html.theme-ready .theme-toggle { display: inline-flex; }
   .build-log-update-content { padding-left: 14px; }
   .site-header, main, footer { width: min(100% - 34px, 1010px); }
   .site-header { display: grid; grid-template-columns: 1fr; padding: 22px 0 14px; gap: 8px; }
+  .theme-toggle { grid-column: 1; grid-row: auto; justify-self: start; }
   .site-nav { flex-wrap: wrap; gap: 8px 12px; margin-right: 58px; }
   .site-nav a { font-size: .84rem; white-space: nowrap; }
   .github-corner { width: 62px; height: 62px; }
