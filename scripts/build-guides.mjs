@@ -785,8 +785,9 @@ for (const [name, markup] of [["header", siteHeader("/")], ["footer", siteFooter
 writeFileSync(homePath, home);
 const featuredProject = projects.find((project) => project.launchGroup === "featured");
 const homeWorkshop = `      <section class="home-workshop" id="workshop-home" aria-labelledby="home-workshop-heading">
-        <div class="home-workshop-heading"><p class="home-workshop-label">Workshop preview</p><h2 id="home-workshop-heading">${esc(featuredProject.title)}</h2><p>A quick look at the resin setup. The Workshop holds the full project list and the changing details.</p></div>
-        <div class="home-workshop-meta"><span class="home-project-status">${esc(featuredProject.statusLabel ?? WORKSHOP_STATES[featuredProject.status])}</span><a href="/workshop/${featuredProject.slug}/">View ${esc(featuredProject.title)} <span aria-hidden="true">↗</span></a></div>
+        <div class="home-workshop-heading"><p class="home-workshop-label">Currently building</p><h2 id="home-workshop-heading">${esc(featuredProject.title)}</h2><p>${esc(featuredProject.purpose)}</p><a class="home-action-primary" href="/workshop/${featuredProject.slug}/">Open the Resin Workshop <span aria-hidden="true">→</span></a></div>
+        <div class="home-workshop-image"><img src="${esc(featuredProject.featuredImage)}" alt="" loading="lazy" decoding="async" /></div>
+        <ul class="home-workshop-points"><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3m-2.6-6.4-2.1 2.1M7.7 16.3l-2.1 2.1m12.8 0-2.1-2.1M7.7 7.7 5.6 5.6"/><circle cx="12" cy="12" r="5"/></svg></span><div><strong>Current status</strong><p>${esc(featuredProject.statusLabel ?? WORKSHOP_STATES[featuredProject.status])}</p></div></li><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5m-18 5 9 5 9-5"/></svg></span><div><strong>Current phase</strong><p>${esc(featuredProject.phase)}</p></div></li><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><div><strong>Next step</strong><p>${esc(featuredProject.nextAction)}</p></div></li></ul>
       </section>`;
 const homeStart = "      <!-- home-workshop:start -->";
 const homeEnd = "      <!-- home-workshop:end -->";
@@ -794,13 +795,12 @@ const homeFrom = home.indexOf(homeStart);
 const homeTo = home.indexOf(homeEnd);
 if (homeFrom < 0 || homeTo < homeFrom) fail("homepage missing managed home-workshop markers");
 home = home.slice(0, homeFrom) + homeStart + "\n" + homeWorkshop + "\n" + homeEnd + home.slice(homeTo + homeEnd.length);
-home = home.replace(/<a class="text-link"[^>]*>[\s\S]*?<\/a>/, '<a class="text-link" href="/resources/">Browse resources <span aria-hidden="true">↗</span></a>');
 writeFileSync(homePath, home);
 
 const resourceStart = "      <!-- home-resources:start -->";
 const resourceEnd = "      <!-- home-resources:end -->";
 const homeResources = `      <section class="tools-section" id="tools" aria-labelledby="tools-heading">
-        <div class="section-heading"><div><h2 id="tools-heading">Useful right now</h2><p>Free tools and code projects from the workbench.</p></div><a class="text-link" href="/resources/">See all resources <span aria-hidden="true">↗</span></a></div>
+        <div class="section-heading"><div><h2 id="tools-heading">Useful right now</h2><p>Practical tools and projects from the workbench.</p></div><a class="text-link" href="/resources/">View all <span aria-hidden="true">→</span></a></div>
         <div class="resource-grid resource-grid-featured">${resourceCards([RESOURCE_TOOLS[3], RESOURCE_CODE[0], RESOURCE_CODE[2], RESOURCE_TOOLS[2]])}</div>
       </section>`;
 const existingResourceStart = home.indexOf(resourceStart);
@@ -817,17 +817,8 @@ if (existingResourceStart < 0 || existingResourceEnd < existingResourceStart) {
   home = home.slice(0, existingResourceStart) + resourceStart + "\n" + homeResources + "\n" + resourceEnd + home.slice(end);
 }
 const movedResourcesStart = home.indexOf(resourceStart);
-const movedResourcesEnd = home.indexOf(resourceEnd, movedResourcesStart) + resourceEnd.length;
 const movedWorkshopStart = home.indexOf(homeStart);
-const movedWorkshopEnd = home.indexOf(homeEnd, movedWorkshopStart) + homeEnd.length;
 if (movedResourcesStart < 0 || movedWorkshopStart < 0) fail("homepage section markers missing");
-if (movedWorkshopStart < movedResourcesStart) {
-  const resourcesBlock = home.slice(movedResourcesStart, movedResourcesEnd);
-  const withoutResources = home.slice(0, movedResourcesStart) + home.slice(movedResourcesEnd);
-  const workshopStart = withoutResources.indexOf(homeStart);
-  const workshopEnd = withoutResources.indexOf(homeEnd, workshopStart) + homeEnd.length;
-  home = withoutResources.slice(0, workshopStart) + resourcesBlock + "\n\n" + withoutResources.slice(workshopStart, workshopEnd) + withoutResources.slice(workshopEnd);
-}
 writeFileSync(homePath, home);
 
 rmSync(OUT, { recursive: true, force: true });

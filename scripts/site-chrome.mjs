@@ -1,6 +1,6 @@
 // Shared static site chrome, rendered at build time (no browser JavaScript required).
 export function siteHeader(path) {
-  const current = path.startsWith('/resources') || path === '/' ? 'resources' : path.startsWith('/workshop') ? 'workshop' : path.startsWith('/build-logs') ? 'build-logs' : path.startsWith('/guides') ? 'guides' : '';
+  const current = path === '/' ? 'home' : path.startsWith('/resources') ? 'resources' : path.startsWith('/workshop') ? 'workshop' : path.startsWith('/build-logs') ? 'build-logs' : path.startsWith('/guides') ? 'guides' : '';
   return `    <a class="skip-link" href="#content">Skip to content</a>
     <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
       <svg viewBox="0 0 250 250" aria-hidden="true" focusable="false">
@@ -18,10 +18,11 @@ export function siteHeader(path) {
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="/resources/"${current === 'resources' ? ' aria-current="page"' : ''}>Resources</a>
+        <a href="/"${current === 'home' ? ' aria-current="page"' : ''}>Home</a>
         <a href="/workshop/"${current === 'workshop' ? ' aria-current="page"' : ''}>Workshop</a>
         <a href="/build-logs/"${current === 'build-logs' ? ' aria-current="page"' : ''}>Build Logs</a>
         <a href="/guides/"${current === 'guides' ? (path === '/guides/' ? ' aria-current="page"' : ' aria-current="true"') : ''}>Guides</a>
+        <a href="/resources/"${current === 'resources' ? ' aria-current="page"' : ''}>Resources</a>
       </nav>
     </header>`;
 }

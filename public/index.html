@@ -84,12 +84,12 @@
     </script>
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
-    <title>Dracars — Free Tools, Code &amp; Practical Maker Resources</title>
+    <title>Dracars — Useful Things in Software and Hardware</title>
     <link rel="canonical" href="https://dracars.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Dracars" />
     <meta property="og:url" content="https://dracars.com/" />
-    <meta property="og:title" content="Dracars — Free Tools, Code &amp; Practical Maker Resources" />
+    <meta property="og:title" content="Dracars — Useful Things in Software and Hardware" />
     <meta property="og:description" content="Free tools and code projects, practical guides, and project notes from Cody Dracars's workshop." />
     <meta property="og:image" content="https://dracars.com/social-preview.png" />
     <meta property="og:image:width" content="1200" />
@@ -97,7 +97,7 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dracars — Free Tools, Code &amp; Practical Maker Resources" />
+    <meta name="twitter:title" content="Dracars — Useful Things in Software and Hardware" />
     <meta name="twitter:description" content="Free tools and code projects, practical guides, and project notes from Cody Dracars's workshop." />
     <meta name="twitter:image" content="https://dracars.com/social-preview.png" />
     <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
@@ -108,7 +108,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="home-page">
     <!-- site-header:start -->
     <a class="skip-link" href="#content">Skip to content</a>
     <a class="github-corner" href="https://github.com/cdracars" target="_blank" rel="noreferrer" aria-label="Visit Cody Dracars on GitHub" title="GitHub">
@@ -127,30 +127,42 @@
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="/resources/" aria-current="page">Resources</a>
+        <a href="/" aria-current="page">Home</a>
         <a href="/workshop/">Workshop</a>
         <a href="/build-logs/">Build Logs</a>
         <a href="/guides/">Guides</a>
+        <a href="/resources/">Resources</a>
       </nav>
     </header>
     <!-- site-header:end -->
 
     <main id="content">
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-copy">
+      <section class="home-hero" aria-labelledby="page-title">
+        <div class="home-hero-copy">
           <h1 id="page-title">I build useful things in software and hardware.</h1>
-          <p class="hero-intro">Free tools, code projects, and practical work around 3D printers and the systems that make them better.</p>
-          <a class="text-link" href="/resources/">Browse resources <span aria-hidden="true">↗</span></a>
+          <p class="hero-intro">This is my workshop, build log, and collection of projects—from 3D printing and electronics to the little software tools that make it all work.</p>
+          <div class="home-hero-actions"><a class="home-action-primary" href="/build-logs/">Explore build logs <span aria-hidden="true">→</span></a><a class="text-link" href="/workshop/">Visit the workshop</a></div>
+          <ul class="home-topics" aria-label="Workshop topics">
+            <li><span class="topic-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3 27 9v14l-11 6L5 23V9l11-6Z M5 9l11 6 11-6M16 15v14" /></svg></span><strong>3D printing</strong><span>Printers, parts, and practical builds</span></li>
+            <li><span class="topic-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="8" y="8" width="16" height="16" rx="2"/><path d="M12 3v5m8-5v5M12 24v5m8-5v5M3 12h5m-5 8h5m16-8h5m-5 8h5" /></svg></span><strong>Electronics</strong><span>Hardware and workshop systems</span></li>
+            <li><span class="topic-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m11 7-9 9 9 9m10-18 9 9-9 9m-2-22-5 28" /></svg></span><strong>Software</strong><span>Small tools built around real work</span></li>
+          </ul>
         </div>
-        <picture class="hero-mark-picture" aria-hidden="true">
-          <source srcset="/dracars-eye-dark.svg" media="(prefers-color-scheme: dark)" />
-          <img class="hero-mark" src="/dracars-eye.svg" alt="" width="245" height="230" />
-        </picture>
+        <figure class="home-hero-image"><img src="/images/workshop-tuneprint-hero.png" alt="Concept composite of the workshop, with TunePrint displayed on the main monitor beside the printers." fetchpriority="high" /><figcaption>Concept composite: TunePrint on the workshop monitor.</figcaption></figure>
       </section>
 
+      <!-- home-workshop:start -->
+      <section class="home-workshop" id="workshop-home" aria-labelledby="home-workshop-heading">
+        <div class="home-workshop-heading"><p class="home-workshop-label">Currently building</p><h2 id="home-workshop-heading">Resin Workshop</h2><p>Build a practical resin-printing area and a repeatable workflow across the machines and workspace.</p><a class="home-action-primary" href="/workshop/resin-workshop/">Open the Resin Workshop <span aria-hidden="true">→</span></a></div>
+        <div class="home-workshop-image"><img src="/images/resin-workshop-featured.png" alt="" loading="lazy" decoding="async" /></div>
+        <ul class="home-workshop-points"><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3m-2.6-6.4-2.1 2.1M7.7 16.3l-2.1 2.1m12.8 0-2.1-2.1M7.7 7.7 5.6 5.6"/><circle cx="12" cy="12" r="5"/></svg></span><div><strong>Current status</strong><p>Building / Testing</p></div></li><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5m-18 5 9 5 9-5"/></svg></span><div><strong>Current phase</strong><p>Workspace and workflow</p></div></li><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><div><strong>Next step</strong><p>Record the current state of each resin workstream and continue the garage workflow setup.</p></div></li></ul>
+      </section>
+      <!-- home-workshop:end -->
+
+      <div class="home-discover">
       <!-- home-resources:start -->
       <section class="tools-section" id="tools" aria-labelledby="tools-heading">
-        <div class="section-heading"><div><h2 id="tools-heading">Useful right now</h2><p>Free tools and code projects from the workbench.</p></div><a class="text-link" href="/resources/">See all resources <span aria-hidden="true">↗</span></a></div>
+        <div class="section-heading"><div><h2 id="tools-heading">Useful right now</h2><p>Practical tools and projects from the workbench.</p></div><a class="text-link" href="/resources/">View all <span aria-hidden="true">→</span></a></div>
         <div class="resource-grid resource-grid-featured"><a class="resource-card" href="/resources/tuneprint/">
   <span class="resource-card-copy"><span class="resource-card-title">TunePrint</span><span class="resource-card-description">A browser-only companion for turning OrcaSlicer calibration results into settings you can save.</span></span>
   <span class="resource-card-arrow" aria-hidden="true">↗</span>
@@ -170,13 +182,13 @@
       </section>
       <!-- home-resources:end -->
 
-      <!-- home-workshop:start -->
-      <section class="home-workshop" id="workshop-home" aria-labelledby="home-workshop-heading">
-        <div class="home-workshop-heading"><p class="home-workshop-label">Workshop preview</p><h2 id="home-workshop-heading">Resin Workshop</h2><p>A quick look at the resin setup. The Workshop holds the full project list and the changing details.</p></div>
-        <div class="home-workshop-meta"><span class="home-project-status">Building / Testing</span><a href="/workshop/resin-workshop/">View Resin Workshop <span aria-hidden="true">↗</span></a></div>
+      <section class="home-build-logs" aria-labelledby="home-logs-heading">
+        <div class="section-heading"><div><h2 id="home-logs-heading">Build Logs</h2><p>Dated notes from the workbench.</p></div><a class="text-link" href="/build-logs/">View all <span aria-hidden="true">→</span></a></div>
+        <a class="home-log-link" href="/build-logs/resin-grow-tent-setup/"><img src="/images/build-logs/resin-grow-tent-setup/08-tent-in-place.webp" alt="" loading="lazy" decoding="async" /><span><strong>Setting up my garage grow tent for resin printing</strong><small>Workspace setup · October 12, 2026</small></span><span class="home-log-arrow" aria-hidden="true">→</span></a>
+        <a class="home-log-link" href="/build-logs/operation-gray-shell/"><img src="/images/build-logs/operation-gray-shell/07-finished-box-turtle.webp" alt="" loading="lazy" decoding="async" /><span><strong>Operation: Gray Shell</strong><small>A Box Turtle 1.1 beta build · October 8, 2026</small></span><span class="home-log-arrow" aria-hidden="true">→</span></a>
+        <a class="home-log-link" href="/build-logs/local-screen-recorder/"><img src="/images/build-logs/local-screen-recorder/02-app-interface.png" alt="" loading="lazy" decoding="async" /><span><strong>Local Screen Recorder</strong><small>A small browser tool, built to keep recordings local · October 8, 2026</small></span><span class="home-log-arrow" aria-hidden="true">→</span></a>
       </section>
-      <!-- home-workshop:end -->
-
+      </div>
 
 
       <section class="support-section" id="support" aria-labelledby="support-heading">
