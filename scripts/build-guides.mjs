@@ -339,7 +339,7 @@ function projectCard(project, logs = []) {
   const imageLog = (project.relatedLogs ?? []).map((slug) => logs.find((log) => log.slug === slug)).find((log) => log?.indexImage);
   const imageSrc = project.featuredImage ?? imageLog?.indexImage;
   const imageAlt = project.featuredImage ? project.featuredImageAlt : "";
-  const image = imageSrc ? `<img class="workshop-project-image" src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" loading="lazy" decoding="async" />` : "";
+  const image = imageSrc ? `<div class="workshop-project-visual"><img class="workshop-project-image" src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" loading="eager" decoding="async" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
   return `<a class="workshop-project-link" href="/workshop/${project.slug}/">
     ${image}
     <span class="workshop-project-copy"><span class="guide-card-meta">${badge}<span>${esc(project.phase)}</span></span><span class="workshop-project-title">${esc(project.title)}</span><span class="guide-card-desc">${esc(project.description)}</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
@@ -352,7 +352,7 @@ function featuredProjectPanel(project, logs, guides) {
   const relatedGuide = (project.relatedGuides ?? []).map((slug) => guides.find((guide) => guide.slug === slug)).find(Boolean);
   const imageSrc = project.featuredImage ?? relatedLog?.indexImage;
   const imageAlt = project.featuredImage ? project.featuredImageAlt : "";
-  const image = imageSrc ? `<div class="featured-project-image"><img src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" fetchpriority="high" /></div>` : "";
+  const image = imageSrc ? `<div class="featured-project-image"><img src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
   const statusNote = project.statusNote ? `<p class="featured-project-note">${esc(project.statusNote)}</p>` : "";
   return `<section class="featured-project" aria-labelledby="featured-project-title">
     <div class="featured-project-copy"><div class="featured-project-heading"><h2 id="featured-project-title"><a href="/workshop/${project.slug}/">${esc(project.title)}</a></h2><p>${esc(project.description)}</p></div>

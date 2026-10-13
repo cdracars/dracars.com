@@ -5,7 +5,8 @@ launchGroup: featured
 launchOrder: 10
 description: The resin setup grew from trading Pam, my Prusa MK4S, for an Elegoo Saturn 4 Ultra and Anycubic Photon P1 on October 9, 2026.
 featuredImage: /images/resin-workshop-featured.png
-featuredImageAlt: Conceptual resin-printing workshop with printers, grow tent, wash containers, and printed test pieces.
+featuredImageAlt: Concept rendering of a future resin-printing workstation, labeled as a vision the project is still working toward.
+imageLabel: Concept · future workspace
 purpose: Build a practical resin-printing area and a repeatable workflow across the machines and workspace.
 status: building
 statusLabel: Building / Testing

@@ -4,11 +4,13 @@ slug: voron-v02-recovery
 launchGroup: active
 launchOrder: 60
 description: Pinkie is an LDO Voron 0.1 being converted to 0.2; the machine record documents its configuration, recovery work, and unfinished enclosure and calibration tasks.
+featuredImage: /images/pinkie-voron-v0.jpg
+featuredImageAlt: Close view of Pinkie's black and magenta Voron V0 enclosure and gantry.
 purpose: Keep Pinkie's current configuration, dated recovery and conversion work, and unresolved next steps together.
 status: building
 phase: V0.2 conversion and enclosure completion
 updatedAt: 2026-10-13
-statusNote: 3DBrain's October 12 notes describe Pinkie as operational during a mid-conversion; verify what has changed since that check.
+statusNote: Cody reconfirmed on October 13, 2026 that the documented operational, mid-conversion state and listed next steps remain accurate.
 nextAction: Complete the enclosure, rerun input shaping, and confirm the current physical conversion state.
 focus:
   - V0.1 to V0.2 conversion: reuse electronics, motion, and wiring while reprinting the printed parts

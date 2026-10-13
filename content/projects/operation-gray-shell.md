@@ -3,6 +3,8 @@ title: Operation: Gray Shell
 slug: operation-gray-shell
 launchGroup: active
 launchOrder: 30
+featuredImage: /images/build-logs/operation-gray-shell/07-finished-box-turtle.webp
+featuredImageAlt: Finished Box Turtle 1.1 with its spool lanes and enclosure assembled.
 description: Box Turtle 1.1 with Longboi 1.0, tracked as a named hardware build with its own chronological log.
 purpose: Document the Box Turtle 1.1 and Longboi 1.0 build as it develops.
 status: building

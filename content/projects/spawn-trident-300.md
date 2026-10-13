@@ -3,6 +3,9 @@ title: Spawn Trident 300
 slug: spawn-trident-300
 launchGroup: planned
 launchOrder: 80
+featuredImage: /images/spawn-trident-concept.svg
+featuredImageAlt: A labeled concept illustration of a planned three-Z Voron Trident style printer with a Spawn-inspired plum and terracotta color direction.
+imageLabel: Planned concept · not a current build
 description: A planned three-Z Trident build with a Spawn-inspired direction; design and sourcing decisions are still ahead.
 purpose: Keep the design constraints, kit comparisons, reuse options, budget, and dependencies together while the build is planned.
 status: planning

@@ -168,8 +168,8 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .featured-project-link { display: inline-flex; align-items: center; gap: 9px; align-self: flex-start; margin-top: 18px; color: var(--terracotta); font-size: .86rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
 .featured-project-link:hover { color: #ffd2bf; }
 .featured-project-link svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-.featured-project-image { min-width: 0; min-height: 100%; background: color-mix(in srgb, var(--plum) 75%, var(--ink)); }
-.featured-project-image img { display: block; width: 100%; height: 100%; min-height: 330px; object-fit: cover; }
+.featured-project-image { position: relative; min-width: 0; min-height: 100%; background: color-mix(in srgb, var(--plum) 75%, var(--ink)); }
+.featured-project-image img { display: block; width: 100%; height: 100%; min-height: 330px; object-fit: cover; object-position: left center; }
 .workshop-section { margin-top: 48px; }
 .workshop-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; margin-bottom: 14px; }
 .workshop-section-heading h2, .workshop-related h2 { margin: 0; font-size: clamp(1.65rem, 3vw, 2.35rem); }
@@ -179,7 +179,9 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .workshop-project-list, .workshop-activity-list, .workshop-guide-list { border-top: 1px solid var(--line); }
 .workshop-project-link { display: flex; flex-direction: column; min-width: 0; min-height: 100%; overflow: hidden; border: 1px solid var(--line); border-radius: 11px; background: color-mix(in srgb, var(--plum) 7%, var(--paper)); color: inherit; text-decoration: none; }
 .workshop-project-grid .workshop-project-link { min-height: 270px; }
-.workshop-project-image { display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; background: color-mix(in srgb, var(--plum) 16%, var(--paper)); }
+.workshop-project-visual { position: relative; width: 100%; aspect-ratio: 16 / 8; overflow: hidden; background: radial-gradient(ellipse at 70% 35%, color-mix(in srgb, var(--terracotta) 20%, var(--paper)), transparent 48%), repeating-linear-gradient(135deg, color-mix(in srgb, var(--plum) 6%, var(--paper)) 0 12px, color-mix(in srgb, var(--plum) 10%, var(--paper)) 12px 13px); }
+.workshop-project-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.workshop-project-image-label { position: absolute; right: 10px; bottom: 10px; max-width: calc(100% - 20px); padding: 6px 9px; border: 1px solid rgb(255 255 255 / .28); border-radius: 999px; background: rgb(55 44 57 / .88); color: #fff; font-size: .72rem; font-weight: 700; line-height: 1.2; }
 .workshop-project-copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 16px; }
 .workshop-project-title { display: block; margin: 9px 0 6px; font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 600; letter-spacing: -.025em; line-height: 1.14; }
 .workshop-project-link .guide-card-desc { display: block; max-width: 50ch; margin: 0; color: var(--muted); }

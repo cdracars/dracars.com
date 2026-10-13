@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SV06 Plus: TPU and 3MS — Dracars Workshop</title>
-    <meta name="description" content="Sam is a fully operational SV06 Plus workhorse in the machine record; this Workshop page follows the separate TPU and 3MS experiments, whose current setup still needs a live check." />
+    <meta name="description" content="Sam is a fully operational SV06 Plus workhorse; the 3MS project is on hold while AFC compatibility is explored." />
     <link rel="canonical" href="https://dracars.com/workshop/sv06-plus-tpu-3ms/" />
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="Dracars" />
     <meta property="og:url" content="https://dracars.com/workshop/sv06-plus-tpu-3ms/" />
     <meta property="og:title" content="SV06 Plus: TPU and 3MS — Dracars Workshop" />
-    <meta property="og:description" content="Sam is a fully operational SV06 Plus workhorse in the machine record; this Workshop page follows the separate TPU and 3MS experiments, whose current setup still needs a live check." />
+    <meta property="og:description" content="Sam is a fully operational SV06 Plus workhorse; the 3MS project is on hold while AFC compatibility is explored." />
     <meta property="og:image" content="https://dracars.com/social-preview.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -20,7 +20,7 @@
     <meta property="og:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="SV06 Plus: TPU and 3MS — Dracars Workshop" />
-    <meta name="twitter:description" content="Sam is a fully operational SV06 Plus workhorse in the machine record; this Workshop page follows the separate TPU and 3MS experiments, whose current setup still needs a live check." />
+    <meta name="twitter:description" content="Sam is a fully operational SV06 Plus workhorse; the 3MS project is on hold while AFC compatibility is explored." />
     <meta name="twitter:image" content="https://dracars.com/social-preview.png" />
     <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
     <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"SV06 Plus: TPU and 3MS","description":"Sam is a fully operational SV06 Plus workhorse in the machine record; this Workshop page follows the separate TPU and 3MS experiments, whose current setup still needs a live check.","dateModified":"2026-10-13","url":"https://dracars.com/workshop/sv06-plus-tpu-3ms/","author":{"@type":"Person","name":"Cody Dracars","url":"https://dracars.com/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"SV06 Plus: TPU and 3MS","description":"Sam is a fully operational SV06 Plus workhorse; the 3MS project is on hold while AFC compatibility is explored.","dateModified":"2026-10-13","url":"https://dracars.com/workshop/sv06-plus-tpu-3ms/","author":{"@type":"Person","name":"Cody Dracars","url":"https://dracars.com/"}}</script>
   </head>
   <body class="workshop">
     <a class="skip-link" href="#content">Skip to content</a>
@@ -49,22 +49,23 @@
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="/resources/">Resources</a>
+        <a href="/">Home</a>
         <a href="/workshop/" aria-current="page">Workshop</a>
         <a href="/build-logs/">Build Logs</a>
         <a href="/guides/">Guides</a>
+        <a href="/resources/">Resources</a>
       </nav>
     </header>
     <main id="content">
       <article class="workshop-project" aria-labelledby="page-title">
         <p class="crumbs"><a href="/workshop/">Workshop</a>  <span aria-hidden="true">/</span> Project</p>
         <header class="workshop-project-header"><div><h1 id="page-title">SV06 Plus: TPU and 3MS</h1><p class="guide-deck">Keep the SV06 Plus firmware, TPU workflow, MMU behavior, and toolhead experiments together.</p></div><div class="workshop-project-meta"><span class="status workshop-status workshop-status-experimental">Working / Experimental</span><p class="workshop-updated">Status last recorded <time datetime="2026-10-13">October 13, 2026</time></p><p class="workshop-updated">Launch scope and status supplied October 12, 2026; configuration and current behavior need a fresh check.</p></div></header>
-        <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>Sam is a fully operational SV06 Plus workhorse in the machine record; this Workshop page follows the separate TPU and 3MS experiments, whose current setup still needs a live check.</p><p class="project-next"><strong>Next action</strong>Verify the live 3MS and Happy Hare setup, then refresh Sam's stale input-shaper calibration.</p></div><div class="project-current-phase"><span>Current phase</span><strong>Working / experimental</strong></div></section>
-
-        <div class="project-detail-grid"><section aria-labelledby="focus-heading"><h2 id="focus-heading">What this project tracks</h2><ul class="project-plain-list"><li>Klipper setup and TPU workflow</li><li>3MS MMU, Happy Hare, gate distances, and unloading behavior</li><li>Future cutter and inline sensor work</li><li>Toolhead experiments</li></ul></section>
-<section aria-labelledby="equipment-heading"><h2 id="equipment-heading">Equipment and setup</h2><ul class="project-plain-list"><li>Standard Sovol SV06 Plus (not the ACE), running Klipper with a BTT Pi V1.2, Mainsail, and Moonraker.</li><li>ADXL345 accelerometer connected through an RP2040; the recorded input-shaper values predate the Pi and camera mounted on the moving gantry.</li><li>Direct-drive extruder, stock inductive probe, 300 × 300 mm textured PEI bed, and a TH3D 5015 part-cooling blower.</li><li>The project notes describe a 3MS material system and Happy Hare workflow, but the 2026-10-12 machine record does not verify their current configuration.</li></ul></section>
+        <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>Sam is a fully operational SV06 Plus workhorse; the 3MS project is on hold while AFC compatibility is explored.</p><p class="project-next"><strong>Next action</strong>Explore whether the 3MS can work with AFC, then document the compatibility path before resuming the project.</p></div><div class="project-current-phase"><span>Current phase</span><strong>Working / experimental</strong></div></section>
+        <div class="featured-project-image project-featured-image"><img src="/images/sam-sv06-plus.jpg" alt="Sam, an open-frame Sovol SV06 Plus with its nameplate visible." loading="lazy" decoding="async" /></div>
+        <div class="project-detail-grid"><section aria-labelledby="focus-heading"><h2 id="focus-heading">What this project tracks</h2><ul class="project-plain-list"><li>Klipper setup and TPU workflow</li><li>3MS MMU, on hold while exploring AFC compatibility instead of Happy Hare</li><li>Gate distances and unloading behavior from the earlier integration work</li><li>Future cutter and inline sensor work</li><li>Toolhead experiments</li></ul></section>
+<section aria-labelledby="equipment-heading"><h2 id="equipment-heading">Equipment and setup</h2><ul class="project-plain-list"><li>Standard Sovol SV06 Plus (not the ACE), running Klipper with a BTT Pi V1.2, Mainsail, and Moonraker.</li><li>ADXL345 accelerometer connected through an RP2040; the recorded input-shaper values predate the Pi and camera mounted on the moving gantry.</li><li>Direct-drive extruder, stock inductive probe, 300 × 300 mm textured PEI bed, and a TH3D 5015 part-cooling blower.</li><li>The 3MS material system is on hold while AFC compatibility is explored; Happy Hare is no longer the planned integration direction.</li></ul></section>
 <section aria-labelledby="problems-heading"><h2 id="problems-heading">Open problems</h2><ul class="project-plain-list"><li>Input-shaper calibration is stale after adding moving mass to the Z gantry; a new Shake&amp;Tune run is needed.</li><li>A March 2025 tall-print test had a layer shift; the cause was not confirmed. The frame is unbraced and tall-Z flex remains a concern.</li><li>The mainboard cooling fan is electrically tied to the part-cooling fan; separating them requires a hardware change.</li></ul></section></div>
-        <section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body"><p>Sam's 3DBrain record, last updated October 12, 2026, describes the printer as fully operational and used for large-format and batch work. It records Klipper on a BTT Pi V1.2, Mainsail and Moonraker, and a Logitech C270 mounted on the Z gantry. The machine record is detailed about Sam's hardware and calibration history, but it does not confirm the current 3MS or Happy Hare setup. This page keeps those material-handling experiments in view without treating their latest state as verified.</p>
+        <section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body"><p>Sam's 3DBrain record, last updated October 12, 2026, describes the printer as fully operational and used for large-format and batch work. It records Klipper on a BTT Pi V1.2, Mainsail and Moonraker, and a Logitech C270 mounted on the Z gantry. Cody confirmed on October 13 that the 3MS work is on hold while he explores making it compatible with AFC instead of Happy Hare. The 3MS is not presented as an active, working integration.</p>
 <p>The notes also record a resolved January 2025 jam caused by a loose nozzle mounting screw and loose toolhead-board cables, and a March 2025 test print with a layer shift high in the print. The latter's cause remains uncertain. Input shaping is marked stale after the Pi and camera were added to the moving gantry, and the frame-bracing work is still a plan. The project page tracks those machine constraints alongside the TPU and multi-material workflow.</p></div></section>
 
 

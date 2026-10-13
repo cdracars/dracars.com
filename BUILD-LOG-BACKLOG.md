@@ -6,7 +6,7 @@ These are possible logs, not commitments to publish every project. A project can
 
 - [ ] **SV06 Plus: Klipper, TPU, and the 3MS MMU**
   - **Why it may be a log:** This printer has evolved into a development machine for TPU printing and multi-material work. The MMU work has enough tuning and troubleshooting to support a series of dated entries.
-  - **Known threads:** Adding Klipper; developing a two-gate 3MS setup with Happy Hare v3.3.0 and a virtual selector; changing gate parking distance from 682 mm to 672 mm; tuning unloading; considering an inline sensor, cutter, and toolhead changes.
+  - **Known threads:** Adding Klipper; developing a two-gate 3MS setup with Happy Hare v3.3.0 and a virtual selector; changing gate parking distance from 682 mm to 672 mm; tuning unloading; considering an inline sensor, cutter, and toolhead changes. Cody says the 3MS work is now on hold while he explores compatibility with AFC instead of Happy Hare; no AFC integration result is documented yet.
   - **Writing approach:** Start with the printer’s original role and what prompted the Klipper/MMU work. Then document each real configuration change and its result. Keep the cutter, inline sensor, and uncompleted toolhead options in a “Next steps” section until installed and tested.
   - **Confirm before writing:** Which changes are already installed and working, what the printer’s current configuration is, and which photos or configuration notes are available.
 

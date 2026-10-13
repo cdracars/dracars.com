@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-labelledby="title desc">
+  <title id="title">Teresa project illustration</title>
+  <desc id="desc">Illustrative line drawing of a Voron 2.4 printer with an attached four-lane filament unit.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#eee2e7"/><stop offset="1" stop-color="#d8c6d4"/></linearGradient>
+    <linearGradient id="panel" x2="0" y2="1"><stop stop-color="#6d536d"/><stop offset="1" stop-color="#372c39"/></linearGradient>
+  </defs>
+  <rect width="960" height="480" fill="url(#bg)"/>
+  <g fill="none" stroke="#4d364c" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="18" d="M142 386V91h447v295M142 114h447M164 386h401M166 137v227m399-227v227"/>
+    <path stroke-width="12" d="M238 113v208m257-208v208M205 327h325M235 158h264M235 290h264"/>
+    <path stroke="#a9503b" stroke-width="16" d="M235 158h264M235 290h264"/>
+    <path stroke-width="10" d="M347 154v67l-31 39h92l-31-39v-67m-38 68h38"/>
+    <path stroke-width="8" d="M315 260v29m92-29v29M267 327v36m207-36v36"/>
+    <path stroke-width="12" d="M652 184h184v193H652zM670 204h148v151H670z"/>
+    <path stroke-width="7" d="M707 204v151m74-151v151M670 254h148M670 305h148"/>
+    <path stroke="#a9503b" stroke-width="8" d="M589 134h64m-64 28h64"/>
+  </g>
+  <g fill="#a9503b"><circle cx="264" cy="327" r="11"/><circle cx="444" cy="327" r="11"/><circle cx="695" cy="180" r="7"/><circle cx="793" cy="180" r="7"/></g>
+  <path fill="#4d364c" opacity=".09" d="M118 400h751v18H118z"/>
+</svg>
