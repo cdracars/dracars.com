@@ -348,10 +348,11 @@ function workshopPage(projects, logs, guides) {
     "Geeetech A10",
     "Ender 3 v2",
     "Sculpfun S9",
-    "Older printers",
+    "Geeetech M1 (recorded as functional and shelved)",
+    "M3D Pro (legacy / display; recorded as intermittent)",
     "Future SFS sensor work",
     "Future cutter work",
-    "Possible conversions",
+    "Ender 3 parts pool and stalled conversions",
     "Other mod ideas",
   ];
   const recentLogs = [...logs].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)).slice(0, 4);
