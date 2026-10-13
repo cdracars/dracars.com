@@ -1,18 +1,18 @@
 ---
 title: SV08 Reliability Lab
 slug: sv08-reliability-lab
-launchGroup: active
+launchGroup: established
 launchOrder: 40
 description: Troubleshooting the SV08 as a changing system, with the hardware, wiring, and fault history kept together.
 featuredImage: /images/hoss-sv08.jpg
 featuredImageAlt: Hoss, an enclosed Sovol SV08 with teal and purple printed trim.
 purpose: Track reliability work and troubleshooting on the SV08 over time.
-status: working
-statusLabel: Working / Upgrading
-phase: Operational; upgrades in progress
+status: operational
+statusLabel: Stable
+phase: Stable; reliability checks as needed
 updatedAt: 2026-10-13
-statusNote: Cody confirmed Hoss is working again on October 13, 2026; the specific repair and which monitored issues cleared are not recorded here.
-nextAction: Record what restored Hoss and check which previously monitored issues remain.
+statusNote: Cody confirmed Hoss is stable and operational on October 13, 2026; older reliability checks remain documented for follow-up if symptoms return.
+nextAction: Record which reliability checks are routine and revisit them if symptoms return.
 equipment:
   - Sovol SV08 350 mm CoreXY with mainline Klipper, Mainsail, Moonraker, stock SV08 control board, Raspberry Pi, and stock planetary direct-drive extruder.
   - Full acrylic enclosure with printed tophat, Klipper Expander, INKBIRD SSR-40 DA bed relay, and Crowsnest camera.

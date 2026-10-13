@@ -1,16 +1,17 @@
 ---
 title: SV06 Plus: TPU and 3MS
 slug: sv06-plus-tpu-3ms
-launchGroup: active
+launchGroup: established
 launchOrder: 50
 description: Sam is a fully operational SV06 Plus workhorse; the 3MS project is on hold while AFC compatibility is explored.
 featuredImage: /images/sam-sv06-plus.jpg
 featuredImageAlt: Sam, an open-frame Sovol SV06 Plus with its nameplate visible.
 purpose: Keep the SV06 Plus firmware, TPU workflow, MMU behavior, and toolhead experiments together.
-status: experimental
-phase: Working / experimental
+status: operational
+statusLabel: Stable
+phase: Stable; 3MS work remains on hold
 updatedAt: 2026-10-13
-statusNote: Launch scope and status supplied October 12, 2026; configuration and current behavior need a fresh check.
+statusNote: Cody confirmed Sam is stable and operational on October 13, 2026; the 3MS project remains on hold while AFC compatibility is explored.
 nextAction: Explore whether the 3MS can work with AFC, then document the compatibility path before resuming the project.
 equipment:
   - Standard Sovol SV06 Plus (not the ACE), running Klipper with a BTT Pi V1.2, Mainsail, and Moonraker.

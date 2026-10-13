@@ -521,7 +521,8 @@ html.theme-ready .theme-toggle { display: inline-flex; }
   :root:not([data-theme]) .status-aging { color: #f2c06b; }
   :root:not([data-theme]) .project-state-in-use { color: #7fd99c; }
   :root:not([data-theme]) .project-state-testing { color: #f2c06b; }
-  :root:not([data-theme]) .workshop-status-working { color: #7fd99c; }
+  :root:not([data-theme]) .workshop-status-working,
+  :root:not([data-theme]) .workshop-status-operational { color: #7fd99c; }
   :root:not([data-theme]) .workshop-status-testing,
   :root:not([data-theme]) .workshop-status-planning { color: #f2c06b; }
   :root:not([data-theme]) .callout,
@@ -562,7 +563,8 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 :root[data-theme="dark"] .status-aging { color: #f2c06b; }
 :root[data-theme="dark"] .project-state-in-use { color: #7fd99c; }
 :root[data-theme="dark"] .project-state-testing { color: #f2c06b; }
-:root[data-theme="dark"] .workshop-status-working { color: #7fd99c; }
+:root[data-theme="dark"] .workshop-status-working,
+:root[data-theme="dark"] .workshop-status-operational { color: #7fd99c; }
 :root[data-theme="dark"] .workshop-status-testing,
 :root[data-theme="dark"] .workshop-status-planning { color: #f2c06b; }
 :root[data-theme="dark"] .callout,
