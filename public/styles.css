@@ -235,7 +235,11 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .workshop-project-link { display: flex; flex-direction: column; min-width: 0; min-height: 100%; overflow: hidden; border: 1px solid var(--line); border-radius: 11px; background: color-mix(in srgb, var(--plum) 7%, var(--paper)); color: inherit; text-decoration: none; }
 .workshop-project-grid .workshop-project-link { min-height: 270px; }
 .workshop-project-visual { position: relative; width: 100%; aspect-ratio: 16 / 8; overflow: hidden; background: radial-gradient(ellipse at 70% 35%, color-mix(in srgb, var(--terracotta) 20%, var(--paper)), transparent 48%), repeating-linear-gradient(135deg, color-mix(in srgb, var(--plum) 6%, var(--paper)) 0 12px, color-mix(in srgb, var(--plum) 10%, var(--paper)) 12px 13px); }
+.workshop-project-visual-contained { background: radial-gradient(ellipse at center, #353033, #171417 76%); }
 .workshop-project-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.workshop-project-image-contain { object-fit: contain; }
+.project-featured-image-contain { background: radial-gradient(ellipse at center, #353033, #171417 76%); }
+.project-featured-image-contain img { object-fit: contain; }
 .workshop-project-image-label { position: absolute; right: 10px; bottom: 10px; max-width: calc(100% - 20px); padding: 6px 9px; border: 1px solid rgb(255 255 255 / .28); border-radius: 999px; background: rgb(55 44 57 / .88); color: #fff; font-size: .72rem; font-weight: 700; line-height: 1.2; }
 .workshop-project-copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 16px; }
 .workshop-project-title { display: block; margin: 9px 0 6px; font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 600; letter-spacing: -.025em; line-height: 1.14; }

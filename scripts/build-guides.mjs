@@ -339,7 +339,7 @@ function projectCard(project, logs = []) {
   const imageLog = (project.relatedLogs ?? []).map((slug) => logs.find((log) => log.slug === slug)).find((log) => log?.indexImage);
   const imageSrc = project.featuredImage ?? imageLog?.indexImage;
   const imageAlt = project.featuredImage ? project.featuredImageAlt : "";
-  const image = imageSrc ? `<div class="workshop-project-visual"><img class="workshop-project-image" src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" loading="eager" decoding="async" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
+  const image = imageSrc ? `<div class="workshop-project-visual${project.imageFit === "contain" ? " workshop-project-visual-contained" : ""}"><img class="workshop-project-image${project.imageFit === "contain" ? " workshop-project-image-contain" : ""}" src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" loading="eager" decoding="async" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
   return `<a class="workshop-project-link" href="/workshop/${project.slug}/">
     ${image}
     <span class="workshop-project-copy"><span class="guide-card-meta">${badge}<span>${esc(project.phase)}</span></span><span class="workshop-project-title">${esc(project.title)}</span><span class="guide-card-desc">${esc(project.description)}</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
@@ -431,7 +431,7 @@ function projectPage(project, allProjects, logs, guides) {
         <p class="crumbs"><a href="/workshop/">Workshop</a> ${parent ? `<span aria-hidden="true">/</span> <a href="/workshop/${parent.slug}/">${esc(parent.title)}</a>` : ""} <span aria-hidden="true">/</span> Project</p>
         <header class="workshop-project-header"><div><h1 id="page-title">${esc(project.title)}</h1><p class="guide-deck">${esc(project.purpose)}</p></div><div class="workshop-project-meta">${stateBadge}<p class="workshop-updated">Status last recorded <time datetime="${project.updatedAt}">${fmtDate(project.updatedAt)}</time></p>${project.statusNote ? `<p class="workshop-updated">${esc(project.statusNote)}</p>` : ""}</div></header>
         <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>${esc(project.description)}</p><p class="project-next"><strong>Next action</strong>${esc(project.nextAction)}</p></div><div class="project-current-phase"><span>Current phase</span><strong>${esc(project.phase)}</strong></div></section>
-        ${project.featuredImage ? `<div class="featured-project-image project-featured-image"><img src="${escAttr(project.featuredImage)}" alt="${escAttr(project.featuredImageAlt ?? "")}" loading="lazy" decoding="async" /></div>` : ""}
+        ${project.featuredImage ? `<div class="featured-project-image project-featured-image${project.imageFit === "contain" ? " project-featured-image-contain" : ""}"><img src="${escAttr(project.featuredImage)}" alt="${escAttr(project.featuredImageAlt ?? "")}" loading="lazy" decoding="async" /></div>` : ""}
         ${detailSections ? `<div class="project-detail-grid">${detailSections}</div>` : ""}
         ${project.html ? `<section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body">${project.html}</div></section>` : ""}
         ${workstreams}
