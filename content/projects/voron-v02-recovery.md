@@ -5,7 +5,7 @@ launchGroup: established
 launchOrder: 60
 description: Pinkie is an LDO Voron 0.1 being converted to 0.2; the machine record documents its configuration, recovery work, and unfinished enclosure and calibration tasks.
 featuredImage: /images/pinkie-voron-v0.jpg
-featuredImageAlt: Close view of Pinkie's black and magenta Voron V0 enclosure and gantry.
+featuredImageAlt: Pinkie's enclosed black Voron V0 with magenta printed parts, clear panels, and the illuminated interior visible.
 purpose: Keep Pinkie's current configuration, dated recovery and conversion work, and unresolved next steps together.
 status: operational
 statusLabel: Stable
