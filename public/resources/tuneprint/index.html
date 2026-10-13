@@ -8,6 +8,7 @@
     <link rel="canonical" href="https://dracars.com/resources/tuneprint/" />
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
+    <script>try{const t=localStorage.getItem('dracars-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Dracars" />
     <meta property="og:url" content="https://dracars.com/resources/tuneprint/" />
@@ -29,6 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/theme.js" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"TunePrint","url":"https://tuneprint.dracars.com/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web browser","isAccessibleForFree":true,"description":"A browser-based companion for turning OrcaSlicer calibration results into settings to save.","author":{"@type":"Person","name":"Cody Dracars","url":"https://dracars.com/"}}</script>
   </head>
   <body class="resource-detail-page">
@@ -49,11 +51,17 @@
         <img class="brand-lockup" src="/dracars-wordmark.webp" alt="" width="96" height="32" />
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="/resources/" aria-current="page">Resources</a>
+        <a href="/">Home</a>
         <a href="/workshop/">Workshop</a>
         <a href="/build-logs/">Build Logs</a>
         <a href="/guides/">Guides</a>
+        <a href="/resources/" aria-current="page">Resources</a>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <svg class="theme-toggle-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="theme-toggle-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/></svg>
+        <span>Dark mode</span>
+      </button>
     </header>
     <main id="content">
 <article class="resource-detail" aria-labelledby="page-title">

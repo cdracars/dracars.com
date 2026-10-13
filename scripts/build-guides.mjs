@@ -281,6 +281,7 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
     <link rel="canonical" href="${url}" />
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
+    <script>try{const t=localStorage.getItem('dracars-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
     <meta property="og:type" content="${type}" />
     <meta property="og:site_name" content="Dracars" />
     <meta property="og:url" content="${url}" />
@@ -302,6 +303,7 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/theme.js" defer></script>
     <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
   </head>
   <body class="${escAttr(bodyClass)}">

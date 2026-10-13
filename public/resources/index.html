@@ -8,6 +8,7 @@
     <link rel="canonical" href="https://dracars.com/resources/" />
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
+    <script>try{const t=localStorage.getItem('dracars-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Dracars" />
     <meta property="og:url" content="https://dracars.com/resources/" />
@@ -29,6 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/theme.js" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Dracars Resources","url":"https://dracars.com/resources/","hasPart":[{"@type":"CreativeWork","name":"Task Prioritizer","url":"https://task-prioritizer.dracars.com/"},{"@type":"CreativeWork","name":"Stitch Shaper","url":"https://stitch-shaper.dracars.com/"},{"@type":"CreativeWork","name":"Local Screen Recorder","url":"https://screen-recorder.dracars.com/"},{"@type":"CreativeWork","name":"TunePrint","url":"https://tuneprint.dracars.com/"},{"@type":"CreativeWork","name":"Voron Mod Hub","url":"https://cdracars.github.io/voron-mod-hub/"},{"@type":"CreativeWork","name":"STL to STEP for FreeCAD","url":"https://github.com/cdracars/stl2step-freecad/releases"},{"@type":"CreativeWork","name":"STL to STEP for Fusion 360","url":"https://github.com/cdracars/stl2step-fusion/releases"},{"@type":"CreativeWork","name":"SafeSync","url":"https://github.com/cdracars/SafeSync"},{"@type":"CreativeWork","name":"Book Scanner Copy Stand","url":"https://github.com/cdracars/book-scanner-copy-stand"}]}</script>
   </head>
   <body class="resources">
@@ -55,6 +57,11 @@
         <a href="/guides/">Guides</a>
         <a href="/resources/" aria-current="page">Resources</a>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <svg class="theme-toggle-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="theme-toggle-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/></svg>
+        <span>Dark mode</span>
+      </button>
     </header>
     <main id="content">
       <section class="guides-hero resources-hero" aria-labelledby="page-title">

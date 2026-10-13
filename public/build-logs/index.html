@@ -8,6 +8,7 @@
     <link rel="canonical" href="https://dracars.com/build-logs/" />
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
+    <script>try{const t=localStorage.getItem('dracars-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Dracars" />
     <meta property="og:url" content="https://dracars.com/build-logs/" />
@@ -29,6 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/theme.js" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Dracars Build Logs","url":"https://dracars.com/build-logs/","hasPart":[{"@type":"BlogPosting","headline":"Local Screen Recorder: keeping the recording on your device","url":"https://dracars.com/build-logs/local-screen-recorder/","dateModified":"2026-10-08"},{"@type":"BlogPosting","headline":"Operation: Gray Shell: a Box Turtle 1.1 beta build","url":"https://dracars.com/build-logs/operation-gray-shell/","dateModified":"2026-10-08"},{"@type":"BlogPosting","headline":"Setting up my garage grow tent for resin printing","url":"https://dracars.com/build-logs/resin-grow-tent-setup/","dateModified":"2026-10-12"},{"@type":"BlogPosting","headline":"SafeSync: a small backup helper that outgrew its first job","url":"https://dracars.com/build-logs/safesync/","dateModified":"2026-10-08"},{"@type":"BlogPosting","headline":"Stitch Shaper: from dice and crochet math to a usable tool","url":"https://dracars.com/build-logs/stitch-shaper/","dateModified":"2026-10-08"},{"@type":"BlogPosting","headline":"STL to STEP plugins: challenge accepted","url":"https://dracars.com/build-logs/stl-to-step-plugins/","dateModified":"2026-10-08"},{"@type":"BlogPosting","headline":"Task Prioritizer: one decision at a time","url":"https://dracars.com/build-logs/task-prioritizer/","dateModified":"2026-10-08"},{"@type":"BlogPosting","headline":"TunePrint: stop rereading the guide and doing the math","url":"https://dracars.com/build-logs/tuneprint/","dateModified":"2026-10-08"},{"@type":"BlogPosting","headline":"Voron Mod Hub: turning a huge table into a browsable catalog","url":"https://dracars.com/build-logs/voron-mod-hub/","dateModified":"2026-10-08"}]}</script>
   </head>
   <body class="guides">
@@ -55,6 +57,11 @@
         <a href="/guides/">Guides</a>
         <a href="/resources/">Resources</a>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <svg class="theme-toggle-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="theme-toggle-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/></svg>
+        <span>Dark mode</span>
+      </button>
     </header>
     <main id="content">
       <section class="guides-hero" aria-labelledby="page-title">
