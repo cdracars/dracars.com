@@ -103,8 +103,10 @@ a PNG or JPEG. Pages without a supported image use the branded fallback,
 `public/social-preview.png` (1200 × 630). Guide and build log titles,
 descriptions, and image fields come from their content frontmatter. Run
 `node scripts/build-guides.mjs` after changing those sources so the published
-HTML stays in sync. Social platforms may cache previews; they pick up deployed
-metadata and images when they re-fetch the page.
+HTML stays in sync. The build publishes a content-hashed filename for the
+fallback image so social platforms receive a new image URL whenever the artwork
+changes. Social platforms may cache previews; they pick up deployed metadata
+and images when they re-fetch the page.
 
 The homepage has `WebSite`, `Person`, and project `ItemList` structured data.
 Its four Dracars-hosted browser tools use

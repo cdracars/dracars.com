@@ -25,6 +25,8 @@ const SOCIAL_PREVIEW_VERSION = createHash("sha256")
   .update(readFileSync(join(PUBLIC, "social-preview.png")))
   .digest("hex")
   .slice(0, 12);
+const SOCIAL_PREVIEW_PATH = `/social-preview-${SOCIAL_PREVIEW_VERSION}.png`;
+writeFileSync(join(PUBLIC, SOCIAL_PREVIEW_PATH.slice(1)), readFileSync(join(PUBLIC, "social-preview.png")));
 
 // A guide that hasn't been updated in this many days is shown as "Aging" (unless marked legacy).
 const AGING_AFTER_DAYS = 180;
@@ -278,12 +280,12 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
   const url = SITE + path;
   // Social crawlers have uneven format support. Prefer declared PNG/JPEG page art;
   // keep the branded card when a page only has WebP/SVG artwork.
-  const socialImage = image && /\.(?:png|jpe?g)$/i.test(image) ? image : "/social-preview.png";
-  const isDefaultSocialImage = socialImage === "/social-preview.png";
-  const socialImageAlt = socialImage === "/social-preview.png"
+  const socialImage = image && /\.(?:png|jpe?g)$/i.test(image) ? image : SOCIAL_PREVIEW_PATH;
+  const isDefaultSocialImage = socialImage === SOCIAL_PREVIEW_PATH;
+  const socialImageAlt = isDefaultSocialImage
     ? "Dracars logo beside the workshop TunePrint scene, with the homepage message about software, hardware, and projects."
     : (imageAlt || title);
-  const socialImageUrl = SITE + socialImage + (isDefaultSocialImage ? `?v=${SOCIAL_PREVIEW_VERSION}` : "");
+  const socialImageUrl = SITE + socialImage;
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -846,12 +848,12 @@ const homeTitle = home.match(/<title>([\s\S]*?)<\/title>/)?.[1];
 const homeDescription = home.match(/<meta name="description" content="([^"]*)"\s*\/>/)?.[1];
 if (!homeTitle || !homeDescription) fail("homepage title or description metadata missing");
 const homeFeaturedImage = featuredProject.featuredImage;
-const homeImage = /\.(?:png|jpe?g)$/i.test(homeFeaturedImage) ? homeFeaturedImage : "/social-preview.png";
-const isHomeUsingSocialPreview = homeImage === "/social-preview.png";
-const homeImageAlt = homeImage === "/social-preview.png"
+const homeImage = /\.(?:png|jpe?g)$/i.test(homeFeaturedImage) ? homeFeaturedImage : SOCIAL_PREVIEW_PATH;
+const isHomeUsingSocialPreview = homeImage === SOCIAL_PREVIEW_PATH;
+const homeImageAlt = isHomeUsingSocialPreview
   ? "Dracars logo beside the workshop TunePrint scene, with the homepage message about software, hardware, and projects."
   : (featuredProject.featuredImageAlt ?? featuredProject.title);
-const homeImageUrl = `${SITE}${homeImage}${isHomeUsingSocialPreview ? `?v=${SOCIAL_PREVIEW_VERSION}` : ""}`;
+const homeImageUrl = `${SITE}${homeImage}`;
 const replaceMetaContent = (source, pattern, value) => source.replace(pattern, (_match, before, after) => `${before}${value}${after}`);
 home = replaceMetaContent(home, /(<meta property="og:title" content=")[^"]*("\s*\/>)/, homeTitle);
 home = replaceMetaContent(home, /(<meta name="twitter:title" content=")[^"]*("\s*\/>)/, homeTitle);
