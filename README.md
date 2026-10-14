@@ -94,10 +94,17 @@ Cloudflare will issue HTTPS certificates after the custom domains are attached.
 
 ## Search and social previews
 
-The homepage metadata lives in `public/index.html`; guide metadata is generated
-by `scripts/build-guides.mjs` from guide frontmatter. Keep each page's title,
-description, canonical URL, and Open Graph/Twitter fields consistent. The shared
-social image is `public/social-preview.png` (1200 × 630).
+The homepage title and description live in `public/index.html`; the build copies
+them into its Open Graph/Twitter tags and uses the featured Workshop project's
+PNG/JPEG for the homepage preview, falling back to the branded image for other
+formats. Generated project pages use their
+`featuredImage`; guides and build logs use `heroImage` or `indexImage` when it is
+a PNG or JPEG. Pages without a supported image use the branded fallback,
+`public/social-preview.png` (1200 × 630). Guide and build log titles,
+descriptions, and image fields come from their content frontmatter. Run
+`node scripts/build-guides.mjs` after changing those sources so the published
+HTML stays in sync. Social platforms may cache previews; they pick up deployed
+metadata and images when they re-fetch the page.
 
 The homepage has `WebSite`, `Person`, and project `ItemList` structured data.
 Its four Dracars-hosted browser tools use

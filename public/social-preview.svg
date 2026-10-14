@@ -1,9 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <!-- Source artwork for social-preview.png. Rendered at 1200 × 630 from this file. -->
-  <rect width="1200" height="630" fill="#eee2e7" />
-  <text x="78" y="275" fill="#372c39" font-family="Quicksand, 'URW Gothic', sans-serif" font-size="60" font-weight="700" letter-spacing="-2">I build useful things</text>
-  <text x="78" y="350" fill="#372c39" font-family="Quicksand, 'URW Gothic', sans-serif" font-size="60" font-weight="700" letter-spacing="-2">in software and hardware.</text>
-  <text x="82" y="420" fill="#665b69" font-family="Noto Sans, sans-serif" font-size="27">Browser tools, open-source projects,</text>
-  <text x="82" y="458" fill="#665b69" font-family="Noto Sans, sans-serif" font-size="27">and practical work around 3D printers.</text>
-  <text x="82" y="562" fill="#753224" font-family="Noto Sans, sans-serif" font-size="22" font-weight="700" letter-spacing="2.2">DRACARS.COM</text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="photo-fade" x1="0" x2="1">
+      <stop offset="0" stop-color="#150f17" />
+      <stop offset=".18" stop-color="#150f17" stop-opacity=".78" />
+      <stop offset=".48" stop-color="#150f17" stop-opacity="0" />
+    </linearGradient>
+    <clipPath id="photo-clip"><rect x="500" y="0" width="700" height="630" /></clipPath>
+    <filter id="white-logo" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="#150f17" />
+  <image x="500" y="0" width="700" height="630" preserveAspectRatio="xMidYMid slice" xlink:href="images/workshop-tuneprint-hero.png" clip-path="url(#photo-clip)" />
+  <rect x="440" width="320" height="630" fill="url(#photo-fade)" />
+  <image x="44" y="42" width="38" height="36" preserveAspectRatio="xMidYMid meet" xlink:href="dracars-eye-dark.svg" />
+  <image x="94" y="46" width="102" height="34" preserveAspectRatio="xMidYMid meet" xlink:href="dracars-wordmark.png" filter="url(#white-logo)" />
+  <text x="48" y="167" fill="#fff3ef" font-family="Georgia, 'Times New Roman', serif" font-size="50" font-weight="700" letter-spacing="-2">I build useful things</text>
+  <text x="48" y="224" fill="#fff3ef" font-family="Georgia, 'Times New Roman', serif" font-size="50" font-weight="700" letter-spacing="-2">in software and</text>
+  <text x="48" y="281" fill="#fff3ef" font-family="Georgia, 'Times New Roman', serif" font-size="50" font-weight="700" letter-spacing="-2">hardware.</text>
+  <text x="50" y="337" fill="#f0dfe4" font-family="Arial, sans-serif" font-size="20">This is my workshop, build log, and</text>
+  <text x="50" y="368" fill="#f0dfe4" font-family="Arial, sans-serif" font-size="20">collection of projects—from 3D printing</text>
+  <text x="50" y="399" fill="#f0dfe4" font-family="Arial, sans-serif" font-size="20">and electronics to the little software</text>
+  <text x="50" y="430" fill="#f0dfe4" font-family="Arial, sans-serif" font-size="20">tools that make it all work.</text>
+  <text x="50" y="574" fill="#ff9a75" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">DRACARS.COM</text>
 </svg>

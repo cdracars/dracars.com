@@ -269,8 +269,16 @@ function freshness(g, today = new Date()) {
 
 const catName = (slug) => CATEGORIES.find((c) => c.slug === slug).name;
 
-function page({ title, description, path, body, jsonld, type = "website", bodyClass = "guides" }) {
+function page({ title, description, path, body, jsonld, type = "website", bodyClass = "guides", image, imageAlt }) {
   const url = SITE + path;
+  // Social crawlers have uneven format support. Prefer declared PNG/JPEG page art;
+  // keep the branded card when a page only has WebP/SVG artwork.
+  const socialImage = image && /\.(?:png|jpe?g)$/i.test(image) ? image : "/social-preview.png";
+  const socialImageAlt = socialImage === "/social-preview.png"
+    ? "Dracars logo beside the workshop TunePrint scene, with the homepage message about software, hardware, and projects."
+    : (imageAlt || title);
+  const socialImageUrl = SITE + socialImage;
+  const isDefaultSocialImage = socialImage === "/social-preview.png";
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -287,16 +295,16 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
     <meta property="og:url" content="${url}" />
     <meta property="og:title" content="${escAttr(title)}" />
     <meta property="og:description" content="${escAttr(description)}" />
-    <meta property="og:image" content="${SITE}/social-preview.png" />
-    <meta property="og:image:width" content="1200" />
+    <meta property="og:image" content="${socialImageUrl}" />
+    ${isDefaultSocialImage ? `<meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <meta property="og:image:type" content="image/png" />` : ""}
+    <meta property="og:image:alt" content="${escAttr(socialImageAlt)}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escAttr(title)}" />
     <meta name="twitter:description" content="${escAttr(description)}" />
-    <meta name="twitter:image" content="${SITE}/social-preview.png" />
-    <meta name="twitter:image:alt" content="Dracars — useful software, browser tools, and hardware projects by Cody Dracars." />
+    <meta name="twitter:image" content="${socialImageUrl}" />
+    <meta name="twitter:image:alt" content="${escAttr(socialImageAlt)}" />
     <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -443,7 +451,7 @@ function projectPage(project, allProjects, logs, guides) {
         ${relatedLogs.length ? `<section class="workshop-related" aria-labelledby="project-logs-heading"><div class="workshop-section-heading"><h2 id="project-logs-heading">Build Logs</h2><p>The dated story behind this current picture.</p></div><div class="workshop-activity-list">${relatedLogs.map((log) => `<a href="/build-logs/${log.slug}/"><time datetime="${log.updatedAt}">${fmtDate(log.updatedAt)}</time><span>${esc(log.title)}</span><span class="activity-arrow" aria-hidden="true">↗</span></a>`).join("\n")}</div></section>` : ""}
         ${relatedGuides.length ? `<section class="workshop-related" aria-labelledby="project-guides-heading"><h2 id="project-guides-heading">Guides from this project</h2><div class="workshop-guide-list">${relatedGuides.map((guide) => `<a href="/guides/${guide.slug}/"><span>${esc(guide.title)}</span>${statusBadge(freshness(guide))}</a>`).join("\n")}</div></section>` : ""}
       </article>`;
-  return page({ title: `${project.title} — Dracars Workshop`, description: project.description, path, body, bodyClass: "workshop", jsonld: { "@context": "https://schema.org", "@type": "CreativeWork", name: project.title, description: project.description, dateModified: project.updatedAt, url: SITE + path, author: { "@type": "Person", name: "Cody Dracars", url: SITE + "/" } } });
+  return page({ title: `${project.title} — Dracars Workshop`, description: project.description, path, body, bodyClass: "workshop", image: project.featuredImage, imageAlt: project.featuredImageAlt, jsonld: { "@context": "https://schema.org", "@type": "CreativeWork", name: project.title, description: project.description, dateModified: project.updatedAt, url: SITE + path, author: { "@type": "Person", name: "Cody Dracars", url: SITE + "/" } } });
 }
 
 function guideCard(g) {
@@ -567,6 +575,8 @@ ${tools.length ? `        <section class="guide-related"><h2 id="related-tools">
     type: "article",
     body,
     bodyClass: "guides",
+    image: g.heroImage,
+    imageAlt: g.heroImageAlt,
     jsonld: {
       "@context": "https://schema.org",
       "@type": "TechArticle",
@@ -662,6 +672,8 @@ function buildLogPage(g, all) {
     type: "article",
     body,
     bodyClass: "build-logs-site",
+    image: g.heroImage ?? g.indexImage,
+    imageAlt: g.heroImageAlt,
     jsonld: {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
@@ -823,6 +835,29 @@ if (existingResourceStart < 0 || existingResourceEnd < existingResourceStart) {
 const movedResourcesStart = home.indexOf(resourceStart);
 const movedWorkshopStart = home.indexOf(homeStart);
 if (movedResourcesStart < 0 || movedWorkshopStart < 0) fail("homepage section markers missing");
+// Keep duplicate social fields aligned with the editable homepage title and
+// description, and use the same featured-project image shown in the page body.
+const homeTitle = home.match(/<title>([\s\S]*?)<\/title>/)?.[1];
+const homeDescription = home.match(/<meta name="description" content="([^"]*)"\s*\/>/)?.[1];
+if (!homeTitle || !homeDescription) fail("homepage title or description metadata missing");
+const homeFeaturedImage = featuredProject.featuredImage;
+const homeImage = /\.(?:png|jpe?g)$/i.test(homeFeaturedImage) ? homeFeaturedImage : "/social-preview.png";
+const homeImageAlt = homeImage === "/social-preview.png"
+  ? "Dracars logo beside the workshop TunePrint scene, with the homepage message about software, hardware, and projects."
+  : (featuredProject.featuredImageAlt ?? featuredProject.title);
+const replaceMetaContent = (source, pattern, value) => source.replace(pattern, (_match, before, after) => `${before}${value}${after}`);
+home = replaceMetaContent(home, /(<meta property="og:title" content=")[^"]*("\s*\/>)/, homeTitle);
+home = replaceMetaContent(home, /(<meta name="twitter:title" content=")[^"]*("\s*\/>)/, homeTitle);
+home = replaceMetaContent(home, /(<meta property="og:description" content=")[^"]*("\s*\/>)/, homeDescription);
+home = replaceMetaContent(home, /(<meta name="twitter:description" content=")[^"]*("\s*\/>)/, homeDescription);
+home = home
+  .replace(/<meta property="og:image" content="[^"]*"\s*\/>/, `<meta property="og:image" content="${SITE}${homeImage}" />`)
+  .replace(/\s*<meta property="og:image:width" content="[^"]*"\s*\/>/, "")
+  .replace(/\s*<meta property="og:image:height" content="[^"]*"\s*\/>/, "")
+  .replace(/\s*<meta property="og:image:type" content="[^"]*"\s*\/>/, "")
+  .replace(/(<meta property="og:image:alt" content=")[^"]*("\s*\/>)/, `$1${escAttr(homeImageAlt)}$2`)
+  .replace(/(<meta name="twitter:image" content=")[^"]*("\s*\/>)/, `$1${SITE}${homeImage}$2`)
+  .replace(/(<meta name="twitter:image:alt" content=")[^"]*("\s*\/>)/, `$1${escAttr(homeImageAlt)}$2`);
 writeFileSync(homePath, home);
 
 rmSync(OUT, { recursive: true, force: true });
