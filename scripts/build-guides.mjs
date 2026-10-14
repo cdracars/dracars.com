@@ -4,6 +4,7 @@
 // The generated HTML is committed so deployment stays a plain static `wrangler deploy`.
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { FIGURES } from "./figures.mjs";
@@ -20,6 +21,10 @@ const RESOURCE_OUT = join(PUBLIC, "resources");
 const BUILD_LOG_OUT = join(PUBLIC, "build-logs");
 const PROJECT_OUT = join(PUBLIC, "workshop");
 const SITE = "https://dracars.com";
+const SOCIAL_PREVIEW_VERSION = createHash("sha256")
+  .update(readFileSync(join(PUBLIC, "social-preview.png")))
+  .digest("hex")
+  .slice(0, 12);
 
 // A guide that hasn't been updated in this many days is shown as "Aging" (unless marked legacy).
 const AGING_AFTER_DAYS = 180;
@@ -274,11 +279,11 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
   // Social crawlers have uneven format support. Prefer declared PNG/JPEG page art;
   // keep the branded card when a page only has WebP/SVG artwork.
   const socialImage = image && /\.(?:png|jpe?g)$/i.test(image) ? image : "/social-preview.png";
+  const isDefaultSocialImage = socialImage === "/social-preview.png";
   const socialImageAlt = socialImage === "/social-preview.png"
     ? "Dracars logo beside the workshop TunePrint scene, with the homepage message about software, hardware, and projects."
     : (imageAlt || title);
-  const socialImageUrl = SITE + socialImage;
-  const isDefaultSocialImage = socialImage === "/social-preview.png";
+  const socialImageUrl = SITE + socialImage + (isDefaultSocialImage ? `?v=${SOCIAL_PREVIEW_VERSION}` : "");
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -842,21 +847,23 @@ const homeDescription = home.match(/<meta name="description" content="([^"]*)"\s
 if (!homeTitle || !homeDescription) fail("homepage title or description metadata missing");
 const homeFeaturedImage = featuredProject.featuredImage;
 const homeImage = /\.(?:png|jpe?g)$/i.test(homeFeaturedImage) ? homeFeaturedImage : "/social-preview.png";
+const isHomeUsingSocialPreview = homeImage === "/social-preview.png";
 const homeImageAlt = homeImage === "/social-preview.png"
   ? "Dracars logo beside the workshop TunePrint scene, with the homepage message about software, hardware, and projects."
   : (featuredProject.featuredImageAlt ?? featuredProject.title);
+const homeImageUrl = `${SITE}${homeImage}${isHomeUsingSocialPreview ? `?v=${SOCIAL_PREVIEW_VERSION}` : ""}`;
 const replaceMetaContent = (source, pattern, value) => source.replace(pattern, (_match, before, after) => `${before}${value}${after}`);
 home = replaceMetaContent(home, /(<meta property="og:title" content=")[^"]*("\s*\/>)/, homeTitle);
 home = replaceMetaContent(home, /(<meta name="twitter:title" content=")[^"]*("\s*\/>)/, homeTitle);
 home = replaceMetaContent(home, /(<meta property="og:description" content=")[^"]*("\s*\/>)/, homeDescription);
 home = replaceMetaContent(home, /(<meta name="twitter:description" content=")[^"]*("\s*\/>)/, homeDescription);
 home = home
-  .replace(/<meta property="og:image" content="[^"]*"\s*\/>/, `<meta property="og:image" content="${SITE}${homeImage}" />`)
+  .replace(/<meta property="og:image" content="[^"]*"\s*\/>/, `<meta property="og:image" content="${homeImageUrl}" />`)
   .replace(/\s*<meta property="og:image:width" content="[^"]*"\s*\/>/, "")
   .replace(/\s*<meta property="og:image:height" content="[^"]*"\s*\/>/, "")
   .replace(/\s*<meta property="og:image:type" content="[^"]*"\s*\/>/, "")
   .replace(/(<meta property="og:image:alt" content=")[^"]*("\s*\/>)/, `$1${escAttr(homeImageAlt)}$2`)
-  .replace(/(<meta name="twitter:image" content=")[^"]*("\s*\/>)/, `$1${SITE}${homeImage}$2`)
+  .replace(/(<meta name="twitter:image" content=")[^"]*("\s*\/>)/, `$1${homeImageUrl}$2`)
   .replace(/(<meta name="twitter:image:alt" content=")[^"]*("\s*\/>)/, `$1${escAttr(homeImageAlt)}$2`);
 writeFileSync(homePath, home);
 
