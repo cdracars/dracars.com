@@ -38,6 +38,8 @@ scripts/build-guides.mjs     Site builder (guides, logs, projects, resources, si
 scripts/figures.mjs          Registered guide figures
 scripts/site-chrome.mjs      Shared header, GitHub corner, and footer markup
 scripts/check-site-chrome.mjs Verifies generated pages carry current shared chrome
+scripts/check-content.mjs     Flags internal-note phrasing and stale updatedAt dates
+.github/workflows/site-checks.yml Runs the build and all checks on every pull request
 PRODUCT.md          Durable site purpose and constraints
 DESIGN.md           Approved visual direction
 BUILD-LOGS.md       Evidence, voice, image, and update guidance for project journals
@@ -65,7 +67,13 @@ node scripts/build-guides.mjs
 
 Commit the generated `public/guides/`, `public/build-logs/`, `public/workshop/`,
 `public/resources/`, `public/404.html`, and `public/sitemap.xml` along with the
-source, then run `node scripts/check-site-chrome.mjs`. The same build refreshes the managed header/footer blocks in
+source, then run `node scripts/check-site-chrome.mjs` and
+`node scripts/check-content.mjs origin/main`. The **Site checks** GitHub
+workflow runs the same steps on every pull request and fails if `public/` is out
+of date, if published content contains internal-note phrasing (for example
+"Cody confirmed" or "3DBrain"), or if a project's status fields change without
+moving `updatedAt`. Other content edits that keep the old date only warn, since
+typo fixes should not change a page's date. The same build refreshes the managed header/footer blocks in
 `public/index.html`; include that file when shared chrome changes. Edit shared
 markup in `scripts/site-chrome.mjs` and styling in `public/styles.css`, rather
 than editing the homepage's `site-header` / `site-footer` comment blocks.
