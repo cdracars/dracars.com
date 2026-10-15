@@ -87,9 +87,11 @@ as part of this link update.
 
 | Product | Ordinary destination | Match / link status | Affiliate replacement |
 | --- | --- | --- | --- |
-| Elegoo Saturn 4 Ultra 12K | [Official US product page](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer) | Exact named printer; linked. Keep the 12K distinct from the 16K. | None yet |
-| Anycubic Photon P1 | [Official product page](https://store.anycubic.com/products/photon-p1-resin-3d-printer) | Linked as the printer being added; no print results claimed. Affiliate program researched; no application recorded. | None yet |
-| AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent | [Current CLOUDLAB 866 product page](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) | Cody identified the model from the 60 × 60-inch footprint and AC Infinity branding; official listing confirms the model name and number. Linked; revision-specific features are not claimed. | None yet |
+| Elegoo Saturn 4 Ultra 12K | [Official US product page](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer) | Exact named printer; linked in the guide and resin-workshop project page. Keep the 12K distinct from the 16K. | None yet |
+| Anycubic Photon P1 | [Official product page](https://store.anycubic.com/products/photon-p1-resin-3d-printer) | Linked in the guide and resin-workshop project page; no print results claimed. Affiliate program researched; no application recorded. | None yet |
+| AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent | [Current CLOUDLAB 866 product page](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) | Cody identified the model from the 60 × 60-inch footprint and AC Infinity branding; official listing confirms the model name and number. Linked in the guide and resin-workshop project page; revision-specific features are not claimed. | None yet |
+| Anycubic Wash & Cure 3 Max | [Official product page](https://store.anycubic.com/products/wash-cure-3-max) | Exact model named in the project record and linked on the resin-workshop project page; function remains unconfirmed. | None yet |
+| Braun 5500 lumen, 4 ft linkable LED hanging shop light (Harbor Freight item 59506) | [Harbor Freight product listing](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html) | Exact item recorded in the Build Log and linked on the resin-workshop project page; light output and UV emission are unmeasured. | None yet |
 
 The guide also links two unselected wet-zone options below the equipment list:
 
@@ -160,3 +162,5 @@ ends, restore its ordinary URLs and set the flag to match the remaining links.
 - **2026-10-07:** Renamed the guide to `resin-grow-tent-setup`, added the official Photon P1 link, and removed the unconfirmed tent-model link from the article. Retained ordinary links only; no affiliate program status changed. Configured redirects from the old Saturn URL; deployment not verified.
 
 - **2026-10-07:** Verified official product and program pages for ELEGOO and AC Infinity. Confirmed two ordinary product links in the Saturn guide source. No applications submitted and no affiliate links activated.
+
+- **2026-10-15:** Added ordinary, non-affiliate links for the exact printers, tent, wash station, and shop light on the resin-workshop project page. Verified destinations against the official ELEGOO, Anycubic, and AC Infinity product pages and Harbor Freight's listing. No affiliate applications or tracking links exist yet; no program status changed.

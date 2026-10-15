@@ -483,7 +483,7 @@ function projectPage(project, allProjects, logs, guides) {
     project.phases.length ? `<section aria-labelledby="phase-heading"><h2 id="phase-heading">Project phases</h2><ol class="project-phase-list">${phases}</ol></section>` : "",
     project.focus.length ? `<section aria-labelledby="focus-heading"><h2 id="focus-heading">What this project tracks</h2><ul class="project-plain-list">${project.focus.map((item) => `<li>${inline(item, { affiliateLinks: 0 })}</li>`).join("")}</ul></section>` : "",
     project.equipment.length ? `<section aria-labelledby="equipment-heading"><h2 id="equipment-heading">Equipment and setup</h2><ul class="project-plain-list">${project.equipment.map((item) => `<li>${inline(item, { affiliateLinks: 0 })}</li>`).join("")}</ul></section>` : "",
-    project.problems.length ? `<section aria-labelledby="problems-heading"><h2 id="problems-heading">Open problems</h2><ul class="project-plain-list">${project.problems.map((item) => `<li>${inline(item, { affiliateLinks: 0 })}</li>`).join("")}</ul></section>` : "",
+    project.problems.length ? `<section class="project-detail-problems" aria-labelledby="problems-heading"><h2 id="problems-heading">Open problems</h2><ul class="project-plain-list">${project.problems.map((item) => `<li>${inline(item, { affiliateLinks: 0 })}</li>`).join("")}</ul></section>` : "",
   ].filter(Boolean).join("\n");
   const workstreams = project.workstreams.length ? `<section class="workshop-related" aria-labelledby="workstreams-heading"><h2 id="workstreams-heading">Workstreams</h2><div class="workshop-project-list">${project.workstreams.map((item) => {
     const [label, slug, state = "In scope"] = item.split("|").map((value) => value.trim());
