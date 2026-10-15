@@ -39,7 +39,7 @@ focus:
   - Power on the Photon P1, confirm it still works, and record first-print results.
 ---
 
-The resin setup came together through a trade on October 8, 2026: Pam, my Prusa MK4S, for an Elegoo Saturn 4 Ultra and an Anycubic Photon P1. Both machines are now in the garage tent, but neither has printed in this workspace. The Saturn has its vat and build plate installed and Wi-Fi set up; its remaining setup checks are still incomplete. The [Saturn 4 Ultra project page](/workshop/saturn-4-ultra/) tracks that machine in more detail.
+The resin setup came together through a trade on October 8, 2026: Pam, my Prusa MK4S, for an Elegoo Saturn 4 Ultra and an Anycubic Photon P1. Both machines are now in the garage tent, but neither has printed in this workspace. The Saturn has its vat and build plate installed and Wi-Fi set up; it still needs resin calibration and a first print. The [Saturn 4 Ultra project page](/workshop/saturn-4-ultra/) tracks that machine in more detail.
 
 The tent is assembled, with a plastic-covered folding table, a plastic floor liner, and the Braun shop light in place. The folding table is temporary; a standing desk is still planned. I have not installed a functioning exhaust or confirmed that the Wash & Cure station works. The liner clips and light output have not been tested for this workflow.
 
