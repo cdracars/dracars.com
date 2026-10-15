@@ -66,6 +66,13 @@ of qualifying sales within 180 days of signup was not found in the Operating
 Agreement text and needs checking against current Associates documentation
 before applying. Do not link items Cody has not chosen.
 
+First candidates (Cody, 2026-10-15): the plain Amazon links already in the resin
+build log — the inline extension cord switch, the 45 oz pickle jars, the extra
+large silicone mat, and the SUNLU ABS-like resin. When they become affiliate
+links, mark each with `"affiliate"`, set `affiliateLinksPresent: true`, and
+replace the log's "plain links, not affiliate links" note with the Associates
+disclosure.
+
 ### Terms to record when applying
 
 For every program, record the approved commission, attribution window, eligible
@@ -139,6 +146,8 @@ ends, restore its ordinary URLs and set the flag to match the remaining links.
 > Dracars publishes practical guides about 3D printing, hardware, and software, alongside free tools and open-source projects. Guides document my actual setup and experience. Affiliate links will appear only where equipment is relevant, with clear disclosure and independent recommendations.
 
 ## Activity
+
+- **2026-10-15:** Cody confirmed the plain Amazon links in the resin build log are the first Associates candidates. No application submitted yet; no links changed. Exhaust plan updated elsewhere: CLOUDLINE fan at the tent end, duct through the attic crawl space and out a new roof opening.
 
 - **2026-10-07:** Cody confirmed an AC Infinity CLOUDLINE fan is planned for the exhaust build. Queued the 4-inch S4/T4 options for the dedicated exhaust follow-up; exact model remains unrecorded. No fan link added to the core article and no affiliate program status changed.
 

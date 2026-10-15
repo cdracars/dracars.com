@@ -10,9 +10,9 @@ status: building
 statusLabel: Building / Testing
 phase: Workspace setup
 updatedAt: 2026-10-15
-nextAction: Inspect the vat and build plate, then record the remaining printer setup checks before adding resin.
+nextAction: Inspect the vat and build plate, then calibrate the resin and run a first print.
 equipment:
-  - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; setup checks incomplete; no prints yet)
+  - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; resin not yet calibrated; no prints yet)
   - Anycubic Photon P1 (acquired in the same trade; worked at pickup, not powered on since)
   - AC Infinity CLOUDLAB 866, 5 × 5 ft grow tent (assembled in the garage; no functioning exhaust installed)
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)
@@ -20,7 +20,7 @@ equipment:
 problems:
   - The wash-and-cure station has not been diagnosed, and the wash process is not established.
   - The exhaust is not installed. The Build Log records my plan to proceed with a few prints before it is ready; that is a personal choice, not a tested or recommended setup.
-  - The printer has not completed its setup checks or produced a print in this workspace.
+  - The printer has not been calibrated for resin or produced a print in this workspace.
 phases:
   - Acquired|done
   - Workspace setup|current

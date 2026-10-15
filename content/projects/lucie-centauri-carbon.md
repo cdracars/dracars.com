@@ -20,4 +20,4 @@ focus:
   - Configuration notes as they are documented
 ---
 
-Lucie is the Elegoo Centauri Carbon on the bottom shelf in the photo. The machine is stable and operational as of October 13, 2026. This page keeps the machine in the established lineup; configuration details can be added as they are recorded.
+Lucie is the Elegoo Centauri Carbon on the bottom shelf in the photo. The machine is stable and operational as of October 13, 2026, and it works great. This page keeps the machine in the established lineup; configuration details can be added as they are recorded.

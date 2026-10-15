@@ -13,7 +13,7 @@ statusLabel: Building / Testing
 statusNote: As of October 12, 2026: both printers are in the tent; neither has printed, and the exhaust and wash station remain unverified.
 phase: Workspace and workflow
 updatedAt: 2026-10-15
-nextAction: Inspect the Saturn's vat and build plate, then complete its remaining setup checks before adding resin.
+nextAction: Inspect the Saturn's vat and build plate, then calibrate the resin and run a first print.
 relatedLogs: [resin-grow-tent-setup]
 relatedGuides: [resin-grow-tent-setup]
 workstreams:
@@ -23,7 +23,7 @@ workstreams:
   - AC Infinity 5×5 tent and exhaust|resin-tent-exhaust|Assembled; exhaust not installed
 equipment:
   - AC Infinity CLOUDLAB 866, 5 × 5 ft tent (assembled in the garage; no functioning exhaust installed)
-  - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; remaining setup checks incomplete; no prints yet)
+  - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; resin not yet calibrated; no prints yet)
   - Anycubic Photon P1 (in the tent; worked at pickup, not powered on since; no prints yet)
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)
   - Temporary folding table with plastic covering and a plastic floor liner; a standing desk is still planned
@@ -31,10 +31,10 @@ equipment:
 problems:
   - The tent has no functioning exhaust yet, and the wash station has not been diagnosed.
   - The floor liner clips have not been tested in use, and the standing desk and cleanup workflow are unfinished.
-  - Neither printer has produced a print in this workspace; the Saturn's remaining setup checks are incomplete.
+  - Neither printer has produced a print in this workspace, and the Saturn has not been calibrated for resin.
 focus:
   - Finish and document the garage workspace and exhaust.
-  - Inspect the Saturn and record its setup checks before adding resin.
+  - Inspect the Saturn, calibrate the resin, and record the first print.
   - Diagnose the Wash & Cure station and establish a cleanup workflow.
   - Power on the Photon P1, confirm it still works, and record first-print results.
 ---
