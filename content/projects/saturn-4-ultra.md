@@ -16,7 +16,7 @@ equipment:
   - Anycubic Photon P1 (acquired in the same trade; worked at pickup, not powered on since)
   - AC Infinity CLOUDLAB 866, 5 × 5 ft grow tent (assembled in the garage; no functioning exhaust installed)
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)
-  - SUNLU ABS-Like Dark Grey resin (stored unopened; not yet used)
+  - SUNLU ABS-Like Dark Grey resin (one bottle opened and stored in the tent; not yet printed with)
 problems:
   - The wash-and-cure station has not been diagnosed, and the wash process is not established.
   - The exhaust is not installed. The Build Log records my plan to proceed with a few prints before it is ready; that is a personal choice, not a tested or recommended setup.

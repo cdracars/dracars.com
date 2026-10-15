@@ -28,6 +28,7 @@ equipment:
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)
   - Temporary folding table with plastic covering and a plastic floor liner; a standing desk is still planned
   - Braun 4 ft shop light installed; its light output and UV emission have not been measured
+  - A chamber heater is planned for printing in the cold garage
 problems:
   - The tent has no functioning exhaust yet, and the wash station has not been diagnosed.
   - The floor liner clips have not been tested in use, and the standing desk and cleanup workflow are unfinished.
@@ -35,7 +36,7 @@ problems:
 focus:
   - Finish and document the garage workspace and exhaust.
   - Inspect the Saturn, calibrate the resin, and record the first print.
-  - Diagnose the Wash & Cure station and establish a cleanup workflow.
+  - Diagnose the Wash & Cure station and establish a cleanup workflow; cured waste goes in a clear bag to finish curing before it goes in the trash.
   - Power on the Photon P1, confirm it still works, and record first-print results.
 ---
 
