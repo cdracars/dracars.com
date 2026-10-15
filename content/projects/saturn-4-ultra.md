@@ -9,7 +9,7 @@ purpose: Develop a repeatable resin-printing setup around the Saturn 4 Ultra, in
 status: building
 statusLabel: Building / Testing
 phase: Workspace setup
-updatedAt: 2026-10-12
+updatedAt: 2026-10-15
 nextAction: Inspect the vat and build plate, then record the remaining printer setup checks before adding resin.
 equipment:
   - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; setup checks incomplete; no prints yet)

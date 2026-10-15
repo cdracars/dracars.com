@@ -11,13 +11,14 @@ purpose: Contain resin printing and post-processing in the tent, and build an ex
 status: planning
 statusLabel: Exhaust planned
 phase: Tent assembled; exhaust not built
-updatedAt: 2026-10-12
-nextAction: Choose the CLOUDLINE model and plan the duct run, then build the exhaust and update my recommendation.
+updatedAt: 2026-10-15
+nextAction: Choose the CLOUDLINE model, cut the new roof opening, and build the exhaust run, then update my recommendation.
 equipment:
   - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent, assembled in the garage, with cinch-top duct ports on the wall and in the floor corner
   - Plastic floor liner held with corner clips, and a plastic-covered temporary folding table; a ~58-inch standing desk is planned as the main work surface
   - Braun 4 ft shop light; its light output and UV emission have not been measured
-  - AC Infinity CLOUDLINE inline fan planned for the exhaust; 4-inch S4 versus T4 not yet chosen
+  - AC Infinity CLOUDLINE inline fan planned at the tent end of the exhaust; 4-inch S4 versus T4 not yet chosen
+  - Planned duct route: from the tent into the attic crawl space through an existing opening, then out through a new roof opening
 problems:
   - There is no working exhaust yet.
   - The liner clips have not been tested in use.
@@ -32,6 +33,6 @@ focus:
 
 This page is the tent-and-exhaust workstream within [Resin Workshop](/workshop/resin-workshop/). The tent is up in the garage with plastic on the floor and a temporary table inside, and both printers are sitting in it.
 
-The exhaust will take time and money to do right. I'd tell someone else to wait until it's ready; I'm planning a few prints before then, and the [Build Log](/build-logs/resin-grow-tent-setup/) records that choice and its limits. Once the exhaust is built, I'll update that recommendation.
+The exhaust will take time and money to do right. The plan is to run the duct from the tent into the attic crawl space through an existing opening and out through a new opening in the roof, with the fan at the tent end. I'd tell someone else to wait until it's ready; I'm planning a few prints before then, and the [Build Log](/build-logs/resin-grow-tent-setup/) records that choice and its limits. Once the exhaust is built, I'll update that recommendation.
 
 The [resin grow-tent setup guide](/guides/resin-grow-tent-setup/) stays Coming Soon until the tent, exhaust, and workflow have actually been used and tested.

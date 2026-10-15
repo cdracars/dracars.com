@@ -15,7 +15,7 @@ updatedAt: 2026-10-15
 nextAction: Inspect the cured resin in the lines and check whether the wash and cure functions work before relying on the station.
 equipment:
   - Anycubic Wash & Cure 3 Max (powers on and lights its display; wash and cure function unconfirmed; cured resin in the lines)
-  - 45 oz pickle jars, planned for dirty-wash storage
+  - 45 oz pickle jars, planned for dirty-wash IPA storage
 problems:
   - There is cured resin in the lines. I have not opened the station to inspect it yet.
   - Neither the wash nor the cure function has been confirmed.
@@ -31,4 +31,4 @@ This page is the wash-and-cure workstream within [Resin Workshop](/workshop/resi
 
 It powers on and the display lights up, but I haven't opened it up or tested whether it works. There is cured resin in the lines, so I need to inspect it before I rely on it. Until then, it is equipment on hand, not a working part of the workflow.
 
-My plan is to do most of the cleaning in a dirty wash and use the station for the final steps. I'll record what I find when I diagnose it; the [Build Log](/build-logs/resin-grow-tent-setup/) keeps the dated sequence.
+My plan is to wash with IPA: most of the cleaning in a dirty IPA wash, then the station for the final steps. I'll record what I find when I diagnose it; the [Build Log](/build-logs/resin-grow-tent-setup/) keeps the dated sequence.

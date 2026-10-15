@@ -10,7 +10,7 @@ purpose: Track reliability work and troubleshooting on the SV08 over time.
 status: operational
 statusLabel: Stable
 phase: Stable; reliability checks as needed
-updatedAt: 2026-10-13
+updatedAt: 2026-10-15
 statusNote: Stable and operational as of October 13, 2026; older reliability checks remain documented for follow-up if symptoms return.
 nextAction: Record which reliability checks are routine and revisit them if symptoms return.
 equipment:

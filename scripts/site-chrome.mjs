@@ -14,7 +14,6 @@ export function siteHeader(path) {
         <a href="/"${current === 'home' ? ' aria-current="page"' : ''}>Home</a>
         <a href="/workshop/"${current === 'workshop' ? ' aria-current="page"' : ''}>Workshop</a>
         <a href="/build-logs/"${current === 'build-logs' ? ' aria-current="page"' : ''}>Build Logs</a>
-        <a href="/guides/"${current === 'guides' ? (path === '/guides/' ? ' aria-current="page"' : ' aria-current="true"') : ''}>Guides</a>
         <a href="/resources/"${current === 'resources' ? ' aria-current="page"' : ''}>Resources</a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
