@@ -24,9 +24,8 @@
     <meta name="twitter:image:alt" content="Task Prioritizer: one decision at a time — Dracars Build Logs" />
     <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="/fonts/atkinson-hyperlegible-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/theme.js" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Task Prioritizer: one decision at a time","description":"A build log for a small tool born from ADHD prioritization overload: compare two tasks and decide what matters more right now.","datePublished":"2026-10-08","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/task-prioritizer/","keywords":"adhd, prioritization, productivity, browser-tool"}</script>
@@ -93,7 +92,7 @@
 <h2 id="a-small-tool-for-a-smaller-question">A small tool for a smaller question</h2>
 <p>The tool turns a pile of tasks into an ordered list by presenting two choices at a time. It does not promise to know what someone <em>should</em> do. It just gives the person a way to express the priorities they can see in the moment.</p>
 <p>That constraint is the point. The useful thing was not a complicated productivity system; it was reducing one overwhelming question into a sequence of manageable ones.</p>
-<figure class="photo"><img src="/images/build-logs/task-prioritizer/01-app-interface.png" alt="Task Prioritizer’s empty-list interface, showing bulk import and its explanation of local saving and export. Captured October 8, 2026." loading="lazy" /><figcaption>Task Prioritizer’s empty-list interface, showing bulk import and its explanation of local saving and export. Captured October 8, 2026.</figcaption></figure>
+<figure class="photo"><img src="/images/build-logs/task-prioritizer/01-app-interface.png" width="672" height="690" alt="Task Prioritizer’s empty-list interface, showing bulk import and its explanation of local saving and export. Captured October 8, 2026." loading="lazy" /><figcaption>Task Prioritizer’s empty-list interface, showing bulk import and its explanation of local saving and export. Captured October 8, 2026.</figcaption></figure>
 <h2 id="the-organized-list-has-to-keep-moving">The organized list has to keep moving</h2>
 <p>Getting a list into order is only part of the job. My wife uses an LLM to help keep track of the list once it has been organized, so Task Prioritizer includes import and export rather than treating its result as a dead end.</p>
 <p>That keeps the tool focused on the decision it is good at—sorting a crowded list—while fitting into the process she already uses to maintain it.</p>
