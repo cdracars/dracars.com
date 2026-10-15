@@ -115,3 +115,6 @@ private customer details and payment information out of this repository.
 - **2026-10-08:** Recorded the $10 Ko-fi submission from a friend after a
   Discord post. The support path has been exercised; the independent-supporter
   milestone remains open.
+- **2026-10-15:** Asked to pick one focus for the next 30 days (first guide,
+  first affiliate enrollment, or first product), Cody chose the resin
+  workspace: "working the resin hardest right now."
