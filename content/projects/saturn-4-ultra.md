@@ -8,7 +8,7 @@ description: The Saturn came with an Anycubic Photon P1 in an October 8, 2026 tr
 purpose: Develop a repeatable resin-printing setup around the Saturn 4 Ultra, including the workspace, calibration, washing, curing, and cleanup.
 status: building
 statusLabel: Building / Testing
-phase: Workspace setup and first calibration
+phase: Workspace setup
 updatedAt: 2026-10-12
 nextAction: Inspect the vat and build plate, then record the remaining printer setup checks before adding resin.
 equipment:
@@ -19,7 +19,7 @@ equipment:
   - SUNLU ABS-Like Dark Grey resin (stored unopened; not yet used)
 problems:
   - The wash-and-cure station has not been diagnosed, and the wash process is not established.
-  - The exhaust is not installed. The Build Log records the author's plan to proceed with a few prints before it is ready; that is a personal choice, not a tested or recommended setup.
+  - The exhaust is not installed. The Build Log records my plan to proceed with a few prints before it is ready; that is a personal choice, not a tested or recommended setup.
   - The printer has not completed its setup checks or produced a print in this workspace.
 phases:
   - Acquired|done
