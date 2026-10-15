@@ -2,7 +2,7 @@
 title: Setting up my garage grow tent for resin printing
 slug: resin-grow-tent-setup
 description: I do plenty of FDM printing, but resin has me planning for the drips, washing, cleanup, and contaminated tools around the printer.
-publishedAt: 2026-10-07
+publishedAt: 2026-10-08
 updatedAt: 2026-10-12
 indexImage: /images/build-logs/resin-grow-tent-setup/08-tent-in-place.webp
 author: Dracars
@@ -31,7 +31,7 @@ I do plenty of FDM printing, but resin adds a cleanup path I need to plan for: l
 
 ## From pickup to getting the tent in place
 
-### Update, 2026-10-07: Starting the workspace
+### Update, 2026-10-08: Starting the workspace
 
 I picked up the printers and wash station, aired out the tent at home, and got the frame into the garage. Here's how I got the first pieces in place.
 
