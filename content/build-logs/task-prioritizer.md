@@ -3,7 +3,7 @@ title: "Task Prioritizer: one decision at a time"
 slug: task-prioritizer
 description: "A build log for a small tool born from prioritization overload: compare two tasks and decide what matters more right now."
 publishedAt: 2026-10-08
-updatedAt: 2026-10-08
+updatedAt: 2026-10-15
 indexImage: /images/build-logs/task-prioritizer/01-app-interface.png
 author: Dracars
 category: tools-software
@@ -35,7 +35,7 @@ The tool turns a pile of tasks into an ordered list by presenting two choices at
 
 That constraint is the point. The useful thing was not a complicated productivity system; it was reducing one overwhelming question into a sequence of manageable ones.
 
-!photo 01-app-interface.png | Task Prioritizer’s empty-list interface, showing bulk import and its explanation of local saving and export. Captured October 8, 2026.
+!photo 01-app-interface.png | Task Prioritizer’s current light-mode interface, showing the empty task list, import controls, and ranking guidance. Captured October 15, 2026.
 
 ## The organized list has to keep moving
 

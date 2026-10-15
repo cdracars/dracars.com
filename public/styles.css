@@ -73,6 +73,8 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 205px), 1fr)); gap: 12px; }
 .resource-grid-featured { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .resource-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 126px; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: color-mix(in srgb, var(--plum) 6%, var(--paper)); color: inherit; text-decoration: none; }
+.resources .resource-card-with-image { grid-column: span 2; grid-template-columns: minmax(120px, .55fr) minmax(0, 1fr) auto; }
+.resource-card-image { display: block; width: 100%; height: auto; aspect-ratio: 1.28; border: 1px solid var(--line); border-radius: 8px; object-fit: cover; }
 .resource-card:hover { border-color: var(--terracotta-dark); }
 .resource-card:focus-visible { outline-offset: 3px; }
 .resource-card-copy { display: grid; gap: 6px; }
@@ -674,6 +676,7 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 @media (max-width: 480px) {
   .resource-grid-featured { grid-template-columns: 1fr; }
   .resource-grid { grid-template-columns: 1fr; }
+  .resources .resource-card-with-image { grid-column: 1 / -1; grid-template-columns: minmax(72px, .36fr) minmax(0, 1fr) auto; }
   .workshop-project-grid { grid-template-columns: 1fr; }
 }
 

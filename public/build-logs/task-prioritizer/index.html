@@ -28,7 +28,7 @@
     <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/theme.js" defer></script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Task Prioritizer: one decision at a time","description":"A build log for a small tool born from prioritization overload: compare two tasks and decide what matters more right now.","datePublished":"2026-10-08","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/task-prioritizer/","keywords":"prioritization, productivity, browser-tool"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Task Prioritizer: one decision at a time","description":"A build log for a small tool born from prioritization overload: compare two tasks and decide what matters more right now.","datePublished":"2026-10-08","dateModified":"2026-10-15","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/task-prioritizer/","keywords":"prioritization, productivity, browser-tool"}</script>
   </head>
   <body class="build-logs-site">
     <a class="skip-link" href="#content">Skip to content</a>
@@ -73,7 +73,7 @@
         <p class="build-log-side-label" id="checkpoint-title">Current checkpoint</p>
         <span class="status project-state project-state-in-use" title="Usable and mostly settled for now; it may be revisited later.">In use</span>
         <p class="build-log-status-note">Live browser tool</p>
-        <dl class="build-log-dates"><div><dt>Started</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div><div><dt>Updated</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div></dl>
+        <dl class="build-log-dates"><div><dt>Started</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div><div><dt>Updated</dt><dd><time datetime="2026-10-15">October 15, 2026</time></dd></div></dl>
       </div>
       <div class="build-log-current"><section class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">The build in brief</p><ul><li>Task Prioritizer started with a real prioritization problem at home, not a plan to make another productivity app.</li><li>When there are many tasks, comparing two at a time can be easier than trying to rank everything at once.</li><li>The tool asks which of two tasks matters more, turns those choices into an ordered list, and lets that list move into the LLM-supported workflow used to keep track of it.</li></ul></section></div>
     </section>
@@ -91,7 +91,7 @@
 <h2 id="a-small-tool-for-a-smaller-question">A small tool for a smaller question</h2>
 <p>The tool turns a pile of tasks into an ordered list by presenting two choices at a time. It does not promise to know what someone <em>should</em> do. It just gives the person a way to express the priorities they can see in the moment.</p>
 <p>That constraint is the point. The useful thing was not a complicated productivity system; it was reducing one overwhelming question into a sequence of manageable ones.</p>
-<figure class="photo"><img src="/images/build-logs/task-prioritizer/01-app-interface.png" width="672" height="690" alt="Task Prioritizer’s empty-list interface, showing bulk import and its explanation of local saving and export. Captured October 8, 2026." loading="lazy" /><figcaption>Task Prioritizer’s empty-list interface, showing bulk import and its explanation of local saving and export. Captured October 8, 2026.</figcaption></figure>
+<figure class="photo"><img src="/images/build-logs/task-prioritizer/01-app-interface.png" width="1265" height="983" alt="Task Prioritizer’s current light-mode interface, showing the empty task list, import controls, and ranking guidance. Captured October 15, 2026." loading="lazy" /><figcaption>Task Prioritizer’s current light-mode interface, showing the empty task list, import controls, and ranking guidance. Captured October 15, 2026.</figcaption></figure>
 <h2 id="the-organized-list-has-to-keep-moving">The organized list has to keep moving</h2>
 <p>Getting a list into order is only part of the job. My wife uses an LLM to help keep track of the list once it has been organized, so Task Prioritizer includes import and export rather than treating its result as a dead end.</p>
 <p>That keeps the tool focused on the decision it is good at—sorting a crowded list—while fitting into the process she already uses to maintain it.</p>

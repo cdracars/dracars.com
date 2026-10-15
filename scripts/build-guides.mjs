@@ -516,7 +516,7 @@ function guideCard(g) {
 }
 
 const RESOURCE_TOOLS = [
-  { name: "Task Prioritizer", description: "Turn a pile of tasks into an ordered list by choosing between two at a time.", url: "https://task-prioritizer.dracars.com/" },
+  { name: "Task Prioritizer", description: "Turn a pile of tasks into an ordered list by choosing between two at a time.", url: "https://task-prioritizer.dracars.com/", image: "/images/build-logs/task-prioritizer/01-app-interface-thumb.webp" },
   { name: "Stitch Shaper", description: "Calculate crochet increases and decreases to shape a row or round evenly.", url: "https://stitch-shaper.dracars.com/" },
   { name: "Local Screen Recorder", description: "Record a screen or window in your browser and save the video directly to your device.", url: "https://screen-recorder.dracars.com/" },
   { name: "TunePrint", description: "A browser-only companion for turning OrcaSlicer calibration results into settings you can save.", url: "https://tuneprint.dracars.com/", pageUrl: "/resources/tuneprint/" },
@@ -531,8 +531,8 @@ const RESOURCE_CODE = [
 ];
 
 function resourceCards(items) {
-  return items.map((item) => `<a class="resource-card" href="${escAttr(item.pageUrl ?? item.url)}"${item.pageUrl ? "" : ' target="_blank" rel="noreferrer"'}>
-  <span class="resource-card-copy"><span class="resource-card-title">${esc(item.name)}</span><span class="resource-card-description">${esc(item.description)}</span></span>
+  return items.map((item) => `<a class="resource-card${item.image ? " resource-card-with-image" : ""}" href="${escAttr(item.pageUrl ?? item.url)}"${item.pageUrl ? "" : ' target="_blank" rel="noreferrer"'}>
+  ${item.image ? `<img class="resource-card-image" src="${escAttr(item.image)}" width="800" height="414" alt="" loading="lazy" decoding="async" />` : ""}<span class="resource-card-copy"><span class="resource-card-title">${esc(item.name)}</span><span class="resource-card-description">${esc(item.description)}</span></span>
   <span class="resource-card-arrow" aria-hidden="true">${item.pageUrl ? "→" : "↗"}</span>
 </a>`).join("\n");
 }
