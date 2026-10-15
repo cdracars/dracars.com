@@ -539,6 +539,8 @@ html.theme-ready .theme-toggle { display: inline-flex; }
   :root:not([data-theme]) .workshop-status-operational { color: #7fd99c; }
   :root:not([data-theme]) .workshop-status-testing,
   :root:not([data-theme]) .workshop-status-planning { color: #f2c06b; }
+  :root:not([data-theme]) .workshop-status-troubleshooting { color: #ff8f86; }
+  :root:not([data-theme]) .workshop-status-experimental { color: #c4b3f0; }
   :root:not([data-theme]) .callout,
   :root:not([data-theme]) .guide-body code,
   :root:not([data-theme]) .guide-body pre,
@@ -584,6 +586,8 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 :root[data-theme="dark"] .workshop-status-operational { color: #7fd99c; }
 :root[data-theme="dark"] .workshop-status-testing,
 :root[data-theme="dark"] .workshop-status-planning { color: #f2c06b; }
+:root[data-theme="dark"] .workshop-status-troubleshooting { color: #ff8f86; }
+:root[data-theme="dark"] .workshop-status-experimental { color: #c4b3f0; }
 :root[data-theme="dark"] .callout,
 :root[data-theme="dark"] .guide-body code,
 :root[data-theme="dark"] .guide-body pre,
