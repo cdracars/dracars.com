@@ -1,7 +1,7 @@
 ---
 title: "Task Prioritizer: one decision at a time"
 slug: task-prioritizer
-description: "A build log for a small tool born from ADHD prioritization overload: compare two tasks and decide what matters more right now."
+description: "A build log for a small tool born from prioritization overload: compare two tasks and decide what matters more right now."
 publishedAt: 2026-10-08
 updatedAt: 2026-10-08
 indexImage: /images/build-logs/task-prioritizer/01-app-interface.png
@@ -10,7 +10,7 @@ category: tools-software
 status: current
 projectState: in-use
 statusNote: Live browser tool
-tags: [adhd, prioritization, productivity, browser-tool]
+tags: [prioritization, productivity, browser-tool]
 testedWith:
   - Pairwise task comparisons in Task Prioritizer
   - Importing and exporting organized task lists
@@ -25,7 +25,7 @@ affiliateLinksPresent: false
 
 ## The problem was too many tasks at once
 
-My wife has ADHD and asked for help with prioritization when there are many tasks competing for attention. Looking at a whole list and deciding its complete order was the hard part.
+My wife has trouble prioritizing when there are many tasks competing for attention, and she asked for help. Looking at a whole list and deciding its complete order was the hard part.
 
 Comparing two tasks was different. Which one is more important? Which one can she do? That is a smaller, more answerable decision. Task Prioritizer was built around that move rather than another scoring formula.
 
