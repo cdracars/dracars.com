@@ -10,7 +10,7 @@ purpose: Document the Box Turtle 1.1 and Longboi 1.0 build as it develops.
 status: building
 phase: Build in progress
 updatedAt: 2026-10-12
-statusNote: Status follows the supplied Workshop launch inventory; check the latest log for current build details.
+statusNote: See the latest Build Log entry for current build details.
 nextAction: Continue the build log with the next concrete hardware change.
 relatedLogs: [operation-gray-shell]
 focus:

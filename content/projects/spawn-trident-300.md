@@ -4,7 +4,7 @@ slug: spawn-trident-300
 launchGroup: planned
 launchOrder: 80
 featuredImage: /images/spawn-trident-concept.png
-featuredImageAlt: User-supplied concept render exploring a Spawn-inspired enclosed Voron build, with lime accents and a touchscreen.
+featuredImageAlt: Concept render exploring a Spawn-inspired enclosed Voron build, with lime accents and a touchscreen.
 imageFit: contain
 imageLabel: Planned concept · not a current build
 description: A planned three-Z Trident build with a Spawn-inspired direction; design and sourcing decisions are still ahead.

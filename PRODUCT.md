@@ -9,7 +9,8 @@ web
 ## Stack
 
 delegated: plain static HTML, CSS, and a small JavaScript enhancement layer;
-chosen for a simple, dependency-free Cloudflare Pages deployment.
+chosen for a simple, dependency-free deployment on Cloudflare Workers Static
+Assets (see `wrangler.jsonc`).
 
 ## Users
 
@@ -37,8 +38,9 @@ or desktop browser.
 
 ## Capabilities and Constraints
 
-- Static Cloudflare Pages site, source hosted in the public `cdracars/dracars.com` repository.
-- Featured links currently include Task Prioritizer, Stitch Shaper source, and Local Screen Recorder.
+- Static site on Cloudflare Workers Static Assets, source hosted in the public `cdracars/dracars.com` repository.
+- The homepage currently features TunePrint, STL to STEP for FreeCAD, SafeSync, and
+  Local Screen Recorder; `/resources/` lists the full set.
 - Ko-fi support destination: `https://ko-fi.com/cdracars66494`.
 - No invented testimonials, usage counts, commercial claims, analytics claims, or paid offerings.
 - Keep current tools and projects free to use. Add a distinct Shop section only
@@ -63,6 +65,8 @@ than changing the terms of existing tools.
   `https://stitch-shaper.dracars.com/`.
 - Local Screen Recorder: private, browser-only recording tool, live at
   `https://screen-recorder.dracars.com/`.
+- TunePrint: browser-only OrcaSlicer calibration companion, live at
+  `https://tuneprint.dracars.com/`.
 - GitHub profile: `https://github.com/cdracars`.
 
 ## Product Principles

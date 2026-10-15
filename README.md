@@ -24,11 +24,20 @@ affiliate links does not change these boundaries.
 ## Project structure
 
 ```text
-public/index.html   The public landing page
+public/index.html   The public landing page (managed header/footer blocks are generated)
 public/styles.css   Responsive visual system and interaction styles
-content/projects/  Persistent Workshop project records
-public/workshop/   Generated Workshop index and project pages
-scripts/site-chrome.mjs Shared header, GitHub corner, and footer markup
+public/theme.js     Light/dark theme toggle
+content/guides/     Guide sources
+content/build-logs/ Build Log sources
+content/projects/   Persistent Workshop project records
+content/resources/  Resource page sources
+public/guides/, public/build-logs/, public/workshop/, public/resources/,
+public/404.html, public/sitemap.xml
+                    Generated output; rebuild instead of editing
+scripts/build-guides.mjs     Site builder (guides, logs, projects, resources, sitemap)
+scripts/figures.mjs          Registered guide figures
+scripts/site-chrome.mjs      Shared header, GitHub corner, and footer markup
+scripts/check-site-chrome.mjs Verifies generated pages carry current shared chrome
 PRODUCT.md          Durable site purpose and constraints
 DESIGN.md           Approved visual direction
 BUILD-LOGS.md       Evidence, voice, image, and update guidance for project journals
@@ -54,8 +63,9 @@ HTML under `public/` with a dependency-free script:
 node scripts/build-guides.mjs
 ```
 
-Commit the generated `public/guides/` and `public/sitemap.xml` along with the
-source. The same build refreshes the managed header/footer blocks in
+Commit the generated `public/guides/`, `public/build-logs/`, `public/workshop/`,
+`public/resources/`, `public/404.html`, and `public/sitemap.xml` along with the
+source, then run `node scripts/check-site-chrome.mjs`. The same build refreshes the managed header/footer blocks in
 `public/index.html`; include that file when shared chrome changes. Edit shared
 markup in `scripts/site-chrome.mjs` and styling in `public/styles.css`, rather
 than editing the homepage's `site-header` / `site-footer` comment blocks.
@@ -100,7 +110,9 @@ PNG/JPEG for the homepage preview, falling back to the branded image for other
 formats. Generated project pages use their
 `featuredImage`; guides and build logs use `heroImage` or `indexImage` when it is
 a PNG or JPEG. Pages without a supported image use the branded fallback,
-`public/social-preview.png` (1200 × 630). Guide and build log titles,
+`public/social-preview.png` (1200 × 630). When a PNG/JPEG project image has a
+same-named `.webp` beside it, pages display the WebP and keep the original for
+social previews. Guide and build log titles,
 descriptions, and image fields come from their content frontmatter. Run
 `node scripts/build-guides.mjs` after changing those sources so the published
 HTML stays in sync. The build publishes a content-hashed filename for the
@@ -163,4 +175,5 @@ continued upkeep on [Ko-fi](https://ko-fi.com/cdracars66494).
 
 ## License
 
-[MIT](LICENSE)
+See [Licensing](#licensing): MIT covers only the code and configuration listed in
+[LICENSE-SCOPE.md](LICENSE-SCOPE.md); content and brand assets are reserved.
