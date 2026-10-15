@@ -10,7 +10,7 @@ purpose: Track reliability work and troubleshooting on the SV08 over time.
 status: operational
 statusLabel: Stable
 phase: Stable; reliability checks as needed
-updatedAt: 2026-10-13
+updatedAt: 2026-10-15
 statusNote: Stable and operational as of October 13, 2026; older reliability checks remain documented for follow-up if symptoms return.
 nextAction: Record which reliability checks are routine and revisit them if symptoms return.
 equipment:
@@ -30,6 +30,6 @@ focus:
   - Planned Cartographer probe and bed-tension modification
 ---
 
-My machine notes for Hoss, last updated October 12, 2026, describe an SV08 350 running mainline Klipper, with its enclosure, camera, adaptive bed mesh, QGL, and input shaping in place. A read-only check that day found Klipper and Moonraker active and captured the live configuration. As of October 13, Hoss is working again. The particular repair and whether the monitored Z, gantry, and bed-positioning issues were addressed have not been recorded yet.
+My machine notes for Hoss, last updated October 12, 2026, describe an SV08 350 running mainline Klipper, with its enclosure, camera, adaptive bed mesh, QGL, and input shaping in place. A read-only check that day found Klipper and Moonraker active and captured the live configuration. As of October 13, Hoss is working again. I don't remember the particular repair, and whether the monitored Z, gantry, and bed-positioning issues were addressed is not recorded.
 
 I keep resolved setup faults separate from issues to monitor. Earlier fixes include a bad hotend thermistor setting that caused brittle prints, probe points that could drive the nozzle into the bed, and a startup macro that referenced a chamber sensor not present in the live configuration. Z1 resets, possible 24 V rail instability, overnight gantry sag, and a shifting PEI sheet remain documented monitor items. I haven't recorded whether those symptoms have come back since their last entries, so they're listed as checks rather than current failures.
