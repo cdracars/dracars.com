@@ -11,7 +11,7 @@ status: operational
 statusLabel: Stable
 phase: Stable; 3MS work remains on hold
 updatedAt: 2026-10-13
-statusNote: Cody confirmed Sam is stable and operational on October 13, 2026; the 3MS project remains on hold while AFC compatibility is explored.
+statusNote: Stable and operational as of October 13, 2026; the 3MS project remains on hold while I explore AFC compatibility.
 nextAction: Explore whether the 3MS can work with AFC, then document the compatibility path before resuming the project.
 equipment:
   - Standard Sovol SV06 Plus (not the ACE), running Klipper with a BTT Pi V1.2, Mainsail, and Moonraker.
@@ -30,6 +30,6 @@ focus:
   - Toolhead experiments
 ---
 
-Sam's 3DBrain record, last updated October 12, 2026, describes the printer as fully operational and used for large-format and batch work. It records Klipper on a BTT Pi V1.2, Mainsail and Moonraker, and a Logitech C270 mounted on the Z gantry. Cody confirmed on October 13 that the 3MS work is on hold while he explores making it compatible with AFC instead of Happy Hare. The 3MS is not presented as an active, working integration.
+My machine notes for Sam, last updated October 12, 2026, describes the printer as fully operational and used for large-format and batch work. It records Klipper on a BTT Pi V1.2, Mainsail and Moonraker, and a Logitech C270 mounted on the Z gantry. As of October 13, the 3MS work is on hold while I explore making it compatible with AFC instead of Happy Hare. The 3MS is not presented as an active, working integration.
 
 The notes also record a resolved January 2025 jam caused by a loose nozzle mounting screw and loose toolhead-board cables, and a March 2025 test print with a layer shift high in the print. The latter's cause remains uncertain. Input shaping is marked stale after the Pi and camera were added to the moving gantry, and the frame-bracing work is still a plan. The project page tracks those machine constraints alongside the TPU and multi-material workflow.

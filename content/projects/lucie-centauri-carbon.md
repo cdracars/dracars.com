@@ -11,7 +11,7 @@ status: operational
 statusLabel: Stable
 phase: Established machine
 updatedAt: 2026-10-13
-statusNote: Cody confirmed Lucie is stable and operational on October 13, 2026.
+statusNote: Stable and operational as of October 13, 2026.
 nextAction: Add configuration notes as they are documented.
 equipment:
   - Centauri Carbon, named Lucie; additional configuration details are not yet recorded here.
@@ -20,4 +20,4 @@ focus:
   - Configuration notes as they are documented
 ---
 
-Lucie is the Elegoo Centauri Carbon on the bottom shelf in the photo. Cody confirmed the machine is stable and operational on October 13, 2026. This page keeps the machine in the established lineup; configuration details can be added as they are recorded.
+Lucie is the Elegoo Centauri Carbon on the bottom shelf in the photo. The machine is stable and operational as of October 13, 2026. This page keeps the machine in the established lineup; configuration details can be added as they are recorded.

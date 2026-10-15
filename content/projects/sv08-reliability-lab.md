@@ -11,7 +11,7 @@ status: operational
 statusLabel: Stable
 phase: Stable; reliability checks as needed
 updatedAt: 2026-10-13
-statusNote: Cody confirmed Hoss is stable and operational on October 13, 2026; older reliability checks remain documented for follow-up if symptoms return.
+statusNote: Stable and operational as of October 13, 2026; older reliability checks remain documented for follow-up if symptoms return.
 nextAction: Record which reliability checks are routine and revisit them if symptoms return.
 equipment:
   - Sovol SV08 350 mm CoreXY with mainline Klipper, Mainsail, Moonraker, stock SV08 control board, Raspberry Pi, and stock planetary direct-drive extruder.
@@ -29,6 +29,6 @@ focus:
   - Camera and wiring concerns
 ---
 
-Hoss's 3DBrain record, last updated October 12, 2026, describes an SV08 350 running mainline Klipper, with its enclosure, camera, adaptive bed mesh, QGL, and input shaping in place. A read-only check that day found Klipper and Moonraker active and captured the live configuration. Cody confirmed on October 13 that Hoss is working again. The particular repair and whether the monitored Z, gantry, and bed-positioning issues were addressed have not been recorded yet.
+My machine notes for Hoss, last updated October 12, 2026, describes an SV08 350 running mainline Klipper, with its enclosure, camera, adaptive bed mesh, QGL, and input shaping in place. A read-only check that day found Klipper and Moonraker active and captured the live configuration. As of October 13, Hoss is working again. The particular repair and whether the monitored Z, gantry, and bed-positioning issues were addressed have not been recorded yet.
 
 The records separate resolved setup faults from issues to monitor. Earlier fixes include a bad hotend thermistor setting that caused brittle prints, probe points that could drive the nozzle into the bed, and a startup macro that referenced a chamber sensor not present in the live configuration. Z1 resets, possible 24 V rail instability, overnight gantry sag, and a shifting PEI sheet remain documented monitor items. The notes do not say whether those symptoms have recurred since their last entries, so this page tracks them as checks rather than current failures.

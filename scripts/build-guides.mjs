@@ -276,7 +276,15 @@ function freshness(g, today = new Date()) {
 
 const catName = (slug) => CATEGORIES.find((c) => c.slug === slug).name;
 
-function page({ title, description, path, body, jsonld, type = "website", bodyClass = "guides", image, imageAlt }) {
+// Serve a same-named WebP beside a PNG/JPEG when one exists. The original stays
+// the social-preview image, since crawler WebP support is uneven.
+function displayImage(src) {
+  if (!src || !/\.(?:png|jpe?g)$/i.test(src)) return src;
+  const webp = src.replace(/\.(?:png|jpe?g)$/i, ".webp");
+  return existsSync(join(PUBLIC, webp.slice(1))) ? webp : src;
+}
+
+function page({ title, description, path, body, jsonld, type = "website", bodyClass = "guides", image, imageAlt, noindex = false }) {
   const url = SITE + path;
   // Social crawlers have uneven format support. Prefer declared PNG/JPEG page art;
   // keep the branded card when a page only has WebP/SVG artwork.
@@ -293,7 +301,7 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${esc(title)}</title>
     <meta name="description" content="${escAttr(description)}" />
-    <link rel="canonical" href="${url}" />
+    ${noindex ? `<meta name="robots" content="noindex" />` : `<link rel="canonical" href="${url}" />`}
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
     <script>try{const t=localStorage.getItem('dracars-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
@@ -356,7 +364,7 @@ function projectCard(project, logs = []) {
   const imageLog = (project.relatedLogs ?? []).map((slug) => logs.find((log) => log.slug === slug)).find((log) => log?.indexImage);
   const imageSrc = project.featuredImage ?? imageLog?.indexImage;
   const imageAlt = project.featuredImage ? project.featuredImageAlt : "";
-  const image = imageSrc ? `<div class="workshop-project-visual${project.imageFit === "contain" ? " workshop-project-visual-contained" : ""}"><img class="workshop-project-image${project.imageFit === "contain" ? " workshop-project-image-contain" : ""}" src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" loading="eager" decoding="async" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
+  const image = imageSrc ? `<div class="workshop-project-visual${project.imageFit === "contain" ? " workshop-project-visual-contained" : ""}"><img class="workshop-project-image${project.imageFit === "contain" ? " workshop-project-image-contain" : ""}" src="${escAttr(displayImage(imageSrc))}" alt="${escAttr(imageAlt)}" loading="eager" decoding="async" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
   return `<a class="workshop-project-link" href="/workshop/${project.slug}/">
     ${image}
     <span class="workshop-project-copy"><span class="guide-card-meta">${badge}<span>${esc(project.phase)}</span></span><span class="workshop-project-title">${esc(project.title)}</span><span class="guide-card-desc">${esc(project.description)}</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
@@ -369,7 +377,7 @@ function featuredProjectPanel(project, logs, guides) {
   const relatedGuide = (project.relatedGuides ?? []).map((slug) => guides.find((guide) => guide.slug === slug)).find(Boolean);
   const imageSrc = project.featuredImage ?? relatedLog?.indexImage;
   const imageAlt = project.featuredImage ? project.featuredImageAlt : "";
-  const image = imageSrc ? `<div class="featured-project-image"><img src="${escAttr(imageSrc)}" alt="${escAttr(imageAlt)}" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
+  const image = imageSrc ? `<div class="featured-project-image"><img src="${escAttr(displayImage(imageSrc))}" alt="${escAttr(imageAlt)}" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
   const statusNote = project.statusNote ? `<p class="featured-project-note">${esc(project.statusNote)}</p>` : "";
   return `<section class="featured-project" aria-labelledby="featured-project-title">
     <div class="featured-project-copy"><div class="featured-project-heading"><h2 id="featured-project-title"><a href="/workshop/${project.slug}/">${esc(project.title)}</a></h2><p>${esc(project.description)}</p></div>
@@ -450,7 +458,7 @@ function projectPage(project, allProjects, logs, guides) {
         <p class="crumbs"><a href="/workshop/">Workshop</a> ${parent ? `<span aria-hidden="true">/</span> <a href="/workshop/${parent.slug}/">${esc(parent.title)}</a>` : ""} <span aria-hidden="true">/</span> Project</p>
         <header class="workshop-project-header"><div><h1 id="page-title">${esc(project.title)}</h1><p class="guide-deck">${esc(project.purpose)}</p></div><div class="workshop-project-meta">${stateBadge}<p class="workshop-updated">Status last recorded <time datetime="${project.updatedAt}">${fmtDate(project.updatedAt)}</time></p>${project.statusNote ? `<p class="workshop-updated">${esc(project.statusNote)}</p>` : ""}</div></header>
         <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>${esc(project.description)}</p><p class="project-next"><strong>Next action</strong>${esc(project.nextAction)}</p></div><div class="project-current-phase"><span>Current phase</span><strong>${esc(project.phase)}</strong></div></section>
-        ${project.featuredImage ? `<div class="featured-project-image project-featured-image${project.imageFit === "contain" ? " project-featured-image-contain" : ""}"><img src="${escAttr(project.featuredImage)}" alt="${escAttr(project.featuredImageAlt ?? "")}" loading="lazy" decoding="async" /></div>` : ""}
+        ${project.featuredImage ? `<div class="featured-project-image project-featured-image${project.imageFit === "contain" ? " project-featured-image-contain" : ""}"><img src="${escAttr(displayImage(project.featuredImage))}" alt="${escAttr(project.featuredImageAlt ?? "")}" loading="lazy" decoding="async" /></div>` : ""}
         ${detailSections ? `<div class="project-detail-grid">${detailSections}</div>` : ""}
         ${project.html ? `<section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body">${project.html}</div></section>` : ""}
         ${workstreams}
@@ -809,7 +817,7 @@ writeFileSync(homePath, home);
 const featuredProject = projects.find((project) => project.launchGroup === "featured");
 const homeWorkshop = `      <section class="home-workshop" id="workshop-home" aria-labelledby="home-workshop-heading">
         <div class="home-workshop-heading"><p class="home-workshop-label">Currently building</p><h2 id="home-workshop-heading">${esc(featuredProject.title)}</h2><p>${esc(featuredProject.purpose)}</p><a class="home-action-primary" href="/workshop/${featuredProject.slug}/">Open the Resin Workshop <span aria-hidden="true">→</span></a></div>
-        <div class="home-workshop-image"><img src="${esc(featuredProject.featuredImage)}" alt="" loading="lazy" decoding="async" /></div>
+        <div class="home-workshop-image"><img src="${esc(displayImage(featuredProject.featuredImage))}" alt="" loading="lazy" decoding="async" /></div>
         <ul class="home-workshop-points"><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3m-2.6-6.4-2.1 2.1M7.7 16.3l-2.1 2.1m12.8 0-2.1-2.1M7.7 7.7 5.6 5.6"/><circle cx="12" cy="12" r="5"/></svg></span><div><strong>Current status</strong><p>${esc(featuredProject.statusLabel ?? WORKSHOP_STATES[featuredProject.status])}</p></div></li><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5m-18 5 9 5 9-5"/></svg></span><div><strong>Current phase</strong><p>${esc(featuredProject.phase)}</p></div></li><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><div><strong>Next step</strong><p>${esc(featuredProject.nextAction)}</p></div></li></ul>
       </section>`;
 const homeStart = "      <!-- home-workshop:start -->";
@@ -876,6 +884,18 @@ for (const g of guides) {
   mkdirSync(join(OUT, g.slug), { recursive: true });
   writeFileSync(join(OUT, g.slug, "index.html"), guidePage(g, guides));
 }
+writeFileSync(join(PUBLIC, "404.html"), page({
+  title: "Page not found — Dracars",
+  description: "This page doesn't exist on dracars.com.",
+  path: "/404",
+  noindex: true,
+  jsonld: { "@context": "https://schema.org", "@type": "WebPage", name: "Page not found" },
+  body: `      <section class="guides-hero" aria-labelledby="page-title">
+        <h1 id="page-title">Not found.</h1>
+        <p class="hero-intro">That page isn't here. It may have moved, or the link may be mistyped.</p>
+        <p><a class="text-link" href="/">Go to the homepage</a> · <a class="text-link" href="/workshop/">Workshop</a> · <a class="text-link" href="/build-logs/">Build Logs</a> · <a class="text-link" href="/guides/">Guides</a></p>
+      </section>`,
+}));
 mkdirSync(RESOURCE_OUT, { recursive: true });
 writeFileSync(join(RESOURCE_OUT, "index.html"), resourceIndexPage());
 mkdirSync(join(RESOURCE_OUT, "tuneprint"), { recursive: true });
