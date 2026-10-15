@@ -118,9 +118,10 @@ function renderBlocks(lines, ctx) {
       const [kind, label] = [container[1], container[2]];
       if (kind === "tldr") ctx.hasTldr = true;
       const heading = label ? `<p class="callout-label">${inline(label, ctx)}</p>` : "";
-      out.push(`<aside class="callout callout-${kind}"${kind === "tldr" ? ' id="tldr" aria-labelledby="tldr-label"' : ""}>${
+      const tag = kind === "tldr" ? "section" : "aside";
+      out.push(`<${tag} class="callout callout-${kind}"${kind === "tldr" ? ' id="tldr" aria-labelledby="tldr-label"' : ""}>${
         kind === "tldr" ? `<p class="callout-label" id="tldr-label">${inline(label, ctx)}</p>` : heading
-      }${renderBlocks(inner, ctx)}</aside>`);
+      }${renderBlocks(inner, ctx)}</${tag}>`);
       continue;
     }
 
@@ -340,7 +341,7 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
     ${noindex ? `<meta name="robots" content="noindex" />` : `<link rel="canonical" href="${url}" />`}
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
-    <script>try{const t=localStorage.getItem('dracars-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
+    <script src="/theme-init.js"></script>
     <meta property="og:type" content="${type}" />
     <meta property="og:site_name" content="Dracars" />
     <meta property="og:url" content="${url}" />
@@ -402,7 +403,7 @@ function projectCard(project, logs = []) {
   const image = imageSrc ? `<div class="workshop-project-visual${project.imageFit === "contain" ? " workshop-project-visual-contained" : ""}"><img class="workshop-project-image${project.imageFit === "contain" ? " workshop-project-image-contain" : ""}" ${imgAttrs(imageSrc, { thumb: true })} alt="${escAttr(imageAlt)}" loading="eager" decoding="async" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
   return `<a class="workshop-project-link" href="/workshop/${project.slug}/">
     ${image}
-    <span class="workshop-project-copy"><span class="guide-card-meta">${badge}<span>${esc(project.phase)}</span></span><span class="workshop-project-title">${esc(project.title)}</span><span class="guide-card-desc">${esc(project.description)}</span><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></span>
+    <span class="workshop-project-copy"><span class="guide-card-meta">${badge}<span>${esc(project.phase)}</span></span><span class="workshop-project-title">${esc(project.title)}</span><span class="guide-card-desc">${esc(project.description)}</span><span class="workshop-open">Open project <span aria-hidden="true">→</span></span></span>
   </a>`;
 }
 
@@ -455,8 +456,8 @@ function workshopPage(projects, logs, guides) {
       ${established.length ? `<section class="workshop-section" aria-labelledby="established-projects-heading"><div class="workshop-section-heading"><h2 id="established-projects-heading">Established machines</h2></div><div class="workshop-project-grid">${established.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
       ${planned.length ? `<section class="workshop-section" aria-labelledby="planned-projects-heading"><div class="workshop-section-heading"><h2 id="planned-projects-heading">Planned</h2><p>Visible as a plan, not presented as an active build.</p></div><div class="workshop-project-grid">${planned.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
       ${past.length ? `<section class="workshop-section" aria-labelledby="past-projects-heading"><div class="workshop-section-heading"><h2 id="past-projects-heading">Past machines</h2><p>Machines that left the shop, kept here for their configuration and history.</p></div><div class="workshop-project-grid">${past.map((project) => projectCard(project, logs)).join("\n")}</div></section>` : ""}
-      ${knowledgeSteps.length || recentLogs.length ? `<div class="workshop-reference-grid">${knowledgeSteps.length ? `<section class="workshop-section workshop-knowledge" aria-labelledby="knowledge-heading"><div class="workshop-section-heading"><h2 id="knowledge-heading">From build to lasting knowledge</h2><a href="/guides/">All guides <span aria-hidden="true">↗</span></a></div><ol class="workshop-knowledge-list">${knowledgeSteps.map((step) => `<li><h3>${esc(step.heading)}</h3><a href="${escAttr(step.href)}">${esc(step.title)}</a><p>${esc(step.note)}</p></li>`).join("\n")}</ol></section>` : ""}
-      ${recentLogs.length ? `<section class="workshop-section" aria-labelledby="recent-logs-heading"><div class="workshop-section-heading"><h2 id="recent-logs-heading">Recent Build Logs</h2><a href="/build-logs/">All Build Logs <span aria-hidden="true">↗</span></a></div><div class="workshop-activity-list">${recentLogs.map((log) => `<a href="/build-logs/${log.slug}/"><time datetime="${log.updatedAt}">${fmtDate(log.updatedAt)}</time><span>${esc(log.title)}</span><span class="activity-arrow" aria-hidden="true">↗</span></a>`).join("\n")}</div></section>` : ""}</div>` : ""}
+      ${knowledgeSteps.length || recentLogs.length ? `<div class="workshop-reference-grid">${knowledgeSteps.length ? `<section class="workshop-section workshop-knowledge" aria-labelledby="knowledge-heading"><div class="workshop-section-heading"><h2 id="knowledge-heading">From build to lasting knowledge</h2><a href="/guides/">All guides <span aria-hidden="true">→</span></a></div><ol class="workshop-knowledge-list">${knowledgeSteps.map((step) => `<li><h3>${esc(step.heading)}</h3><a href="${escAttr(step.href)}">${esc(step.title)}</a><p>${esc(step.note)}</p></li>`).join("\n")}</ol></section>` : ""}
+      ${recentLogs.length ? `<section class="workshop-section" aria-labelledby="recent-logs-heading"><div class="workshop-section-heading"><h2 id="recent-logs-heading">Recent Build Logs</h2><a href="/build-logs/">All Build Logs <span aria-hidden="true">→</span></a></div><div class="workshop-activity-list">${recentLogs.map((log) => `<a href="/build-logs/${log.slug}/"><time datetime="${log.updatedAt}">${fmtDate(log.updatedAt)}</time><span>${esc(log.title)}</span><span class="activity-arrow" aria-hidden="true">→</span></a>`).join("\n")}</div></section>` : ""}</div>` : ""}
       <section class="workshop-section workshop-shelf" id="on-the-shelf" aria-labelledby="shelved-projects-heading"><details><summary id="shelved-projects-heading">On the shelf <span>${shelvedItems.length} parked topics</span></summary><p>Older machines and ideas kept for reference. These are not active Workshop projects.</p><ul>${shelvedItems.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></details></section>
       `;
   return page({
@@ -486,11 +487,11 @@ function projectPage(project, allProjects, logs, guides) {
   ].filter(Boolean).join("\n");
   const workstreams = project.workstreams.length ? `<section class="workshop-related" aria-labelledby="workstreams-heading"><h2 id="workstreams-heading">Workstreams</h2><div class="workshop-project-list">${project.workstreams.map((item) => {
     const [label, slug, state = "In scope"] = item.split("|").map((value) => value.trim());
-    return slug && allProjects.some((p) => p.slug === slug) ? `<a class="workshop-project-link" href="/workshop/${escAttr(slug)}/"><div><h3>${esc(label)}</h3><p class="guide-card-desc">${esc(state)}</p></div><span class="workshop-open">Open project <span aria-hidden="true">↗</span></span></a>` : `<div class="workshop-project-link"><div><h3>${esc(label)}</h3><p class="guide-card-desc">${esc(state)}</p></div></div>`;
+    return slug && allProjects.some((p) => p.slug === slug) ? `<a class="workshop-project-link" href="/workshop/${escAttr(slug)}/"><div><h3>${esc(label)}</h3><p class="guide-card-desc">${esc(state)}</p></div><span class="workshop-open">Open project <span aria-hidden="true">→</span></span></a>` : `<div class="workshop-project-link"><div><h3>${esc(label)}</h3><p class="guide-card-desc">${esc(state)}</p></div></div>`;
   }).join("")}</div></section>` : "";
   const childProjects = (project.relatedProjects ?? []).map((slug) => allProjects.find((item) => item.slug === slug)).filter(Boolean);
   const body = `      <article class="workshop-project" aria-labelledby="page-title">
-        <p class="crumbs"><a href="/workshop/">Workshop</a> ${parent ? `<span aria-hidden="true">/</span> <a href="/workshop/${parent.slug}/">${esc(parent.title)}</a>` : ""} <span aria-hidden="true">/</span> Project</p>
+        <p class="crumbs"><a href="/workshop/">Workshop</a> ${parent ? `<span aria-hidden="true">/</span> <a href="/workshop/${parent.slug}/">${esc(parent.title)}</a>` : ""} <span aria-hidden="true">/</span> <span aria-current="page">${esc(project.title)}</span></p>
         <header class="workshop-project-header"><div><h1 id="page-title">${esc(project.title)}</h1><p class="guide-deck">${esc(project.purpose)}</p></div><div class="workshop-project-meta">${stateBadge}<p class="workshop-updated">Status last recorded <time datetime="${project.updatedAt}">${fmtDate(project.updatedAt)}</time></p>${project.statusNote ? `<p class="workshop-updated">${esc(project.statusNote)}</p>` : ""}</div></header>
         <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>${esc(project.description)}</p><p class="project-next"><strong>Next action</strong>${esc(project.nextAction)}</p></div><div class="project-current-phase"><span>Current phase</span><strong>${esc(project.phase)}</strong></div></section>
         ${project.featuredImage ? `<div class="featured-project-image project-featured-image${project.imageFit === "contain" ? " project-featured-image-contain" : ""}"><img ${imgAttrs(project.featuredImage)} alt="${escAttr(project.featuredImageAlt ?? "")}" loading="lazy" decoding="async" /></div>` : ""}
@@ -498,7 +499,7 @@ function projectPage(project, allProjects, logs, guides) {
         ${project.html ? `<section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body">${project.html}</div></section>` : ""}
         ${workstreams}
         ${childProjects.length ? `<section class="workshop-related" aria-labelledby="related-projects-heading"><h2 id="related-projects-heading">Related projects</h2><div class="workshop-project-list">${childProjects.map(projectCard).join("")}</div></section>` : ""}
-        ${relatedLogs.length ? `<section class="workshop-related" aria-labelledby="project-logs-heading"><div class="workshop-section-heading"><h2 id="project-logs-heading">Build Logs</h2><p>The dated story behind this current picture.</p></div><div class="workshop-activity-list">${relatedLogs.map((log) => `<a href="/build-logs/${log.slug}/"><time datetime="${log.updatedAt}">${fmtDate(log.updatedAt)}</time><span>${esc(log.title)}</span><span class="activity-arrow" aria-hidden="true">↗</span></a>`).join("\n")}</div></section>` : ""}
+        ${relatedLogs.length ? `<section class="workshop-related" aria-labelledby="project-logs-heading"><div class="workshop-section-heading"><h2 id="project-logs-heading">Build Logs</h2><p>The dated story behind this current picture.</p></div><div class="workshop-activity-list">${relatedLogs.map((log) => `<a href="/build-logs/${log.slug}/"><time datetime="${log.updatedAt}">${fmtDate(log.updatedAt)}</time><span>${esc(log.title)}</span><span class="activity-arrow" aria-hidden="true">→</span></a>`).join("\n")}</div></section>` : ""}
         ${relatedGuides.length ? `<section class="workshop-related" aria-labelledby="project-guides-heading"><h2 id="project-guides-heading">Guides from this project</h2><div class="workshop-guide-list">${relatedGuides.map((guide) => `<a href="/guides/${guide.slug}/"><span>${esc(guide.title)}</span>${statusBadge(freshness(guide))}</a>`).join("\n")}</div></section>` : ""}
       </article>`;
   return page({ title: `${project.title} — Dracars Workshop`, description: project.description, path, body, bodyClass: "workshop", image: project.featuredImage, imageAlt: project.featuredImageAlt, jsonld: { "@context": "https://schema.org", "@type": "CreativeWork", name: project.title, description: project.description, dateModified: project.updatedAt, url: SITE + path, author: { "@type": "Person", name: "Cody Dracars", url: SITE + "/" } } });
@@ -532,7 +533,7 @@ const RESOURCE_CODE = [
 function resourceCards(items) {
   return items.map((item) => `<a class="resource-card" href="${escAttr(item.pageUrl ?? item.url)}"${item.pageUrl ? "" : ' target="_blank" rel="noreferrer"'}>
   <span class="resource-card-copy"><span class="resource-card-title">${esc(item.name)}</span><span class="resource-card-description">${esc(item.description)}</span></span>
-  <span class="resource-card-arrow" aria-hidden="true">↗</span>
+  <span class="resource-card-arrow" aria-hidden="true">${item.pageUrl ? "→" : "↗"}</span>
 </a>`).join("\n");
 }
 
@@ -673,7 +674,7 @@ function buildLogStory(html) {
 function buildLogPage(g, all) {
   const articlePath = `/build-logs/${g.slug}/`;
   const projectHref = g.project ? `/workshop/${g.project}/` : "/workshop/";
-  const intro = g.html.match(/<aside class="callout callout-tldr"[\s\S]*?<\/aside>/)?.[0] ?? "";
+  const intro = g.html.match(/<section class="callout callout-tldr"[\s\S]*?<\/section>/)?.[0] ?? "";
   const story = buildLogStory(intro ? g.html.replace(intro, "") : g.html);
   const contents = [...story.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>|<h3 id="(update-\d{4}-\d{2}-\d{2}-[^"]+)">([\s\S]*?)<\/h3>/g)]
     .map(([, h2Id, h2Label, updateId, updateLabel]) => `<li><a href="#${escAttr(h2Id ?? updateId)}">${h2Label ?? updateLabel}</a></li>`)
@@ -698,11 +699,11 @@ function buildLogPage(g, all) {
     </details>` : "";
   const body = `      <article class="build-log">
         <header class="build-log-masthead">
-          <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> <a href="${projectHref}">${g.project ? "Project" : "Workshop"}</a></p>
+          <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> <a href="${projectHref}">${esc(allProjects.find((p) => p.slug === g.project)?.title ?? "Workshop")}</a></p>
           <p class="build-log-kicker">Project journal <span aria-hidden="true">·</span> ${esc(catName(g.category))}</p>
           <h1>${esc(g.title)}</h1>
         <p class="guide-deck">${esc(g.description)}</p>
-        <p class="build-log-project-link">This is the dated story. <a href="${projectHref}">${g.project ? "See the project's current picture" : "Browse Workshop projects"} <span aria-hidden="true">↗</span></a></p>
+        <p class="build-log-project-link">This is the dated story. <a href="${projectHref}">${g.project ? "See the project's current picture" : "Browse Workshop projects"} <span aria-hidden="true">→</span></a></p>
         </header>
         ${snapshot}
         ${g.affiliateLinksPresent ? `        <p class="disclosure">${esc(AFFILIATE_DISCLOSURE)}</p>\n` : ""}
@@ -807,7 +808,7 @@ function buildLogIndexPage(logs) {
       </section>
 
       <section aria-labelledby="logs-h" class="all-guides">
-        <h2 id="logs-h" class="section-label">Project status</h2>
+        <h2 id="logs-h" class="section-label">All Build Logs</h2>
         <div class="guide-grid">${cards}</div>
       </section>`;
   return page({
