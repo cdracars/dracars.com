@@ -71,9 +71,10 @@ source, then run `node scripts/check-site-chrome.mjs` and
 `node scripts/check-content.mjs origin/main`. The **Site checks** GitHub
 workflow runs the same steps on every pull request and fails if `public/` is out
 of date, if published content contains internal-note phrasing (for example
-"Cody confirmed" or "3DBrain"), or if a project's status fields change without
-moving `updatedAt`. Other content edits that keep the old date only warn, since
-typo fixes should not change a page's date. The same build refreshes the managed header/footer blocks in
+"Cody confirmed" or "3DBrain"), or if a project's status fields change while its
+`updatedAt` is older than the commit that changed them. Other content edits in
+that situation only warn, since typo fixes should not change a page's date; a
+same-day update to a page already dated today passes. The same build refreshes the managed header/footer blocks in
 `public/index.html`; include that file when shared chrome changes. Edit shared
 markup in `scripts/site-chrome.mjs` and styling in `public/styles.css`, rather
 than editing the homepage's `site-header` / `site-footer` comment blocks.
