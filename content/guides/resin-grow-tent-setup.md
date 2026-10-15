@@ -38,7 +38,7 @@ I'm keeping the working notes in the [resin workspace build log](/build-logs/res
 
 ## What has to be true before it's published
 
-- the exhaust is built and smoke-tested at the tent seams with incense
+- the exhaust is built and smoke-tested at the tent seams with incense, with all IPA and resin sealed and out of the tent first, since IPA vapor is flammable
 - ten good prints across both printers
 - the dirty-to-clean IPA workflow used at least three times
 - a month without a mess escaping the tent
