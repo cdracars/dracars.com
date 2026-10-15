@@ -719,7 +719,7 @@ function indexPage(guides) {
           <p class="guide-card-meta"><span>${esc(catName(featured.category))}</span> ${statusBadge(ff)}</p>
           <h3>${esc(featured.title)}</h3>
           <p class="guide-card-desc">${esc(featured.description)}</p>
-          <div class="featured-card-footer"><span class="guide-card-updated">Updated <time datetime="${featured.updatedAt}">${fmtDate(featured.updatedAt)}</time></span><span class="guide-read">Read the guide <span aria-hidden="true">↗</span></span></div>
+          <div class="featured-card-footer"><span class="guide-card-updated">Updated <time datetime="${featured.updatedAt}">${fmtDate(featured.updatedAt)}</time></span><span class="guide-read">${featured.status === "coming-soon" ? "See what’s planned" : "Read the guide"} <span aria-hidden="true">→</span></span></div>
         </a>
       </section>
 

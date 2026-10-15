@@ -4,7 +4,7 @@ slug: saturn-4-ultra
 launchGroup: child
 launchOrder: 20
 parentProject: resin-workshop
-description: The Saturn is in the garage tent; it was traded for Pam (Prusa MK4S) with an Anycubic Photon P1 on October 9, 2026. Setup checks and cleanup workflow remain.
+description: The Saturn came with an Anycubic Photon P1 in an October 2026 trade for Pam (Prusa MK4S) and now sits in the garage tent. Setup checks and cleanup workflow remain.
 purpose: Develop a repeatable resin-printing setup around the Saturn 4 Ultra, including the workspace, calibration, washing, curing, and cleanup.
 status: building
 statusLabel: Building / Testing
