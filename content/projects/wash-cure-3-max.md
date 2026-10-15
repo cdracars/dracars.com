@@ -11,13 +11,13 @@ purpose: Find out whether the Wash & Cure works, then set up the dirty and clean
 status: troubleshooting
 statusLabel: Needs diagnosis
 phase: Not yet diagnosed
-updatedAt: 2026-10-12
+updatedAt: 2026-10-15
 nextAction: Inspect the cured resin in the lines and check whether the wash and cure functions work before relying on the station.
 equipment:
   - Anycubic Wash & Cure 3 Max (powers on and lights its display; wash and cure function unconfirmed; cured resin in the lines)
   - 45 oz pickle jars, planned for dirty-wash storage
 problems:
-  - There is cured resin in the lines, and I have not inspected it yet.
+  - There is cured resin in the lines. I have not opened the station to inspect it yet.
   - Neither the wash nor the cure function has been confirmed.
   - The dirty-wash and clean-wash process is not set up.
 relatedLogs: [resin-grow-tent-setup]
@@ -29,6 +29,6 @@ focus:
 
 This page is the wash-and-cure workstream within [Resin Workshop](/workshop/resin-workshop/). The Wash & Cure 3 Max came from the same pickup as the [Saturn](/workshop/saturn-4-ultra/) and the Photon P1.
 
-It powers on and the display lights up, but I haven't figured out whether it works. There is cured resin in the lines, so I need to inspect it before I rely on it. Until then, it is equipment on hand, not a working part of the workflow.
+It powers on and the display lights up, but I haven't opened it up or tested whether it works. There is cured resin in the lines, so I need to inspect it before I rely on it. Until then, it is equipment on hand, not a working part of the workflow.
 
 My plan is to do most of the cleaning in a dirty wash and use the station for the final steps. I'll record what I find when I diagnose it; the [Build Log](/build-logs/resin-grow-tent-setup/) keeps the dated sequence.

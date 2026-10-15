@@ -13,7 +13,7 @@ updatedAt: 2026-10-12
 nextAction: Inspect the vat and build plate, then record the remaining printer setup checks before adding resin.
 equipment:
   - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; setup checks incomplete; no prints yet)
-  - Anycubic Photon P1 (acquired in the same trade; current condition and use not yet recorded)
+  - Anycubic Photon P1 (acquired in the same trade; worked at pickup, not powered on since)
   - AC Infinity CLOUDLAB 866, 5 × 5 ft grow tent (assembled in the garage; no functioning exhaust installed)
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)
   - SUNLU ABS-Like Dark Grey resin (stored unopened; not yet used)

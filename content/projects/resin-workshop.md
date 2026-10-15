@@ -12,19 +12,19 @@ status: building
 statusLabel: Building / Testing
 statusNote: As of October 12, 2026: both printers are in the tent; neither has printed, and the exhaust and wash station remain unverified.
 phase: Workspace and workflow
-updatedAt: 2026-10-12
+updatedAt: 2026-10-15
 nextAction: Inspect the Saturn's vat and build plate, then complete its remaining setup checks before adding resin.
 relatedLogs: [resin-grow-tent-setup]
 relatedGuides: [resin-grow-tent-setup]
 workstreams:
   - Saturn 4 Ultra 12K|saturn-4-ultra|Main active machine
-  - Anycubic Photon P1||In the tent; condition and use not yet recorded
+  - Anycubic Photon P1||In the tent; worked at pickup, not powered on since
   - Anycubic Wash & Cure 3 Max|wash-cure-3-max|Powers on; function unconfirmed, cured resin in the lines
   - AC Infinity 5×5 tent and exhaust|resin-tent-exhaust|Assembled; exhaust not installed
 equipment:
   - AC Infinity CLOUDLAB 866, 5 × 5 ft tent (assembled in the garage; no functioning exhaust installed)
   - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; remaining setup checks incomplete; no prints yet)
-  - Anycubic Photon P1 (in the tent; no prints yet)
+  - Anycubic Photon P1 (in the tent; worked at pickup, not powered on since; no prints yet)
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)
   - Temporary folding table with plastic covering and a plastic floor liner; a standing desk is still planned
   - Braun 4 ft shop light installed; its light output and UV emission have not been measured
@@ -36,7 +36,7 @@ focus:
   - Finish and document the garage workspace and exhaust.
   - Inspect the Saturn and record its setup checks before adding resin.
   - Diagnose the Wash & Cure station and establish a cleanup workflow.
-  - Record first-print results and the Photon P1's condition when known.
+  - Power on the Photon P1, confirm it still works, and record first-print results.
 ---
 
 The resin setup came together through a trade on October 8, 2026: Pam, my Prusa MK4S, for an Elegoo Saturn 4 Ultra and an Anycubic Photon P1. Both machines are now in the garage tent, but neither has printed in this workspace. The Saturn has its vat and build plate installed and Wi-Fi set up; its remaining setup checks are still incomplete. The [Saturn 4 Ultra project page](/workshop/saturn-4-ultra/) tracks that machine in more detail.
