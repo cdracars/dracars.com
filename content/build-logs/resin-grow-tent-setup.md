@@ -106,7 +106,7 @@ The next photo shows those parts in place: the empty vat is installed, and the b
 
 !photo 12-saturn-with-tank-installed.webp | The Saturn 4 Ultra with the resin vat and build plate from the preceding two box photos in place; the vat is empty, and the antenna is attached.
 
-I picked the [Braun 5500 lumen, 4 ft linkable LED hanging shop light](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html), Harbor Freight item 59506. This is a plain link, not an affiliate link. The shelf photo shows the light I chose. Its listing gives 55 W at 120 V, an on/off metal pull chain, and two chains with S-hooks; the box says 4000K cool white. Those are the manufacturer's numbers, not anything I've measured, and I haven't confirmed whether it puts out UV.
+I picked the [Braun 5500 lumen, 4 ft linkable LED hanging shop light](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html), Harbor Freight item 59506. This is a plain link, not an affiliate link. The shelf photo shows the light I chose. Its listing gives 55 W at 120 V, an on/off metal pull chain, and two chains with S-hooks; the box says 4000K cool white. Those are the manufacturer's numbers, not anything I've measured, It's an LED shop light, so it shouldn't put out meaningful UV; I haven't measured it.
 
 !photo 17-braun-shop-light-shelf.webp | The Braun lights on the store shelf. The 5500 lumen, 4 ft linkable shop light is the one I picked.
 
