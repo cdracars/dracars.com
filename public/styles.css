@@ -164,7 +164,7 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 .home-page .site-header, .home-page footer { width: min(1280px, calc(100% - 44px)); }
 .home-page .site-nav a[aria-current] { color: var(--terracotta-dark); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .55em; }
 .home-hero { position: relative; display: flex; align-items: center; min-height: 620px; margin: 0 0 22px; isolation: isolate; }
-.home-hero-copy { position: relative; z-index: 1; width: min(51%, 590px); padding: 54px 0 42px 24px; }
+.home-hero-copy { position: relative; z-index: 1; width: min(44%, 590px); padding: 54px 0 42px 24px; }
 .home-hero h1 { max-width: 13.5ch; margin: 0 0 23px; font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-size: clamp(3.1rem, 5vw, 4.75rem); font-weight: 600; letter-spacing: -.04em; line-height: .98; }
 .home-hero .hero-intro { max-width: 36ch; margin: 0 0 25px; font-size: clamp(1.08rem, 1.55vw, 1.28rem); line-height: 1.48; }
 .home-hero-image { position: absolute; z-index: -1; inset: 0 0 0 42%; margin: 0; overflow: hidden; border-radius: 16px; }
@@ -655,7 +655,7 @@ html.theme-ready .theme-toggle { display: inline-flex; }
   .workshop-project-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .home-hero { display: flex; min-height: 0; flex-direction: column; align-items: stretch; margin-bottom: 30px; }
   .home-hero-image { position: relative; inset: auto; order: -1; width: 100%; height: min(76vw, 390px); margin: 0 0 20px; border-radius: 12px; }
   .home-hero-image::before { background: linear-gradient(0deg, color-mix(in srgb, var(--paper) 40%, transparent), transparent 42%); }
