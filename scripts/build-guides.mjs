@@ -890,11 +890,29 @@ writeFileSync(join(PUBLIC, "404.html"), page({
   path: "/404",
   noindex: true,
   jsonld: { "@context": "https://schema.org", "@type": "WebPage", name: "Page not found" },
-  body: `      <section class="guides-hero" aria-labelledby="page-title">
-        <h1 id="page-title">Not found.</h1>
+  bodyClass: "not-found-page",
+  body: `      <section class="not-found" aria-labelledby="page-title">
+        <p class="not-found-eyebrow">Error 404</p>
+        <h1 id="page-title">Klipper says no.</h1>
         <p class="hero-intro">That page isn't here. It may have moved, or the link may be mistyped.</p>
-        <p><a class="text-link" href="/">Go to the homepage</a> · <a class="text-link" href="/workshop/">Workshop</a> · <a class="text-link" href="/build-logs/">Build Logs</a> · <a class="text-link" href="/guides/">Guides</a></p>
-      </section>`,
+        <div class="klipper-console">
+          <p class="klipper-console-title"><span>Console</span><span class="klipper-state">Shutdown</span></p>
+          <ol class="klipper-console-log">
+            <li><time data-console-time></time><span>Send: GET <span data-requested-path>this page</span></span></li>
+            <li class="klipper-error"><time data-console-time></time><span>!! Move out of range: <span data-requested-path>this page</span></span></li>
+            <li class="klipper-error"><time data-console-time></time><span>!! MCU 'dracars' shutdown: Page not found</span></li>
+            <li><time data-console-time></time><span>// Once the underlying issue is corrected, use the "FIRMWARE_RESTART" command to reset the firmware, reload the config, and restart the host software.</span></li>
+            <li><time data-console-time></time><span>// Klipper state: Shutdown</span></li>
+          </ol>
+          <nav class="klipper-macros" aria-label="Ways out">
+            <a class="klipper-restart" href="/">FIRMWARE_RESTART <span class="klipper-macro-note">→ home</span></a>
+            <a href="/workshop/">WORKSHOP</a>
+            <a href="/build-logs/">BUILD_LOGS</a>
+            <a href="/guides/">GUIDES</a>
+          </nav>
+        </div>
+      </section>
+    <script src="/not-found.js" defer></script>`,
 }));
 mkdirSync(RESOURCE_OUT, { recursive: true });
 writeFileSync(join(RESOURCE_OUT, "index.html"), resourceIndexPage());
