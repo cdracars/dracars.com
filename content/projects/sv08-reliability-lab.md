@@ -23,12 +23,13 @@ problems:
   - The custom PEI bed sheet can shift because it has no positional locator.
   - Per-material ABS/ASA pressure advance and batch profiles remain unfinished; a Cartographer probe and bed-tension modification are planned, not installed.
 focus:
-  - Anthead and Orbiter configuration
-  - EBB36, thermistor, CAN, and H36 issues
-  - Filament sensor plans
-  - Camera and wiring concerns
+  - Z1 resets and 24 V rail checks
+  - Gantry sag and Z-belt tension
+  - PEI sheet positioning
+  - Per-material ABS/ASA pressure advance and batch profiles
+  - Planned Cartographer probe and bed-tension modification
 ---
 
-My machine notes for Hoss, last updated October 12, 2026, describes an SV08 350 running mainline Klipper, with its enclosure, camera, adaptive bed mesh, QGL, and input shaping in place. A read-only check that day found Klipper and Moonraker active and captured the live configuration. As of October 13, Hoss is working again. The particular repair and whether the monitored Z, gantry, and bed-positioning issues were addressed have not been recorded yet.
+My machine notes for Hoss, last updated October 12, 2026, describe an SV08 350 running mainline Klipper, with its enclosure, camera, adaptive bed mesh, QGL, and input shaping in place. A read-only check that day found Klipper and Moonraker active and captured the live configuration. As of October 13, Hoss is working again. The particular repair and whether the monitored Z, gantry, and bed-positioning issues were addressed have not been recorded yet.
 
-The records separate resolved setup faults from issues to monitor. Earlier fixes include a bad hotend thermistor setting that caused brittle prints, probe points that could drive the nozzle into the bed, and a startup macro that referenced a chamber sensor not present in the live configuration. Z1 resets, possible 24 V rail instability, overnight gantry sag, and a shifting PEI sheet remain documented monitor items. The notes do not say whether those symptoms have recurred since their last entries, so this page tracks them as checks rather than current failures.
+I keep resolved setup faults separate from issues to monitor. Earlier fixes include a bad hotend thermistor setting that caused brittle prints, probe points that could drive the nozzle into the bed, and a startup macro that referenced a chamber sensor not present in the live configuration. Z1 resets, possible 24 V rail instability, overnight gantry sag, and a shifting PEI sheet remain documented monitor items. I haven't recorded whether those symptoms have come back since their last entries, so they're listed as checks rather than current failures.

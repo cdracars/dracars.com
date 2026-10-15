@@ -727,3 +727,17 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 .klipper-macros .klipper-restart { background: #a9503b; border-color: #a9503b; color: #fff; }
 .klipper-macros .klipper-restart:hover { background: #913d2d; color: #fff; }
 .klipper-macro-note { font-weight: 400; }
+
+/* Project page photo: a landscape crop instead of a full-height portrait on desktop or a thin strip on phones. */
+.project-featured-image { min-height: 0; }
+.project-featured-image img { height: auto; min-height: 0; max-height: 560px; aspect-ratio: 4 / 3; object-position: center; }
+@media (max-width: 650px) {
+  .project-featured-image { height: auto; }
+  .project-featured-image img { min-height: 0; }
+  /* Two-row header: logo and theme toggle, then all five links. */
+  .site-header { grid-template-columns: 1fr auto; padding-right: 56px; row-gap: 4px; }
+  .site-header > .wordmark { grid-column: 1; grid-row: 1; }
+  .theme-toggle { grid-column: 2; grid-row: 1; justify-self: end; white-space: nowrap; }
+  .site-nav { grid-column: 1 / -1; grid-row: 2; gap: 4px 12px; margin-right: -56px; }
+  .home-page .site-nav { gap: 4px 12px; margin-right: -56px; }
+}
