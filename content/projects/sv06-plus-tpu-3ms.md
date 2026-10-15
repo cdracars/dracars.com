@@ -30,6 +30,6 @@ focus:
   - Toolhead experiments
 ---
 
-My machine notes for Sam, last updated October 12, 2026, describes the printer as fully operational and used for large-format and batch work. It records Klipper on a BTT Pi V1.2, Mainsail and Moonraker, and a Logitech C270 mounted on the Z gantry. As of October 13, the 3MS work is on hold while I explore making it compatible with AFC instead of Happy Hare. The 3MS is not presented as an active, working integration.
+My machine notes for Sam, last updated October 12, 2026, describe the printer as fully operational and used for large-format and batch work. It records Klipper on a BTT Pi V1.2, Mainsail and Moonraker, and a Logitech C270 mounted on the Z gantry. As of October 13, the 3MS work is on hold while I explore making it compatible with AFC instead of Happy Hare. The 3MS is not presented as an active, working integration.
 
 The notes also record a resolved January 2025 jam caused by a loose nozzle mounting screw and loose toolhead-board cables, and a March 2025 test print with a layer shift high in the print. The latter's cause remains uncertain. Input shaping is marked stale after the Pi and camera were added to the moving gantry, and the frame-bracing work is still a plan. The project page tracks those machine constraints alongside the TPU and multi-material workflow.

@@ -62,7 +62,7 @@ It is a good example of a build picking up its own identity while it is still on
 
 !photo 06-spool-lanes-top.webp | Looking down at the spool lanes and printed guides on the assembled frame.
 
-!photo 07-finished-box-turtle.webp | The finished Gray Shell setup with spools loaded and the front lighting on.
+!photo 07-finished-box-turtle.webp | The assembled Gray Shell with spools loaded and the front lighting on.
 
 ## The thing I would change
 

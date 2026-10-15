@@ -21,4 +21,4 @@ focus:
   - Build dependencies, tophat, and touchscreen plans
 ---
 
-This project is visible as a plan so its decisions have a durable home. It should stay marked Planning until a real build begins.
+This is a planned build, not an active one. The page holds the design direction, kit comparisons, budget, and dependencies as I work through them, and it stays marked Planning until the build actually starts.

@@ -1,7 +1,7 @@
 ---
 title: "STL to STEP plugins: challenge accepted"
 slug: stl-to-step-plugins
-description: "A build log for bringing a newly discussed STL-to-STEP library into FreeCAD and Fusion 360 as plugins."
+description: "A build log for bringing the open-source stl2step engine into FreeCAD and Fusion 360 as plugins."
 publishedAt: 2026-10-08
 updatedAt: 2026-10-08
 indexImage: /images/build-logs/stl-to-step-plugins/02-ai-mesh-flat-cad.webp
@@ -18,7 +18,7 @@ affiliateLinksPresent: false
 ---
 
 :::tldr The build in brief
-- A library drop got people talking about STL-to-STEP conversion.
+- The release of the open-source `stl2step` engine got people talking about STL-to-STEP conversion.
 - Someone asked whether it could be a plugin instead of a standalone tool.
 - That sounded like a challenge, so the idea became plugins for FreeCAD and Fusion 360.
 :::
@@ -27,7 +27,7 @@ affiliateLinksPresent: false
 
 ## The question that started it
 
-After a library drop, people were talking about converting STL meshes into STEP geometry. Someone asked whether it could be a plugin instead of a standalone application.
+After the open-source [stl2step](https://github.com/BlinkingSun/stl2step) engine was released, people were talking about converting STL meshes into STEP geometry. Someone asked whether it could be a plugin instead of a standalone application.
 
 Challenge accepted.
 

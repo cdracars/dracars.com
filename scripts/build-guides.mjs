@@ -624,6 +624,7 @@ ${tools.length ? `        <section class="guide-related"><h2 id="related-tools">
     description: g.description,
     path: articlePath,
     type: "article",
+    noindex: g.status === "coming-soon",
     body,
     bodyClass: "guides",
     image: g.heroImage,
@@ -673,7 +674,12 @@ function buildLogStory(html) {
 
 function buildLogPage(g, all) {
   const articlePath = `/build-logs/${g.slug}/`;
-  const projectHref = g.project ? `/workshop/${g.project}/` : "/workshop/";
+  // Tool logs point at the tool (its resource page, or Resources); project logs at their Workshop page.
+  const resourcePage = existsSync(join(RESOURCE_CONTENT, `${g.slug}.html`)) ? `/resources/${g.slug}/` : null;
+  const isTool = !g.project && g.category === "tools-software";
+  const projectHref = g.project ? `/workshop/${g.project}/` : isTool ? resourcePage ?? "/resources/" : "/workshop/";
+  const crumbLabel = g.project ? allProjects.find((p) => p.slug === g.project)?.title ?? "Workshop" : isTool ? "Resources" : "Workshop";
+  const projectLinkLabel = g.project ? "See the project's current picture" : isTool ? (resourcePage ? "See the tool page" : "Find it in Resources") : "Browse Workshop projects";
   const intro = g.html.match(/<section class="callout callout-tldr"[\s\S]*?<\/section>/)?.[0] ?? "";
   const story = buildLogStory(intro ? g.html.replace(intro, "") : g.html);
   const contents = [...story.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>|<h3 id="(update-\d{4}-\d{2}-\d{2}-[^"]+)">([\s\S]*?)<\/h3>/g)]
@@ -699,11 +705,11 @@ function buildLogPage(g, all) {
     </details>` : "";
   const body = `      <article class="build-log">
         <header class="build-log-masthead">
-          <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> <a href="${projectHref}">${esc(allProjects.find((p) => p.slug === g.project)?.title ?? "Workshop")}</a></p>
+          <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> <a href="${projectHref}">${esc(crumbLabel)}</a></p>
           <p class="build-log-kicker">Project journal <span aria-hidden="true">·</span> ${esc(catName(g.category))}</p>
           <h1>${esc(g.title)}</h1>
         <p class="guide-deck">${esc(g.description)}</p>
-        <p class="build-log-project-link">This is the dated story. <a href="${projectHref}">${g.project ? "See the project's current picture" : "Browse Workshop projects"} <span aria-hidden="true">→</span></a></p>
+        <p class="build-log-project-link">This is the dated story. <a href="${projectHref}">${projectLinkLabel} <span aria-hidden="true">→</span></a></p>
         </header>
         ${snapshot}
         ${g.affiliateLinksPresent ? `        <p class="disclosure">${esc(AFFILIATE_DISCLOSURE)}</p>\n` : ""}
@@ -974,7 +980,7 @@ const urls = [
   { loc: `${SITE}/resources/` },
   { loc: `${SITE}/resources/tuneprint/` },
   { loc: `${SITE}/guides/`, lastmod: guides.map((g) => g.updatedAt).sort().at(-1) },
-  ...guides.map((g) => ({ loc: `${SITE}/guides/${g.slug}/`, lastmod: g.updatedAt })),
+  ...guides.filter((g) => g.status !== "coming-soon").map((g) => ({ loc: `${SITE}/guides/${g.slug}/`, lastmod: g.updatedAt })),
   { loc: `${SITE}/build-logs/`, lastmod: buildLogs.map((g) => g.updatedAt).sort().at(-1) },
   ...buildLogs.map((g) => ({ loc: `${SITE}/build-logs/${g.slug}/`, lastmod: g.updatedAt })),
   { loc: `${SITE}/workshop/`, lastmod: allProjects.map((p) => p.updatedAt).sort().at(-1) },

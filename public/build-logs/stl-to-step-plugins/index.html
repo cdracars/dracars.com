@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>STL to STEP plugins: challenge accepted — Dracars Build Logs</title>
-    <meta name="description" content="A build log for bringing a newly discussed STL-to-STEP library into FreeCAD and Fusion 360 as plugins." />
+    <meta name="description" content="A build log for bringing the open-source stl2step engine into FreeCAD and Fusion 360 as plugins." />
     <link rel="canonical" href="https://dracars.com/build-logs/stl-to-step-plugins/" />
     <meta name="theme-color" content="#eee2e7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#160f18" media="(prefers-color-scheme: dark)" />
@@ -13,7 +13,7 @@
     <meta property="og:site_name" content="Dracars" />
     <meta property="og:url" content="https://dracars.com/build-logs/stl-to-step-plugins/" />
     <meta property="og:title" content="STL to STEP plugins: challenge accepted — Dracars Build Logs" />
-    <meta property="og:description" content="A build log for bringing a newly discussed STL-to-STEP library into FreeCAD and Fusion 360 as plugins." />
+    <meta property="og:description" content="A build log for bringing the open-source stl2step engine into FreeCAD and Fusion 360 as plugins." />
     <meta property="og:image" content="https://dracars.com/social-preview-75847a814850.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -21,7 +21,7 @@
     <meta property="og:image:alt" content="Dracars logo beside the workshop TunePrint scene, with the homepage message about software, hardware, and projects." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="STL to STEP plugins: challenge accepted — Dracars Build Logs" />
-    <meta name="twitter:description" content="A build log for bringing a newly discussed STL-to-STEP library into FreeCAD and Fusion 360 as plugins." />
+    <meta name="twitter:description" content="A build log for bringing the open-source stl2step engine into FreeCAD and Fusion 360 as plugins." />
     <meta name="twitter:image" content="https://dracars.com/social-preview-75847a814850.png" />
     <meta name="twitter:image:alt" content="Dracars logo beside the workshop TunePrint scene, with the homepage message about software, hardware, and projects." />
     <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
@@ -30,7 +30,7 @@
     <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/theme.js" defer></script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"STL to STEP plugins: challenge accepted","description":"A build log for bringing a newly discussed STL-to-STEP library into FreeCAD and Fusion 360 as plugins.","datePublished":"2026-10-08","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/stl-to-step-plugins/","keywords":"cad, stl, step, freecad, fusion-360, plugins"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"STL to STEP plugins: challenge accepted","description":"A build log for bringing the open-source stl2step engine into FreeCAD and Fusion 360 as plugins.","datePublished":"2026-10-08","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/stl-to-step-plugins/","keywords":"cad, stl, step, freecad, fusion-360, plugins"}</script>
   </head>
   <body class="build-logs-site">
     <a class="skip-link" href="#content">Skip to content</a>
@@ -65,11 +65,11 @@
     <main id="content">
       <article class="build-log">
         <header class="build-log-masthead">
-          <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> <a href="/workshop/">Workshop</a></p>
+          <p class="crumbs"><a href="/build-logs/">Build Logs</a> <span aria-hidden="true">/</span> <a href="/resources/">Resources</a></p>
           <p class="build-log-kicker">Project journal <span aria-hidden="true">·</span> Tools &amp; Software</p>
           <h1>STL to STEP plugins: challenge accepted</h1>
-        <p class="guide-deck">A build log for bringing a newly discussed STL-to-STEP library into FreeCAD and Fusion 360 as plugins.</p>
-        <p class="build-log-project-link">This is the dated story. <a href="/workshop/">Browse Workshop projects <span aria-hidden="true">→</span></a></p>
+        <p class="guide-deck">A build log for bringing the open-source stl2step engine into FreeCAD and Fusion 360 as plugins.</p>
+        <p class="build-log-project-link">This is the dated story. <a href="/resources/">Find it in Resources <span aria-hidden="true">→</span></a></p>
         </header>
         <section class="build-log-snapshot" aria-labelledby="checkpoint-title">
       <div class="build-log-checkpoint">
@@ -78,7 +78,7 @@
         <p class="build-log-status-note">Available as FreeCAD and Fusion 360 plugins</p>
         <dl class="build-log-dates"><div><dt>Started</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div><div><dt>Updated</dt><dd><time datetime="2026-10-08">October 8, 2026</time></dd></div></dl>
       </div>
-      <div class="build-log-current"><section class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">The build in brief</p><ul><li>A library drop got people talking about STL-to-STEP conversion.</li><li>Someone asked whether it could be a plugin instead of a standalone tool.</li><li>That sounded like a challenge, so the idea became plugins for FreeCAD and Fusion 360.</li></ul></section></div>
+      <div class="build-log-current"><section class="callout callout-tldr" id="tldr" aria-labelledby="tldr-label"><p class="callout-label" id="tldr-label">The build in brief</p><ul><li>The release of the open-source <code>stl2step</code> engine got people talking about STL-to-STEP conversion.</li><li>Someone asked whether it could be a plugin instead of a standalone tool.</li><li>That sounded like a challenge, so the idea became plugins for FreeCAD and Fusion 360.</li></ul></section></div>
     </section>
 
         <details class="build-log-index">
@@ -90,7 +90,7 @@
             <div class="build-log-body">
 <figure class="photo"><img src="/images/build-logs/stl-to-step-plugins/02-ai-mesh-flat-cad.webp" width="1672" height="941" alt="AI-generated concept illustration: a green triangulated mesh transitions into a flat-shaded CAD-style solid. Not a plugin screenshot or conversion result." loading="lazy" /><figcaption>AI-generated concept illustration: a green triangulated mesh transitions into a flat-shaded CAD-style solid. Not a plugin screenshot or conversion result.</figcaption></figure>
 <h2 id="the-question-that-started-it">The question that started it</h2>
-<p>After a library drop, people were talking about converting STL meshes into STEP geometry. Someone asked whether it could be a plugin instead of a standalone application.</p>
+<p>After the open-source <a href="https://github.com/BlinkingSun/stl2step" rel="noopener" target="_blank">stl2step</a> engine was released, people were talking about converting STL meshes into STEP geometry. Someone asked whether it could be a plugin instead of a standalone application.</p>
 <p>Challenge accepted.</p>
 <h2 id="put-the-conversion-where-the-work-already-happens">Put the conversion where the work already happens</h2>
 <p>The result is two plugins: one for FreeCAD and one for Autodesk Fusion 360. Both are aimed at bringing STL-to-STEP conversion into the CAD tool where the editable geometry will be used next.</p>
