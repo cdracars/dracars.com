@@ -36,7 +36,7 @@ problems:
 focus:
   - Finish and document the garage workspace and exhaust.
   - Inspect the Saturn, calibrate the resin, and record the first print.
-  - Diagnose the Wash & Cure station and establish a cleanup workflow; resin-contaminated waste goes in a clear bag to cure fully before it goes in the trash, while liquid resin and dirty IPA are held until I confirm local disposal rules.
+  - Diagnose the Wash & Cure station and establish a cleanup workflow; resin-contaminated waste goes in a clear bag to cure fully before it goes in the trash, Dirty IPA gets cleaned and reused; I haven't decided how to dispose of it or liquid resin once it's spent, and will hold both until I confirm local disposal rules.
   - Power on the Photon P1, confirm it still works, and record first-print results.
 ---
 
