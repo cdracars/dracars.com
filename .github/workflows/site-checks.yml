@@ -1,0 +1,33 @@
+name: Site checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the site
+        run: node scripts/build-guides.mjs
+      - name: Generated files match their sources
+        run: |
+          if ! git diff --quiet -- public; then
+            echo "::error::public/ is out of date. Run node scripts/build-guides.mjs and commit the result."
+            git diff --stat -- public
+            exit 1
+          fi
+      - name: Shared header and footer
+        run: node scripts/check-site-chrome.mjs
+      - name: Content checks
+        run: node scripts/check-content.mjs ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || '' }}
