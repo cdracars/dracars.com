@@ -19,8 +19,8 @@ relatedGuides: [resin-grow-tent-setup]
 workstreams:
   - Saturn 4 Ultra 12K|saturn-4-ultra|Main active machine
   - Anycubic Photon P1||In the tent; condition and use not yet recorded
-  - Anycubic Wash & Cure 3 Max||Powers on; function unconfirmed, cured resin in the lines
-  - AC Infinity 5×5 tent and garage workflow||Assembled; exhaust not installed
+  - Anycubic Wash & Cure 3 Max|wash-cure-3-max|Powers on; function unconfirmed, cured resin in the lines
+  - AC Infinity 5×5 tent and exhaust|resin-tent-exhaust|Assembled; exhaust not installed
 equipment:
   - AC Infinity CLOUDLAB 866, 5 × 5 ft tent (assembled in the garage; no functioning exhaust installed)
   - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; remaining setup checks incomplete; no prints yet)
