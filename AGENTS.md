@@ -20,7 +20,7 @@
 
 ## Verify the change
 
-- For guide content, builder, or figure changes, run `node scripts/build-guides.mjs` from the repository root. Review the generated diff and include affected generated files with the source changes; follow the README's rebuild requirement before deployment.
+- For guide content, builder, or figure changes, run `node scripts/build-guides.mjs` from the repository root, then `node scripts/check-site-chrome.mjs` and `node scripts/check-content.mjs origin/main`. When a change records new facts, move that page's `updatedAt` to the date of those facts. Review the generated diff and include affected generated files with the source changes; follow the README's rebuild requirement before deployment.
 - For visible changes, inspect affected pages at mobile and desktop widths in light and dark themes. Check keyboard access, visible focus, and changed links or controls.
 - For documentation-only changes, check referenced paths and instructions against the repository; a site rebuild is unnecessary.
 - Report what changed, which checks ran, and any checks that could not be completed. Distinguish local verification from a verified deployment.
