@@ -16,7 +16,7 @@ nextAction: Choose the CLOUDLINE model, cut the new roof opening, and build the 
 equipment:
   - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent, assembled in the garage, with cinch-top duct ports on the wall and in the floor corner
   - Plastic floor liner held with corner clips, and a plastic-covered temporary folding table; a ~58-inch standing desk is planned as the main work surface
-  - Braun 4 ft shop light; its light output and UV emission have not been measured
+  - Braun 4 ft shop light; an LED light that shouldn't put out meaningful UV, though its output hasn't been measured
   - AC Infinity CLOUDLINE inline fan planned at the tent end of the exhaust; 4-inch S4 versus T4 not yet chosen
   - Planned duct route: from the tent into the attic crawl space through an existing opening, then out through a new roof opening
 problems:
