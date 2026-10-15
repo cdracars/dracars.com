@@ -6,8 +6,9 @@
 //   - Internal-note phrasing that should not reach readers ("Cody confirmed", "3DBrain", ...).
 //   - updatedAt dates in the future.
 // With a base ref (pull requests):
-//   - A project's status fields changed without moving updatedAt  -> error.
-//   - Any other published content change without moving updatedAt -> warning (typo fixes are fine).
+//   - A project's status fields changed while updatedAt is older than the commit -> error.
+//   - Any other published content change in the same situation -> warning (typo fixes are fine).
+//   A same-day update to a page already dated today passes.
 
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
@@ -71,12 +72,15 @@ if (base) {
     catch { continue; } // new file
     const old = frontmatter(before);
     const now = frontmatter(readFileSync(join(ROOT, file), "utf8"));
-    if (now.keys.draft === "true" || now.keys.updatedAt !== old.keys.updatedAt) continue;
+    if (now.keys.draft === "true") continue;
+    // Date of the latest commit touching this file; updatedAt on or after it is current.
+    const changedOn = execFileSync("git", ["log", "-1", "--format=%cs", "HEAD", "--", file], { cwd: ROOT, encoding: "utf8" }).trim() || today;
+    if ((now.keys.updatedAt ?? "") >= changedOn) continue;
     const stateChanged = file.startsWith("content/projects/") ? STATE_KEYS.filter((k) => (old.keys[k] ?? "") !== (now.keys[k] ?? "")) : [];
     if (stateChanged.length) {
-      report(errors, "error", file, `changed ${stateChanged.join(", ")} but updatedAt is still ${now.keys.updatedAt}; move it to the date of the new facts`);
+      report(errors, "error", file, `changed ${stateChanged.join(", ")} on ${changedOn} but updatedAt is ${now.keys.updatedAt}; move it to the date of the new facts`);
     } else if (before !== readFileSync(join(ROOT, file), "utf8")) {
-      report(warnings, "warning", file, `content changed but updatedAt is still ${now.keys.updatedAt}; fine for a typo fix, move it for new facts`);
+      report(warnings, "warning", file, `content changed on ${changedOn} but updatedAt is ${now.keys.updatedAt}; fine for a typo fix, move it for new facts`);
     }
   }
 }
