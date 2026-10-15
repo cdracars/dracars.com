@@ -24,9 +24,8 @@
     <meta name="twitter:image:alt" content="TunePrint: stop rereading the guide and doing the math — Dracars Build Logs" />
     <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="/fonts/atkinson-hyperlegible-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/theme.js" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"TunePrint: stop rereading the guide and doing the math","description":"A build log for a browser companion that turns OrcaSlicer calibration results into settings worth saving.","datePublished":"2026-10-08","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/tuneprint/","keywords":"3d-printing, orcaslicer, calibration, browser-tool"}</script>
@@ -90,7 +89,7 @@
 <h2 id="calibration-should-not-require-the-same-homework-every-time">Calibration should not require the same homework every time</h2>
 <p>I use OrcaSlicer. After enough calibration work, I got tired of rereading the guides and manually doing the math from the results.</p>
 <p>TunePrint came from wanting a more direct bridge between a result on the page and a setting worth saving. The tool is intentionally a companion to the workflow, not a claim that calibration can be skipped or reduced to one magic number.</p>
-<figure class="photo"><img src="/images/build-logs/tuneprint/01-app-interface.png" alt="TunePrint’s calibration workspace with Flow ratio selected. Captured October 8, 2026." loading="lazy" /><figcaption>TunePrint’s calibration workspace with Flow ratio selected. Captured October 8, 2026.</figcaption></figure>
+<figure class="photo"><img src="/images/build-logs/tuneprint/01-app-interface.png" width="1280" height="846" alt="TunePrint’s calibration workspace with Flow ratio selected. Captured October 8, 2026." loading="lazy" /><figcaption>TunePrint’s calibration workspace with Flow ratio selected. Captured October 8, 2026.</figcaption></figure>
 <h2 id="a-place-to-turn-results-into-settings">A place to turn results into settings</h2>
 <p>TunePrint is a browser-only helper for OrcaSlicer calibration results. It is built to make the arithmetic and handoff less annoying so the useful part of calibration—learning what the printer needs—does not get buried under repeat calculation.</p>
 <h2 id="try-it">Try it</h2>

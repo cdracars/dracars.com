@@ -29,6 +29,9 @@ covered code, as stated in `LICENSE-MIT-CODE.md`.
   for reuse by the MIT license.
 - Product names, logos, trademarks, and domain names are not licensed by the
   MIT license.
+- `public/fonts/**` are third-party fonts (Atkinson Hyperlegible and Space
+  Grotesk) under the SIL Open Font License 1.1; their license texts are kept
+  beside them as `OFL-*.txt`.
 - Third-party material remains under the rights and terms of its respective
   owner; this repository cannot grant rights to it.
 

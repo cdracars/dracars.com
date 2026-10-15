@@ -112,7 +112,11 @@ formats. Generated project pages use their
 a PNG or JPEG. Pages without a supported image use the branded fallback,
 `public/social-preview.png` (1200 × 630). When a PNG/JPEG project image has a
 same-named `.webp` beside it, pages display the WebP and keep the original for
-social previews. Guide and build log titles,
+social previews.
+Card-sized images (Workshop and Build Log indexes, homepage lists) use a
+same-named `-thumb.webp` (800px wide) when one exists, and the builder adds
+width/height from the image file so pages do not shift while loading. Fonts are
+self-hosted from `public/fonts/`; no third-party font requests are made. Guide and build log titles,
 descriptions, and image fields come from their content frontmatter. Run
 `node scripts/build-guides.mjs` after changing those sources so the published
 HTML stays in sync. The build publishes a content-hashed filename for the

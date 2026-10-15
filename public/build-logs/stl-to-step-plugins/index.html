@@ -26,9 +26,8 @@
     <meta name="twitter:image:alt" content="Dracars logo beside the workshop TunePrint scene, with the homepage message about software, hardware, and projects." />
     <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="/fonts/atkinson-hyperlegible-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/theme.js" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"STL to STEP plugins: challenge accepted","description":"A build log for bringing a newly discussed STL-to-STEP library into FreeCAD and Fusion 360 as plugins.","datePublished":"2026-10-08","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/stl-to-step-plugins/","keywords":"cad, stl, step, freecad, fusion-360, plugins"}</script>
@@ -89,7 +88,7 @@
         <div class="build-log-layout">
           <div class="build-log-story">
             <div class="build-log-body">
-<figure class="photo"><img src="/images/build-logs/stl-to-step-plugins/02-ai-mesh-flat-cad.webp" alt="AI-generated concept illustration: a green triangulated mesh transitions into a flat-shaded CAD-style solid. Not a plugin screenshot or conversion result." loading="lazy" /><figcaption>AI-generated concept illustration: a green triangulated mesh transitions into a flat-shaded CAD-style solid. Not a plugin screenshot or conversion result.</figcaption></figure>
+<figure class="photo"><img src="/images/build-logs/stl-to-step-plugins/02-ai-mesh-flat-cad.webp" width="1672" height="941" alt="AI-generated concept illustration: a green triangulated mesh transitions into a flat-shaded CAD-style solid. Not a plugin screenshot or conversion result." loading="lazy" /><figcaption>AI-generated concept illustration: a green triangulated mesh transitions into a flat-shaded CAD-style solid. Not a plugin screenshot or conversion result.</figcaption></figure>
 <h2 id="the-question-that-started-it">The question that started it</h2>
 <p>After a library drop, people were talking about converting STL meshes into STEP geometry. Someone asked whether it could be a plugin instead of a standalone application.</p>
 <p>Challenge accepted.</p>

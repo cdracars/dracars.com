@@ -24,9 +24,8 @@
     <meta name="twitter:image:alt" content="SafeSync: a small backup helper that outgrew its first job — Dracars Build Logs" />
     <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="/fonts/atkinson-hyperlegible-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/theme.js" defer></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"SafeSync: a small backup helper that outgrew its first job","description":"A build log for a small Git-backed helper first made to protect OrcaSlicer profiles.","datePublished":"2026-10-08","dateModified":"2026-10-08","author":{"@type":"Person","name":"Dracars","url":"https://dracars.com/"},"mainEntityOfPage":"https://dracars.com/build-logs/safesync/","keywords":"backup, git, orcaslicer, configuration"}</script>
@@ -89,7 +88,7 @@
             <div class="build-log-body">
 <h2 id="the-first-job-was-protecting-slicer-profiles">The first job was protecting slicer profiles</h2>
 <p>SafeSync began as a way to keep OrcaSlicer profiles backed up. Losing configuration that took time to tune is annoying, and a small Git-backed helper was enough for the job.</p>
-<figure class="photo"><img src="/images/build-logs/safesync/01-app-interface.png" alt="SafeSync backup.sh dry run on a disposable example profile folder, showing one detected untracked file and the planned backup. No remote was configured. Captured October 8, 2026." loading="lazy" /><figcaption>SafeSync backup.sh dry run on a disposable example profile folder, showing one detected untracked file and the planned backup. No remote was configured. Captured October 8, 2026.</figcaption></figure>
+<figure class="photo"><img src="/images/build-logs/safesync/01-app-interface.png" width="882" height="352" alt="SafeSync backup.sh dry run on a disposable example profile folder, showing one detected untracked file and the planned backup. No remote was configured. Captured October 8, 2026." loading="lazy" /><figcaption>SafeSync backup.sh dry run on a disposable example profile folder, showing one detected untracked file and the planned backup. No remote was configured. Captured October 8, 2026.</figcaption></figure>
 <p>That original use is not as necessary for me anymore, but the idea held up: there are plenty of important configuration folders that benefit from a simple, inspectable backup history.</p>
 <h2 id="keep-the-helper-small">Keep the helper small</h2>
 <p>SafeSync is a generic Git-based configuration backup helper. It is not meant to compete with a broad backup product. The value is a lightweight way to keep a folder under versioned backup when that is the right level of protection.</p>

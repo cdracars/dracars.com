@@ -147,7 +147,7 @@ function renderBlocks(lines, ctx) {
       if (!/^[a-z0-9][a-z0-9._-]*$/i.test(file)) fail(`invalid photo filename "${file}"`);
       const alt = caption || "Build log photo";
       const photoDirectory = ctx.photoDirectory ?? "resin-grow-tent-setup";
-      out.push(`<figure class="photo"><img src="/images/build-logs/${escAttr(photoDirectory)}/${escAttr(file)}" alt="${escAttr(alt)}" loading="lazy" />${caption ? `<figcaption>${inline(caption, ctx)}</figcaption>` : ""}</figure>`);
+      out.push(`<figure class="photo"><img ${imgAttrs(`/images/build-logs/${photoDirectory}/${file}`)} alt="${escAttr(alt)}" loading="lazy" />${caption ? `<figcaption>${inline(caption, ctx)}</figcaption>` : ""}</figure>`);
       i++; continue;
     }
 
@@ -279,6 +279,42 @@ const catName = (slug) => CATEGORIES.find((c) => c.slug === slug).name;
 
 // Serve a same-named WebP beside a PNG/JPEG when one exists. The original stays
 // the social-preview image, since crawler WebP support is uneven.
+// Read pixel dimensions from PNG, JPEG, or WebP headers so <img> can reserve space.
+function imageSize(src) {
+  const path = join(PUBLIC, src.replace(/^\//, ""));
+  if (!src.startsWith("/") || !existsSync(path)) return null;
+  const b = readFileSync(path);
+  if (b.toString("ascii", 1, 4) === "PNG") return { width: b.readUInt32BE(16), height: b.readUInt32BE(20) };
+  if (b.toString("ascii", 0, 4) === "RIFF" && b.toString("ascii", 8, 12) === "WEBP") {
+    const chunk = b.toString("ascii", 12, 16);
+    if (chunk === "VP8X") return { width: 1 + b.readUIntLE(24, 3), height: 1 + b.readUIntLE(27, 3) };
+    if (chunk === "VP8L") { const bits = b.readUInt32LE(21); return { width: (bits & 0x3fff) + 1, height: ((bits >> 14) & 0x3fff) + 1 }; }
+    if (chunk === "VP8 ") return { width: b.readUInt16LE(26) & 0x3fff, height: b.readUInt16LE(28) & 0x3fff };
+    return null;
+  }
+  if (b[0] === 0xff && b[1] === 0xd8) {
+    for (let i = 2; i + 9 < b.length; ) {
+      if (b[i] !== 0xff) { i++; continue; }
+      const marker = b[i + 1];
+      if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) return { width: b.readUInt16BE(i + 7), height: b.readUInt16BE(i + 5) };
+      i += 2 + b.readUInt16BE(i + 2);
+    }
+  }
+  return null;
+}
+
+// src plus width/height attributes. With thumb: true, prefer a same-named "-thumb.webp"
+// (about 800px wide) for card-sized images.
+function imgAttrs(src, { thumb = false } = {}) {
+  let file = displayImage(src);
+  if (thumb) {
+    const candidate = file.replace(/\.(?:webp|png|jpe?g)$/i, "-thumb.webp");
+    if (existsSync(join(PUBLIC, candidate.slice(1)))) file = candidate;
+  }
+  const size = imageSize(file);
+  return `src="${escAttr(file)}"${size ? ` width="${size.width}" height="${size.height}"` : ""}`;
+}
+
 function displayImage(src) {
   if (!src || !/\.(?:png|jpe?g)$/i.test(src)) return src;
   const webp = src.replace(/\.(?:png|jpe?g)$/i, ".webp");
@@ -323,9 +359,8 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
     <meta name="twitter:image:alt" content="${escAttr(socialImageAlt)}" />
     <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
     <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="/fonts/atkinson-hyperlegible-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/theme.js" defer></script>
     <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
@@ -365,7 +400,7 @@ function projectCard(project, logs = []) {
   const imageLog = (project.relatedLogs ?? []).map((slug) => logs.find((log) => log.slug === slug)).find((log) => log?.indexImage);
   const imageSrc = project.featuredImage ?? imageLog?.indexImage;
   const imageAlt = project.featuredImage ? project.featuredImageAlt : "";
-  const image = imageSrc ? `<div class="workshop-project-visual${project.imageFit === "contain" ? " workshop-project-visual-contained" : ""}"><img class="workshop-project-image${project.imageFit === "contain" ? " workshop-project-image-contain" : ""}" src="${escAttr(displayImage(imageSrc))}" alt="${escAttr(imageAlt)}" loading="eager" decoding="async" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
+  const image = imageSrc ? `<div class="workshop-project-visual${project.imageFit === "contain" ? " workshop-project-visual-contained" : ""}"><img class="workshop-project-image${project.imageFit === "contain" ? " workshop-project-image-contain" : ""}" ${imgAttrs(imageSrc, { thumb: true })} alt="${escAttr(imageAlt)}" loading="eager" decoding="async" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
   return `<a class="workshop-project-link" href="/workshop/${project.slug}/">
     ${image}
     <span class="workshop-project-copy"><span class="guide-card-meta">${badge}<span>${esc(project.phase)}</span></span><span class="workshop-project-title">${esc(project.title)}</span><span class="guide-card-desc">${esc(project.description)}</span><span class="workshop-open">Open project <span aria-hidden="true">→</span></span></span>
@@ -378,7 +413,7 @@ function featuredProjectPanel(project, logs, guides) {
   const relatedGuide = (project.relatedGuides ?? []).map((slug) => guides.find((guide) => guide.slug === slug)).find(Boolean);
   const imageSrc = project.featuredImage ?? relatedLog?.indexImage;
   const imageAlt = project.featuredImage ? project.featuredImageAlt : "";
-  const image = imageSrc ? `<div class="featured-project-image"><img src="${escAttr(displayImage(imageSrc))}" alt="${escAttr(imageAlt)}" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
+  const image = imageSrc ? `<div class="featured-project-image"><img ${imgAttrs(imageSrc, { thumb: true })} alt="${escAttr(imageAlt)}" fetchpriority="high" />${project.imageLabel ? `<span class="workshop-project-image-label">${esc(project.imageLabel)}</span>` : ""}</div>` : "";
   const statusNote = project.statusNote ? `<p class="featured-project-note">${esc(project.statusNote)}</p>` : "";
   return `<section class="featured-project" aria-labelledby="featured-project-title">
     <div class="featured-project-copy"><div class="featured-project-heading"><h2 id="featured-project-title"><a href="/workshop/${project.slug}/">${esc(project.title)}</a></h2><p>${esc(project.description)}</p></div>
@@ -459,7 +494,7 @@ function projectPage(project, allProjects, logs, guides) {
         <p class="crumbs"><a href="/workshop/">Workshop</a> ${parent ? `<span aria-hidden="true">/</span> <a href="/workshop/${parent.slug}/">${esc(parent.title)}</a>` : ""} <span aria-hidden="true">/</span> <span aria-current="page">${esc(project.title)}</span></p>
         <header class="workshop-project-header"><div><h1 id="page-title">${esc(project.title)}</h1><p class="guide-deck">${esc(project.purpose)}</p></div><div class="workshop-project-meta">${stateBadge}<p class="workshop-updated">Status last recorded <time datetime="${project.updatedAt}">${fmtDate(project.updatedAt)}</time></p>${project.statusNote ? `<p class="workshop-updated">${esc(project.statusNote)}</p>` : ""}</div></header>
         <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>${esc(project.description)}</p><p class="project-next"><strong>Next action</strong>${esc(project.nextAction)}</p></div><div class="project-current-phase"><span>Current phase</span><strong>${esc(project.phase)}</strong></div></section>
-        ${project.featuredImage ? `<div class="featured-project-image project-featured-image${project.imageFit === "contain" ? " project-featured-image-contain" : ""}"><img src="${escAttr(displayImage(project.featuredImage))}" alt="${escAttr(project.featuredImageAlt ?? "")}" loading="lazy" decoding="async" /></div>` : ""}
+        ${project.featuredImage ? `<div class="featured-project-image project-featured-image${project.imageFit === "contain" ? " project-featured-image-contain" : ""}"><img ${imgAttrs(project.featuredImage)} alt="${escAttr(project.featuredImageAlt ?? "")}" loading="lazy" decoding="async" /></div>` : ""}
         ${detailSections ? `<div class="project-detail-grid">${detailSections}</div>` : ""}
         ${project.html ? `<section class="project-context" aria-labelledby="project-context-heading"><h2 id="project-context-heading">Project notes</h2><div class="guide-body">${project.html}</div></section>` : ""}
         ${workstreams}
@@ -758,7 +793,7 @@ function buildLogIndexPage(logs) {
   const byUpdated = [...logs].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const cards = byUpdated.map((g) => {
     return `<a class="guide-card${g.indexImage ? " guide-card-with-image" : ""}" href="/build-logs/${g.slug}/">${g.indexImage ? `
-  <img class="guide-card-image" src="${escAttr(g.indexImage)}" alt="" loading="lazy" />` : ""}
+  <img class="guide-card-image" ${imgAttrs(g.indexImage, { thumb: true })} alt="" loading="lazy" />` : ""}
   <div class="guide-card-content">
   <p class="guide-card-meta"><span>${esc(catName(g.category))}</span> ${projectStateBadge(g)}</p>
   <h3>${esc(g.title)}</h3>
@@ -818,7 +853,7 @@ writeFileSync(homePath, home);
 const featuredProject = projects.find((project) => project.launchGroup === "featured");
 const homeWorkshop = `      <section class="home-workshop" id="workshop-home" aria-labelledby="home-workshop-heading">
         <div class="home-workshop-heading"><p class="home-workshop-label">Currently building</p><h2 id="home-workshop-heading">${esc(featuredProject.title)}</h2><p>${esc(featuredProject.purpose)}</p><a class="home-action-primary" href="/workshop/${featuredProject.slug}/">Open the Resin Workshop <span aria-hidden="true">→</span></a></div>
-        <div class="home-workshop-image"><img src="${esc(displayImage(featuredProject.featuredImage))}" alt="" loading="lazy" decoding="async" /></div>
+        <div class="home-workshop-image"><img ${imgAttrs(featuredProject.featuredImage, { thumb: true })} alt="" loading="lazy" decoding="async" /></div>
         <ul class="home-workshop-points"><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3m-2.6-6.4-2.1 2.1M7.7 16.3l-2.1 2.1m12.8 0-2.1-2.1M7.7 7.7 5.6 5.6"/><circle cx="12" cy="12" r="5"/></svg></span><div><strong>Current status</strong><p>${esc(featuredProject.statusLabel ?? WORKSHOP_STATES[featuredProject.status])}</p></div></li><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5m-18 5 9 5 9-5"/></svg></span><div><strong>Current phase</strong><p>${esc(featuredProject.phase)}</p></div></li><li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><div><strong>Next step</strong><p>${esc(featuredProject.nextAction)}</p></div></li></ul>
       </section>`;
 const homeStart = "      <!-- home-workshop:start -->";
