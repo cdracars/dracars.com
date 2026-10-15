@@ -3,7 +3,7 @@ title: Resin grow-tent setup guide
 slug: resin-grow-tent-setup
 description: A practical guide to setting up a contained resin-printing workspace will come out of the real build log as the equipment, workflow, and ventilation are tested.
 publishedAt: 2026-10-07
-updatedAt: 2026-10-07
+updatedAt: 2026-10-15
 author: Dracars
 category: resin-printing
 status: coming-soon
@@ -35,5 +35,12 @@ I'm keeping the working notes in the [resin workspace build log](/build-logs/res
 - curing and contaminated-waste handling
 - ventilation and the limits of using a grow tent as an enclosure
 - what equipment was actually useful, what was unnecessary, and what I would change
+
+## What has to be true before it's published
+
+- the exhaust is built and smoke-tested at the tent seams with incense
+- ten good prints across both printers
+- the dirty-to-clean IPA workflow used at least three times
+- a month without a mess escaping the tent
 
 The guide will be marked current only after those recommendations come from use rather than plans.

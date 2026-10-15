@@ -20,9 +20,10 @@ equipment:
   - AC Infinity CLOUDLINE inline fan planned at the tent end of the exhaust; 4-inch S4 versus T4 not yet chosen
   - Planned duct route: from the tent into the attic crawl space through an existing opening, then out through a new roof opening
 problems:
-  - There is no working exhaust yet.
+  - There is no working exhaust yet. When it is built, I will test it with incense smoke at the tent seams.
   - The liner clips have not been tested in use.
   - I plan to make a few prints before the exhaust is ready. That is my choice, not a tested or recommended setup.
+  - Safety goggles are on hand. There is no fire extinguisher at the tent yet (I plan to get one) and no respirator yet.
 relatedLogs: [resin-grow-tent-setup]
 relatedGuides: [resin-grow-tent-setup]
 focus:
