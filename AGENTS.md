@@ -24,3 +24,14 @@
 - For visible changes, inspect affected pages at mobile and desktop widths in light and dark themes. Check keyboard access, visible focus, and changed links or controls.
 - For documentation-only changes, check referenced paths and instructions against the repository; a site rebuild is unnecessary.
 - Report what changed, which checks ran, and any checks that could not be completed. Distinguish local verification from a verified deployment.
+
+## Commit identity
+
+Author and commit only as `Cody Dracars <cdracars@gmail.com>`. Never use a
+work or employer email address for commits in this repository.
+
+Before committing, check `git config user.email`. If it shows anything else,
+pass the identity for that commit (`git -c user.name="Cody Dracars" -c
+user.email=cdracars@gmail.com commit ...`) or set it for this repository only;
+don't change global git config. Don't rewrite existing history to change
+authors unless Cody asks.
