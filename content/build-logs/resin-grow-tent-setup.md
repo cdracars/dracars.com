@@ -3,19 +3,19 @@ title: Setting up my garage grow tent for resin printing
 slug: resin-grow-tent-setup
 description: I do plenty of FDM printing, but resin has me planning for the drips, washing, cleanup, and contaminated tools around the printer.
 publishedAt: 2026-10-08
-updatedAt: 2026-10-12
+updatedAt: 2026-10-19
 indexImage: /images/build-logs/resin-grow-tent-setup/08-tent-in-place.webp
 author: Dracars
 category: projects-builds
 status: current
 projectState: building
-statusNote: Tent assembled — workspace still being built
+statusNote: Calibration prints passed; a test mini failed — workspace still being built
 featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
-  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; no prints yet)
-  - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate found; remaining setup checks not done; not ready to print)
-  - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet)
+  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; calibration prints done)
+  - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; calibration prints, including Cones of Calibration v3, succeeded in SUNLU ABS-Like Dark Grey; a test mini afterward failed because debris was left in the vat)
+  - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet; its power cord doesn't reach the overhead power until the taller standing desk is in)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
   - Garage; ~58-inch standing desk planned as the main work surface
 affiliateLinksPresent: false
@@ -134,27 +134,62 @@ The floor liner is done for now. The yellow clips are the 22mm grow tent clips I
 
 !photo 22-liner-clip-detail.webp | A closer look at the liner with a yellow clip near the top and another near the bottom, the plastic hanging in loose folds between them.
 
+### Update, 2026-10-19: A successful calibration print
+
+The resin calibration prints worked. I printed TableFlip Foundry's [Cones of Calibration V3](https://www.tableflipfoundry.com/3d-printing/the-cones-of-calibration-v3/) on the Saturn 4 Ultra in the SUNLU ABS-Like Dark Grey resin, and it came off with every feature I can see intact: the skull, the thin spike, the five cones under the roof, the mug with its open handle, and the SUCCESS lettering along the base. That lettering is part of the model, so it's the print's own verdict, not a measurement. It tells me this exposure is in a workable range; it doesn't tell me the settings are tuned or that the next print will go the same way.
+
+For now, all my resin printing is on the Saturn. The power in the tent is mounted up high, and the Photon P1's cord won't reach it from the folding table. That changes once the standing desk is in, since it can raise the P1 higher.
+
+!photo 23-cones-of-calibration-success.webp | The Cones of Calibration v3 in SUNLU Dark Grey resin, top-down: the TableFlip Foundry roof, the skull and spike at left, the mug at right, and SUCCESS along the front of the base.
+
+!photo 24-cones-of-calibration-front.webp | A front view of the same print, showing the five cones standing under the roof and the open mug handle.
+
+### Update, 2026-10-19: Where I messed up
+
+That success shot isn't the whole story, and this log is supposed to be honest, so here's the part I'd rather skip.
+
+After the calibration prints, I thought everything was good and ran a mini as a final test. What I didn't know was that a piece from the calibration prints had come off the build plate and stayed in the vat. I didn't check the vat before starting the mini, and the mini failed. Checking the vat between prints is the kind of step I'd tell someone else not to skip, and I skipped it.
+
+Trying to get the stuck pieces out, I ran the Saturn's vat-cleaning job. It exposes the full LCD, so it cured a layer of resin across the whole bottom of the vat, and then I couldn't figure out how to get that layer out.
+
+Then I emptied the vat, and that's where it really went sideways. The SUNLU resin came with a little paper filter funnel, and I didn't realize it's meant to sit inside a real, rigid funnel. You'd expect the paper to collapse on its own, but it didn't; once resin was in it, it stood up fine. The problem was that the resin soaked through the paper and ran down the outside of the bottle, and I made a huge mess. My wife came out to help me clean it all up.
+
+With the resin finally out of the vat, I was able to pull the cured layer out, clean the vat fully, and put everything back together.
+
+Next, I'm going to take the vat off and run another full-screen exposure test to make sure the failed print didn't damage the LCD, then work through some routine maintenance before printing again.
+
+So learning has been "fun." The lessons I've remembered best are usually the ones I learned the hard way.
+
+My biggest takeaway from the calibrations, the failed mini, and the cleanup is that resin is slow and methodical. Don't get in a hurry, and don't skip steps. Take it slow and do it right and safe. That's different from FDM, which can be a little fast and loose if you want it to be because there's less at stake when something goes wrong. With resin, one skipped check led to a failed print, a cured layer stuck in the vat, and a big mess.
+
 ## Drip mods I've already printed
 
-I do plenty of FDM printing, and I've already printed drip mods for both resin machines. I haven't used either resin printer yet, so I don't know how the mods will work in practice or whether I'll want to make other changes. For now, I'm focusing on the workspace and cleanup flow; I'll note what I learn when I try the mods.
+I do plenty of FDM printing, and I've already printed drip mods for both resin machines. I printed these before any resin printing.
+
+**Update, 2026-10-19:** I used one of the drip mods on the Saturn during the calibration prints, and it worked gloriously. It's a little tight, though, so I'm printing a new drip mod that stays on the build plate.
+
+I'm also printing a replacement for the drip tray that normally comes with the Saturn. Mine was used and didn't come with one, and it drips onto the outside of the printer a lot. Every time I moved the build plate during the calibrations, resin dripped everywhere, and I was wiping constantly. The plate-mounted drip mod and the drip tray are both going on the printer queue tonight; I haven't printed or tested either yet.
 
 ## A move I wouldn't recommend
 
 When moving my resin equipment, I left it in my truck for a day before getting it into the garage. The machines had been emptied for the move, and it reached about 85°F that day. I wouldn't recommend leaving resin equipment in a vehicle on a hot day. My concern is sunlight reaching any uncured resin residue left on the equipment.
 
-I don't know whether anything was affected: I haven't run either machine yet. I'll inspect the vats and build plates before use and record any problems I find. I can't call the move harmless or claim that heat damaged the machines.
+I don't know whether anything was affected; I hadn't run either machine when I wrote this. I'll inspect the vats and build plates before use and record any problems I find. I can't call the move harmless or claim that heat damaged the machines.
 
 I've also had cured resin end up in places I didn't want it on another resin machine. That's why I'm planning a defined dirty zone before this workspace sees any resin.
 
 ## What I'd do differently
 
-I haven't used this setup yet, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
+I've only run a calibration print in this setup, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
 
 
 ## What I'm working on next
 
 - see how the printed clips on the floor liner hold up once I'm working in the tent
-- record how the first prints and IPA cleanup go
+- record how the next prints and IPA cleanup go
+- take the vat off and run a full-screen exposure test to check the LCD for damage from the failed print
+- check the vat before every print and set up a proper funnel before draining it
+- print and try the plate-mounted drip mod and the replacement Saturn drip tray
 - inspect the Saturn's vat and build plate, then work through its setup checks
 - diagnose the Wash & Cure and set up the dirty and clean washes
 - set up the standing desk and work out the curing workflow
