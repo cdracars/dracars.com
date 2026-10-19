@@ -150,7 +150,7 @@ After the calibration prints, I thought everything was good and ran a mini as a 
 
 Trying to get the stuck pieces out, I ran the Saturn's vat-cleaning job. It exposes the full LCD, so it cured a layer of resin across the whole bottom of the vat, and then I couldn't figure out how to get that layer out.
 
-Then I emptied the vat, and that's where it really went sideways. The SUNLU resin came with a little paper filter funnel, and I didn't realize it's meant to sit inside a real, rigid funnel. On its own it didn't hold up, and I made a huge mess. My wife came out to help me clean it all up.
+Then I emptied the vat, and that's where it really went sideways. The SUNLU resin came with a little paper filter funnel, and I didn't realize it's meant to sit inside a real, rigid funnel. You'd expect the paper to collapse on its own, but it didn't; once resin was in it, it stood up fine. The problem was that the resin soaked through the paper and ran down the outside of the bottle, and I made a huge mess. My wife came out to help me clean it all up.
 
 With the resin finally out of the vat, I was able to pull the cured layer out, clean the vat fully, and put everything back together.
 
