@@ -152,6 +152,10 @@ Trying to get the stuck pieces out, I ran the Saturn's vat-cleaning job. It expo
 
 Then I emptied the vat, and that's where it really went sideways. The SUNLU resin came with a little paper filter funnel, and I didn't realize it's meant to sit inside a real, rigid funnel. On its own it didn't hold up, and I made a huge mess. My wife came out to help me clean it all up.
 
+With the resin finally out of the vat, I was able to pull the cured layer out, clean the vat fully, and put everything back together.
+
+Next, I'm going to take the vat off and run another full-screen exposure test to make sure the failed print didn't damage the LCD, then work through some routine maintenance before printing again.
+
 So learning has been "fun." The lessons I've remembered best are usually the ones I learned the hard way.
 
 My biggest takeaway from the calibrations, the failed mini, and the cleanup is that resin is slow and methodical. Don't get in a hurry, and don't skip steps. Take it slow and do it right and safe. That's different from FDM, which can be a little fast and loose if you want it to be because there's less at stake when something goes wrong. With resin, one skipped check led to a failed print, a cured layer stuck in the vat, and a big mess.
@@ -177,6 +181,7 @@ I've only run a calibration print in this setup, so I can't call this a finished
 
 - see how the printed clips on the floor liner hold up once I'm working in the tent
 - record how the next prints and IPA cleanup go
+- take the vat off and run a full-screen exposure test to check the LCD for damage from the failed print
 - check the vat before every print and set up a proper funnel before draining it
 - inspect the Saturn's vat and build plate, then work through its setup checks
 - diagnose the Wash & Cure and set up the dirty and clean washes
