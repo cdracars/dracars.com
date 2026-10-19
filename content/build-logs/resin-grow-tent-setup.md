@@ -3,13 +3,13 @@ title: Setting up my garage grow tent for resin printing
 slug: resin-grow-tent-setup
 description: I do plenty of FDM printing, but resin has me planning for the drips, washing, cleanup, and contaminated tools around the printer.
 publishedAt: 2026-10-08
-updatedAt: 2026-10-12
+updatedAt: 2026-10-19
 indexImage: /images/build-logs/resin-grow-tent-setup/08-tent-in-place.webp
 author: Dracars
 category: projects-builds
 status: current
 projectState: building
-statusNote: Tent assembled — workspace still being built
+statusNote: First resin calibration print succeeded — workspace still being built
 featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
@@ -134,27 +134,35 @@ The floor liner is done for now. The yellow clips are the 22mm grow tent clips I
 
 !photo 22-liner-clip-detail.webp | A closer look at the liner with a yellow clip near the top and another near the bottom, the plastic hanging in loose folds between them.
 
+### Update, 2026-10-19: A successful calibration print
+
+The first resin calibration print worked. I printed Tableflip Foundry's Cones of Calibration v3, and it came off with every feature I can see intact: the skull, the thin spike, the five cones under the roof, the mug with its open handle, and the SUCCESS lettering along the base. That lettering is part of the model, so it's the print's own verdict, not a measurement. It tells me this exposure is in a workable range; it doesn't tell me the settings are tuned or that the next print will go the same way.
+
+!photo 23-cones-of-calibration-success.webp | The Cones of Calibration v3 in grey resin, top-down: the Tableflip Foundry roof, the skull and spike at left, the mug at right, and SUCCESS along the front of the base. FDM Benchys sit behind it.
+
+!photo 24-cones-of-calibration-front.webp | A front view of the same print, showing the five cones standing under the roof and the open mug handle. The Benchys behind it are FDM prints.
+
 ## Drip mods I've already printed
 
-I do plenty of FDM printing, and I've already printed drip mods for both resin machines. I haven't used either resin printer yet, so I don't know how the mods will work in practice or whether I'll want to make other changes. For now, I'm focusing on the workspace and cleanup flow; I'll note what I learn when I try the mods.
+I do plenty of FDM printing, and I've already printed drip mods for both resin machines. I printed these before any resin printing, so I don't know yet how the mods work in practice or whether I'll want to make other changes. For now, I'm focusing on the workspace and cleanup flow; I'll note what I learn when I try the mods.
 
 ## A move I wouldn't recommend
 
 When moving my resin equipment, I left it in my truck for a day before getting it into the garage. The machines had been emptied for the move, and it reached about 85°F that day. I wouldn't recommend leaving resin equipment in a vehicle on a hot day. My concern is sunlight reaching any uncured resin residue left on the equipment.
 
-I don't know whether anything was affected: I haven't run either machine yet. I'll inspect the vats and build plates before use and record any problems I find. I can't call the move harmless or claim that heat damaged the machines.
+I don't know whether anything was affected; I hadn't run either machine when I wrote this. I'll inspect the vats and build plates before use and record any problems I find. I can't call the move harmless or claim that heat damaged the machines.
 
 I've also had cured resin end up in places I didn't want it on another resin machine. That's why I'm planning a defined dirty zone before this workspace sees any resin.
 
 ## What I'd do differently
 
-I haven't used this setup yet, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
+I've only run a calibration print in this setup, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
 
 
 ## What I'm working on next
 
 - see how the printed clips on the floor liner hold up once I'm working in the tent
-- record how the first prints and IPA cleanup go
+- record how the next prints and IPA cleanup go
 - inspect the Saturn's vat and build plate, then work through its setup checks
 - diagnose the Wash & Cure and set up the dirty and clean washes
 - set up the standing desk and work out the curing workflow
