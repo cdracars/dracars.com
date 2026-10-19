@@ -24,6 +24,7 @@ problems:
   - There is no working exhaust yet. When it is built, I will test it with incense smoke at the tent seams.
   - The liner clips have not been tested in use.
   - I started printing on the Saturn before the exhaust is ready, with the exposure test on October 18 and calibration prints on October 19. That is my choice, not a tested or recommended setup.
+  - The space heater is an ignition source, and IPA vapor is flammable. I keep IPA covered when it's not in use and stored away from the heater.
   - Safety goggles are on hand. There is no fire extinguisher at the tent yet (I plan to get one) and no respirator yet.
 relatedLogs: [resin-grow-tent-setup]
 relatedGuides: [resin-grow-tent-setup]
