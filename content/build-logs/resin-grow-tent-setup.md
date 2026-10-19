@@ -15,7 +15,7 @@ tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
   - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; calibration prints done)
   - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; calibration prints, including Cones of Calibration v3, succeeded in SUNLU ABS-Like Dark Grey; a test mini afterward failed because debris was left in the vat)
-  - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet)
+  - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet; its power cord doesn't reach the overhead power until the taller standing desk is in)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
   - Garage; ~58-inch standing desk planned as the main work surface
 affiliateLinksPresent: false
@@ -137,6 +137,8 @@ The floor liner is done for now. The yellow clips are the 22mm grow tent clips I
 ### Update, 2026-10-19: A successful calibration print
 
 The resin calibration prints worked. I printed TableFlip Foundry's [Cones of Calibration V3](https://www.tableflipfoundry.com/3d-printing/the-cones-of-calibration-v3/) on the Saturn 4 Ultra in the SUNLU ABS-Like Dark Grey resin, and it came off with every feature I can see intact: the skull, the thin spike, the five cones under the roof, the mug with its open handle, and the SUCCESS lettering along the base. That lettering is part of the model, so it's the print's own verdict, not a measurement. It tells me this exposure is in a workable range; it doesn't tell me the settings are tuned or that the next print will go the same way.
+
+For now, all my resin printing is on the Saturn. The power in the tent is mounted up high, and the Photon P1's cord won't reach it from the folding table. That changes once the standing desk is in, since it can raise the P1 higher.
 
 !photo 23-cones-of-calibration-success.webp | The Cones of Calibration v3 in SUNLU Dark Grey resin, top-down: the TableFlip Foundry roof, the skull and spike at left, the mug at right, and SUCCESS along the front of the base.
 
