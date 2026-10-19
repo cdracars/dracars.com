@@ -171,7 +171,7 @@ The total doesn't include a possible heater. The old fish tank fixture has been 
 
 ### Where the gear came from
 
-Several of the supplies came from Harbor Freight. These are plain links, not affiliate links, and I haven't tested any of this gear for resin work yet:
+Several of the supplies came from Harbor Freight. I haven't tested any of this gear for resin work yet:
 
 - **Extension cord:** [Vanguard 25 ft. x 16/3 gauge indoor/outdoor extension cord, orange](https://www.harborfreight.com/25-ft-x-163-gauge-indooroutdoor-extension-cord-orange-62938.html).
 - **Gloves:** [Hardy 9 mil nitrile powder-free gloves, medium](https://www.harborfreight.com/9-mil-nitrile-powder-free-gloves-medium-50-pack-68510.html), the black ones. I wear a medium, and they run a little tight on me, though not too bad.

@@ -77,7 +77,7 @@ Nothing in these photos has been tested for resin work. At the time, there was s
 
 One note on the cords: I coiled and hung them on the wall to keep them off the floor. The orange one is a 25 ft Harbor Freight cord, 16 gauge, and it's the only cord whose gauge I know for sure. The other cord is the one on the light, which gets replaced when the light does. Coiled cords hold heat, so I'll uncoil them before anything that draws real power runs through them.
 
-**Supplies that arrived.** I bought four more items for the workspace, and they've been delivered. These are plain links, not affiliate links:
+**Supplies that arrived.** I bought four more items for the workspace, and they've been delivered:
 
 - [Inline extension cord switch](https://www.amazon.com/dp/B0DRTCM4DH): the red rocker I first added to the old fish-tank light because it had no switch, then reused with the Braun LED.
 - [2-pack of 45 oz pickle jars](https://www.amazon.com/dp/B0DBKF17W3): for dirty wash storage, an idea I picked up from a YouTube video.
@@ -106,7 +106,7 @@ The next photo shows those parts in place: the empty vat is installed, and the b
 
 !photo 12-saturn-with-tank-installed.webp | The Saturn 4 Ultra with the resin vat and build plate from the preceding two box photos in place; the vat is empty, and the antenna is attached.
 
-I picked the [Braun 5500 lumen, 4 ft linkable LED hanging shop light](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html), Harbor Freight item 59506. This is a plain link, not an affiliate link. The shelf photo shows the light I chose. Its listing gives 55 W at 120 V, an on/off metal pull chain, and two chains with S-hooks; the box says 4000K cool white. Those are the manufacturer's numbers, not anything I've measured, It's an LED shop light, so it shouldn't put out meaningful UV; I haven't measured it.
+I picked the [Braun 5500 lumen, 4 ft linkable LED hanging shop light](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html), Harbor Freight item 59506. The shelf photo shows the light I chose. Its listing gives 55 W at 120 V, an on/off metal pull chain, and two chains with S-hooks; the box says 4000K cool white. Those are the manufacturer's numbers, not anything I've measured, It's an LED shop light, so it shouldn't put out meaningful UV; I haven't measured it.
 
 !photo 17-braun-shop-light-shelf.webp | The Braun lights on the store shelf. The 5500 lumen, 4 ft linkable shop light is the one I picked.
 
@@ -140,15 +140,15 @@ Before the calibration print below, I ran an exposure test on the Saturn: a set 
 
 !photo 28-saturn-vat.webp | The Saturn's vat seated under the raised build plate, held by its black clamp knob.
 
-!photo 27-exposure-test-cones.webp | The exposure test pieces on a blue shop towel, labeled 2, 2.4, 2.8, 3.2, 3.6, and 4. The 2 and 2.4 settings left only resin stains on the towel; 2.8 through 4 printed.
+!photo 27-exposure-test-cones.webp | The exposure test pieces on a blue shop towel, labeled 2, 2.4, 2.8, 3.2, 3.6, and 4. The 2 and 2.4 pieces had already moved to the curing station, so only their resin marks are left on the towel.
 
-The two lowest settings, 2 and 2.4, didn't print; all that's left of them is resin stains on the towel. 2.8, 3.2, 3.6, and 4 all produced pieces.
+I cured the pieces one at a time in a [Fungdo resin curing enclosure](https://www.amazon.com/dp/B085KW8K3F), a small fabric box with a UV light and a turntable inside. When I took the towel photo, the 2 and 2.4 pieces had already gone to the enclosure; the marks on the towel are just where they sat.
 
-I cured a print in a Fungdo curing enclosure, a small fabric box with a UV light and a turntable inside.
+My favorite part is the turntable. It's solar powered, so it starts spinning on its own when the UV light comes on and stops when the light goes off. I think that's super cool.
 
-!photo 25-fungdo-curing-enclosure.webp | The Fungdo curing enclosure glowing purple through its window while a print cures inside.
+!photo 25-fungdo-curing-enclosure.webp | The Fungdo curing enclosure glowing purple through its window while a test piece cures inside.
 
-!photo 26-curing-on-turntable.webp | Inside the enclosure: a print on the clear turntable under the UV light, with the reflective lining behind it.
+!photo 26-curing-on-turntable.webp | Inside the enclosure: a test piece on the clear turntable under the UV light, with the reflective lining behind it.
 
 ### Update, 2026-10-19: A successful calibration print
 

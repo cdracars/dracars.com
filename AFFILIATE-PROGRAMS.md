@@ -70,8 +70,8 @@ First candidates (Cody, 2026-10-15): the plain Amazon links already in the resin
 build log — the inline extension cord switch, the 45 oz pickle jars, the extra
 large silicone mat, and the SUNLU ABS-like resin. When they become affiliate
 links, mark each with `"affiliate"`, set `affiliateLinksPresent: true`, and
-replace the log's "plain links, not affiliate links" note with the Associates
-disclosure.
+add the Associates disclosure. Ordinary links carry no label; only affiliate
+links are marked (Cody, 2026-10-19).
 
 ### Terms to record when applying
 
@@ -91,6 +91,7 @@ as part of this link update.
 | Anycubic Photon P1 | [Official product page](https://store.anycubic.com/products/photon-p1-resin-3d-printer) | Linked in the guide and resin-workshop project page; no print results claimed. Affiliate program researched; no application recorded. | None yet |
 | AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent | [Current CLOUDLAB 866 product page](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) | Cody identified the model from the 60 × 60-inch footprint and AC Infinity branding; official listing confirms the model name and number. Linked in the guide and resin-workshop project page; revision-specific features are not claimed. | None yet |
 | Anycubic Wash & Cure 3 Max | [Official product page](https://store.anycubic.com/products/wash-cure-3-max) | Exact model named in the project record and linked on the resin-workshop project page; function remains unconfirmed. | None yet |
+| Fungdo 3D printer resin curing enclosure (UV light with turntable) | [Amazon listing](https://www.amazon.com/dp/B085KW8K3F) | Cody supplied the listing on 2026-10-19; linked in the Build Log's 2026-10-18 exposure test entry as an ordinary link. Used to cure the exposure test pieces; UV output and cure times are unmeasured. | None yet |
 | Braun 5500 lumen, 4 ft linkable LED hanging shop light (Harbor Freight item 59506) | [Harbor Freight product listing](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html) | Exact item recorded in the Build Log and linked on the resin-workshop project page; light output and UV emission are unmeasured. | None yet |
 
 The guide also links two unselected wet-zone options below the equipment list:
@@ -148,6 +149,10 @@ ends, restore its ordinary URLs and set the flag to match the remaining links.
 > Dracars publishes practical guides about 3D printing, hardware, and software, alongside free tools and open-source projects. Guides document my actual setup and experience. Affiliate links will appear only where equipment is relevant, with clear disclosure and independent recommendations.
 
 ## Activity
+
+- **2026-10-19:** Per Cody, removed the "plain link, not affiliate" notes from the resin build log and working-draft guide; only affiliate links get labeled.
+
+- **2026-10-19:** Added Cody's Fungdo resin curing enclosure Amazon listing as an ordinary link in the resin build log and to the link inventory. Another Associates candidate if that program goes ahead; no application submitted and no program status changed. Deployment not verified.
 
 - **2026-10-15:** Cody confirmed the plain Amazon links in the resin build log are the first Associates candidates. No application submitted yet; no links changed. Exhaust plan updated elsewhere: CLOUDLINE fan at the tent end, duct through the attic crawl space and out a new roof opening.
 
