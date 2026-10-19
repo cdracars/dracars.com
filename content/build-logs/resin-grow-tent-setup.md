@@ -170,11 +170,15 @@ For now, all my resin printing is on the Saturn. The power in the tent is mounte
 
 !photo 24-cones-of-calibration-front.webp | A front view of the same print, showing the five cones standing under the roof and the open mug handle.
 
+### Update, 2026-10-19: Where the exposure landed
+
+From the calibration prints, I've settled on a 2.0 s exposure per layer at 0.05 mm layer height, with 6 bottom layers at 25 s. The lowest exposure that still printed was between 1.6 and 1.7 s. At 2.3 s, the bridge still didn't print. That's a starting point for this resin on this printer, not a final tune.
+
 ### Update, 2026-10-19: Where I messed up
 
 That success shot isn't the whole story, and this log is supposed to be honest, so here's the part I'd rather skip.
 
-After the calibration prints, I thought everything was good and ran a mini as a final test. What I didn't know was that a piece from the calibration prints had come off the build plate and stayed in the vat. I didn't check the vat before starting the mini, and the mini failed. Checking the vat between prints is the kind of step I'd tell someone else not to skip, and I skipped it.
+After the calibration prints, I thought everything was good and ran a mini as a final test. What I didn't know was that the mugs on two of the calibration prints, the 1.9 s and 2.3 s ones, had torn at one end, and a piece of mug had come off and stayed in the vat. I don't know yet why they tore; peel force and where the parts sat on the build plate are my main suspects. I didn't check the vat before starting the mini, and the mini failed. Checking the vat between prints is the kind of step I'd tell someone else not to skip, and I skipped it.
 
 Trying to get the stuck pieces out, I ran the Saturn's vat-cleaning job. It exposes the full LCD, so it cured a layer of resin across the whole bottom of the vat, and then I couldn't figure out how to get that layer out.
 
@@ -215,6 +219,7 @@ I've only run an exposure test, a calibration print, and one failed mini in this
 - record how the next prints and IPA cleanup go
 - take the vat off and run a full-screen exposure test to check the LCD for damage from the failed print
 - check the vat before every print and set up a proper funnel before draining it
+- figure out why the 1.9 s and 2.3 s mugs tore
 - print and try the plate-mounted drip mod and the replacement Saturn drip tray
 - inspect the Saturn's vat and build plate, then work through its setup checks
 - diagnose the Wash & Cure and set up the dirty and clean washes
