@@ -15,7 +15,7 @@ updatedAt: 2026-10-19
 nextAction: Set up the ductwork, including the new roof opening, then smoke-test the exhaust and update my recommendation.
 equipment:
   - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent, assembled in the garage, with cinch-top duct ports on the wall and in the floor corner
-  - A space heater in the tent to keep it warm as winter comes on; with the fan controller's temperature sensor, I can see whether it's warm enough to print instead of guessing
+  - A space heater in the tent to keep it warm as winter comes on; with the fan controller's temperature sensor, I can see whether it's warm enough to print instead of guessing. Long term, I plan to heat just the inside of the printer instead of the whole tent
   - Plastic floor liner held with corner clips, and a plastic-covered temporary folding table; a ~58-inch standing desk is planned as the main work surface
   - Braun 4 ft shop light; an LED light that shouldn't put out meaningful UV, though its output hasn't been measured
   - AC Infinity CLOUDLINE T4 (AI-CLT4) 4-inch inline fan, on hand since October 17, 2026; I use its temperature sensor as a reference for the tent's temperature. It is not ducted yet and will sit at the tent end of the exhaust.
