@@ -162,7 +162,11 @@ My biggest takeaway from the calibrations, the failed mini, and the cleanup is t
 
 ## Drip mods I've already printed
 
-I do plenty of FDM printing, and I've already printed drip mods for both resin machines. I printed these before any resin printing, so I don't know yet how the mods work in practice or whether I'll want to make other changes. For now, I'm focusing on the workspace and cleanup flow; I'll note what I learn when I try the mods.
+I do plenty of FDM printing, and I've already printed drip mods for both resin machines. I printed these before any resin printing.
+
+**Update, 2026-10-19:** I used one of the drip mods on the Saturn during the calibration prints, and it worked gloriously. It's a little tight, though, so I'm printing a new drip mod that stays on the build plate.
+
+I'm also printing a replacement for the drip tray that normally comes with the Saturn. Mine was used and didn't come with one, and it drips onto the outside of the printer a lot. Every time I moved the build plate during the calibrations, resin dripped everywhere, and I was wiping constantly. The plate-mounted drip mod and the drip tray are both going on the printer queue tonight; I haven't printed or tested either yet.
 
 ## A move I wouldn't recommend
 
@@ -183,6 +187,7 @@ I've only run a calibration print in this setup, so I can't call this a finished
 - record how the next prints and IPA cleanup go
 - take the vat off and run a full-screen exposure test to check the LCD for damage from the failed print
 - check the vat before every print and set up a proper funnel before draining it
+- print and try the plate-mounted drip mod and the replacement Saturn drip tray
 - inspect the Saturn's vat and build plate, then work through its setup checks
 - diagnose the Wash & Cure and set up the dirty and clean washes
 - set up the standing desk and work out the curing workflow
