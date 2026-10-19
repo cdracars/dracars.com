@@ -18,6 +18,7 @@ testedWith:
   - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet; its power cord doesn't reach the overhead power until the taller standing desk is in)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
   - Fungdo resin curing enclosure (used to cure the exposure test pieces)
+  - AC Infinity inline fan (temperature sensor in use; not ducted yet)
   - Garage; ~58-inch standing desk planned as the main work surface
 affiliateLinksPresent: false
 ---
@@ -134,6 +135,14 @@ The floor liner is done for now. The yellow clips are the 22mm grow tent clips I
 !photo 21-liner-held-by-clips.webp | Lifting the liner away from the wall to show two yellow clips holding the plastic to the lower frame tube.
 
 !photo 22-liner-clip-detail.webp | A closer look at the liner with a yellow clip near the top and another near the bottom, the plastic hanging in loose folds between them.
+
+### Update, before the calibrations: The exhaust fan
+
+Before I ran any calibrations, the exhaust fan showed up: an AC Infinity inline fan. I'm already using its temperature sensor, but the fan isn't ducted to anything yet, so it isn't an exhaust. The duct run into the attic crawl space and out through a new roof opening is still ahead, and everything I said above about printing before the exhaust is ready still applies.
+
+!photo 29-inline-fan-unboxed.webp | The AC Infinity inline fan in its box, with its mounting bracket, coiled cord, and installation sheet.
+
+!photo 30-inline-fan-in-tent.webp | The inline fan sitting on the plastic-covered table in the tent, not yet connected to any ductwork, with the Photon P1 and the Saturn behind it.
 
 ### Update, 2026-10-18: The exposure test
 
