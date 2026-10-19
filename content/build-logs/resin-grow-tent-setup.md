@@ -144,6 +144,8 @@ Before the calibration print below, I ran an exposure test on the Saturn: a set 
 
 I cured the pieces one at a time in a [Fungdo resin curing enclosure](https://www.amazon.com/dp/B085KW8K3F), a small fabric box with a UV light and a turntable inside. That's a plain link, not an affiliate link. When I took the towel photo, the 2 and 2.4 pieces had already gone to the enclosure; the marks on the towel are just where they sat.
 
+My favorite part is the turntable. It's solar powered, so it starts spinning on its own when the UV light comes on and stops when the light goes off. I think that's super cool.
+
 !photo 25-fungdo-curing-enclosure.webp | The Fungdo curing enclosure glowing purple through its window while a test piece cures inside.
 
 !photo 26-curing-on-turntable.webp | Inside the enclosure: a test piece on the clear turntable under the UV light, with the reflective lining behind it.
