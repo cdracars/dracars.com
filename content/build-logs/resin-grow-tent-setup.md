@@ -142,7 +142,7 @@ Before the calibration print below, I ran an exposure test on the Saturn: a set 
 
 !photo 27-exposure-test-cones.webp | The exposure test pieces on a blue shop towel, labeled 2, 2.4, 2.8, 3.2, 3.6, and 4. The 2 and 2.4 pieces had already moved to the curing station, so only their resin marks are left on the towel.
 
-I cured the pieces one at a time in a Fungdo curing enclosure, a small fabric box with a UV light and a turntable inside. When I took the towel photo, the 2 and 2.4 pieces had already gone to the enclosure; the marks on the towel are just where they sat.
+I cured the pieces one at a time in a [Fungdo resin curing enclosure](https://www.amazon.com/dp/B085KW8K3F), a small fabric box with a UV light and a turntable inside. That's a plain link, not an affiliate link. When I took the towel photo, the 2 and 2.4 pieces had already gone to the enclosure; the marks on the towel are just where they sat.
 
 !photo 25-fungdo-curing-enclosure.webp | The Fungdo curing enclosure glowing purple through its window while a test piece cures inside.
 
