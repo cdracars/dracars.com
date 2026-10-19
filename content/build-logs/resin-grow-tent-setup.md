@@ -13,16 +13,17 @@ statusNote: Calibration prints passed; a test mini failed — workspace still be
 featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
-  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; calibration prints done)
+  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn and Photon P1 inside, Braun shop light, cords, plastic-covered folding table; exposure test and calibration prints done)
   - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; calibration prints, including Cones of Calibration v3, succeeded in SUNLU ABS-Like Dark Grey; a test mini afterward failed because debris was left in the vat)
   - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet; its power cord doesn't reach the overhead power until the taller standing desk is in)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
+  - Fungdo resin curing enclosure (used to cure the exposure test pieces)
   - Garage; ~58-inch standing desk planned as the main work surface
 affiliateLinksPresent: false
 ---
 
 :::tldr Where I'm at
-I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn, with an empty tank installed, and the Photon P1 are both sitting on that table. The exhaust will take time and money to do right. I have new machines and want to play with them, so I plan to make a few prints before it's ready. I'll explain how I'm approaching that below.
+I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn and the Photon P1 are both sitting on that table. The Saturn has passed an exposure test and a calibration print, and then a test mini failed because I left debris in the vat. The P1 hasn't printed yet. The exhaust will take time and money to do right. I have new machines and want to play with them, so I started printing before it's ready. I'll explain how I'm approaching that below.
 :::
 
 ## Why I'm setting it up this way
@@ -196,7 +197,7 @@ I've also had cured resin end up in places I didn't want it on another resin mac
 
 ## What I'd do differently
 
-I've only run a calibration print in this setup, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
+I've only run an exposure test, a calibration print, and one failed mini in this setup, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
 
 
 ## What I'm working on next

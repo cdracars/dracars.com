@@ -25,7 +25,7 @@ These are possible logs, not commitments to publish every project. A project can
 - [ ] **Resin workspace: the garage grow-tent setup**
   - **Scope:** The shared workspace for the Photon P1 and Saturn 4 Ultra: layout, floor protection, spill response, ventilation, and wash/cleanup workflow.
   - **Log structure:** This is the parent workspace log. Once the direct P1 and Saturn logs are published, link to them where a decision concerns one machine specifically, and link back from both printer logs. Keep the workspace log focused on shared setup and workflow.
-  - **Current state:** The tent is assembled, but the workspace and workflows are still being developed. The Saturn is not ready to print: it came with two boxes of parts, and the vat has not been found among the items checked so far; it may still be in one of those boxes. Record installed and tested setup separately from plans.
+  - **Current state:** The tent is assembled, but the workspace and workflows are still being developed. The Saturn's missing vat and build plate arrived in two Elegoo boxes and were installed on 2026-10-11. It ran an exposure test on 2026-10-18 and a successful calibration print on 2026-10-19; a test mini then failed because debris was left in the vat, and an LCD check is next. The Photon P1 has not printed. Record installed and tested setup separately from plans.
   - **Guide boundary:** Keep the Saturn setup guide marked Coming Soon until the printer is complete and the workspace and workflows have been used and tested.
 
 - [ ] **Anycubic Photon P1: setup**
@@ -41,9 +41,9 @@ These are possible logs, not commitments to publish every project. A project can
 
 - [ ] **Elegoo Saturn 4 Ultra 12K: unpacking and completing setup**
   - **Scope:** Inventorying the printer and included parts, resolving what is missing, and getting it to a ready-to-print state.
-  - **Current state:** Two boxes of parts came with the printer. The vat has not been found among the items checked so far and may be in one of those boxes. The printer is not ready to print.
+  - **Current state:** The missing vat and build plate arrived in two Elegoo boxes and were installed on 2026-10-11, with Wi-Fi set up the same day. Exposure test on 2026-10-18 and a successful Cones of Calibration v3 print on 2026-10-19; a test mini then failed because debris was left in the vat. The vat has been cleaned and reassembled.
   - **Log structure:** Start with the as-received condition and box inventory. Add dated updates as parts are found, the vat is installed, and setup checks are completed. Link to the resin workspace log for shared workspace decisions and the Wash & Cure 3 Max log where its condition affects workflow.
-  - **Next step:** Check both boxes and confirm the vat and other required parts before documenting print tests.
+  - **Next step:** Run a full-screen exposure test to check the LCD after the failed print, do routine maintenance, then try a first useful print.
 
 ### Earlier printer builds and conversions
 
