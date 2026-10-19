@@ -118,7 +118,7 @@ Cody reports 3.5 mil on the packaging.
 
 | Planned equipment | Ordinary destination | Match / link status | Affiliate replacement |
 | --- | --- | --- | --- |
-| AC Infinity CLOUDLINE T4 (AI-CLT4), 4-inch inline fan with temperature/humidity controller | [Official product page](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/) | Bought on Facebook Marketplace; model read from the fan's label, and the official page confirms AI-CLT4. On hand since 2026-10-18 with its temperature sensor in use; not ducted, so no exhaust results yet. Linked in the Build Log's 2026-10-18 fan entry and the resin-workshop project page. | None yet |
+| AC Infinity CLOUDLINE T4 (AI-CLT4), 4-inch inline fan with temperature/humidity controller | [Official product page](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/) | Bought on Facebook Marketplace; model read from the fan's label, and the official page confirms AI-CLT4. On hand since 2026-10-17 with its temperature sensor in use; not ducted, so no exhaust results yet. Linked in the Build Log's 2026-10-17 fan entry and the resin-workshop project page. | None yet |
 
 Keep this as a build plan, not a tested recommendation. When the exhaust build
 exists, record the exact fan, ducting, outdoor outlet, and actual results before
@@ -152,7 +152,7 @@ ends, restore its ordinary URLs and set the flag to match the remaining links.
 
 - **2026-10-19:** Per Cody, removed the "plain link, not affiliate" notes from the resin build log and working-draft guide; only affiliate links get labeled.
 
-- **2026-10-19:** Recorded the exhaust fan as the CLOUDLINE T4 (AI-CLT4), on hand since 2026-10-18, and linked its official AC Infinity page in the Build Log and resin-workshop project page. No program status changed.
+- **2026-10-19:** Recorded the exhaust fan as the CLOUDLINE T4 (AI-CLT4), on hand since 2026-10-17, and linked its official AC Infinity page in the Build Log and resin-workshop project page. No program status changed.
 
 - **2026-10-19:** Linked the Fungdo curing enclosure on the resin-workshop project page with the same ordinary Amazon link. No program status changed.
 
