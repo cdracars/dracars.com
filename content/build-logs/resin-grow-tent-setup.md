@@ -138,7 +138,7 @@ The floor liner is done for now. The yellow clips are the 22mm grow tent clips I
 
 ### Update, 2026-10-17: The exhaust fan
 
-The day before the exposure test, I scored the exhaust fan on Facebook Marketplace: an [AC Infinity CLOUDLINE T4](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/), the 4-inch model with a temperature and humidity controller. The label on the fan reads AI-CLT4. I'm already using its temperature sensor, but the fan isn't ducted to anything yet, so it isn't an exhaust. The duct run into the attic crawl space and out through a new roof opening is still ahead, and everything I said above about printing before the exhaust is ready still applies.
+I scored the exhaust fan on Facebook Marketplace today: an [AC Infinity CLOUDLINE T4](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/), the 4-inch model with a temperature and humidity controller. The label on the fan reads AI-CLT4. It isn't ducted to anything yet, so it isn't an exhaust. The duct run into the attic crawl space and out through a new roof opening is still ahead, and everything I said above about printing before the exhaust is ready still applies.
 
 !photo 29-inline-fan-unboxed.webp | The AC Infinity CLOUDLINE T4 inline fan in its box, with its mounting bracket, coiled cord, and installation sheet.
 
