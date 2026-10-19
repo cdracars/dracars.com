@@ -134,6 +134,22 @@ The floor liner is done for now. The yellow clips are the 22mm grow tent clips I
 
 !photo 22-liner-clip-detail.webp | A closer look at the liner with a yellow clip near the top and another near the bottom, the plastic hanging in loose folds between them.
 
+### Update, 2026-10-18: The exposure test
+
+Before the calibration print below, I ran an exposure test on the Saturn: a set of small Cones of Calibration test pieces, one at each exposure setting from 2 to 4 in steps of 0.4. I laid them out on a shop towel next to their labels.
+
+!photo 28-saturn-vat.webp | The Saturn's vat seated under the raised build plate, held by its black clamp knob.
+
+!photo 27-exposure-test-cones.webp | The exposure test pieces on a blue shop towel, labeled 2, 2.4, 2.8, 3.2, 3.6, and 4. The 2 and 2.4 settings left only resin stains on the towel; 2.8 through 4 printed.
+
+The two lowest settings, 2 and 2.4, didn't print; all that's left of them is resin stains on the towel. 2.8, 3.2, 3.6, and 4 all produced pieces.
+
+I cured a print in a Fungdo curing enclosure, a small fabric box with a UV light and a turntable inside.
+
+!photo 25-fungdo-curing-enclosure.webp | The Fungdo curing enclosure glowing purple through its window while a print cures inside.
+
+!photo 26-curing-on-turntable.webp | Inside the enclosure: a print on the clear turntable under the UV light, with the reflective lining behind it.
+
 ### Update, 2026-10-19: A successful calibration print
 
 The resin calibration prints worked. I printed TableFlip Foundry's [Cones of Calibration V3](https://www.tableflipfoundry.com/3d-printing/the-cones-of-calibration-v3/) on the Saturn 4 Ultra in the SUNLU ABS-Like Dark Grey resin, and it came off with every feature I can see intact: the skull, the thin spike, the five cones under the roof, the mug with its open handle, and the SUCCESS lettering along the base. That lettering is part of the model, so it's the print's own verdict, not a measurement. It tells me this exposure is in a workable range; it doesn't tell me the settings are tuned or that the next print will go the same way.
