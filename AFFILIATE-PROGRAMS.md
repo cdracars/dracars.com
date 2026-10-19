@@ -118,7 +118,7 @@ Cody reports 3.5 mil on the packaging.
 
 | Planned equipment | Ordinary destination | Match / link status | Affiliate replacement |
 | --- | --- | --- | --- |
-| AC Infinity CLOUDLINE T4 (AI-CLT4), 4-inch inline fan with temperature/humidity controller | [Official product page](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/) | Model read from the fan's label; official page confirms AI-CLT4. On hand since 2026-10-18 with its temperature sensor in use; not ducted, so no exhaust results yet. Linked in the Build Log's 2026-10-18 fan entry and the resin-workshop project page. | None yet |
+| AC Infinity CLOUDLINE T4 (AI-CLT4), 4-inch inline fan with temperature/humidity controller | [Official product page](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/) | Bought on Facebook Marketplace; model read from the fan's label, and the official page confirms AI-CLT4. On hand since 2026-10-18 with its temperature sensor in use; not ducted, so no exhaust results yet. Linked in the Build Log's 2026-10-18 fan entry and the resin-workshop project page. | None yet |
 
 Keep this as a build plan, not a tested recommendation. When the exhaust build
 exists, record the exact fan, ducting, outdoor outlet, and actual results before
