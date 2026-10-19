@@ -70,8 +70,8 @@ First candidates (Cody, 2026-10-15): the plain Amazon links already in the resin
 build log — the inline extension cord switch, the 45 oz pickle jars, the extra
 large silicone mat, and the SUNLU ABS-like resin. When they become affiliate
 links, mark each with `"affiliate"`, set `affiliateLinksPresent: true`, and
-replace the log's "plain links, not affiliate links" note with the Associates
-disclosure.
+add the Associates disclosure. Ordinary links carry no label; only affiliate
+links are marked (Cody, 2026-10-19).
 
 ### Terms to record when applying
 
@@ -149,6 +149,8 @@ ends, restore its ordinary URLs and set the flag to match the remaining links.
 > Dracars publishes practical guides about 3D printing, hardware, and software, alongside free tools and open-source projects. Guides document my actual setup and experience. Affiliate links will appear only where equipment is relevant, with clear disclosure and independent recommendations.
 
 ## Activity
+
+- **2026-10-19:** Per Cody, removed the "plain link, not affiliate" notes from the resin build log and working-draft guide; only affiliate links get labeled.
 
 - **2026-10-19:** Added Cody's Fungdo resin curing enclosure Amazon listing as an ordinary link in the resin build log and to the link inventory. Another Associates candidate if that program goes ahead; no application submitted and no program status changed. Deployment not verified.
 
