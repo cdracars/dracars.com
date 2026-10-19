@@ -20,7 +20,7 @@ equipment:
 problems:
   - The wash-and-cure station has not been diagnosed, and the wash process is not established.
   - The exhaust is not installed. The Build Log records my plan to proceed with a few prints before it is ready; that is a personal choice, not a tested or recommended setup.
-  - One calibration print has succeeded; the settings have not been repeated or tested on a real model yet.
+  - Calibration prints passed, but the first real test print, a mini, failed because of debris in the vat; the LCD still needs a check for damage.
 phases:
   - Acquired|done
   - Workspace setup|current

@@ -32,7 +32,7 @@ equipment:
 problems:
   - The tent has no functioning exhaust yet, and the wash station has not been diagnosed.
   - The floor liner clips have not been tested in use, and the standing desk and cleanup workflow are unfinished.
-  - The Saturn has one successful calibration print; the Photon P1 has not printed in this workspace.
+  - The Saturn passed its calibration prints, but a test mini failed and its LCD still needs a check; the Photon P1 has not printed in this workspace.
 focus:
   - Finish and document the garage workspace and exhaust.
   - Move the Saturn from its first successful calibration print to useful prints.
