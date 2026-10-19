@@ -417,7 +417,7 @@ function featuredProjectPanel(project, logs, guides) {
   const statusNote = project.statusNote ? `<p class="featured-project-note">${esc(project.statusNote)}</p>` : "";
   return `<section class="featured-project" aria-labelledby="featured-project-title">
     <div class="featured-project-copy"><div class="featured-project-heading"><h2 id="featured-project-title"><a href="/workshop/${project.slug}/">${esc(project.title)}</a></h2><p>${esc(project.description)}</p></div>
-      <div class="featured-project-details"><div><h3>Current state</h3><p>${badge}</p><p class="featured-project-updated">Recorded ${fmtDate(project.updatedAt)}</p>${statusNote}</div><div><h3>Next action</h3><p>${esc(project.nextAction)}</p></div></div>
+      <div class="featured-project-details"><div><h3>Current state</h3><p>${badge}</p><p class="featured-project-updated">Page updated ${fmtDate(project.updatedAt)}</p>${statusNote}</div><div><h3>Next action</h3><p>${esc(project.nextAction)}</p></div></div>
       <a class="featured-project-link" href="/workshop/${project.slug}/">View project <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7" /></svg></a>
     </div>${image}
   </section>`;
@@ -492,7 +492,7 @@ function projectPage(project, allProjects, logs, guides) {
   const childProjects = (project.relatedProjects ?? []).map((slug) => allProjects.find((item) => item.slug === slug)).filter(Boolean);
   const body = `      <article class="workshop-project" aria-labelledby="page-title">
         <p class="crumbs"><a href="/workshop/">Workshop</a> ${parent ? `<span aria-hidden="true">/</span> <a href="/workshop/${parent.slug}/">${esc(parent.title)}</a>` : ""} <span aria-hidden="true">/</span> <span aria-current="page">${esc(project.title)}</span></p>
-        <header class="workshop-project-header"><div><h1 id="page-title">${esc(project.title)}</h1><p class="guide-deck">${esc(project.purpose)}</p></div><div class="workshop-project-meta">${stateBadge}<p class="workshop-updated">Status last recorded <time datetime="${project.updatedAt}">${fmtDate(project.updatedAt)}</time></p>${project.statusNote ? `<p class="workshop-updated">${esc(project.statusNote)}</p>` : ""}</div></header>
+        <header class="workshop-project-header"><div><h1 id="page-title">${esc(project.title)}</h1><p class="guide-deck">${esc(project.purpose)}</p></div><div class="workshop-project-meta">${stateBadge}<p class="workshop-updated">Page updated <time datetime="${project.updatedAt}">${fmtDate(project.updatedAt)}</time></p>${project.statusNote ? `<p class="workshop-updated">${esc(project.statusNote)}</p>` : ""}</div></header>
         <section class="project-current" aria-labelledby="current-state-heading"><div><h2 id="current-state-heading">Current state</h2><p>${esc(project.description)}</p><p class="project-next"><strong>Next action</strong>${esc(project.nextAction)}</p></div><div class="project-current-phase"><span>Current phase</span><strong>${esc(project.phase)}</strong></div></section>
         ${project.featuredImage ? `<div class="featured-project-image project-featured-image${project.imageFit === "contain" ? " project-featured-image-contain" : ""}"><img ${imgAttrs(project.featuredImage)} alt="${escAttr(project.featuredImageAlt ?? "")}" loading="lazy" decoding="async" /></div>` : ""}
         ${detailSections ? `<div class="project-detail-grid">${detailSections}</div>` : ""}
@@ -569,7 +569,7 @@ function resourceIndexPage() {
 function tuneprintResourcePage() {
   const body = readFileSync(join(RESOURCE_CONTENT, "tuneprint.html"), "utf8").trim();
   return page({
-    title: "TunePrint — OrcaSlicer Calibration Companion | Dracars",
+    title: "TunePrint — OrcaSlicer Calibration Companion — Dracars Resources",
     description: "A browser-based companion for turning OrcaSlicer calibration results into settings to save.",
     path: "/resources/tuneprint/",
     body,
@@ -785,6 +785,8 @@ ${groups}
     description: "Practical 3D printing, resin printing, Klipper, and build guides from someone who actually uses the gear. Answer first, details after.",
     path: "/guides/",
     body,
+    // Keep the section out of search until at least one guide is published.
+    noindex: !hasPublishedGuide(guides),
     jsonld: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
@@ -793,6 +795,10 @@ ${groups}
       hasPart: guides.map((g) => ({ "@type": "TechArticle", headline: g.title, url: `${SITE}/guides/${g.slug}/`, dateModified: g.updatedAt })),
     },
   });
+}
+
+function hasPublishedGuide(guides) {
+  return guides.some((g) => g.status !== "coming-soon");
 }
 
 function buildLogIndexPage(logs) {
@@ -950,7 +956,7 @@ writeFileSync(join(PUBLIC, "404.html"), page({
             <a class="klipper-restart" href="/">FIRMWARE_RESTART <span class="klipper-macro-note">→ home</span></a>
             <a href="/workshop/">WORKSHOP</a>
             <a href="/build-logs/">BUILD_LOGS</a>
-            <a href="/guides/">GUIDES</a>
+            <a href="/resources/">RESOURCES</a>
           </nav>
         </div>
       </section>
@@ -979,7 +985,7 @@ const urls = [
   { loc: `${SITE}/` },
   { loc: `${SITE}/resources/` },
   { loc: `${SITE}/resources/tuneprint/` },
-  { loc: `${SITE}/guides/`, lastmod: guides.map((g) => g.updatedAt).sort().at(-1) },
+  ...(hasPublishedGuide(guides) ? [{ loc: `${SITE}/guides/`, lastmod: guides.map((g) => g.updatedAt).sort().at(-1) }] : []),
   ...guides.filter((g) => g.status !== "coming-soon").map((g) => ({ loc: `${SITE}/guides/${g.slug}/`, lastmod: g.updatedAt })),
   { loc: `${SITE}/build-logs/`, lastmod: buildLogs.map((g) => g.updatedAt).sort().at(-1) },
   ...buildLogs.map((g) => ({ loc: `${SITE}/build-logs/${g.slug}/`, lastmod: g.updatedAt })),
