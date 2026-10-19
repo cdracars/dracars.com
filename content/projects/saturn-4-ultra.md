@@ -12,7 +12,7 @@ phase: Workspace setup
 updatedAt: 2026-10-19
 nextAction: Build on the successful calibration print with a first useful print, and work out the wash and cure steps.
 equipment:
-  - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; a calibration print succeeded on October 19, 2026; another failed after debris was left in the vat)
+  - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; calibration prints succeeded on October 19, 2026; a test mini afterward failed because debris was left in the vat)
   - Anycubic Photon P1 (acquired in the same trade; worked at pickup, not powered on since)
   - AC Infinity CLOUDLAB 866, 5 × 5 ft grow tent (assembled in the garage; no functioning exhaust installed)
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)

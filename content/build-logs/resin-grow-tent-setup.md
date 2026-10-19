@@ -9,12 +9,12 @@ author: Dracars
 category: projects-builds
 status: current
 projectState: building
-statusNote: Calibration prints underway, one success and one failure — workspace still being built
+statusNote: Calibration prints passed; a test mini failed — workspace still being built
 featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
-  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; calibration prints underway)
-  - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; a Cones of Calibration v3 print in SUNLU ABS-Like Dark Grey succeeded; one calibration print failed after debris was left in the vat)
+  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; calibration prints done)
+  - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; calibration prints, including Cones of Calibration v3, succeeded in SUNLU ABS-Like Dark Grey; a test mini afterward failed because debris was left in the vat)
   - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
   - Garage; ~58-inch standing desk planned as the main work surface
@@ -136,7 +136,7 @@ The floor liner is done for now. The yellow clips are the 22mm grow tent clips I
 
 ### Update, 2026-10-19: A successful calibration print
 
-A resin calibration print worked. I printed Tableflip Foundry's Cones of Calibration v3 on the Saturn 4 Ultra in the SUNLU ABS-Like Dark Grey resin, and it came off with every feature I can see intact: the skull, the thin spike, the five cones under the roof, the mug with its open handle, and the SUCCESS lettering along the base. That lettering is part of the model, so it's the print's own verdict, not a measurement. It tells me this exposure is in a workable range; it doesn't tell me the settings are tuned or that the next print will go the same way.
+The resin calibration prints worked. I printed Tableflip Foundry's Cones of Calibration v3 on the Saturn 4 Ultra in the SUNLU ABS-Like Dark Grey resin, and it came off with every feature I can see intact: the skull, the thin spike, the five cones under the roof, the mug with its open handle, and the SUCCESS lettering along the base. That lettering is part of the model, so it's the print's own verdict, not a measurement. It tells me this exposure is in a workable range; it doesn't tell me the settings are tuned or that the next print will go the same way.
 
 !photo 23-cones-of-calibration-success.webp | The Cones of Calibration v3 in SUNLU Dark Grey resin, top-down: the Tableflip Foundry roof, the skull and spike at left, the mug at right, and SUCCESS along the front of the base.
 
@@ -146,13 +146,15 @@ A resin calibration print worked. I printed Tableflip Foundry's Cones of Calibra
 
 That success shot isn't the whole story, and this log is supposed to be honest, so here's the part I'd rather skip.
 
-During the calibration prints, a piece of one print came off the build plate and stayed in the vat. I didn't check the vat before starting the next print, and that print failed. Checking the vat between prints is the kind of step I'd tell someone else not to skip, and I skipped it.
+After the calibration prints, I thought everything was good and ran a mini as a final test. What I didn't know was that a piece from the calibration prints had come off the build plate and stayed in the vat. I didn't check the vat before starting the mini, and the mini failed. Checking the vat between prints is the kind of step I'd tell someone else not to skip, and I skipped it.
 
 Trying to get the stuck pieces out, I ran the Saturn's vat-cleaning job. It exposes the full LCD, so it cured a layer of resin across the whole bottom of the vat, and then I couldn't figure out how to get that layer out.
 
 Then I emptied the vat, and that's where it really went sideways. The SUNLU resin came with a little paper filter funnel, and I didn't realize it's meant to sit inside a real, rigid funnel. On its own it didn't hold up, and I made a huge mess. My wife came out to help me clean it all up.
 
-So learning has been "fun." The lessons I've remembered best are usually the ones I learned the hard way, and this one is: check the vat before every print, and set up the pour before opening the vat.
+So learning has been "fun." The lessons I've remembered best are usually the ones I learned the hard way.
+
+My biggest takeaway from the calibrations, the failed mini, and the cleanup is that resin is slow and methodical. Don't get in a hurry, and don't skip steps. Take it slow and do it right and safe. That's different from FDM, which can be a little fast and loose if you want it to be because there's less at stake when something goes wrong. With resin, one skipped check led to a failed print, a cured layer stuck in the vat, and a big mess.
 
 ## Drip mods I've already printed
 
