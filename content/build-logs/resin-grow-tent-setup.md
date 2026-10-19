@@ -142,7 +142,7 @@ I scored the exhaust fan on Facebook Marketplace today: an [AC Infinity CLOUDLIN
 
 !photo 29-inline-fan-unboxed.webp | The AC Infinity CLOUDLINE T4 inline fan in its box, with its mounting bracket, coiled cord, and installation sheet.
 
-!photo 30-inline-fan-in-tent.webp | The CLOUDLINE T4 sitting on the plastic-covered table in the tent, not yet connected to any ductwork, with the Photon P1 and the Saturn behind it.
+!photo 30-inline-fan-in-tent.webp | The CLOUDLINE T4 sitting on the plastic-covered table in the tent, not yet connected to any ductwork, with the Photon P1 and the Saturn behind it and a small space heater beside it.
 
 ### Update, 2026-10-18: The exposure test
 

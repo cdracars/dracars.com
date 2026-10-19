@@ -31,7 +31,7 @@ equipment:
   - SUNLU ABS-Like Dark Grey resin (used for the exposure test and calibration prints)
   - Temporary folding table with plastic covering and a plastic floor liner; a standing desk is still planned
   - [Braun 5500 lumen, 4 ft LED shop light](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html) installed; an LED light that shouldn't put out meaningful UV, though its output hasn't been measured
-  - A chamber heater is planned for printing in the cold garage
+  - A space heater in the tent for the cold months, with the CLOUDLINE T4 controller's temperature sensor as my temperature reference; a chamber heater is planned for printing in the cold garage
 problems:
   - The tent has no functioning exhaust yet, and the wash station has not been diagnosed.
   - The floor liner clips have not been tested in use, and the standing desk and cleanup workflow are unfinished.
