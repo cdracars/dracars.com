@@ -10,10 +10,10 @@ imageLabel: Workspace update · October 12, 2026
 purpose: Build a practical resin-printing area and a repeatable workflow across the machines and workspace.
 status: building
 statusLabel: Building / Testing
-statusNote: As of October 12, 2026: both printers are in the tent; neither has printed, and the exhaust and wash station remain unverified.
+statusNote: As of October 19, 2026: the Saturn has produced its first successful calibration print; the Photon P1 has not printed, and the exhaust and wash station remain unverified.
 phase: Workspace and workflow
-updatedAt: 2026-10-15
-nextAction: Inspect the Saturn's vat and build plate, then calibrate the resin and run a first print.
+updatedAt: 2026-10-19
+nextAction: Follow the Saturn's successful calibration print with a first useful print, and work out the wash and cure steps.
 relatedLogs: [resin-grow-tent-setup]
 relatedGuides: [resin-grow-tent-setup]
 workstreams:
@@ -23,7 +23,7 @@ workstreams:
   - AC Infinity 5×5 tent and exhaust|resin-tent-exhaust|Assembled; exhaust not installed
 equipment:
   - [AC Infinity CLOUDLAB 866, 5 × 5 ft tent](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) (assembled in the garage; no functioning exhaust installed)
-  - [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer) (vat and build plate installed; Wi-Fi set up; resin not yet calibrated; no prints yet)
+  - [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer) (vat and build plate installed; Wi-Fi set up; first calibration print succeeded on October 19, 2026)
   - [Anycubic Photon P1](https://store.anycubic.com/products/photon-p1-resin-3d-printer) (in the tent; worked at pickup, not powered on since; no prints yet)
   - [Anycubic Wash & Cure 3 Max](https://store.anycubic.com/products/wash-cure-3-max) (powers on; function unconfirmed; cured resin in its lines)
   - Temporary folding table with plastic covering and a plastic floor liner; a standing desk is still planned
@@ -32,15 +32,15 @@ equipment:
 problems:
   - The tent has no functioning exhaust yet, and the wash station has not been diagnosed.
   - The floor liner clips have not been tested in use, and the standing desk and cleanup workflow are unfinished.
-  - Neither printer has produced a print in this workspace, and the Saturn has not been calibrated for resin.
+  - The Saturn has one successful calibration print; the Photon P1 has not printed in this workspace.
 focus:
   - Finish and document the garage workspace and exhaust.
-  - Inspect the Saturn, calibrate the resin, and record the first print.
+  - Move the Saturn from its first successful calibration print to useful prints.
   - Diagnose the Wash & Cure station and establish a cleanup workflow; resin-contaminated waste goes in a clear bag to cure fully before it goes in the trash, Dirty IPA gets cleaned and reused; I haven't decided how to dispose of it or liquid resin once it's spent, and will hold both until I confirm local disposal rules.
   - Power on the Photon P1, confirm it still works, and record first-print results.
 ---
 
-The resin setup came together through a trade on October 8, 2026: Pam, my Prusa MK4S, for an Elegoo Saturn 4 Ultra and an Anycubic Photon P1. Both machines are now in the garage tent, but neither has printed in this workspace. The Saturn has its vat and build plate installed and Wi-Fi set up; it still needs resin calibration and a first print. The [Saturn 4 Ultra project page](/workshop/saturn-4-ultra/) tracks that machine in more detail.
+The resin setup came together through a trade on October 8, 2026: Pam, my Prusa MK4S, for an Elegoo Saturn 4 Ultra and an Anycubic Photon P1. Both machines are now in the garage tent. On October 19, 2026, the Saturn produced its first successful calibration print, a Cones of Calibration v3 in SUNLU ABS-Like Dark Grey. The Photon P1 has not printed in this workspace yet. The [Saturn 4 Ultra project page](/workshop/saturn-4-ultra/) tracks that machine in more detail.
 
 The tent is assembled, with a plastic-covered folding table, a plastic floor liner, and the Braun shop light in place. The folding table is temporary; a standing desk is still planned. I have not installed a functioning exhaust or confirmed that the Wash & Cure station works. The liner clips and light output have not been tested for this workflow.
 

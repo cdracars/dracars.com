@@ -9,18 +9,18 @@ purpose: Develop a repeatable resin-printing setup around the Saturn 4 Ultra, in
 status: building
 statusLabel: Building / Testing
 phase: Workspace setup
-updatedAt: 2026-10-15
-nextAction: Inspect the vat and build plate, then calibrate the resin and run a first print.
+updatedAt: 2026-10-19
+nextAction: Build on the successful calibration print with a first useful print, and work out the wash and cure steps.
 equipment:
-  - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; resin not yet calibrated; no prints yet)
+  - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; first calibration print succeeded on October 19, 2026)
   - Anycubic Photon P1 (acquired in the same trade; worked at pickup, not powered on since)
   - AC Infinity CLOUDLAB 866, 5 × 5 ft grow tent (assembled in the garage; no functioning exhaust installed)
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)
-  - SUNLU ABS-Like Dark Grey resin (one bottle opened and stored in the tent; not yet printed with)
+  - SUNLU ABS-Like Dark Grey resin (one bottle opened and stored in the tent; used for the first calibration print)
 problems:
   - The wash-and-cure station has not been diagnosed, and the wash process is not established.
   - The exhaust is not installed. The Build Log records my plan to proceed with a few prints before it is ready; that is a personal choice, not a tested or recommended setup.
-  - The printer has not been calibrated for resin or produced a print in this workspace.
+  - One calibration print has succeeded; the settings have not been repeated or tested on a real model yet.
 phases:
   - Acquired|done
   - Workspace setup|current
