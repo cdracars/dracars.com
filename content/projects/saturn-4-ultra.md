@@ -18,6 +18,7 @@ equipment:
   - Anycubic Photon P1 (acquired in the same trade; worked at pickup, not powered on since)
   - AC Infinity CLOUDLAB 866, 5 × 5 ft grow tent (assembled in the garage; no functioning exhaust installed)
   - Anycubic Wash & Cure 3 Max (powers on; function unconfirmed; cured resin in its lines)
+  - An Elegoo heater mounted inside the Saturn's hood, which came with the printer but without its power cord, so it hasn't been used
   - Fungdo resin curing enclosure (used to cure the October 18 exposure test pieces)
   - SUNLU ABS-Like Dark Grey resin (one bottle opened and stored in the tent; used for the exposure test and calibration prints)
 problems:
