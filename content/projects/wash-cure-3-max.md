@@ -11,11 +11,12 @@ purpose: Find out whether the Wash & Cure works, then set up the dirty and clean
 status: troubleshooting
 statusLabel: Needs diagnosis
 phase: Not yet diagnosed
-updatedAt: 2026-10-15
+updatedAt: 2026-10-19
 nextAction: Inspect the cured resin in the lines and check whether the wash and cure functions work before relying on the station.
 equipment:
   - Anycubic Wash & Cure 3 Max (powers on and lights its display; wash and cure function unconfirmed; cured resin in the lines)
   - 45 oz pickle jars, planned for dirty-wash IPA storage
+  - Fungdo resin curing enclosure, used instead of this station to cure the October 18 exposure test pieces
 problems:
   - There is cured resin in the lines. I have not opened the station to inspect it yet.
   - Neither the wash nor the cure function has been confirmed.
@@ -29,6 +30,6 @@ focus:
 
 This page is the wash-and-cure workstream within [Resin Workshop](/workshop/resin-workshop/). The Wash & Cure 3 Max came from the same pickup as the [Saturn](/workshop/saturn-4-ultra/) and the Photon P1.
 
-It powers on and the display lights up, but I haven't opened it up or tested whether it works. There is cured resin in the lines, so I need to inspect it before I rely on it. Until then, it is equipment on hand, not a working part of the workflow.
+It powers on and the display lights up, but I haven't opened it up or tested whether it works. There is cured resin in the lines, so I need to inspect it before I rely on it. Until then, it is equipment on hand, not a working part of the workflow. I cured the Saturn's first exposure test pieces in a separate Fungdo curing enclosure instead.
 
 My plan is to wash with IPA: most of the cleaning in a dirty IPA wash, then the station for the final steps. I'll record what I find when I diagnose it; the [Build Log](/build-logs/resin-grow-tent-setup/) keeps the dated sequence.

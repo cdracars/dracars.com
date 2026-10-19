@@ -91,7 +91,8 @@ as part of this link update.
 | Anycubic Photon P1 | [Official product page](https://store.anycubic.com/products/photon-p1-resin-3d-printer) | Linked in the guide and resin-workshop project page; no print results claimed. Affiliate program researched; no application recorded. | None yet |
 | AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent | [Current CLOUDLAB 866 product page](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) | Cody identified the model from the 60 × 60-inch footprint and AC Infinity branding; official listing confirms the model name and number. Linked in the guide and resin-workshop project page; revision-specific features are not claimed. | None yet |
 | Anycubic Wash & Cure 3 Max | [Official product page](https://store.anycubic.com/products/wash-cure-3-max) | Exact model named in the project record and linked on the resin-workshop project page; function remains unconfirmed. | None yet |
-| Fungdo 3D printer resin curing enclosure (UV light with turntable) | [Amazon listing](https://www.amazon.com/dp/B085KW8K3F) | Cody supplied the listing on 2026-10-19; linked in the Build Log's 2026-10-18 exposure test entry as an ordinary link. Used to cure the exposure test pieces; UV output and cure times are unmeasured. | None yet |
+| Fungdo 3D printer resin curing enclosure (UV light with turntable) | [Amazon listing](https://www.amazon.com/dp/B085KW8K3F) | Cody supplied the listing on 2026-10-19; linked in the Build Log's 2026-10-18 exposure test entry and the resin-workshop project page as an ordinary link. Used to cure the exposure test pieces; UV output and cure times are unmeasured. | None yet |
+| ELEGOO Mini Heater (resin printer chamber heater) | [Official US product page](https://us.elegoo.com/products/mini-heater) | Mounted inside the Saturn when it came in the trade; identified by matching Elegoo's listing. It arrived without its power cord and hasn't been used. Linked on the resin-workshop project page. | None yet |
 | Braun 5500 lumen, 4 ft linkable LED hanging shop light (Harbor Freight item 59506) | [Harbor Freight product listing](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html) | Exact item recorded in the Build Log and linked on the resin-workshop project page; light output and UV emission are unmeasured. | None yet |
 
 The guide also links two unselected wet-zone options below the equipment list:
@@ -118,7 +119,7 @@ Cody reports 3.5 mil on the packaging.
 
 | Planned equipment | Ordinary destination | Match / link status | Affiliate replacement |
 | --- | --- | --- | --- |
-| AC Infinity CLOUDLINE series inline fan (4-inch S4 / T4 options) | Verify the exact model's official product page when selected. | Cody confirmed CLOUDLINE is planned for the exhaust build; S4 versus T4 is not yet recorded. Queued for the dedicated exhaust guide, not linked in the core article. No purchase, installation, or testing recorded. | None yet |
+| AC Infinity CLOUDLINE T4 (AI-CLT4), 4-inch inline fan with temperature/humidity controller | [Official product page](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/) | Bought on Facebook Marketplace; model read from the fan's label, and the official page confirms AI-CLT4. On hand since 2026-10-17 with its temperature sensor in use; not ducted, so no exhaust results yet. Linked in the Build Log's 2026-10-17 fan entry and the resin-workshop project page. | None yet |
 
 Keep this as a build plan, not a tested recommendation. When the exhaust build
 exists, record the exact fan, ducting, outdoor outlet, and actual results before
@@ -127,7 +128,7 @@ publishing the follow-up and adding its product link.
 ## Next steps
 
 - Publish/review the shared resin-workspace guide and add follow-ups as real experience develops.
-- Document the planned CLOUDLINE exhaust build in its dedicated follow-up once built; confirm S4/T4 selection and its product destination then.
+- Document the CLOUDLINE T4 exhaust build in its dedicated follow-up once the ductwork is built and tested.
 - Apply to ELEGOO and Anycubic first, since Cody uses both printers; record the network chosen, submission date, and outcome here.
 - Confirm audience eligibility and resin-workspace content fit before applying to AC Infinity; hold Amazon Associates until the supply items are confirmed.
 - Add approved links using the conversion checklist below.
@@ -151,6 +152,12 @@ ends, restore its ordinary URLs and set the flag to match the remaining links.
 ## Activity
 
 - **2026-10-19:** Per Cody, removed the "plain link, not affiliate" notes from the resin build log and working-draft guide; only affiliate links get labeled.
+
+- **2026-10-19:** Linked the ELEGOO Mini Heater's official page on the resin-workshop project page and added it to the inventory. No program status changed.
+
+- **2026-10-19:** Recorded the exhaust fan as the CLOUDLINE T4 (AI-CLT4), on hand since 2026-10-17, and linked its official AC Infinity page in the Build Log and resin-workshop project page. No program status changed.
+
+- **2026-10-19:** Linked the Fungdo curing enclosure on the resin-workshop project page with the same ordinary Amazon link. No program status changed.
 
 - **2026-10-19:** Added Cody's Fungdo resin curing enclosure Amazon listing as an ordinary link in the resin build log and to the link inventory. Another Associates candidate if that program goes ahead; no application submitted and no program status changed. Deployment not verified.
 

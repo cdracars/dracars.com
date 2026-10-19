@@ -13,16 +13,18 @@ statusNote: Calibration prints passed; a test mini failed — workspace still be
 featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
-  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; calibration prints done)
+  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn and Photon P1 inside, Braun shop light, cords, plastic-covered folding table; exposure test and calibration prints done)
   - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; calibration prints, including Cones of Calibration v3, succeeded in SUNLU ABS-Like Dark Grey; a test mini afterward failed because debris was left in the vat)
   - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet; its power cord doesn't reach the overhead power until the taller standing desk is in)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
+  - Fungdo resin curing enclosure (used to cure the exposure test pieces)
+  - AC Infinity CLOUDLINE T4 (AI-CLT4) 4-inch inline fan (temperature sensor in use; not ducted yet)
   - Garage; ~58-inch standing desk planned as the main work surface
 affiliateLinksPresent: false
 ---
 
 :::tldr Where I'm at
-I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn, with an empty tank installed, and the Photon P1 are both sitting on that table. The exhaust will take time and money to do right. I have new machines and want to play with them, so I plan to make a few prints before it's ready. I'll explain how I'm approaching that below.
+I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn and the Photon P1 are both sitting on that table. The Saturn has passed an exposure test and a calibration print, and then a test mini failed because I left debris in the vat. The P1 hasn't printed yet. The exhaust will take time and money to do right. I have new machines and want to play with them, so I started printing before it's ready. I'll explain how I'm approaching that below.
 :::
 
 ## Why I'm setting it up this way
@@ -134,6 +136,14 @@ The floor liner is done for now. The yellow clips are the 22mm grow tent clips I
 
 !photo 22-liner-clip-detail.webp | A closer look at the liner with a yellow clip near the top and another near the bottom, the plastic hanging in loose folds between them.
 
+### Update, 2026-10-17: The exhaust fan
+
+I scored the exhaust fan on Facebook Marketplace today: an [AC Infinity CLOUDLINE T4](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/), the 4-inch model with a temperature and humidity controller. The label on the fan reads AI-CLT4. It isn't ducted to anything yet, so it isn't an exhaust. The duct run into the attic crawl space and out through a new roof opening is still ahead, and everything I said above about printing before the exhaust is ready still applies.
+
+!photo 29-inline-fan-unboxed.webp | The AC Infinity CLOUDLINE T4 inline fan in its box, with its mounting bracket, coiled cord, and installation sheet.
+
+!photo 30-inline-fan-in-tent.webp | The CLOUDLINE T4 sitting on the plastic-covered table in the tent, not yet connected to any ductwork, with the Photon P1 and the Saturn behind it and a small space heater beside it.
+
 ### Update, 2026-10-18: The exposure test
 
 Before the calibration print below, I ran an exposure test on the Saturn: a set of small Cones of Calibration test pieces, one at each exposure setting from 2 to 4 in steps of 0.4. I laid them out on a shop towel next to their labels.
@@ -196,7 +206,7 @@ I've also had cured resin end up in places I didn't want it on another resin mac
 
 ## What I'd do differently
 
-I've only run a calibration print in this setup, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
+I've only run an exposure test, a calibration print, and one failed mini in this setup, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
 
 
 ## What I'm working on next
@@ -209,4 +219,4 @@ I've only run a calibration print in this setup, so I can't call this a finished
 - inspect the Saturn's vat and build plate, then work through its setup checks
 - diagnose the Wash & Cure and set up the dirty and clean washes
 - set up the standing desk and work out the curing workflow
-- build the exhaust and update my recommendation and setup notes
+- set up the ductwork for the inline fan, finish the exhaust, and update my recommendation and setup notes
