@@ -9,12 +9,12 @@ author: Dracars
 category: projects-builds
 status: current
 projectState: building
-statusNote: First resin calibration print succeeded — workspace still being built
+statusNote: Calibration prints underway, one success and one failure — workspace still being built
 featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
-  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; first calibration print done)
-  - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; first calibration print, Cones of Calibration v3 in SUNLU ABS-Like Dark Grey, succeeded)
+  - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn inside, Braun shop light, cords, plastic-covered folding table; calibration prints underway)
+  - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; a Cones of Calibration v3 print in SUNLU ABS-Like Dark Grey succeeded; one calibration print failed after debris was left in the vat)
   - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
   - Garage; ~58-inch standing desk planned as the main work surface
@@ -136,11 +136,23 @@ The floor liner is done for now. The yellow clips are the 22mm grow tent clips I
 
 ### Update, 2026-10-19: A successful calibration print
 
-The first resin calibration print worked. I printed Tableflip Foundry's Cones of Calibration v3 on the Saturn 4 Ultra in the SUNLU ABS-Like Dark Grey resin, and it came off with every feature I can see intact: the skull, the thin spike, the five cones under the roof, the mug with its open handle, and the SUCCESS lettering along the base. That lettering is part of the model, so it's the print's own verdict, not a measurement. It tells me this exposure is in a workable range; it doesn't tell me the settings are tuned or that the next print will go the same way.
+A resin calibration print worked. I printed Tableflip Foundry's Cones of Calibration v3 on the Saturn 4 Ultra in the SUNLU ABS-Like Dark Grey resin, and it came off with every feature I can see intact: the skull, the thin spike, the five cones under the roof, the mug with its open handle, and the SUCCESS lettering along the base. That lettering is part of the model, so it's the print's own verdict, not a measurement. It tells me this exposure is in a workable range; it doesn't tell me the settings are tuned or that the next print will go the same way.
 
 !photo 23-cones-of-calibration-success.webp | The Cones of Calibration v3 in SUNLU Dark Grey resin, top-down: the Tableflip Foundry roof, the skull and spike at left, the mug at right, and SUCCESS along the front of the base.
 
 !photo 24-cones-of-calibration-front.webp | A front view of the same print, showing the five cones standing under the roof and the open mug handle.
+
+### Update, 2026-10-19: Where I messed up
+
+That success shot isn't the whole story, and this log is supposed to be honest, so here's the part I'd rather skip.
+
+During the calibration prints, a piece of one print came off the build plate and stayed in the vat. I didn't check the vat before starting the next print, and that print failed. Checking the vat between prints is the kind of step I'd tell someone else not to skip, and I skipped it.
+
+Trying to get the stuck pieces out, I ran the Saturn's vat-cleaning job. It exposes the full LCD, so it cured a layer of resin across the whole bottom of the vat, and then I couldn't figure out how to get that layer out.
+
+Then I emptied the vat, and that's where it really went sideways. The SUNLU resin came with a little paper filter funnel, and I didn't realize it's meant to sit inside a real, rigid funnel. On its own it didn't hold up, and I made a huge mess. My wife came out to help me clean it all up.
+
+So learning has been "fun." The lessons I've remembered best are usually the ones I learned the hard way, and this one is: check the vat before every print, and set up the pour before opening the vat.
 
 ## Drip mods I've already printed
 
@@ -163,6 +175,7 @@ I've only run a calibration print in this setup, so I can't call this a finished
 
 - see how the printed clips on the floor liner hold up once I'm working in the tent
 - record how the next prints and IPA cleanup go
+- check the vat before every print and set up a proper funnel before draining it
 - inspect the Saturn's vat and build plate, then work through its setup checks
 - diagnose the Wash & Cure and set up the dirty and clean washes
 - set up the standing desk and work out the curing workflow

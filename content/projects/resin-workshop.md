@@ -23,7 +23,7 @@ workstreams:
   - AC Infinity 5×5 tent and exhaust|resin-tent-exhaust|Assembled; exhaust not installed
 equipment:
   - [AC Infinity CLOUDLAB 866, 5 × 5 ft tent](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) (assembled in the garage; no functioning exhaust installed)
-  - [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer) (vat and build plate installed; Wi-Fi set up; first calibration print succeeded on October 19, 2026)
+  - [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer) (vat and build plate installed; Wi-Fi set up; a calibration print succeeded on October 19, 2026; another failed after debris was left in the vat)
   - [Anycubic Photon P1](https://store.anycubic.com/products/photon-p1-resin-3d-printer) (in the tent; worked at pickup, not powered on since; no prints yet)
   - [Anycubic Wash & Cure 3 Max](https://store.anycubic.com/products/wash-cure-3-max) (powers on; function unconfirmed; cured resin in its lines)
   - Temporary folding table with plastic covering and a plastic floor liner; a standing desk is still planned
