@@ -20,12 +20,13 @@ workstreams:
   - Saturn 4 Ultra 12K|saturn-4-ultra|Main active machine
   - Anycubic Photon P1||In the tent; worked at pickup, not powered on since; cord won't reach the overhead power yet
   - Anycubic Wash & Cure 3 Max|wash-cure-3-max|Powers on; function unconfirmed, cured resin in the lines
-  - AC Infinity 5×5 tent and exhaust|resin-tent-exhaust|Assembled; exhaust not installed
+  - AC Infinity 5×5 tent and exhaust|resin-tent-exhaust|Assembled; fan on hand, ductwork not built
 equipment:
   - [AC Infinity CLOUDLAB 866, 5 × 5 ft tent](https://acinfinity.com/cloudlab-866-advance-grow-tent-5x5-thickest-poles-and-canvas-60-x-60-x-80/) (assembled in the garage; no functioning exhaust installed)
   - [Elegoo Saturn 4 Ultra 12K](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer) (vat and build plate installed; Wi-Fi set up; exposure test on October 18 and calibration prints on October 19, 2026; a test mini afterward failed because debris was left in the vat)
   - [Anycubic Photon P1](https://store.anycubic.com/products/photon-p1-resin-3d-printer) (in the tent; worked at pickup, not powered on since; no prints yet; its power cord won't reach the tent's overhead power until the taller standing desk is in)
   - [Anycubic Wash & Cure 3 Max](https://store.anycubic.com/products/wash-cure-3-max) (powers on; function unconfirmed; cured resin in its lines)
+  - AC Infinity inline fan for the exhaust (on hand with its temperature sensor in use; ductwork not set up)
   - [Fungdo resin curing enclosure](https://www.amazon.com/dp/B085KW8K3F) (used to cure the October 18 exposure test pieces)
   - SUNLU ABS-Like Dark Grey resin (used for the exposure test and calibration prints)
   - Temporary folding table with plastic covering and a plastic floor liner; a standing desk is still planned

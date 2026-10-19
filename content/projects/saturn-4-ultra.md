@@ -22,7 +22,7 @@ equipment:
   - SUNLU ABS-Like Dark Grey resin (one bottle opened and stored in the tent; used for the exposure test and calibration prints)
 problems:
   - The wash-and-cure station has not been diagnosed, and the wash process is not established.
-  - The exhaust is not installed. The Build Log records my plan to proceed with a few prints before it is ready; that is a personal choice, not a tested or recommended setup.
+  - The exhaust is not installed: the fan is on hand, but the ductwork isn't set up. I've started printing before it's ready, as the Build Log records; that is a personal choice, not a tested or recommended setup.
   - Calibration prints passed, but the first real test print, a mini, failed because of debris in the vat; the LCD still needs a check for damage.
 phases:
   - Acquired|done

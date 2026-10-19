@@ -210,4 +210,4 @@ I've only run an exposure test, a calibration print, and one failed mini in this
 - inspect the Saturn's vat and build plate, then work through its setup checks
 - diagnose the Wash & Cure and set up the dirty and clean washes
 - set up the standing desk and work out the curing workflow
-- build the exhaust and update my recommendation and setup notes
+- set up the ductwork for the inline fan, finish the exhaust, and update my recommendation and setup notes
