@@ -4,7 +4,7 @@ slug: resin-tent-exhaust
 launchGroup: child
 launchOrder: 22
 parentProject: resin-workshop
-description: The 5 × 5 ft grow tent is assembled in the garage with a floor liner and a temporary table. An AC Infinity inline fan is on hand, but the ductwork isn't set up, so there is no working exhaust yet.
+description: The 5 × 5 ft grow tent is assembled in the garage with a floor liner and a temporary table. An AC Infinity CLOUDLINE T4 inline fan is on hand, but the ductwork isn't set up, so there is no working exhaust yet.
 featuredImage: /images/build-logs/resin-grow-tent-setup/10-tent-interior-table.webp
 featuredImageAlt: Inside the tent with the light on, showing the folding table, hanging cords, and the silver cinch-top duct ports on the wall and in the floor corner.
 purpose: Contain resin printing and post-processing in the tent, and build an exhaust that I can recommend rather than just use.
@@ -17,7 +17,7 @@ equipment:
   - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent, assembled in the garage, with cinch-top duct ports on the wall and in the floor corner
   - Plastic floor liner held with corner clips, and a plastic-covered temporary folding table; a ~58-inch standing desk is planned as the main work surface
   - Braun 4 ft shop light; an LED light that shouldn't put out meaningful UV, though its output hasn't been measured
-  - AC Infinity inline fan, on hand with its temperature sensor in use; not yet ducted, and planned for the tent end of the exhaust
+  - AC Infinity CLOUDLINE T4 (AI-CLT4) 4-inch inline fan, on hand since October 18, 2026, with its temperature sensor in use; not yet ducted, and planned for the tent end of the exhaust
   - Planned duct route: from the tent into the attic crawl space through an existing opening, then out through a new roof opening
 problems:
   - There is no working exhaust yet. When it is built, I will test it with incense smoke at the tent seams.

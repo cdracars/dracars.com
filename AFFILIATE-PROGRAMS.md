@@ -118,7 +118,7 @@ Cody reports 3.5 mil on the packaging.
 
 | Planned equipment | Ordinary destination | Match / link status | Affiliate replacement |
 | --- | --- | --- | --- |
-| AC Infinity CLOUDLINE series inline fan (4-inch S4 / T4 options) | Verify the exact model's official product page when selected. | Cody confirmed CLOUDLINE is planned for the exhaust build; S4 versus T4 is not yet recorded. Queued for the dedicated exhaust guide, not linked in the core article. No purchase, installation, or testing recorded. | None yet |
+| AC Infinity CLOUDLINE T4 (AI-CLT4), 4-inch inline fan with temperature/humidity controller | [Official product page](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/) | Model read from the fan's label; official page confirms AI-CLT4. On hand since 2026-10-18 with its temperature sensor in use; not ducted, so no exhaust results yet. Linked in the Build Log's 2026-10-18 fan entry and the resin-workshop project page. | None yet |
 
 Keep this as a build plan, not a tested recommendation. When the exhaust build
 exists, record the exact fan, ducting, outdoor outlet, and actual results before
@@ -127,7 +127,7 @@ publishing the follow-up and adding its product link.
 ## Next steps
 
 - Publish/review the shared resin-workspace guide and add follow-ups as real experience develops.
-- Document the planned CLOUDLINE exhaust build in its dedicated follow-up once built; confirm S4/T4 selection and its product destination then.
+- Document the CLOUDLINE T4 exhaust build in its dedicated follow-up once the ductwork is built and tested.
 - Apply to ELEGOO and Anycubic first, since Cody uses both printers; record the network chosen, submission date, and outcome here.
 - Confirm audience eligibility and resin-workspace content fit before applying to AC Infinity; hold Amazon Associates until the supply items are confirmed.
 - Add approved links using the conversion checklist below.
@@ -151,6 +151,8 @@ ends, restore its ordinary URLs and set the flag to match the remaining links.
 ## Activity
 
 - **2026-10-19:** Per Cody, removed the "plain link, not affiliate" notes from the resin build log and working-draft guide; only affiliate links get labeled.
+
+- **2026-10-19:** Recorded the exhaust fan as the CLOUDLINE T4 (AI-CLT4), on hand since 2026-10-18, and linked its official AC Infinity page in the Build Log and resin-workshop project page. No program status changed.
 
 - **2026-10-19:** Linked the Fungdo curing enclosure on the resin-workshop project page with the same ordinary Amazon link. No program status changed.
 
