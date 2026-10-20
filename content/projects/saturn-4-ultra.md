@@ -11,7 +11,7 @@ purpose: Develop a repeatable resin-printing setup around the Saturn 4 Ultra, in
 status: building
 statusLabel: Building / Testing
 phase: Calibration
-updatedAt: 2026-10-19
+updatedAt: 2026-10-20
 nextAction: Run a full-screen exposure test to check the Saturn's LCD after the failed print, do routine maintenance, then try a first useful print.
 equipment:
   - Elegoo Saturn 4 Ultra 12K (vat and build plate installed; Wi-Fi set up; calibration prints succeeded on October 19, 2026; a test mini, Puck the Adventurer, failed afterward because debris was left in the vat, then reprinted cleanly at 2.0 s)
