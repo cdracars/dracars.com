@@ -24,7 +24,7 @@ affiliateLinksPresent: false
 ---
 
 :::tldr Where I'm at
-I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn and the Photon P1 are both sitting on that table. The Saturn has passed an exposure test and a calibration print, and then a test mini failed because I left debris in the vat. The reprint of that mini came out clean. The P1 hasn't printed yet. The exhaust will take time and money to do right. I have new machines and want to play with them, so I started printing before it's ready. I'll explain how I'm approaching that below.
+The tent is assembled, with plastic on the floor and a temporary folding table inside. Both resin printers are on that table, but all my printing so far has been on the Saturn; the Photon P1's cord won't reach the overhead power until the standing desk is in. On the Saturn, the exposure test and calibration prints worked, and I've settled on 2.0 s per layer as a starting point. Then a test mini failed because I left debris in the vat, and the cleanup turned into a big resin mess. The reprint of that mini came out clean. Next, I'm rerunning the full-screen exposure test to make sure the LCD is OK. I have an inline fan for the exhaust, but it isn't ducted yet, so there's still no working exhaust. Doing that right will take time and money. I have new machines and want to play with them, so I started printing before it's ready. I'll explain how I'm approaching that below.
 :::
 
 ## Why I'm setting it up this way
@@ -41,11 +41,11 @@ I picked up the printers and wash station, aired out the tent at home, and got t
 
 I took these photos at pickup, before I brought the printers and wash station home.
 
-!photo 01-equipment-at-pickup.webp | The printers and cleaning equipment at the pickup location.
+!photo 01-equipment-at-pickup.webp | The resin gear at pickup, still somebody else's garage problem for a few more minutes. | The printers and cleaning equipment at the pickup location.
 
-!photo 02-cleaning-station-at-pickup.webp | A closer look at the cleaning station before the move.
+!photo 02-cleaning-station-at-pickup.webp | The Wash & Cure before the move. It lights up, which is not the same thing as working. | A closer look at the cleaning station before the move.
 
-!photo 03-photon-p1-at-pickup.webp | The Anycubic Photon P1 at the pickup location.
+!photo 03-photon-p1-at-pickup.webp | The Photon P1 at pickup. Every printer starts out as pure potential. | The Anycubic Photon P1 at the pickup location.
 
 The Wash & Cure 3 Max came with the printers. It powers on and the display lights up, but I haven't figured out whether it works. There is cured resin in the lines, so I need to inspect it before I rely on it.
 
@@ -53,27 +53,27 @@ The Wash & Cure 3 Max came with the printers. It powers on and the display light
 
 At home, I unzipped the AC Infinity tent and opened it up to air out. I also worked on curing small resin spills on the floor and elsewhere on the tent. I forgot to photograph it fully open, so the picture only catches part of the job.
 
-!photo 05-tent-airing-out.webp | The AC Infinity tent on the grass at home. I fully unzipped and opened it for curing and airing out, but forgot to photograph that step.
+!photo 05-tent-airing-out.webp | The tent airing out on the grass. I opened it all the way and forgot to photograph that, so here's proof of the part I remembered. | The AC Infinity tent on the grass at home. I fully unzipped and opened it for curing and airing out, but forgot to photograph that step.
 
 ### Wrestling it into place
 
 Getting the tent into place in the garage was less graceful. I took photos along the way: the bare frame, the fabric going on, and the tent finally standing where I wanted it. It's still empty in these shots; I hadn't put in the work surface yet.
 
-!photo 04-tent-frame.webp | The bare tent frame in its garage spot.
+!photo 04-tent-frame.webp | A tent is mostly an idea until the fabric goes on. This is the idea, standing in its garage spot. | The bare tent frame in its garage spot.
 
-!photo 06-tent-fabric.webp | Getting the reflective tent fabric into position around the frame.
+!photo 06-tent-fabric.webp | Getting the reflective fabric around the frame, which is less like dressing a tent and more like negotiating with one. | Getting the reflective tent fabric into position around the frame.
 
-!photo 07-tent-going-in.webp | Partway through wrestling the tent into place.
+!photo 07-tent-going-in.webp | Partway in. The tent and I had different opinions about where it should go. | Partway through wrestling the tent into place.
 
-!photo 08-tent-in-place.webp | The tent standing in place, still empty while I plan the interior.
+!photo 08-tent-in-place.webp | Standing where I wanted it and still empty: a clean, quiet box full of plans. | The tent standing in place, still empty while I plan the interior.
 
 ### Update, 2026-10-10: First things inside the tent
 
 The tent isn't empty anymore. The light is an old fish tank light, not a UV light. It has no power switch of its own, so I added an external switch with a red rocker on its black cord and zip-tied it to the tent frame near the door. That lets me turn the light on and off from the door without touching the surge protector. Extension cords are coiled and hung on the wall nearby, and a black folding table is set up inside. The table is a temporary measure so I can get up and running sooner rather than later; the standing desk is still the plan for the main work surface.
 
-!photo 09-tent-light-and-switch.webp | The old non-UV fish tank light hanging from chains, its black cord running along the tent wall to the external red rocker switch zip-tied to the frame near the door, and coiled extension cords hung on the wall.
+!photo 09-tent-light-and-switch.webp | The old fish tank light on its chains, with the red rocker switch I added by the door. It was never a UV light; it just needed an off switch it never came with. | The old non-UV fish tank light hanging from chains, its black cord running along the tent wall to the external red rocker switch zip-tied to the frame near the door, and coiled extension cords hung on the wall.
 
-!photo 10-tent-interior-table.webp | Inside the tent with the light on: a black folding table, the hanging coiled cords, and the silver cinch-top duct ports on the wall and in the floor corner.
+!photo 10-tent-interior-table.webp | Light on, table in. It isn't a workshop yet, but it's starting to look like it's thinking about becoming one. | Inside the tent with the light on: a black folding table, the hanging coiled cords, and the silver cinch-top duct ports on the wall and in the floor corner.
 
 Nothing in these photos has been tested for resin work. At the time, there was still no exhaust, wash station, or printer in here. My plan then was to build the exhaust before using resin.
 
@@ -96,27 +96,27 @@ I also bought Hardy 9 mil nitrile gloves. I haven't found compatibility data for
 
 The folding table and the tent floor now have plastic on them, and the Elegoo Saturn is sitting on the plastic-covered table. White clips hold the plastic at the table's edge. The floor liner is in, but I'm not happy with how it's sitting, so I'm printing more clips to tidy it up. I haven't tested how well any of them hold yet.
 
-!photo 11-table-and-floor-plastic.webp | The tent with plastic over the folding table and across the floor, and white clips holding the plastic at the table's edge.
+!photo 11-table-and-floor-plastic.webp | Plastic on the table, plastic on the floor. Resin will drip somewhere eventually; the plan is for it to drip on something I can throw away. | The tent with plastic over the folding table and across the floor, and white clips holding the plastic at the table's edge.
 
 The two Elegoo boxes held the parts I was missing for the Saturn 4 Ultra: a resin tank (vat) and a laser-carved build plate. I photographed the boxes first, then put the parts on the printer.
 
-!photo 13-resin-tank-box.webp | The Elegoo resin vat box for the Saturn 4 Ultra; this was one of the missing parts.
+!photo 13-resin-tank-box.webp | The vat box: half of what the Saturn was missing, and the half that holds the resin. | The Elegoo resin vat box for the Saturn 4 Ultra; this was one of the missing parts.
 
-!photo 14-build-plate-box.webp | The Elegoo laser-carved build plate box for the Saturn 4 Ultra; this was the other missing part.
+!photo 14-build-plate-box.webp | The build plate box, the other missing half. Every print on this machine will hang upside down from what's inside. | The Elegoo laser-carved build plate box for the Saturn 4 Ultra; this was the other missing part.
 
 The next photo shows those parts in place: the empty vat is installed, and the build plate is raised above it. The Wi-Fi antenna is attached, and I got Wi-Fi set up on the Saturn on October 11. There's no resin in the vat, and I still haven't worked through the remaining setup checks, so the printer isn't ready to print yet.
 
-!photo 12-saturn-with-tank-installed.webp | The Saturn 4 Ultra with the resin vat and build plate from the preceding two box photos in place; the vat is empty, and the antenna is attached.
+!photo 12-saturn-with-tank-installed.webp | Vat in, plate on, antenna up. All dressed up, with nothing in the vat yet. | The Saturn 4 Ultra with the resin vat and build plate from the preceding two box photos in place; the vat is empty, and the antenna is attached.
 
 I picked the [Braun 5500 lumen, 4 ft linkable LED hanging shop light](https://www.harborfreight.com/5500-lumen-4-ft-linkable-led-hanging-shop-light-59506.html), Harbor Freight item 59506. The shelf photo shows the light I chose. Its listing gives 55 W at 120 V, an on/off metal pull chain, and two chains with S-hooks; the box says 4000K cool white. Those are the manufacturer's numbers, not anything I've measured, It's an LED shop light, so it shouldn't put out meaningful UV; I haven't measured it.
 
-!photo 17-braun-shop-light-shelf.webp | The Braun lights on the store shelf. The 5500 lumen, 4 ft linkable shop light is the one I picked.
+!photo 17-braun-shop-light-shelf.webp | A whole shelf of Braun lights to choose from. I went home with the 5500 lumen, 4 ft linkable one. | The Braun lights on the store shelf. The 5500 lumen, 4 ft linkable shop light is the one I picked.
 
 After I hung the light, I reused the inline rocker switch from the old fish-tank light on the Braun's black cord. The switch is by the tent door, so I can turn the light on there instead of reaching around to find its pull chain. The orange cord is the tent's primary power feed. The white cord looped below is excess length from the surge protector's cord, which is zip-tied nearby.
 
-!photo 15-tent-light-on-frame.webp | The new LED light on, running along the tent's top frame, with the surge protector zip-tied nearby, the orange primary power cord coiled on the wall, excess length of the surge protector's white cord looped below, and a bead pull chain hanging at left.
+!photo 15-tent-light-on-frame.webp | The new LED along the top frame. It's hard to clean up a drip you can't see. | The new LED light on, running along the tent's top frame, with the surge protector zip-tied nearby, the orange primary power cord coiled on the wall, excess length of the surge protector's white cord looped below, and a bead pull chain hanging at left.
 
-!photo 16-tent-light-end-piece.webp | The Braun light's black cord runs across the tent wall to the reused inline rocker switch by the door; the orange primary power cord is coiled behind it.
+!photo 16-tent-light-end-piece.webp | The old rocker switch, now on the new light's cord. Good switches outlive their lights. | The Braun light's black cord runs across the tent wall to the reused inline rocker switch by the door; the orange primary power cord is coiled behind it.
 
 ### Update, 2026-10-12: Planning the first print
 
@@ -124,41 +124,41 @@ After I hung the light, I reused the inline rocker switch from the old fish-tank
 
 Tonight I took photos of where things stand. Both resin machines are in the tent now: the Anycubic Photon P1 (its base is labeled P1 Photon) at left and the Saturn 4 Ultra at right, side by side on the plastic-covered table. The Saturn's hood is open and the empty vat is in place. I haven't printed on either one.
 
-!photo 18-photon-p1-and-saturn-in-tent.webp | Both machines on the plastic-covered table in the tent: the Anycubic Photon P1 at left, and the Saturn 4 Ultra at right with its hood open and the vat installed. The new LED light runs across the top of the frame.
+!photo 18-photon-p1-and-saturn-in-tent.webp | Both machines side by side on the table, and neither one has printed yet. The calm before the resin. | Both machines on the plastic-covered table in the tent: the Anycubic Photon P1 at left, and the Saturn 4 Ultra at right with its hood open and the vat installed. The new LED light runs across the top of the frame.
 
-!photo 19-both-machines-on-table.webp | An angled view of the same table. White clips hold the plastic at the table's edge and a leg, a power adapter is zip-tied to the tent wall above the machines, and the Saturn's hood is open.
+!photo 19-both-machines-on-table.webp | The same table from an angle. Every clip is a small vote of no confidence in plastic sheeting. | An angled view of the same table. White clips hold the plastic at the table's edge and a leg, a power adapter is zip-tied to the tent wall above the machines, and the Saturn's hood is open.
 
 The floor liner is done for now. The yellow clips are the 22mm grow tent clips I printed from the Printables collection. They sit along the lower tent frame and hold the plastic up against the wall at the corner. I haven't tested how well they hold.
 
-!photo 20-floor-liner-corner-clips.webp | A corner of the tent floor liner, bunched along the base of the wall, with yellow clips on the lower frame tube.
+!photo 20-floor-liner-corner-clips.webp | The floor liner bunched along the wall, held up by yellow clips I printed for exactly this job. | A corner of the tent floor liner, bunched along the base of the wall, with yellow clips on the lower frame tube.
 
-!photo 21-liner-held-by-clips.webp | Lifting the liner away from the wall to show two yellow clips holding the plastic to the lower frame tube.
+!photo 21-liner-held-by-clips.webp | Lift the curtain and there are the clips, doing the unglamorous work. | Lifting the liner away from the wall to show two yellow clips holding the plastic to the lower frame tube.
 
-!photo 22-liner-clip-detail.webp | A closer look at the liner with a yellow clip near the top and another near the bottom, the plastic hanging in loose folds between them.
+!photo 22-liner-clip-detail.webp | A clip at the top, a clip at the bottom, and loose folds in between. Those folds are where a drip would land, which is sort of the point. | A closer look at the liner with a yellow clip near the top and another near the bottom, the plastic hanging in loose folds between them.
 
 ### Update, 2026-10-17: The exhaust fan
 
 I scored the exhaust fan on Facebook Marketplace today: an [AC Infinity CLOUDLINE T4](https://acinfinity.com/cloudline-t4-quiet-inline-fan-4-with-temperature-humidity-vpd-controller/), the 4-inch model with a temperature and humidity controller. The label on the fan reads AI-CLT4. It isn't ducted to anything yet, so it isn't an exhaust. The duct run into the attic crawl space and out through a new roof opening is still ahead, and everything I said above about printing before the exhaust is ready still applies.
 
-!photo 29-inline-fan-unboxed.webp | The AC Infinity CLOUDLINE T4 inline fan in its box, with its mounting bracket, coiled cord, and installation sheet.
+!photo 29-inline-fan-unboxed.webp | A Marketplace find, still in its box. Right now it's a fan; it only becomes an exhaust once it's connected to ductwork. | The AC Infinity CLOUDLINE T4 inline fan in its box, with its mounting bracket, coiled cord, and installation sheet.
 
-!photo 30-inline-fan-in-tent.webp | The CLOUDLINE T4 sitting on the plastic-covered table in the tent, not yet connected to any ductwork, with the Photon P1 and the Saturn behind it and a small space heater beside it.
+!photo 30-inline-fan-in-tent.webp | The T4 on the table, connected to nothing yet, with a space heater beside it: one machine for moving air, one for warming it. | The CLOUDLINE T4 sitting on the plastic-covered table in the tent, not yet connected to any ductwork, with the Photon P1 and the Saturn behind it and a small space heater beside it.
 
 ### Update, 2026-10-18: The exposure test
 
 Before the calibration print below, I ran an exposure test on the Saturn: a set of small Cones of Calibration test pieces, one at each exposure setting from 2 to 4 in steps of 0.4. I laid them out on a shop towel next to their labels.
 
-!photo 28-saturn-vat.webp | The Saturn's vat seated under the raised build plate, held by its black clamp knob.
+!photo 28-saturn-vat.webp | The vat clamped in under the raised plate. Every resin print starts with a small act of faith right here. | The Saturn's vat seated under the raised build plate, held by its black clamp knob.
 
-!photo 27-exposure-test-cones.webp | The exposure test pieces on a blue shop towel, labeled 2, 2.4, 2.8, 3.2, 3.6, and 4. The 2 and 2.4 pieces had already moved to the curing station, so only their resin marks are left on the towel.
+!photo 27-exposure-test-cones.webp | Six exposure settings on a blue towel. The 2 and 2.4 pieces had already gone to the curing station; those resin marks are all that's left of them here. | The exposure test pieces on a blue shop towel, labeled 2, 2.4, 2.8, 3.2, 3.6, and 4. The 2 and 2.4 pieces had already moved to the curing station, so only their resin marks are left on the towel.
 
 I cured the pieces one at a time in a [Fungdo resin curing enclosure](https://www.amazon.com/dp/B085KW8K3F), a small fabric box with a UV light and a turntable inside. When I took the towel photo, the 2 and 2.4 pieces had already gone to the enclosure; the marks on the towel are just where they sat.
 
 My favorite part is the turntable. It's solar powered, so it starts spinning on its own when the UV light comes on and stops when the light goes off. I think that's super cool.
 
-!photo 25-fungdo-curing-enclosure.webp | The Fungdo curing enclosure glowing purple through its window while a test piece cures inside.
+!photo 25-fungdo-curing-enclosure.webp | It looks like a portal. It's a small fabric box with a UV light, curing one test piece at a time. | The Fungdo curing enclosure glowing purple through its window while a test piece cures inside.
 
-!photo 26-curing-on-turntable.webp | Inside the enclosure: a test piece on the clear turntable under the UV light, with the reflective lining behind it.
+!photo 26-curing-on-turntable.webp | A test piece on the turntable, which spins on solar power from the same UV light that cures it. Still my favorite part. | Inside the enclosure: a test piece on the clear turntable under the UV light, with the reflective lining behind it.
 
 ### Update, 2026-10-19: A successful calibration print
 
@@ -166,9 +166,9 @@ The resin calibration prints worked. I printed TableFlip Foundry's [Cones of Cal
 
 For now, all my resin printing is on the Saturn. The power in the tent is mounted up high, and the Photon P1's cord won't reach it from the folding table. That changes once the standing desk is in, since it can raise the P1 higher.
 
-!photo 23-cones-of-calibration-success.webp | The Cones of Calibration v3 in SUNLU Dark Grey resin, top-down: the TableFlip Foundry roof, the skull and spike at left, the mug at right, and SUCCESS along the front of the base.
+!photo 23-cones-of-calibration-success.webp | SUCCESS is a bold thing for a model to print about itself, but the skull, the spike, and the mug back it up. | The Cones of Calibration v3 in SUNLU Dark Grey resin, top-down: the TableFlip Foundry roof, the skull and spike at left, the mug at right, and SUCCESS along the front of the base.
 
-!photo 24-cones-of-calibration-front.webp | A front view of the same print, showing the five cones standing under the roof and the open mug handle.
+!photo 24-cones-of-calibration-front.webp | From the front: five cones under the roof, and a mug handle that stayed open. | A front view of the same print, showing the five cones standing under the roof and the open mug handle.
 
 ### Update, 2026-10-19: Where the exposure landed
 
@@ -200,13 +200,13 @@ This time I printed him on the Saturn in the SUNLU ABS-Like Dark Grey at the 2.0
 
 The loose skulls and swords in the photos aren't part of Puck. I ran so many calibration prints that I took those pieces off them to keep as extra basing options for future minis.
 
-!photo 31-puck-front.webp | Puck in Dark Grey resin, front view: armored, holding a banded tankard, with a sword over his shoulder, standing on a skull-strewn base. The loose skulls and the sword in front came off other calibration prints.
+!photo 31-puck-front.webp | Puck, second try: armored, tankard in hand, sword on his shoulder, and completely unbothered by what happened to the first Puck. | Puck in Dark Grey resin, front view: armored, holding a banded tankard, with a sword over his shoulder, standing on a skull-strewn base. The loose skulls and the sword in front came off other calibration prints.
 
-!photo 32-puck-angled.webp | An angled view of Puck on a shop towel, with loose skulls and a spare sword from the calibration prints around him.
+!photo 32-puck-angled.webp | Puck on a shop towel among spare skulls and a sword from the calibration prints. Every adventurer needs a little loot. | An angled view of Puck on a shop towel, with loose skulls and a spare sword from the calibration prints around him.
 
-!photo 33-puck-side.webp | Puck from the side, tankard raised, with spare calibration skulls lined up along the front of the base.
+!photo 33-puck-side.webp | Tankard raised, with a row of calibration skulls at his feet. Everything here came off a test print, and he seems fine with that. | Puck from the side, tankard raised, with spare calibration skulls lined up along the front of the base.
 
-!photo 34-puck-top-down.webp | A top-down view of Puck on his round base, surrounded by the spare skulls, with a spare sword at lower left.
+!photo 34-puck-top-down.webp | From above: Puck on his round base, ringed by spare skulls. Calibration leftovers make surprisingly good scenery. | A top-down view of Puck on his round base, surrounded by the spare skulls, with a spare sword at lower left.
 
 ## Drip mods I've already printed
 

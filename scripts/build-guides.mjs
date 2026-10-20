@@ -80,7 +80,7 @@ function parseFrontmatter(src, file) {
 }
 
 // ---------- markdown (small subset) ----------
-// Blocks: ## / ### headings, paragraphs, - and 1. lists, > quotes, ::: containers (tldr, note), and !photo blocks.
+// Blocks: ## / ### headings, paragraphs, - and 1. lists, > quotes, ::: containers (tldr, note), and !photo blocks (!photo file | caption | optional alt).
 // Inline: `code`, **bold**, *italic*, [text](url) and [text](url "affiliate") for affiliate links.
 
 function inline(text, ctx) {
@@ -141,11 +141,12 @@ function renderBlocks(lines, ctx) {
       continue;
     }
 
-    const photo = line.match(/^!photo\s+(\S+)(?:\s*\|\s*(.*))?\s*$/);
+    // !photo file | caption | alt — alt is optional and falls back to the caption.
+    const photo = line.match(/^!photo\s+(\S+)(?:\s*\|\s*(.*?))?(?:\s*\|\s*(.*?))?\s*$/);
     if (photo) {
-      const [, file, caption = ""] = photo;
+      const [, file, caption = "", altText = ""] = photo;
       if (!/^[a-z0-9][a-z0-9._-]*$/i.test(file)) fail(`invalid photo filename "${file}"`);
-      const alt = caption || "Build log photo";
+      const alt = altText || caption || "Build log photo";
       const photoDirectory = ctx.photoDirectory ?? "resin-grow-tent-setup";
       out.push(`<figure class="photo"><img ${imgAttrs(`/images/build-logs/${photoDirectory}/${file}`)} alt="${escAttr(alt)}" loading="lazy" />${caption ? `<figcaption>${inline(caption, ctx)}</figcaption>` : ""}</figure>`);
       i++; continue;
