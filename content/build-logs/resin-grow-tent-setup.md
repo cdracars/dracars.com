@@ -9,12 +9,12 @@ author: Dracars
 category: projects-builds
 status: current
 projectState: building
-statusNote: Calibration prints passed; a test mini failed — workspace still being built
+statusNote: Calibration prints passed; Puck reprinted cleanly after a failed first try — workspace still being built
 featured: true
 tags: [resin, grow-tent, garage, workspace, saturn-4-ultra, photon-p1]
 testedWith:
   - AC Infinity CLOUDLAB 866 (AC-CBA866), 5 × 5 ft grow tent (assembled; Saturn and Photon P1 inside, Braun shop light, cords, plastic-covered folding table; exposure test and calibration prints done)
-  - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; calibration prints, including Cones of Calibration v3, succeeded in SUNLU ABS-Like Dark Grey; a test mini afterward failed because debris was left in the vat)
+  - Elegoo Saturn 4 Ultra 12K (Wi-Fi set up; vat and build plate installed; calibration prints, including Cones of Calibration v3, succeeded in SUNLU ABS-Like Dark Grey; the Puck test mini failed because debris was left in the vat, then printed cleanly at 2.0 s)
   - Anycubic Photon P1 (in the tent on the plastic-covered table; no prints yet; its power cord doesn't reach the overhead power until the taller standing desk is in)
   - Anycubic Wash & Cure 3 Max (powers on and display lights; function unconfirmed, cured resin in the lines)
   - Fungdo resin curing enclosure (used to cure the exposure test pieces)
@@ -24,7 +24,7 @@ affiliateLinksPresent: false
 ---
 
 :::tldr Where I'm at
-I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn and the Photon P1 are both sitting on that table. The Saturn has passed an exposure test and a calibration print, and then a test mini failed because I left debris in the vat. The P1 hasn't printed yet. The exhaust will take time and money to do right. I have new machines and want to play with them, so I started printing before it's ready. I'll explain how I'm approaching that below.
+I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn and the Photon P1 are both sitting on that table. The Saturn has passed an exposure test and a calibration print, and then a test mini failed because I left debris in the vat. The reprint of that mini came out clean. The P1 hasn't printed yet. The exhaust will take time and money to do right. I have new machines and want to play with them, so I started printing before it's ready. I'll explain how I'm approaching that below.
 :::
 
 ## Why I'm setting it up this way
@@ -192,21 +192,21 @@ So learning has been "fun." The lessons I've remembered best are usually the one
 
 My biggest takeaway from the calibrations, the failed mini, and the cleanup is that resin is slow and methodical. Don't get in a hurry, and don't skip steps. Take it slow and do it right and safe. That's different from FDM, which can be a little fast and loose if you want it to be because there's less at stake when something goes wrong. With resin, one skipped check led to a failed print, a cured layer stuck in the vat, and a big mess.
 
-### Update, 2026-10-19: Puck the Adventurer
+### Update, 2026-10-19: Puck the Adventurer, second try
 
-[DRAFT: confirm whether Puck was the mini that failed earlier and this is the reprint, and whether the LCD check and maintenance happened first.] I printed Puck the Adventurer on the Saturn in the SUNLU ABS-Like Dark Grey. Puck comes in the same download as TableFlip Foundry's [Cones of Calibration V3](https://www.tableflipfoundry.com/3d-printing/the-cones-of-calibration-v3/), and TableFlip describes him as the final check after calibrating, with supports tuned to match the cones. The two are designed to go together: the skull, the tankard in his hand, and the sword on his back all come from the Cones of Calibration.
+The mini that failed earlier was Puck the Adventurer, and I printed him again. Puck comes in the same download as TableFlip Foundry's [Cones of Calibration V3](https://www.tableflipfoundry.com/3d-printing/the-cones-of-calibration-v3/), and TableFlip describes him as the final check after calibrating, with supports tuned to match the cones. The two are designed to go together: the skull, the tankard in his hand, and the sword on his back all come from the Cones of Calibration.
 
-[DRAFT: exposure settings used, e.g. the 2.0 s / 25 s from above, and how it went: supports, anything that failed or needed cleanup.]
+This time I printed him on the Saturn in the SUNLU ABS-Like Dark Grey at the 2.0 s exposure from above. He came out super clean, and nothing about him was hard.
 
-!photo 31-puck-front.webp | Puck in Dark Grey resin, front view: armored, holding a banded tankard, with a sword over his shoulder, standing on a skull-strewn base with loose skulls and a separate sword piece around him.
+The loose skulls and swords in the photos aren't part of Puck. I ran so many calibration prints that I took those pieces off them to keep as extra basing options for future minis.
 
-!photo 32-puck-angled.webp | An angled view of Puck and the loose pieces on a shop towel, with the separate sword lying in front of the base.
+!photo 31-puck-front.webp | Puck in Dark Grey resin, front view: armored, holding a banded tankard, with a sword over his shoulder, standing on a skull-strewn base. The loose skulls and the sword in front came off other calibration prints.
 
-!photo 33-puck-side.webp | Puck from the side, tankard raised, with loose skulls lined up along the front of the base.
+!photo 32-puck-angled.webp | An angled view of Puck on a shop towel, with loose skulls and a spare sword from the calibration prints around him.
 
-!photo 34-puck-top-down.webp | A top-down view of Puck on his round base, surrounded by the loose skulls, with the separate sword at lower left.
+!photo 33-puck-side.webp | Puck from the side, tankard raised, with spare calibration skulls lined up along the front of the base.
 
-[DRAFT: what the loose skulls and the separate sword are for, and whether these photos are before or after washing and curing.]
+!photo 34-puck-top-down.webp | A top-down view of Puck on his round base, surrounded by the spare skulls, with a spare sword at lower left.
 
 ## Drip mods I've already printed
 
