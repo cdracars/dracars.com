@@ -24,7 +24,7 @@ affiliateLinksPresent: false
 ---
 
 :::tldr Where I'm at
-I've got the tent assembled with plastic on the floor and a temporary table inside. The Saturn and the Photon P1 are both sitting on that table. The Saturn has passed an exposure test and a calibration print, and then a test mini failed because I left debris in the vat. The reprint of that mini came out clean. The P1 hasn't printed yet. The exhaust will take time and money to do right. I have new machines and want to play with them, so I started printing before it's ready. I'll explain how I'm approaching that below.
+The tent is assembled, with plastic on the floor and a temporary folding table inside. Both resin printers are on that table, but all my printing so far has been on the Saturn; the Photon P1's cord won't reach the overhead power until the standing desk is in. On the Saturn, the exposure test and calibration prints worked, and I've settled on 2.0 s per layer as a starting point. Then a test mini failed because I left debris in the vat, and the cleanup turned into a big resin mess. The reprint of that mini came out clean. Next, I'm rerunning the full-screen exposure test to make sure the LCD is OK. I have an inline fan for the exhaust, but it isn't ducted yet, so there's still no working exhaust. Doing that right will take time and money. I have new machines and want to play with them, so I started printing before it's ready. I'll explain how I'm approaching that below.
 :::
 
 ## Why I'm setting it up this way
