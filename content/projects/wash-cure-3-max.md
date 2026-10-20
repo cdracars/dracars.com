@@ -11,14 +11,14 @@ purpose: Find out whether the Wash & Cure works, then set up the dirty and clean
 status: troubleshooting
 statusLabel: Needs diagnosis
 phase: Not yet diagnosed
-updatedAt: 2026-10-19
-nextAction: Inspect the cured resin in the lines and check whether the wash and cure functions work before relying on the station.
+updatedAt: 2026-10-20
+nextAction: Run water through the removed lines on their own, then water-test the station before relying on it.
 equipment:
   - Anycubic Wash & Cure 3 Max (powers on and lights its display; wash and cure function unconfirmed; cured resin in the lines)
   - 45 oz pickle jars, planned for dirty-wash IPA storage
   - Fungdo resin curing enclosure, used instead of this station to cure the October 18 exposure test pieces
 problems:
-  - There is cured resin in the lines. I have not opened the station to inspect it yet.
+  - There is cured resin in the lines. I've taken the lines off but haven't tested them yet.
   - Neither the wash nor the cure function has been confirmed.
   - The dirty-wash and clean-wash process is not set up.
 relatedLogs: [resin-grow-tent-setup]
