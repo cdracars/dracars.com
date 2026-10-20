@@ -192,6 +192,22 @@ So learning has been "fun." The lessons I've remembered best are usually the one
 
 My biggest takeaway from the calibrations, the failed mini, and the cleanup is that resin is slow and methodical. Don't get in a hurry, and don't skip steps. Take it slow and do it right and safe. That's different from FDM, which can be a little fast and loose if you want it to be because there's less at stake when something goes wrong. With resin, one skipped check led to a failed print, a cured layer stuck in the vat, and a big mess.
 
+### Update, 2026-10-19: Puck the Adventurer
+
+[DRAFT: confirm whether Puck was the mini that failed earlier and this is the reprint, and whether the LCD check and maintenance happened first.] I printed Puck the Adventurer on the Saturn in the SUNLU ABS-Like Dark Grey. Puck comes in the same download as TableFlip Foundry's [Cones of Calibration V3](https://www.tableflipfoundry.com/3d-printing/the-cones-of-calibration-v3/), and TableFlip describes him as the final check after calibrating, with supports tuned to match the cones. The two are designed to go together: the skull, the tankard in his hand, and the sword on his back all come from the Cones of Calibration.
+
+[DRAFT: exposure settings used, e.g. the 2.0 s / 25 s from above, and how it went: supports, anything that failed or needed cleanup.]
+
+!photo 31-puck-front.webp | Puck in Dark Grey resin, front view: armored, holding a banded tankard, with a sword over his shoulder, standing on a skull-strewn base with loose skulls and a separate sword piece around him.
+
+!photo 32-puck-angled.webp | An angled view of Puck and the loose pieces on a shop towel, with the separate sword lying in front of the base.
+
+!photo 33-puck-side.webp | Puck from the side, tankard raised, with loose skulls lined up along the front of the base.
+
+!photo 34-puck-top-down.webp | A top-down view of Puck on his round base, surrounded by the loose skulls, with the separate sword at lower left.
+
+[DRAFT: what the loose skulls and the separate sword are for, and whether these photos are before or after washing and curing.]
+
 ## Drip mods I've already printed
 
 I do plenty of FDM printing, and I've already printed drip mods for both resin machines. I printed these before any resin printing.
