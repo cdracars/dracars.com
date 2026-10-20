@@ -226,7 +226,7 @@ I've also had cured resin end up in places I didn't want it on another resin mac
 
 ## What I'd do differently
 
-I've only run an exposure test, a calibration print, and one failed mini in this setup, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
+I've only run an exposure test, calibration prints, one failed mini, and its reprint in this setup, so I can't call this a finished lesson. I did start by asking where the printer goes; now I'm trying to answer where everything goes after the print.
 
 
 ## What I'm working on next
