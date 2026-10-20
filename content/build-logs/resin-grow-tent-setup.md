@@ -178,7 +178,7 @@ From the calibration prints, I've settled on a 2.0 s exposure per layer at 0.05 
 
 That success shot isn't the whole story, and this log is supposed to be honest, so here's the part I'd rather skip.
 
-After the calibration prints, I thought everything was good and ran a mini as a final test. What I didn't know was that the mugs on two of the calibration prints, the 1.9 s and 2.3 s ones, had torn at one end, and a piece of mug had come off and stayed in the vat. I don't know yet why they tore; peel force and where the parts sat on the build plate are my main suspects. I didn't check the vat before starting the mini, and the mini failed. Checking the vat between prints is the kind of step I'd tell someone else not to skip, and I skipped it.
+After the calibration prints, I thought everything was good and ran a mini as a final test. What I didn't know was that a piece from the calibration prints had come off the build plate and stayed in the vat. I didn't check the vat before starting the mini, and the mini failed. Checking the vat between prints is the kind of step I'd tell someone else not to skip, and I skipped it.
 
 Trying to get the stuck pieces out, I ran the Saturn's vat-cleaning job. It exposes the full LCD, so it cured a layer of resin across the whole bottom of the vat, and then I couldn't figure out how to get that layer out.
 
