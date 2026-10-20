@@ -13,7 +13,7 @@ statusLabel: Building / Testing
 statusNote: As of October 19, 2026: the Saturn has produced successful calibration prints and a clean test mini after one failed attempt; the Photon P1 has not printed, and the exhaust and wash station remain unverified.
 phase: Workspace and workflow
 updatedAt: 2026-10-20
-nextAction: Run a full-screen exposure test to check the Saturn's LCD after the failed print, do routine maintenance, then try a first useful print.
+nextAction: Rerun the full-screen exposure test over a sheet of white paper to check what may be a line on the left side of the Saturn's LCD, then try a first useful print.
 relatedLogs: [resin-grow-tent-setup]
 relatedGuides: [resin-grow-tent-setup]
 workstreams:
@@ -34,8 +34,8 @@ equipment:
   - A space heater in the tent for the cold months, paired with the CLOUDLINE T4 controller's temperature sensor so I'm not guessing whether the tent is warm enough to print. That's a stopgap: long term, I plan to heat just the inside of the printer, not the whole tent. The Saturn already has an [ELEGOO Mini Heater](https://us.elegoo.com/products/mini-heater) mounted inside, but it came without its power cord
 problems:
   - The tent has no functioning exhaust yet, and the wash station has not been diagnosed.
-  - The floor liner clips have not been tested in use, and the standing desk and cleanup workflow are unfinished.
-  - The Saturn passed its calibration prints, and a test mini reprinted cleanly after a failed first try, but its LCD still needs a check; the Photon P1 has not printed in this workspace.
+  - The standing desk and cleanup workflow are unfinished.
+  - The Saturn passed its calibration prints, and a test mini reprinted cleanly after a failed first try, but a first LCD check may show a line on the left side and is being rerun; the Photon P1 has not printed in this workspace.
 focus:
   - Finish and document the garage workspace and exhaust.
   - Move the Saturn from its first successful calibration print to useful prints.
@@ -45,6 +45,6 @@ focus:
 
 The resin setup came together through a trade on October 8, 2026: Pam, my Prusa MK4S, for an Elegoo Saturn 4 Ultra and an Anycubic Photon P1. Both machines are now in the garage tent. After an exposure test on October 18, the Saturn produced a successful calibration print on October 19, 2026: a Cones of Calibration v3 in SUNLU ABS-Like Dark Grey. A test mini right after it failed because debris was left in the vat; the reprint came out clean. The Photon P1 has not printed in this workspace yet. The [Saturn 4 Ultra project page](/workshop/saturn-4-ultra/) tracks that machine in more detail.
 
-The tent is assembled, with a plastic-covered folding table, a plastic floor liner, and the Braun shop light in place. The folding table is temporary; a standing desk is still planned. I have not installed a functioning exhaust or confirmed that the Wash & Cure station works. The liner clips and light output have not been tested for this workflow.
+The tent is assembled, with a plastic-covered folding table, a plastic floor liner, and the Braun shop light in place. The folding table is temporary; a standing desk is still planned. I have not installed a functioning exhaust or confirmed that the Wash & Cure station works. The liner clips haven't moved so far. I haven't measured the light output.
 
 I am documenting the workspace before calling it ready. The [Build Log](/build-logs/resin-grow-tent-setup/) keeps the dated sequence, including my choice to start printing before the exhaust is finished. That is my current plan, not a tested or recommended setup; the log records the limitations and what still needs checking. The [Coming Soon guide](/guides/resin-grow-tent-setup/) will remain unfinished until I have used and tested the workflow.

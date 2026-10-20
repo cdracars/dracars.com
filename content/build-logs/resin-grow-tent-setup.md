@@ -231,13 +231,9 @@ I've only run an exposure test, calibration prints, one failed mini, and its rep
 
 ## What I'm working on next
 
-- see how the printed clips on the floor liner hold up once I'm working in the tent
-- record how the next prints and IPA cleanup go
-- take the vat off and run a full-screen exposure test to check the LCD for damage from the failed print
-- check the vat before every print and set up a proper funnel before draining it
-- figure out why the 1.9 s and 2.3 s mugs tore
-- print and try the plate-mounted drip mod and the replacement Saturn drip tray
-- inspect the Saturn's vat and build plate, then work through its setup checks
-- diagnose the Wash & Cure and set up the dirty and clean washes
+- rerun the full-screen exposure test over a sheet of white paper; the first run looked like it might show a line on the left side of the LCD, but it was hard to see
+- make checking the vat before every print a habit, and set up a proper funnel before draining it
+- swap my old drip mod for the plate-mounted one; the old one works well but is still tight. Print the replacement Saturn drip tray too
+- run water through the Wash & Cure's lines on their own, then water-test the station before setting up the dirty and clean washes
 - set up the standing desk and work out the curing workflow
 - set up the ductwork for the inline fan, finish the exhaust, and update my recommendation and setup notes
