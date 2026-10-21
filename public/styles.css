@@ -1,6 +1,8 @@
 /* Self-hosted fonts (SIL Open Font License; see /fonts/OFL-*.txt). */
 @font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/atkinson-hyperlegible-400-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/atkinson-hyperlegible-400-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: italic; font-weight: 400; font-display: swap; src: url("/fonts/atkinson-hyperlegible-400-italic-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: italic; font-weight: 400; font-display: swap; src: url("/fonts/atkinson-hyperlegible-400-italic-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/atkinson-hyperlegible-700-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/atkinson-hyperlegible-700-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 600 700; font-display: swap; src: url("/fonts/space-grotesk-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
@@ -37,6 +39,9 @@
   --flow-clean: light-dark(#4d364c, #b49ab2);
   --flow-clean-ink: light-dark(#fff9fb, #160f18);
   --flow-end-border: light-dark(#4d364c, #765c71);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  /* Comfortable running-text width: about 70-75 characters of Atkinson at body size. */
+  --measure: 34rem;
   font-family: "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif;
   font-synthesis: none;
 }
@@ -46,6 +51,9 @@
 :where(img[width][height]) { height: auto; }
 html { scroll-behavior: smooth; }
 body { min-width: 320px; margin: 0; background: var(--paper); color: var(--ink); line-height: 1.55; }
+code, kbd, samp, pre { font-family: var(--font-mono); }
+h1, h2, h3 { text-wrap: balance; }
+p, li, figcaption { text-wrap: pretty; }
 ::selection { background: var(--selection-bg); color: var(--selection-ink); }
 a { color: inherit; text-underline-offset: 0.25em; text-decoration-thickness: 1px; }
 .text-link:hover,
@@ -127,7 +135,7 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: clamp(3rem, 6.6vw, 6.05rem); 
 .resource-detail-section { display: grid; grid-template-columns: minmax(175px, .6fr) minmax(0, 1.4fr); gap: clamp(22px, 4vw, 48px); padding: 28px 0; border-bottom: 1px solid var(--line); }
 .resource-detail-section h2,
 .resource-detail-log h2 { margin: 0; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.15; }
-.resource-detail-copy { max-width: 70ch; font-size: 1.03rem; line-height: 1.65; }
+.resource-detail-copy { max-width: var(--measure); font-size: 1.03rem; line-height: 1.65; }
 .resource-detail-copy > :first-child { margin-top: 0; }
 .resource-detail-copy > :last-child { margin-bottom: 0; }
 .resource-detail-copy p { margin: 0 0 1em; }
@@ -451,9 +459,10 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 .guide-body h3 { margin: 1.8em 0 .4em; font-size: 1.2rem; }
 .guide-body p, .guide-body ul, .guide-body ol { margin: 0 0 1.1em; }
 .guide-body li + li { margin-top: .35em; }
-.guide-body code { padding: 1px 5px; border-radius: 5px; background: var(--inset-bg); font-size: .92em; }
+.guide-body code { padding: 1px 5px; border: 1px solid color-mix(in srgb, var(--line) 55%, transparent); border-radius: 5px; background: var(--inset-bg); font-size: .9em; }
 .guide-body pre { margin: 0 0 1.1em; padding: 14px 16px; overflow-x: auto; border-radius: 12px; background: var(--inset-bg); font-size: .88rem; line-height: 1.5; }
-.guide-body pre code { padding: 0; background: none; font-size: inherit; }
+.guide-body pre code { padding: 0; border: 0; background: none; font-size: inherit; }
+.guide-body > :is(p, ul, ol, blockquote) { max-width: var(--measure); }
 .guide-body blockquote { margin: 0 0 1.1em; padding-left: 16px; border-left: 3px solid var(--line); color: var(--muted); }
 
 .build-logs-site main { padding-bottom: 56px; }
@@ -482,12 +491,13 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 .build-log-index nav a:hover { color: var(--terracotta-dark); text-decoration: underline; }
 .build-log-story { min-width: 0; }
 .build-log-body { font-size: 1.03rem; line-height: 1.68; }
-.build-log-body > :not(.photo):not(.figure), .build-log-update-content > :not(.photo):not(.figure) { max-width: 78ch; }
+.build-log-body > :where(:not(.photo, .figure)), .build-log-update-content > :where(:not(.photo, .figure)) { max-width: 78ch; }
+.build-log-body > :is(p, ul, ol, blockquote), .build-log-update-content > :is(p, ul, ol, blockquote) { max-width: var(--measure); }
 .build-log-body > h2 { margin: 2.8em 0 .6em; padding-top: .7em; border-top: 1px solid var(--line); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.15; }
 .build-log-body h3 { margin: 1.8em 0 .4em; font-size: 1.2rem; line-height: 1.25; }
 .build-log-body p, .build-log-body ul, .build-log-body ol { margin: 0 0 1.1em; }
 .build-log-body li + li { margin-top: .35em; }
-.build-log-body code { padding: 1px 5px; border-radius: 5px; background: var(--inset-bg); font-size: .92em; }
+.build-log-body code { padding: 1px 5px; border: 1px solid color-mix(in srgb, var(--line) 55%, transparent); border-radius: 5px; background: var(--inset-bg); font-size: .9em; }
 .build-log-update { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 22px; margin: 38px 0 46px; padding: 8px 0 32px; border-bottom: 1px solid var(--line); }
 .build-log-update-stamp { padding-top: 7px; color: var(--terracotta-dark); font-size: .82rem; font-weight: 700; line-height: 1.3; }
 .build-log-update-stamp time { display: block; font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-size: 1rem; letter-spacing: -.02em; }
@@ -666,7 +676,7 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 .not-found h1 { margin: 0 0 18px; font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-size: clamp(2.8rem, 8vw, 5rem); font-weight: 600; letter-spacing: -.04em; line-height: .98; }
 .not-found-eyebrow { margin: 0 0 10px; color: var(--terracotta-dark); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .not-found .hero-intro { margin: 0 0 28px; }
-.klipper-console { overflow: hidden; border: 1px solid #3b3340; border-radius: 12px; background: #1b1820; color: #e6e1ea; font: .9rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; box-shadow: 0 12px 34px color-mix(in srgb, var(--plum) 14%, transparent); }
+.klipper-console { overflow: hidden; border: 1px solid #3b3340; border-radius: 12px; background: #1b1820; color: #e6e1ea; font: .9rem/1.5 var(--font-mono); box-shadow: 0 12px 34px color-mix(in srgb, var(--plum) 14%, transparent); }
 .klipper-console-title { display: flex; align-items: center; justify-content: space-between; margin: 0; padding: 10px 16px; border-bottom: 1px solid #3b3340; background: #25212b; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: .78rem; }
 .klipper-state { padding: 2px 9px; border-radius: 999px; background: #5c1f22; color: #ffc9c4; }
 .klipper-console-log { margin: 0; padding: 14px 16px; list-style: none; }
