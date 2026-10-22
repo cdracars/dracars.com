@@ -39,6 +39,8 @@
   --flow-clean: light-dark(#4d364c, #b49ab2);
   --flow-clean-ink: light-dark(#fff9fb, #160f18);
   --flow-end-border: light-dark(#4d364c, #765c71);
+  --corner-ink: light-dark(#fff9fb, #160f18);
+  --corner-hover: light-dark(#4d364c, #ffc0a8);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   /* Comfortable running-text width: about 70-75 characters of Atkinson at body size. */
   --measure: 34rem;
@@ -86,9 +88,9 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 :root[data-theme="dark"] .brand-symbol-light { display: none; }
 :root[data-theme="dark"] .brand-symbol-dark { display: block; }
 .brand-lockup { width: auto; height: 32px; }
-.github-corner { position: fixed; z-index: 5; top: 0; right: 0; width: 82px; height: 82px; color: var(--cloud); }
-.github-corner svg { position: absolute; top: 0; right: 0; width: 100%; height: 100%; fill: var(--terracotta); color: var(--cloud); }
-.github-corner:hover svg { fill: var(--plum); }
+.github-corner { position: fixed; z-index: 5; top: 0; right: 0; width: 82px; height: 82px; color: var(--corner-ink); }
+.github-corner svg { position: absolute; top: 0; right: 0; width: 100%; height: 100%; fill: var(--terracotta); color: var(--corner-ink); }
+.github-corner:hover svg { fill: var(--corner-hover); }
 .github-corner:focus-visible { outline: 2px solid var(--focus); outline-offset: -5px; }
 .github-corner .octo-arm { fill: currentColor; transform-origin: 130px 106px; }
 .github-corner .octo-body { fill: currentColor; }
@@ -193,7 +195,7 @@ h1 { max-width: 13ch; margin: 0 0 23px; font-size: var(--step-8); line-height: .
 .site-nav { display: flex; gap: 24px; margin-right: 0; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--terracotta-dark); }
 .site-nav a:hover { text-decoration-thickness: 2px; }
-.site-nav a[aria-current] { color: var(--ink); }
+.site-nav a[aria-current] { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: .55em; }
 .theme-toggle { display: none; min-height: 44px; align-items: center; justify-content: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font: inherit; font-size: var(--text-xs); font-weight: 700; cursor: pointer; }
 html.theme-ready .theme-toggle { display: inline-flex; }
 .theme-toggle:hover { border-color: var(--terracotta); background: var(--surface-raised); }
@@ -214,7 +216,7 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 /* Homepage composition */
 .home-page main { width: min(1280px, calc(100% - 44px)); }
 .home-page .site-header, .home-page .site-footer { width: min(1280px, calc(100% - 44px)); }
-.home-page .site-nav a[aria-current] { color: var(--terracotta-dark); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .55em; }
+.home-page .site-nav a[aria-current] { color: var(--terracotta-dark); }
 .home-hero { position: relative; display: flex; align-items: center; min-height: 620px; margin: 0 0 22px; isolation: isolate; }
 .home-hero-copy { position: relative; z-index: 1; width: min(44%, 590px); padding: 54px 0 42px 24px; }
 .home-hero h1 { max-width: 13.5ch; margin: 0 0 23px; font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; font-size: clamp(3.1rem, 5vw, 4.75rem); font-weight: 600; letter-spacing: -.04em; line-height: .98; }
@@ -714,10 +716,15 @@ html.theme-ready .theme-toggle { display: inline-flex; }
 @media (max-width: 650px) {
   .project-featured-image { height: auto; }
   .project-featured-image img { min-height: 0; }
-  /* Two-row header: logo and theme toggle, then all five links. */
+  /* Two-row header: logo and theme toggle, then the nav links. */
   .site-header { grid-template-columns: 1fr auto; padding-right: 56px; row-gap: 4px; }
   .site-header > .wordmark { grid-column: 1; grid-row: 1; }
   .theme-toggle { grid-column: 2; grid-row: 1; justify-self: end; white-space: nowrap; }
   .site-nav { grid-column: 1 / -1; grid-row: 2; gap: 4px 12px; margin-right: -56px; }
   .home-page .site-nav { gap: 4px 12px; margin-right: -56px; }
+}
+@media (max-width: 374px) {
+  /* Logo and labelled toggle no longer fit beside the GitHub corner, so the toggle shows its icon only; aria-label keeps its name. */
+  .theme-toggle { width: 44px; padding: 0; }
+  .theme-toggle span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
