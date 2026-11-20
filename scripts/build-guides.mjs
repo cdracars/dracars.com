@@ -359,7 +359,6 @@ function page({ title, description, path, body, jsonld, type = "website", bodyCl
     <meta name="twitter:image" content="${socialImageUrl}" />
     <meta name="twitter:image:alt" content="${escAttr(socialImageAlt)}" />
     <link rel="icon" href="/dracars-eye.svg" type="image/svg+xml" />
-    <link rel="icon" href="/dracars-mark.webp" type="image/webp" />
     <link rel="preload" href="/fonts/atkinson-hyperlegible-400-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
